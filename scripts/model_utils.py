@@ -91,6 +91,70 @@ def generate(
     }
 
 
+@torch.no_grad()
+def generate_batch(
+    model,
+    tokenizer,
+    prompts: list[str],
+    *,
+    max_new_tokens: int = 512,
+    enable_thinking: bool = False,
+    batch_size: int = 4,
+    on_result=None,
+) -> list[dict]:
+    """批量生成（贪心）。对 CPU-offload 场景显著提速。
+
+    on_result(gen_dict, index): 每完成一条回调（用于增量落盘）。
+    """
+    results: list[dict | None] = [None] * len(prompts)
+
+    def build_text(prompt: str) -> str:
+        messages = [{"role": "user", "content": prompt}]
+        return tokenizer.apply_chat_template(
+            messages,
+            tokenize=False,
+            add_generation_prompt=True,
+            enable_thinking=enable_thinking,
+        )
+
+    pad_id = tokenizer.pad_token_id
+    if pad_id is None:
+        pad_id = tokenizer.eos_token_id
+
+    for start in range(0, len(prompts), batch_size):
+        batch_prompts = prompts[start : start + batch_size]
+        texts = [build_text(p) for p in batch_prompts]
+        enc = tokenizer(
+            texts, return_tensors="pt", padding=True, padding_side="left"
+        ).to(model.device)
+        output_ids = model.generate(
+            **enc,
+            max_new_tokens=max_new_tokens,
+            do_sample=False,
+            pad_token_id=pad_id,
+        )
+        for j in range(len(batch_prompts)):
+            new_ids = output_ids[j][enc["input_ids"].shape[1] :]
+            text = tokenizer.decode(new_ids, skip_special_tokens=True)
+            think, answer = "", text
+            if "</think>" in text:
+                idx = text.index("</think>")
+                think = text[: idx + len("</think>")]
+                answer = text[idx + len("</think>") :]
+            g = {
+                "prompt": batch_prompts[j],
+                "thinking": think.strip(),
+                "response": answer.strip(),
+                "full_text": text,
+                "num_new_tokens": int(new_ids.shape[0]),
+            }
+            results[start + j] = g
+            if on_result is not None:
+                on_result(g, start + j)
+
+    return results
+
+
 @contextlib.contextmanager
 def capture_activations(
     model,

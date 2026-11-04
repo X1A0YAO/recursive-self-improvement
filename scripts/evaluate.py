@@ -30,13 +30,17 @@ from model_utils import generate
 
 
 def _last_number(text: str, reference: str) -> tuple[bool, str]:
-    """GSM8K 风格：参考答案里 <<...>> 或末尾数字为准；预测取最后一个数字。"""
-    m = re.search(r"<<[^>]*?=\s*(-?[\d,]+(?:\.\d+)?)", reference)
-    if not m:
+    """GSM8K 风格：gold 从 '#### FINAL' 提取；预测取响应中最后一个数字。"""
+    # GSM8K 参考格式: "... <<240/2=120>> ... #### 120"
+    m = re.search(r"####\s*(-?[\d,]+(?:\.\d+)?)", reference)
+    if m:
+        gold = m.group(1).replace(",", "")
+    else:
         m = re.search(r"(-?[\d,]+(?:\.\d+)?)\s*(?:\.|$)", reference.strip())
-    gold = m.group(1).replace(",", "") if m else reference.strip()
+        gold = m.group(1).replace(",", "") if m else reference.strip()
 
-    nums = re.findall(r"-?\$?[\d,]*\d(?:\.\d+)?", text)
+    # 预测：最后一个数字（忽略 LaTeX 包裹、货币符、逗号）
+    nums = re.findall(r"-?\$?\d[\d,]*(?:\.\d+)?", text)
     if not nums:
         return False, gold
     pred = nums[-1].replace("$", "").replace(",", "")
@@ -130,6 +134,12 @@ def score_one(example: dict, response: str, truncated: bool) -> dict:
     score = 0.0
     info: dict = {}
 
+    # 截断的响应无法证明模型得出了结论，统一计 0 分（保守评分）
+    if truncated:
+        out["score"] = 0.0
+        out["info"] = {"truncated": True}
+        return out
+
     if extract == "last_number":
         ok, gold = _last_number(response, ref or "")
         score = 1.0 if ok else 0.0
@@ -149,7 +159,6 @@ def score_one(example: dict, response: str, truncated: bool) -> dict:
         score = max(0.0, 1.0 - stats["sentence_dup_rate"])
         if stats["char8gram_loop_ratio"] > 0.3:
             score = 0.0
-        info["truncated"] = truncated
     elif extract == "ifeval_strict":
         try:
             ok, detail = _ifeval_check(example, response)
@@ -181,31 +190,54 @@ def load_split(path: Path) -> list[dict]:
     return rows
 
 
-def evaluate_split(model, tokenizer, examples: list[dict], max_new_tokens: int, log_path: Path | None = None):
+def evaluate_split(model, tokenizer, examples: list[dict], max_new_tokens: int, log_path: Path | None = None, split_name: str = "", batch_size: int = 4):
+    """批量评测，逐条增量落盘到 log_path（jsonl 追加）。"""
     results = []
-    for i, ex in enumerate(examples):
-        t0 = time.time()
-        gen = generate(
-            model,
-            tokenizer,
-            ex["prompt"],
-            max_new_tokens=max_new_tokens,
-            enable_thinking=False,  # 基线用非思考模式，控制生成长度与时间
-        )
-        elapsed = time.time() - t0
+    done_uids: set[str] = set()
+    if log_path is not None and log_path.exists():
+        with log_path.open(encoding="utf-8") as f:
+            for line in f:
+                if line.strip():
+                    r = json.loads(line)
+                    results.append(r)
+                    done_uids.add(r["uid"])
+        if results:
+            print(f"    [resume] {len(results)}/{len(examples)} already done", flush=True)
+
+    todo = [ex for ex in examples if ex["uid"] not in done_uids]
+    if not todo:
+        return results
+
+    def on_result(gen: dict, idx: int) -> None:
+        ex = todo[idx]
         truncated = gen["num_new_tokens"] >= max_new_tokens
         s = score_one(ex, gen["response"], truncated)
         s.update(
             {
                 "response": gen["response"],
-                "thinking": gen["thinking"],
                 "num_new_tokens": gen["num_new_tokens"],
-                "elapsed_s": round(elapsed, 2),
             }
         )
         results.append(s)
-        if log_path is not None and (i + 1) % 10 == 0:
-            print(f"    ... {i+1}/{len(examples)} done", flush=True)
+        if log_path is not None:
+            with log_path.open("a", encoding="utf-8") as f:
+                f.write(json.dumps(s, ensure_ascii=False) + "\n")
+        n = len(results)
+        if n % 5 == 0 or n == len(examples):
+            mean = sum(r["score"] for r in results) / len(results)
+            print(f"    [{split_name}] {n}/{len(examples)}  running_mean={mean:.3f}", flush=True)
+
+    from model_utils import generate_batch
+
+    generate_batch(
+        model,
+        tokenizer,
+        [ex["prompt"] for ex in todo],
+        max_new_tokens=max_new_tokens,
+        enable_thinking=False,
+        batch_size=batch_size,
+        on_result=on_result,
+    )
     return results
 
 
@@ -230,7 +262,8 @@ def main() -> None:
     ap.add_argument("--splits", default="optimization,validation,test")
     ap.add_argument("--benchmarks-dir", default="benchmarks")
     ap.add_argument("--output", default="results/baseline_V0.json")
-    ap.add_argument("--max-new-tokens", type=int, default=1024)
+    ap.add_argument("--max-new-tokens", type=int, default=768)
+    ap.add_argument("--batch-size", type=int, default=4)
     ap.add_argument("--limit", type=int, default=0, help="每个 split 最多评多少条（0=全部），调试用")
     args = ap.parse_args()
 
@@ -254,7 +287,11 @@ def main() -> None:
         if args.limit:
             examples = examples[: args.limit]
         print(f"[eval] {split}: {len(examples)} examples", flush=True)
-        results = evaluate_split(model, tokenizer, examples, args.max_new_tokens)
+        log_path = Path(args.output).parent / f"{split}_progress.jsonl"
+        results = evaluate_split(
+            model, tokenizer, examples, args.max_new_tokens,
+            log_path=log_path, split_name=split, batch_size=args.batch_size,
+        )
         summary = summarize(results)
         report["splits"][split] = {"summary": summary, "results": results}
         print(f"[eval] {split} summary: {json.dumps(summary, ensure_ascii=False)}", flush=True)
