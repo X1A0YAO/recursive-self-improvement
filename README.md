@@ -4,8 +4,7 @@ An experimental framework for studying whether an LLM can analyze its own
 parameters and directly edit its weights to improve itself 鈥?and whether the
 improved model can improve itself further, forming a recursive positive loop.
 
-> **Status: Phase 0 鈥?infrastructure & baseline (in progress). No weight
-> modification has been performed.**
+> **Status: Phase 0 complete (baseline: opt 0.794 / val 0.881 / test 0.785). Phase 1 (controlled defect) authorized by user, running autonomously.**
 
 ## Research Questions
 
