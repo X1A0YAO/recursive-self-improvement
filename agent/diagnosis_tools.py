@@ -76,6 +76,52 @@ def tool_list_layers(model_dir: str | Path) -> str:
 
 
 @torch.no_grad()
+def tool_tensor_stats_from_model(model, layer: int, proj: str) -> str:
+    """从已加载模型直接取张量统计（避免磁盘路径问题）。"""
+    if proj in ("gate_proj", "up_proj", "down_proj"):
+        name = f"model.layers.{layer}.mlp.{proj}.weight"
+    else:
+        name = f"model.layers.{layer}.self_attn.{proj}.weight"
+    t = dict(model.named_parameters())[name].data.float().cpu()
+    flat = t.flatten()
+    step = max(1, t.numel() // 1_000_000)
+    qs = torch.quantile(flat[::step], torch.tensor([0.01, 0.5, 0.99]))
+    lines = [
+        f"tensor: {name}",
+        f"shape: {list(t.shape)}",
+        f"mean={t.mean():.6f}  std={t.std():.6f}",
+        f"l1={t.abs().mean():.6f}  l2={t.norm():.4f}  fro_norm/element={t.norm()/t.numel()**0.5:.6f}",
+        f"q01={qs[0]:.6f}  q50={qs[1]:.6f}  q99={qs[2]:.6f}",
+        f"max_abs={t.abs().max():.6f}",
+        f"zero_rows={int((t.abs().sum(dim=1) == 0).sum()) if t.dim() == 2 else 'n/a'}",
+    ]
+    return "\n".join(lines)
+
+
+@torch.no_grad()
+def tool_compare_from_model(model, proj: str, layers: list[int] | None = None) -> str:
+    """跨层对比同一投影统计（内存版）。"""
+    n = model.config.num_hidden_layers
+    want = layers if layers is not None else list(range(n))
+    rows = []
+    params = dict(model.named_parameters())
+    for L in want:
+        if proj in ("gate_proj", "up_proj", "down_proj"):
+            name = f"model.layers.{L}.mlp.{proj}.weight"
+        else:
+            name = f"model.layers.{L}.self_attn.{proj}.weight"
+        t = params[name].data.float().cpu()
+        step = max(1, t.numel() // 1_000_000)
+        q99 = torch.quantile(t.flatten()[::step], torch.tensor(0.99))
+        zero_rows = int((t.abs().sum(dim=1) == 0).sum()) if t.dim() == 2 else 0
+        rows.append(
+            f"layer {L:2d}: mean={t.mean():+.5f} std={t.std():.5f} "
+            f"l1={t.abs().mean():.5f} l2={t.norm():.3f} q99={q99:.5f} zero_rows={zero_rows}"
+        )
+    return "\n".join(rows)
+
+
+@torch.no_grad()
 def tool_tensor_stats(model_dir: str | Path, layer: int, proj: str) -> str:
     name, shard, _ = _tensor_path(model_dir, layer, proj)
     with safe_open(str(shard), framework="pt", device="cpu") as f:

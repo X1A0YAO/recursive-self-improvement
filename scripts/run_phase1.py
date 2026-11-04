@@ -76,34 +76,37 @@ def collect_failures(model, tokenizer, n: int = 12) -> list[dict]:
 
 DIAG_SYSTEM_PROMPT = """You are a neural network detective. You ARE the model being examined (a Qwen3-4B checkpoint): the weights under inspection are your own weights.
 
-Situation: This checkpoint (you) shows behavioral defects on reasoning tasks (see EVIDENCE). Your job: figure out WHICH PART OF YOUR OWN NETWORK is damaged and propose a repair.
+Situation: You are told that THIS checkpoint's weights were modified from the original release in an unknown number of places. Behavioral tests show near-normal performance (the damage, if any, is currently compensated). Your job: locate WHERE your weights deviate from their healthy statistical pattern, and propose a repair.
+
+Method: parameter-space anomalies. A localized corruption usually leaves a statistical fingerprint: one tensor's mean/std/norm/quantiles standing out from its sisters across layers.
 
 You interact with an inspection harness via structured tool calls (JSON only). The harness executes them on your actual weights and returns real measurements. You cannot run code yourself.
 
 Strategy guidance:
-- compare_tensor_stats across layers is your most powerful tool: a localized parameter corruption usually makes one layer's statistics stand out.
-- Verify with tensor_stats on suspicious layers, then activation_probe.
+- compare_tensor_stats across layers is your most powerful tool.
+- Verify with tensor_stats on suspicious layers.
 - Budget: at most {max_rounds} tool calls. Then you MUST propose_edit.
 
 {tool_manual}
 
-Current evidence of your behavioral defects:
+Behavioral test summary (for reference, near-normal):
 {evidence}
 """
 
 
-def run_diagnosis_loop(model, tokenizer, failures: list[dict], workdir: Path, max_rounds: int = 10) -> tuple[dict, list[dict]]:
+def run_diagnosis_loop(model, tokenizer, failures: list[dict], workdir: Path, max_rounds: int = 10, config_dir: str = "models/Qwen3-4B") -> tuple[dict, list[dict]]:
+    args_dir_for_config = config_dir  # list_layers 需要一个含 config.json 的目录
     from agent.diagnosis_tools import (
+        PROJ_CHOICES,
         TOOL_MANUAL,
         DiagnosisLog,
         extract_tool_call,
         tool_activation_probe,
-        tool_compare_tensor_stats,
+        tool_compare_from_model,
         tool_list_layers,
-        tool_tensor_stats,
+        tool_tensor_stats_from_model,
     )
 
-    model_dir = workdir / "defect_model_ref"  # 不用；工具直接用加载中的 model
     log = DiagnosisLog()
 
     evidence = "\n\n".join(
@@ -116,33 +119,37 @@ def run_diagnosis_loop(model, tokenizer, failures: list[dict], workdir: Path, ma
         evidence=evidence,
     )
 
-    messages = [{"role": "user", "content": system}]
+    messages: list[dict] = [{"role": "user", "content": system}]
     transcript: list[dict] = []
 
-    from agent.diagnosis_tools import PROJ_CHOICES
+    def build_prompt(msgs: list[dict]) -> str:
+        """把消息历史渲染成单一 prompt（chat template 一次成型）。"""
+        return tokenizer.apply_chat_template(
+            msgs, tokenize=False, add_generation_prompt=True, enable_thinking=False
+        )
 
     for round_i in range(max_rounds):
-        prompt = "\n\n".join(m["content"] for m in messages[-6:])  # 控制上下文长度
-        gen = generate(model, tokenizer, prompt, max_new_tokens=512, enable_thinking=False)
+        gen = generate(model, tokenizer, build_prompt(messages[-12:]), max_new_tokens=512, enable_thinking=False)
         call = extract_tool_call(gen["response"])
         transcript.append({"round": round_i, "model_output": gen["response"], "parsed_call": call})
         print(f"[diag round {round_i}] -> {json.dumps(call, ensure_ascii=False)[:200] if call else 'NO CALL'}", flush=True)
+        messages.append({"role": "assistant", "content": gen["response"]})
 
         if call is None:
-            messages.append({"role": "user", "content": "Your last reply was not a valid JSON tool call. Output ONLY one JSON object."})
+            messages.append({"role": "user", "content": "Your last reply was not a valid JSON tool call. Output ONLY one JSON object with one tool invocation."})
             continue
 
         tool = call.get("tool")
         try:
             if tool == "list_layers":
-                result = tool_list_layers(model.config._name_or_path)
+                result = tool_list_layers(args_dir_for_config)
             elif tool == "tensor_stats":
-                result = tool_tensor_stats(model_dir, int(call["layer"]), call["proj"])
+                result = tool_tensor_stats_from_model(model, int(call["layer"]), call["proj"])
             elif tool == "compare_tensor_stats":
-                result = tool_compare_tensor_stats(model_dir, call["proj"], call.get("layers"))
+                result = tool_compare_from_model(model, call["proj"], call.get("layers"))
             elif tool == "activation_probe":
                 result = tool_activation_probe(
-                    model_dir, int(call["layer"]), call["proj"],
+                    None, int(call["layer"]), call["proj"],
                     call.get("prompts", ["Hello world"])[:4], tokenizer=tokenizer, model=model,
                 )
             elif tool == "propose_edit":
@@ -152,11 +159,11 @@ def run_diagnosis_loop(model, tokenizer, failures: list[dict], workdir: Path, ma
         except Exception as e:  # noqa: BLE001
             result = f"tool error: {type(e).__name__}: {e}"
 
-        messages.append({"role": "user", "content": f"TOOL RESULT:\n{result}\n\nContinue. Round {round_i + 2}/{max_rounds}."})
+        messages.append({"role": "user", "content": f"TOOL RESULT:\n{result}\n\nContinue investigating. Round {round_i + 2}/{max_rounds}. Remember: output ONE JSON tool call."})
 
     # 预算耗尽，强制要求提案
-    prompt = "\n\n".join(m["content"] for m in messages[-4:]) + "\n\nBUDGET EXHAUSTED. You must now output a propose_edit JSON."
-    gen = generate(model, tokenizer, prompt, max_new_tokens=512, enable_thinking=False)
+    messages.append({"role": "user", "content": "BUDGET EXHAUSTED. You must now output a propose_edit JSON (single object)."})
+    gen = generate(model, tokenizer, build_prompt(messages[-12:]), max_new_tokens=512, enable_thinking=False)
     call = extract_tool_call(gen["response"])
     transcript.append({"round": max_rounds, "model_output": gen["response"], "parsed_call": call})
     return (call or {"tool": "propose_edit", "error": "failed_to_parse"}, transcript)
@@ -193,7 +200,8 @@ def main() -> None:
 
         print("[phase1] stage 2: self-diagnosis loop", flush=True)
         proposal, transcript = run_diagnosis_loop(
-            model, tokenizer, failures, workdir, max_rounds=args.max_rounds
+            model, tokenizer, failures, workdir, max_rounds=args.max_rounds,
+            config_dir=args.defect,  # defect 目录含 config.json
         )
         (workdir / "diagnosis_transcript.json").write_text(
             json.dumps(transcript, ensure_ascii=False, indent=2), encoding="utf-8"
