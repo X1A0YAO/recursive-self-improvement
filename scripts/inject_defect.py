@@ -38,24 +38,24 @@ def inject_low_rank_noise(
     sigma_frac: float,
     rank: int = 4,
 ) -> tuple[torch.Tensor, dict]:
-    """W' = W + sigma * (U V^T)，U/V 随机正交列。
+    """W' = W + delta，delta = sigma_frac * ||W||_F * (UVᵀ)/√r，U/V 随机正交列。
 
-    sigma = sigma_frac * W.std()，即相对幅度可控。
-    rank 控制扰动的自由度（低秩 → 便于 oracle 对照修复）。
+    sigma_frac 语义：delta 的 Frobenius 范数相对 ||W||_F 的比例
+    （初版按 std 定义导致实际扰动仅 ~1e-4 相对能量，行为无感，故修正为范数比例；
+     修正记录见 experiments/iteration_1/PREREGISTRATION.md 附录）。
     """
     assert W.dim() == 2, f"expect 2D, got {tuple(W.shape)}"
     m, n = W.shape
     r = min(rank, m, n)
     U = torch.randn(m, r, generator=rng, dtype=torch.float32)
     V = torch.randn(n, r, generator=rng, dtype=torch.float32)
-    # QR 正交化，让扰动方向均匀
     U, _ = torch.linalg.qr(U)
     V, _ = torch.linalg.qr(V)
-    sigma = sigma_frac * W.float().std().item()
-    delta = sigma * (U @ V.T) / math.sqrt(r)
+    delta = (U @ V.T) / math.sqrt(r)          # ||delta||_F = 1
+    delta = delta * (sigma_frac * W.float().norm().item())  # 缩放到目标相对范数
     W_new = (W.float() + delta).to(W.dtype)
     info = {
-        "sigma_abs": sigma,
+        "sigma_abs": delta.norm().item(),
         "sigma_frac": sigma_frac,
         "rank": r,
         "delta_l2": delta.norm().item(),

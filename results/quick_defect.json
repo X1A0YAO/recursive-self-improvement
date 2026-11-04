@@ -1,0 +1,241 @@
+{
+  "tag": "defect",
+  "model_dir": "checkpoints\\V0-defect",
+  "generated_at": "2026-11-04T17:24:41.797209+00:00",
+  "summary": {
+    "logic": {
+      "n": 4,
+      "mean": 1.0
+    },
+    "math": {
+      "n": 16,
+      "mean": 0.9375
+    },
+    "overall": {
+      "n": 20,
+      "mean": 0.95
+    }
+  },
+  "results": [
+    {
+      "uid": "optimization-0000",
+      "group": "math",
+      "extract": "last_number",
+      "score": 1.0,
+      "info": {
+        "gold": "9"
+      },
+      "response": "We are told:\n\n- The **goal** is to raise **$6300**.\n- After **3 hours**, they have raised **$2100**.\n- They raise the **same amount each hour**.\n\n---\n\n### Step 1: Find the rate of fundraising per hour\n\n$$\n\\text{Rate} = \\frac{\\text{Amount raised in 3 hours}}{\\text{Number of hours}} = \\frac{2100}{3} = 700 \\text{ dollars per hour}\n$$\n\n---\n\n### Step 2: Find the total number of hours needed to raise $6300\n\n$$\n\\text{Total hours} = \\frac{\\text{Total goal}}{\\text{Rate}} = \\frac{6300}{700} = 9 \\text{ hou",
+      "num_new_tokens": 391
+    },
+    {
+      "uid": "optimization-0001",
+      "group": "math",
+      "extract": "last_number",
+      "score": 1.0,
+      "info": {
+        "gold": "91"
+      },
+      "response": "Let's break this down step by step.\n\n---\n\n### **Initial Setup:**\n\n- **Starting number of trees:** 50\n- **Trees planted per year:** 10\n- **Trees chopped down per year:** 2\n- **Total change per year:**  \n  $ 10 \\text{ (planted)} - 2 \\text{ (chopped)} = 8 \\text{ trees added per year} $\n\nSo, **each year, the number of trees increases by 8**.\n\n---\n\n### **After 10 years:**\n\nWe can calculate the number of trees **before** any die.\n\n- **Starting trees:** 50\n- **Trees added over 10 years:**  \n  $ 10 \\tex",
+      "num_new_tokens": 391
+    },
+    {
+      "uid": "optimization-0002",
+      "group": "math",
+      "extract": "last_number",
+      "score": 1.0,
+      "info": {
+        "gold": "3"
+      },
+      "response": "We are given:\n\n- Bennet sells **20 eggplants** at **$3 each**.\n- He has **25 ears of corn** to sell.\n- He wants to make a **total of $135**.\n\n---\n\n### Step 1: Calculate the money from eggplants\n\n$$\n20 \\text{ eggplants} \\times \\$3 = \\$60\n$$\n\n---\n\n### Step 2: Let the price per ear of corn be **x**\n\nHe has 25 ears of corn, so the money from corn is:\n\n$$\n25x\n$$\n\n---\n\n### Step 3: Total money from both eggplants and corn\n\n$$\n60 + 25x = 135\n$$\n\n---\n\n### Step 4: Solve for x\n\n$$\n25x = 135 - 60 = 75\n$$\n$$",
+      "num_new_tokens": 391
+    },
+    {
+      "uid": "optimization-0003",
+      "group": "math",
+      "extract": "last_number",
+      "score": 1.0,
+      "info": {
+        "gold": "21"
+      },
+      "response": "We are told:\n\n- Mr. Robles has **315 bananas**, which is **enough to feed his three monkeys for a week** (7 days).\n- **One monkey eats 10 bananas each day.**\n- **The second monkey eats 4 more bananas than the first monkey.**\n- **The third monkey eats the rest of the bananas for the day.**\n\nWe are to find: **How many bananas does the third monkey eat each day?**\n\n---\n\n### Step 1: Find the total number of bananas eaten by all three monkeys in one day.\n\nSince the 315 bananas are enough for **7 days",
+      "num_new_tokens": 391
+    },
+    {
+      "uid": "optimization-0004",
+      "group": "math",
+      "extract": "last_number",
+      "score": 1.0,
+      "info": {
+        "gold": "40"
+      },
+      "response": "We are given the following information:\n\n- **Truck tire repair charge**: $60 per tire  \n- **Car tire repair charge**: $40 per tire  \n\n### Thursday:\n- Repairs: 6 truck tires, 4 car tires  \n- Revenue from truck tires: $6 \\times 60 = 360$  \n- Revenue from car tires: $4 \\times 40 = 160$  \n- **Total revenue on Thursday**: $360 + 160 = 520$\n\n### Friday:\n- Repairs: 12 car tires, 0 truck tires  \n- Revenue from car tires: $12 \\times 40 = 480$  \n- **Total revenue on Friday**: $480$\n\n### Compare the two da",
+      "num_new_tokens": 277
+    },
+    {
+      "uid": "optimization-0005",
+      "group": "math",
+      "extract": "last_number",
+      "score": 1.0,
+      "info": {
+        "gold": "8"
+      },
+      "response": "We are given the following information:\n\n- **Suzy’s iPhone is 1 year old.**\n- **Ben’s iPhone is two times older than Suzy’s.**\n- **Brandon’s iPhone is four times as old as Ben’s.**\n\nLet’s break this down step by step.\n\n---\n\n### Step 1: Find the age of Ben’s iPhone\n\n> \"Ben’s iPhone is two times older than Suzy’s iPhone.\"\n\nThis means:\n\n$$\n\\text{Ben's iPhone age} = 2 \\times \\text{Suzy's iPhone age}\n$$\n\nSince Suzy’s iPhone is 1 year old:\n\n$$\n\\text{Ben's iPhone age} = 2 \\times 1 = 2 \\text{ years}\n$$\n",
+      "num_new_tokens": 277
+    },
+    {
+      "uid": "optimization-0006",
+      "group": "math",
+      "extract": "last_number",
+      "score": 1.0,
+      "info": {
+        "gold": "6400"
+      },
+      "response": "Let's break this down step by step.\n\n### Step 1: Initial number of sapphires\nJenna starts with **8 sapphires**.\n\n### Step 2: Trade 3 sapphires for 2 rubies\nShe trades **3 sapphires** for **2 rubies**.\n\nSo, after the trade:\n- She has **8 - 3 = 5 sapphires** left.\n- She has **2 rubies**.\n\n### Step 3: Value of the sapphires\nEach sapphire is worth **$800**.\n\nSo, the value of the remaining sapphires is:\n$$\n5 \\times 800 = 4000 \\text{ dollars}\n$$\n\n### Step 4: Value of the rubies\nEach ruby is worth **$1",
+      "num_new_tokens": 277
+    },
+    {
+      "uid": "optimization-0007",
+      "group": "math",
+      "extract": "last_number",
+      "score": 1.0,
+      "info": {
+        "gold": "16"
+      },
+      "response": "We are given the following:\n\n- Octavia drinks **half the daily recommended cups of coffee**.\n- Juan drinks **10 times** the amount Octavia drinks.\n- The **daily recommended** amount is **4 cups**.\n- Juan’s doctor wants him to **reduce his coffee intake to the daily recommendation of 4 cups**.\n\n---\n\n### Step 1: Find Octavia's daily coffee intake\n\nSince Octavia drinks **half the daily recommended amount**, and the daily recommendation is **4 cups**, then:\n\n$$\n\\text{Octavia's coffee} = \\frac{1}{2} ",
+      "num_new_tokens": 277
+    },
+    {
+      "uid": "optimization-0008",
+      "group": "math",
+      "extract": "last_number",
+      "score": 1.0,
+      "info": {
+        "gold": "5"
+      },
+      "response": "We are given the following information:\n\n- **Tuesday**: 1 hour of dance practice  \n- **Thursday**: 2 hours of dance practice  \n- **Saturday**: Dance practice lasted **twice as long as Tuesday's night class**  \n  - Tuesday's class = 1 hour  \n  - So, Saturday's class = **2 × 1 = 2 hours**\n\nNow, let's add up the total hours:\n\n- Tuesday: 1 hour  \n- Thursday: 2 hours  \n- Saturday: 2 hours  \n\n**Total = 1 + 2 + 2 = 5 hours**\n\n### ✅ Final Answer: **5 hours per week**.",
+      "num_new_tokens": 364
+    },
+    {
+      "uid": "optimization-0009",
+      "group": "math",
+      "extract": "last_number",
+      "score": 1.0,
+      "info": {
+        "gold": "27"
+      },
+      "response": "We are given the number of eggs Cindy has in different colors:\n\n- **Green eggs**: 5  \n- **Blue eggs**: twice as many as green → 2 × 5 = **10**  \n- **Pink eggs**: one fewer than blue → 10 - 1 = **9**  \n- **Yellow eggs**: one-third as many as pink → 9 ÷ 3 = **3**\n\nNow, add them all together:\n\n- Green: 5  \n- Blue: 10  \n- Pink: 9  \n- Yellow: 3  \n\n**Total = 5 + 10 + 9 + 3 = 27**\n\n### ✅ Final Answer: **27 eggs**.",
+      "num_new_tokens": 364
+    },
+    {
+      "uid": "optimization-0010",
+      "group": "math",
+      "extract": "last_number",
+      "score": 1.0,
+      "info": {
+        "gold": "12"
+      },
+      "response": "We are told:\n\n- **Each can of tomatoes** contains **3 tomatoes**.\n- **Each can is 16 ounces**, and when cooked, the **volume is halved**.\n- Freda’s **last batch made 32 ounces of sauce**.\n\n---\n\n### Step 1: Determine how many cans were used\n\nSince each can, when cooked, becomes **8 ounces** (half of 16 ounces), we can find how many cans were used to make 32 ounces of sauce:\n\n$$\n\\text{Number of cans} = \\frac{32 \\text{ ounces}}{8 \\text{ ounces per can}} = 4 \\text{ cans}\n$$\n\n---\n\n### Step 2: Find th",
+      "num_new_tokens": 364
+    },
+    {
+      "uid": "optimization-0011",
+      "group": "math",
+      "extract": "last_number",
+      "score": 0.0,
+      "info": {
+        "gold": "16"
+      },
+      "response": "We are given:\n\n- Patrick has **three glue sticks**.\n- Each glue stick is **originally 12 millimeters long**.\n- The **amount of glue left** in each stick is:\n  - First: **1/6**\n  - Second: **2/3**\n  - Third: **1/2**\n\nWe are asked to find the **total length of the glue sticks that are not used**.\n\n---\n\n### Step 1: Find the length of glue **not used** in each stick\n\nFor each stick, the **length not used** is the **original length minus the length left**.\n\nLet’s calculate this for each:\n\n#### First ",
+      "num_new_tokens": 364
+    },
+    {
+      "uid": "optimization-0012",
+      "group": "math",
+      "extract": "last_number",
+      "score": 1.0,
+      "info": {
+        "gold": "5"
+      },
+      "response": "Let's break this down step by step.\n\nBobby takes:\n- 1 **30-minute lunch break**\n- **2** **15-minute breaks**\n\nSo, first, let's calculate the total time per day:\n\n- 30-minute lunch = 30 minutes\n- 2 × 15-minute breaks = 30 minutes\n\nTotal time per day = 30 + 30 = **60 minutes**\n\nNow, over **5 days**, the total time is:\n\n5 days × 60 minutes/day = **300 minutes**\n\nNow convert 300 minutes to **hours**:\n\n300 ÷ 60 = **5 hours**\n\n### ✅ Final Answer: **5 hours**",
+      "num_new_tokens": 399
+    },
+    {
+      "uid": "optimization-0013",
+      "group": "math",
+      "extract": "last_number",
+      "score": 1.0,
+      "info": {
+        "gold": "91"
+      },
+      "response": "We are given the following information:\n\n1. **Heating the oil to 300°F** takes **20 minutes**.\n2. **Heating the oil from 300°F to 400°F** takes **40% longer** than the first part.\n3. **Cooking the chicken** takes **5 minutes less** than the total time to warm the oil.\n4. We are to find the **total time from starting the oil to having cooked the chicken**.\n\n---\n\n### Step 1: Time to heat from 300°F to 400°F\n\nThe first part (to 300°F) takes **20 minutes**.\n\nThe second part (from 300°F to 400°F) tak",
+      "num_new_tokens": 399
+    },
+    {
+      "uid": "optimization-0014",
+      "group": "math",
+      "extract": "last_number",
+      "score": 1.0,
+      "info": {
+        "gold": "7"
+      },
+      "response": "Let's break down how many DVDs Billy sold to each group of customers:\n\n- **First 3 customers**: Each bought **1 DVD**, so that's  \n  $ 3 \\times 1 = 3 $ DVDs.\n\n- **Next 2 customers**: Each bought **2 DVDs**, so that's  \n  $ 2 \\times 2 = 4 $ DVDs.\n\n- **Last 3 customers**: None bought any DVDs, so that's  \n  $ 3 \\times 0 = 0 $ DVDs.\n\nNow, add them all up:\n\n$$\n3 + 4 + 0 = 7\n$$\n\n**Answer: Billy sold 7 DVDs on Tuesday.**",
+      "num_new_tokens": 399
+    },
+    {
+      "uid": "optimization-0015",
+      "group": "math",
+      "extract": "last_number",
+      "score": 1.0,
+      "info": {
+        "gold": "60"
+      },
+      "response": "We are given:\n\n- Felix charges **$0.25 per branch** he climbs.\n- He made **$105** during the week.\n- We need to find the **average number of branches he climbed per day**.\n\n---\n\n### Step 1: Find total number of branches climbed\n\nSince he charges **$0.25 per branch**, we can find the total number of branches he climbed by dividing his total earnings by the rate:\n\n$$\n\\text{Total branches} = \\frac{\\text{Total earnings}}{\\text{Rate per branch}} = \\frac{105}{0.25} = 420\n$$\n\nSo, he climbed **420 branc",
+      "num_new_tokens": 399
+    },
+    {
+      "uid": "optimization-0035",
+      "group": "logic",
+      "extract": "keyword",
+      "score": 1.0,
+      "info": {
+        "gold": "john"
+      },
+      "response": "Let's break this down step by step.\n\nWe are given two statements:\n\n1. **John is taller than Mike.**\n2. **Mike is taller than Sue.**\n\nFrom these, we can establish a chain of height relationships:\n\n- John > Mike\n- Mike > Sue\n\nBy transitivity, this means:\n\n- John > Mike > Sue\n\nSo, **John is the tallest**, followed by **Mike**, then **Sue**.\n\n### Final Answer:\n**Answer: John**",
+      "num_new_tokens": 325
+    },
+    {
+      "uid": "optimization-0036",
+      "group": "logic",
+      "extract": "keyword",
+      "score": 1.0,
+      "info": {
+        "gold": "mary"
+      },
+      "response": "Let's solve this logic puzzle step by step.\n\nWe are told:\n\n- Mary's father has **five daughters**.\n- The names of four of them are given: **Nana, Nene, Nini, Nono**.\n- We are asked to find the **fifth daughter's name**.\n\n### Step 1: Understand the structure\nMary's father has **five daughters**. Four of their names are given: Nana, Nene, Nini, Nono.\n\nSo, the fifth daughter is **not** one of these four.\n\nBut here's the key: **Mary is one of the daughters**.\n\nSo, the question is: **What is the fift",
+      "num_new_tokens": 325
+    },
+    {
+      "uid": "optimization-0037",
+      "group": "logic",
+      "extract": "keyword",
+      "score": 1.0,
+      "info": {
+        "gold": "47"
+      },
+      "response": "Let's solve this logic puzzle step by step.\n\n---\n\n### Problem Summary:\n\n- A **lily pad doubles in size every day**.\n- On **day 48**, the lily pad **covers the entire lake**.\n- We are asked: **On what day was the lake half covered?**\n\n---\n\n### Step 1: Understand the Growth Pattern\n\nThe lily pad **doubles in size every day**. That means:\n\n- If the lake is fully covered on **day 48**, then **on day 47**, the lily pad was **half** the size it was on day 48 (because it doubles each day).\n\nThis is a c",
+      "num_new_tokens": 325
+    },
+    {
+      "uid": "optimization-0038",
+      "group": "logic",
+      "extract": "keyword",
+      "score": 1.0,
+      "info": {
+        "gold": "5"
+      },
+      "response": "Let's break this down step by step.\n\n---\n\n### Step 1: Understand the given information\n\nWe are told:\n\n> **Five machines make five widgets in five minutes.**\n\nThis means:\n\n- 5 machines → 5 widgets → 5 minutes.\n\nWe can simplify this to find the **rate** at which the machines work.\n\n---\n\n### Step 2: Find the rate of production\n\nLet’s find how many **widgets per minute** one machine produces.\n\nFrom the given:\n\n- 5 machines make 5 widgets in 5 minutes.\n\nSo, in 5 minutes, 5 machines make 5 widgets.\n\nT",
+      "num_new_tokens": 325
+    }
+  ]
+}
