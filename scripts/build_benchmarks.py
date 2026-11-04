@@ -216,7 +216,9 @@ def build_general(rng: random.Random) -> dict[str, list[dict]]:
                     "prompt": (
                         "Answer this multiple-choice question with the letter only.\n\n"
                         f"Question: {r['question'].strip()}\n"
-                        + "\n".join(f"{'ABCD'[i]}. {c}" for i, c in enumerate(choices))
+                        + "\n".join(
+                            f"{chr(ord('A') + i)}. {c}" for i, c in enumerate(choices)
+                        )
                         + "\n\nAnswer with a single letter (A, B, C, ...)."
                     ),
                     "reference_answer": correct,
