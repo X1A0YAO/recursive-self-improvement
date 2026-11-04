@@ -1,0 +1,55 @@
+# === 模型权重与 checkpoint（大文件，绝不入库）===
+models/
+checkpoints/
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.gguf
+*.onnx
+*.ckpt
+
+# === Python ===
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# === 密钥与认证（严禁入库）===
+.env
+.env.*
+*.key
+*.pem
+*.token
+credentials*
+secrets*
+
+# === HF / 工具缓存 ===
+.cache/
+hf_cache/
+.cache/huggingface/
+
+# === 临时文件与大型中间数据 ===
+*.tmp
+*.temp
+*.log.tmp
+~$*
+*.lock.tmp
+experiments/**/generations_cache/
+experiments/**/full_outputs/
+
+# === 大型评测输出（保留轻量 JSON/CSV/MD 摘要）===
+results/**/full_generations*.json
+results/**/*.bin
+
+# === IDE / 系统 ====
+.idea/
+.vscode/
+*.swp
+Thumbs.db
+.DS_Store
