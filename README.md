@@ -1,10 +1,10 @@
-# Recursive Self-Improvement via Weight-Space Programming
+﻿# Recursive Self-Improvement via Weight-Space Programming
 
 An experimental framework for studying whether an LLM can analyze its own
-parameters and directly edit its weights to improve itself — and whether the
+parameters and directly edit its weights to improve itself 鈥?and whether the
 improved model can improve itself further, forming a recursive positive loop.
 
-> **Status: Phase 0 — infrastructure & baseline (in progress). No weight
+> **Status: Phase 0 鈥?infrastructure & baseline (in progress). No weight
 > modification has been performed.**
 
 ## Research Questions
@@ -29,7 +29,7 @@ Key distinction studied here:
 - **Forbidden:** gradient descent, backpropagation, optimizers, SFT/LoRA/QLoRA,
   any retraining of the target model.
 - **Allowed:** reading/analyzing parameters & activations, statistics,
-  matrix ops, direct numerical weight edits (e.g. low-rank updates W' = W + αuvᵀ),
+  matrix ops, direct numerical weight edits (e.g. low-rank updates W' = W + 伪uv岬€),
   within a structured edit protocol with budgets and safety checks.
 - Original HF checkpoint is read-only; every edit creates a new versioned
   checkpoint under `checkpoints/`.
@@ -40,32 +40,32 @@ Key distinction studied here:
 
 ```
 weight-space-rsi/
-├── models/Qwen3-4B/        # original HF weights (read-only, gitignored)
-├── checkpoints/            # V0, V1, V2 ... versioned checkpoints (gitignored)
-├── scripts/
-│   ├── check_environment.py    # hardware/software inventory
-│   ├── build_benchmarks.py     # optimization/validation/test datasets
-│   ├── inference.py            # generation utilities
-│   ├── inspect_weights.py      # Weight Inspector: tensor index & stats
-│   ├── evaluate.py             # independent Evaluator
-│   └── edit_weights.py         # Weight Editor (applies validated proposals)
-├── agent/
-│   ├── self_improvement.py     # Self-Improvement Agent (runs on target model)
-│   └── edit_protocol.py        # structured edit proposal schema + validation
-├── benchmarks/
-│   ├── optimization/       # agent-visible, used for self-analysis
-│   ├── validation/         # accept/reject decisions
-│   └── test/               # final reporting only, never agent-visible
-├── experiments/            # per-iteration records (markdown + configs)
-├── results/                # evaluation outputs (lightweight JSON/MD kept)
-└── logs/                   # run logs (large logs gitignored)
+鈹溾攢鈹€ models/Qwen3-4B/        # original HF weights (read-only, gitignored)
+鈹溾攢鈹€ checkpoints/            # V0, V1, V2 ... versioned checkpoints (gitignored)
+鈹溾攢鈹€ scripts/
+鈹?  鈹溾攢鈹€ check_environment.py    # hardware/software inventory
+鈹?  鈹溾攢鈹€ build_benchmarks.py     # optimization/validation/test datasets
+鈹?  鈹溾攢鈹€ inference.py            # generation utilities
+鈹?  鈹溾攢鈹€ inspect_weights.py      # Weight Inspector: tensor index & stats
+鈹?  鈹溾攢鈹€ evaluate.py             # independent Evaluator
+鈹?  鈹斺攢鈹€ edit_weights.py         # Weight Editor (applies validated proposals)
+鈹溾攢鈹€ agent/
+鈹?  鈹溾攢鈹€ self_improvement.py     # Self-Improvement Agent (runs on target model)
+鈹?  鈹斺攢鈹€ edit_protocol.py        # structured edit proposal schema + validation
+鈹溾攢鈹€ benchmarks/
+鈹?  鈹溾攢鈹€ optimization/       # agent-visible, used for self-analysis
+鈹?  鈹溾攢鈹€ validation/         # accept/reject decisions
+鈹?  鈹斺攢鈹€ test/               # final reporting only, never agent-visible
+鈹溾攢鈹€ experiments/            # per-iteration records (markdown + configs)
+鈹溾攢鈹€ results/                # evaluation outputs (lightweight JSON/MD kept)
+鈹斺攢鈹€ logs/                   # run logs (large logs gitignored)
 ```
 
 ## Environment
 
 - Windows 11, Python 3.12 (uv venv at `.venv/`), PyTorch + CUDA.
 - Target model: **Qwen/Qwen3-4B** (BF16 safetensors, no quantization).
-- Hardware: NVIDIA RTX 4060 Ti 8GB, 32GB RAM — model loaded via
+- Hardware: NVIDIA RTX 4060 Ti 8GB, 32GB RAM 鈥?model loaded via
   `device_map="auto"` with CPU offload; inference-friendly, edit-friendly.
 
 Setup:
@@ -113,15 +113,15 @@ Decoding: greedy (deterministic) for reproducibility.
 
 ## Experiment Phases
 
-- **Phase 0** — env, model load, param index, baseline eval, V0 checkpoint. *(current)*
-- **Phase 1** — controlled reversible defect + self-diagnosis/repair, with
+- **Phase 0** 鈥?env, model load, param index, baseline eval, V0 checkpoint. *(current)*
+- **Phase 1** 鈥?controlled reversible defect + self-diagnosis/repair, with
   random-edit and oracle control groups.
-- **Phase 2** — genuine self-editing on optimization split, accept/reject by
+- **Phase 2** 鈥?genuine self-editing on optimization split, accept/reject by
   validation split.
-- **Phase 3** — multi-generation recursion V0 → V1 → V2 → ..., measuring both
+- **Phase 3** 鈥?multi-generation recursion V0 鈫?V1 鈫?V2 鈫?..., measuring both
   C(W_t) (task capability) and M(W_t) (meta-capability).
 
-Control arms (§4 of the plan): A self-editing, B fixed external editor,
+Control arms (搂4 of the plan): A self-editing, B fixed external editor,
 C random editing, D no-editing (noise floor), E oracle editing (upper bound).
 
 ## Progress Log

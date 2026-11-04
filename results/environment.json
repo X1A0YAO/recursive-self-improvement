@@ -1,0 +1,22 @@
+{
+  "generated_at": "2026-11-04T12:22:55.563640+00:00",
+  "python": "3.12.15 (main, Oct 21 2026, 17:48:33) [MSC v.1944 64 bit (AMD64)]",
+  "executable": "D:\\Proj\\weight-space-rsi\\.venv\\Scripts\\python.exe",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "torch": "2.14.1+cu126",
+  "cuda_available": true,
+  "cuda_version": "12.6",
+  "cudnn_version": 91002,
+  "gpu_count": 1,
+  "gpus": [
+    {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4060 Ti",
+      "total_memory_gb": 8.0,
+      "multi_processor_count": 34,
+      "capability": "8.9"
+    }
+  ],
+  "disk_free_gb": 287.8,
+  "disk_total_gb": 651.6
+}
