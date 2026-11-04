@@ -14,7 +14,10 @@
 # limitations under the License.
 
 """Registry of all instructions."""
-from instruction_following_eval import instructions
+try:
+    from instruction_following_eval import instructions
+except ImportError:  # flat deployment in scripts/: fall back to direct import
+    import instructions
 
 _KEYWORD = "keywords:"
 

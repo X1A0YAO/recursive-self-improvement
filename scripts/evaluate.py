@@ -113,7 +113,7 @@ def _ifeval_check(example: dict, response: str) -> tuple[bool, dict]:
         try:
             cls = reg.INSTRUCTION_DICT[iid]
             inst = cls(iid)
-            kwargs = dict(kw) if isinstance(kw, dict) else {}
+            kwargs = {k: v for k, v in dict(kw).items() if v is not None}  # 官方: None 不传
             inst.build_description(**kwargs)
             args = inst.get_instruction_args()
             if args and "prompt" in args:

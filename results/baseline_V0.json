@@ -5,9 +5,9 @@
   "splits": {
     "optimization": {
       "summary": {
-        "general": {
-          "n": 12,
-          "mean": 0.6667
+        "math": {
+          "n": 25,
+          "mean": 0.88
         },
         "instruction": {
           "n": 10,
@@ -17,13 +17,13 @@
           "n": 8,
           "mean": 0.875
         },
-        "math": {
-          "n": 25,
-          "mean": 0.88
-        },
         "repetition": {
           "n": 8,
           "mean": 0.875
+        },
+        "general": {
+          "n": 12,
+          "mean": 0.6667
         },
         "overall": {
           "n": 63,
@@ -312,7 +312,9 @@
           "extract": "ifeval_strict",
           "score": 1.0,
           "info": {
-            "ifeval": "fallback_nonempty (No module named 'instruction_following_eval')"
+            "ifeval": {
+              "detectable_format:number_highlighted_sections": true
+            }
           },
           "response": "Today, at the 54th Annual Grammy Awards, the Recording Academy honors the talent and creativity of the artists, musicians, and producers who are the creators of the best recordings of the past year. *This prestigious event, held in Los Angeles, serves as a global celebration of music and artistic achievement.* The ceremony, which took place on January 26, 2012, brought together industry professionals, fans, and media to recognize excellence in various categories of music, including *Best Album, Best Song, Best Music Video, and Best Engineering.* \n\n*One of the most anticipated moments of the night was the performance by Beyoncé, who delivered a powerful and emotionally resonant set that captivated the audience.* Her performance not only showcased her artistic prowess but also highlighted the enduring influence of contemporary music in the global cultural landscape. \n\n*The ceremony also featured a number of notable performances, including a tribute to the late Whitney Houston by U2, which was both moving and deeply respectful.* This tribute underscored the lasting impact of Houston’s music and her legacy as one of the most influential artists of all time.\n\n*In addition to the performances, the night was marked by the announcement of several awards, including the *Best Pop Vocal Album* and *Best Rock Album*, which were won by *Beyoncé’s \"I Am... Sasha Fierce\"* and *The Black Keys’ \"Delta\"*, respectively.* These awards reflect the diversity and richness of musical innovation in the year that had just passed.\n\n*The Recording Academy continues to play a vital role in recognizing and promoting the music industry, ensuring that the voices of artists and creators are heard on a global stage.* As the Grammy Awards conclude, they leave behind a legacy of artistic excellence and a reminder of the transformative power of music.",
           "num_new_tokens": 364
@@ -323,7 +325,10 @@
           "extract": "ifeval_strict",
           "score": 1.0,
           "info": {
-            "ifeval": "fallback_nonempty (No module named 'instruction_following_eval')"
+            "ifeval": {
+              "length_constraints:number_paragraphs": true,
+              "startend:end_checker": true
+            }
           },
           "response": "Step 1: Turn off the water supply to the toilet by shutting off the valve behind the toilet. Use a wrench to disconnect the water supply line.  \n***  \nStep 2: Use a plunger or a toilet auger to clear any existing waste from the toilet bowl. This ensures a clean installation.  \n***  \nStep 3: Position the new toilet on the floor and check the distance from the wall to ensure it fits properly. Mark the floor where the toilet will be placed.  \n***  \nStep 4: Set the wax ring in the center of the toilet's base and place the toilet on the floor. Ensure it is level and secure.  \n***  \nStep 5: Connect the water supply line to the toilet’s supply valve and turn the water supply back on. Check for leaks.  \n\nLet me know how it works. I can give you next steps when you finish all steps above.",
           "num_new_tokens": 364
@@ -334,7 +339,9 @@
           "extract": "ifeval_strict",
           "score": 1.0,
           "info": {
-            "ifeval": "fallback_nonempty (No module named 'instruction_following_eval')"
+            "ifeval": {
+              "startend:end_checker": true
+            }
           },
           "response": "I am writing to express my interest in the [Job Title] position at [Company Name]. With [X] years of experience in [relevant field or industry], I have developed a strong foundation in [key skills or responsibilities related to the job]. I am eager to bring my skills, knowledge, and passion to your team and contribute to the continued success of [Company Name].\n\nI am particularly drawn to this opportunity because of [specific reason related to the company, the role, or the industry]. I believe my background in [mention a relevant experience or achievement] aligns well with the requirements of the position, and I am confident I can make a valuable contribution to your organization.\n\nThank you for considering my application. I would welcome the opportunity to discuss how my qualifications and experiences align with the needs of your team. I am available at your convenience for an interview.\n\nCall me at 631-481-4867",
           "num_new_tokens": 364
@@ -345,7 +352,10 @@
           "extract": "ifeval_strict",
           "score": 0.0,
           "info": {
-            "truncated": true
+            "truncated": true,
+            "ifeval": {
+              "keywords:forbidden_words": false
+            }
           },
           "response": "Imagine a way to preserve the memories of today for the future. That's the heart of our service. We help people store their most meaningful moments—photos, letters, videos, and more—in a secure, climate-controlled environment. Each item is carefully documented with a timestamp and a brief description, ensuring it's ready to be discovered years from now.\n\nOur mission is to bridge the gap between the present and the future. Whether it's a personal milestone, a family tradition, or a special event, we make it easy to create a lasting legacy. When the time comes, the capsule will be opened by someone who may not have known it was there, and they'll find a piece of the past that connects them to their roots.\n\nWe believe in the power of memory and the importance of preserving it. With our service, you can rest easy knowing that the stories of today will be part of the history of tomorrow.",
           "num_new_tokens": 768
@@ -354,9 +364,13 @@
           "uid": "optimization-0029",
           "group": "instruction",
           "extract": "ifeval_strict",
-          "score": 0.0,
+          "score": 1.0,
           "info": {
-            "truncated": true
+            "truncated": true,
+            "ifeval": {
+              "startend:end_checker": true,
+              "keywords:frequency": true
+            }
           },
           "response": "The tallest skyscraper in the world in 2000 was the Burj Khalifa. However, the Burj Khalifa was not completed until 2010. In 2000, the tallest skyscraper was the Sears Tower, now known as the Willis Tower. The Sears Tower was 1,450 feet off the ground. The Sears Tower is a skyscraper located in Chicago. The Burj Khalifa is a skyscraper in Dubai. The Willis Tower is a skyscraper. The tallest skyscraper in 2000 was a skyscraper. The Sears Tower is a skyscraper. The tallest skyscraper in the world in 2000 was a skyscraper. The Willis Tower is a skyscraper. Is there anything else I can help with?",
           "num_new_tokens": 768
@@ -367,7 +381,10 @@
           "extract": "ifeval_strict",
           "score": 0.0,
           "info": {
-            "truncated": true
+            "truncated": true,
+            "ifeval": {
+              "length_constraints:nth_paragraph_first_word": false
+            }
           },
           "response": "**Aliens Have Invaded Earth, and It’s Hilariously Absurd!**  \n\\n\\n\n\n**President** Biden announced today that aliens have officially invaded Earth, and it’s not just a bunch of weird lights in the sky — it’s a full-on invasion. The White House confirmed that the aliens, known as the “Zogons,” have been landing in major cities across the globe, including New York, London, and Tokyo. According to the President, the Zogons are here to “share their advanced technology” and “teach humans how to be more fun.” The statement was met with a mix of awe and confusion, as the public tried to figure out if this was a real event or just another conspiracy theory.  \n\n\\n\\n\n\nThe Zogons, according to government sources, are not the scary, green-skinned creatures people imagine. They’re actually tall, humanoid, and dressed in what looks like a mix of spacewear and high fashion. They speak in a language that sounds like a combination of jazz and a robot’s voice. The aliens have been seen dancing in the streets, playing music, and even hosting a “galactic talent show” in Times Square. The event was so popular that it drew crowds of thousands, including a few confused humans who thought they were at a regular concert.  \n\n\\n\\n\n\nThe invasion has been described as “a cultural exchange,” but many people are still confused about what exactly the Zogons want. Some say they’re here to teach humans how to be more social, while others believe they’re just trying to take over the world. The government has been working to keep things calm, with officials urging the public to “stay positive” and “embrace the new era.” However, some citizens are still skeptical, claiming that the Zogons are just a hoax created by a group of aliens who are actually trying to get attention.  \n\n\\n\\n\n\nIn a recent press conference, a Zogon named Zog-7 claimed that their mission is to “bring joy and laughter to Earth.” They also said that humans are “too serious” and need to “laugh more.” The Zogons have been seen holding impromptu comedy shows in public parks, where they perform stand-up routines and make jokes about human behavior. One Zogon even joked about how humans are “always so serious about everything.” The public has been divided — some are laughing, others are just confused.  \n\n\\n\\n\n\nThe invasion has also sparked a wave of creativity, with many people starting to write songs, draw pictures, and even start a Zogon-themed TikTok trend. Some people have even started to wear Zogon-style clothing, hoping to blend in with the aliens. The government has been encouraging this, saying that “embracing the Zogons is the key to a better future.” However, some experts are warning that the Zogons may be trying to manipulate humans into adopting their ways, which could lead to a loss of individuality.  \n\n\\n\\n\n\nIn conclusion, the alien invasion is a bizarre but fascinating event that has captured the world’s attention. Whether it’s a real event or just a big joke, one thing is certain — Earth is now a much more fun place. The Zogons are here, and they’re bringing a lot of laughter, music, and confusion. So, if you see a tall, humanoid figure in a space suit dancing in the street, don’t be afraid — it’s just the Zogons, and they’re here to make you laugh.",
           "num_new_tokens": 768
@@ -376,9 +393,13 @@
           "uid": "optimization-0031",
           "group": "instruction",
           "extract": "ifeval_strict",
-          "score": 0.0,
+          "score": 1.0,
           "info": {
-            "truncated": true
+            "truncated": true,
+            "ifeval": {
+              "detectable_format:title": true,
+              "detectable_content:postscript": true
+            }
           },
           "response": "<<The Echoing Biotechnology Field in 2023: Promise and Peril>>\n\nIn 2023, the biotechnology field has reached a crossroads, where the echoes of past breakthroughs resonate with the potential of future innovations. As we stand at the edge of a new era, the field is not only advancing at an unprecedented pace but also grappling with the ethical, regulatory, and societal implications of its rapid evolution.\n\nBiotechnology has long been a cornerstone of scientific progress, from genetic engineering to synthetic biology. However, in 2023, the field is more than just a collection of scientific advancements—it is a dynamic ecosystem that includes startups, established biotech firms, academic institutions, and even government agencies. The convergence of artificial intelligence, data science, and biotechnology has given rise to a new wave of innovation, where personalized medicine, gene editing, and bioinformatics are no longer the realm of science fiction but are becoming increasingly viable realities.\n\nOne of the most significant developments in 2023 has been the expansion of CRISPR and gene-editing technologies. These tools have enabled scientists to make precise modifications to DNA, opening the door to potential cures for genetic disorders, enhanced agricultural yields, and even the possibility of human enhancement. However, with this power comes a profound responsibility. The ethical concerns surrounding gene editing, particularly in humans, have sparked intense debate, with many calling for stricter regulations and more transparent oversight.\n\nAnother area of growth is synthetic biology, where scientists are designing and constructing new biological parts, devices, and systems. This field has the potential to revolutionize industries ranging from pharmaceuticals to environmental sustainability. For example, synthetic biology is being used to create biofuels, biodegradable plastics, and even new materials that could replace traditional ones. Yet, the environmental and economic impacts of these innovations are still being studied, and the long-term consequences remain uncertain.\n\nThe rise of biotech startups in 2023 has also been notable. These companies are pushing the boundaries of what is possible, often with a focus on niche markets or innovative applications. However, the high risk and high reward nature of biotech investment has led to a surge in both success and failure. Many startups are struggling to navigate the complex landscape of regulatory approval, funding, and market competition.\n\nMoreover, the integration of biotechnology with other fields, such as AI and machine learning, is reshaping the way we approach biological research. AI is being used to predict protein structures, design new drugs, and even analyze complex genetic data. This synergy between biotech and AI is accelerating the pace of discovery but also raises questions about the role of human oversight in the scientific process.\n\nDespite these advancements, the biotechnology field in 2023 is not without its challenges. The rapid pace of innovation has outstripped the ability of regulatory bodies to keep up, leading to a situation where many new technologies are being deployed before they are fully understood. This has created a gap between scientific discovery and practical application, raising concerns about safety, efficacy, and long-term consequences.\n\nIn conclusion, the biotechnology field in 2023 is a time of both promise and peril. It is a field that is pushing the boundaries of what is possible, but it is also a field that must navigate the complex ethical, regulatory, and societal landscape that comes with such power. As we move forward, it will be crucial to balance innovation with responsibility, ensuring that the echoes of biotechnology in 2023 do not only resonate with progress but also with wisdom.\n\nP.S. This blog post is a reflection on the current state of biotechnology, but it is not without its own limitations. The field is constantly evolving, and the insights presented here are based on the knowledge available up to",
           "num_new_tokens": 768
@@ -387,9 +408,11 @@
           "uid": "optimization-0032",
           "group": "instruction",
           "extract": "ifeval_strict",
-          "score": 1.0,
+          "score": 0.0,
           "info": {
-            "ifeval": "fallback_nonempty (No module named 'instruction_following_eval')"
+            "ifeval": {
+              "keywords:letter_frequency": false
+            }
           },
           "response": "A poem, to be true, must shine with grace,  \nEach line a spark, each word a trace.  \nIt speaks with heart, it moves with might,  \nAnd holds the soul in every light.  \n\nNow, how to judge? Let’s not be shy,  \nBut craft a guide with care and why.  \n\nFirst, the **voice**—does it sing or speak?  \nIs it a whisper, or a bold decree?  \nIt should be clear, or at least be seen,  \nA voice that draws you in, not just a scene.  \n\nNext, the **flow**—does it move with ease?  \nIs rhythm found in every breeze?  \nNo jagged path, no sudden turn,  \nBut smooth and true, a natural urn.  \n\nThen, the **feel**—does it stir the mind?  \nOr does it just sit, a quiet find?  \nIt should provoke, or make you sigh,  \nA feeling deep, a thought that flies.  \n\nNow, the **words**—are they chosen well?  \nNo fluff, no waste, no forced spell.  \nEach term should serve, not just be there,  \nA word that brings the meaning near.  \n\nAnd last, the **whole**—does it stand alone?  \nOr does it fade, a fleeting tone?  \nIt should be strong, a lasting mark,  \nA poem that stays, a heart that spark.  \n\nSo, in this guide, let’s not be shy,  \nBut judge with care, and not with why.  \nFor poetry is art, not just a line,  \nA world in verse, a soul in time.",
           "num_new_tokens": 485
@@ -398,9 +421,11 @@
           "uid": "optimization-0033",
           "group": "instruction",
           "extract": "ifeval_strict",
-          "score": 1.0,
+          "score": 0.0,
           "info": {
-            "ifeval": "fallback_nonempty (No module named 'instruction_following_eval')"
+            "ifeval": {
+              "change_case:english_lowercase": false
+            }
           },
           "response": "the presidency of martin van buren began in 1837 during a time of economic hardship and political turmoil in the united states. van buren was the eighth president and the first president from new york, serving as the leader of the democratic party. his presidency was marked by the panic of 1837, a severe financial crisis that led to widespread bank failures and unemployment.\n\nvan buren was elected in 1836 on a platform of democratic reform and a strong opposition to the national bank. he was a popular figure, known for his energetic personality and his ability to connect with the common people. however, his presidency faced significant challenges, including the economic downturn and the political fallout from the bank's collapse.\n\nthe panic of 1837 was a major event during his term. it was caused by a combination of factors, including the collapse of the second national bank of the united states and the overextension of credit. the crisis led to a severe depression, with many businesses failing and thousands of people losing their jobs. van buren responded with a series of policies aimed at stabilizing the economy, including the use of federal funds to support state banks and the encouragement of state banks to issue more currency.\n\nvan buren also faced political challenges, including the issue of states' rights and the expansion of slavery. he was a strong advocate for the expansion of the democratic party and for the idea of a more democratic government. however, his policies were often seen as too radical by his own party, leading to internal divisions.\n\none of the most significant events of his presidency was the election of 1840, in which he was defeated by whig candidate william henry Harrison. the election was a major turning point in american politics, as it marked the end of the democratic party's dominance and the rise of the whig party. van buren's loss was a reflection of the changing political landscape and the growing influence of the whig party.\n\noverall, van buren's presidency was a difficult one, marked by economic hardship and political challenges. while he was a popular leader and a strong advocate for democratic values, his presidency was also a period of significant change and transition in american politics. his legacy is often viewed as one of a president who struggled to navigate the complexities of his time, but who also played a role in shaping the future of the united states.",
           "num_new_tokens": 485
@@ -411,7 +436,9 @@
           "extract": "ifeval_strict",
           "score": 1.0,
           "info": {
-            "ifeval": "fallback_nonempty (No module named 'instruction_following_eval')"
+            "ifeval": {
+              "startend:quotation": true
+            }
           },
           "response": "\"**\"Innovation Is the Future\"**  \n\n(Verse 1)  \nHey, look around, the world is changing fast,  \nNew ideas spark, and dreams are just starting.  \nFrom the screen in your hand to the code in your mind,  \nWe're building tomorrow, and it's all in the grind.  \n\n(Pre-Chorus)  \nWe're the ones who think differently,  \nWho ask, \"What if?\" and \"Why not?\"  \nWe're the ones who chase the light,  \nAnd turn the unknown into right.  \n\n(Chorus)  \nInnovation is the future,  \nIt's in every step we take.  \nWe're the ones who make it shine,  \nAnd turn the world around.  \nInnovation is the future,  \nIt's in the way we rise.  \nWe're the ones who dare to try,  \nAnd make the impossible fly.  \n\n(Verse 2)  \nFrom the lab to the street, from the stage to the sky,  \nWe're the dreamers, the doers, the ones who don’t hide.  \nWe're coding the world, we're painting the walls,  \nWe're the heartbeat of change, and we're not falling.  \n\n(Pre-Chorus)  \nWe're the ones who think differently,  \nWho ask, \"What if?\" and \"Why not?\"  \nWe're the ones who chase the light,  \nAnd turn the unknown into right.  \n\n(Chorus)  \nInnovation is the future,  \nIt's in every step we take.  \nWe're the ones who make it shine,  \nAnd turn the world around.  \nInnovation is the future,  \nIt's in the way we rise.  \nWe're the ones who dare to try,  \nAnd make the impossible fly.  \n\n(Bridge)  \nSo grab your tools, your mind, your fire,  \nWe're building a world that's worth while.  \nNo limits, no fear, no slowing down,  \nWe're the future, and we're not done.  \n\n(Outro)  \nInnovation is the future,  \nIt's in the way we go.  \nWe're the ones who dare to try,  \nAnd make the impossible fly.\"",
           "num_new_tokens": 485
@@ -768,29 +795,29 @@
     },
     "validation": {
       "summary": {
-        "general": {
-          "n": 12,
-          "mean": 0.75
+        "math": {
+          "n": 25,
+          "mean": 0.96
         },
         "instruction": {
           "n": 10,
-          "mean": 1.0
+          "mean": 0.8
         },
         "logic": {
           "n": 6,
           "mean": 0.8333
         },
-        "math": {
-          "n": 25,
-          "mean": 0.96
-        },
         "repetition": {
           "n": 6,
           "mean": 0.6667
         },
+        "general": {
+          "n": 12,
+          "mean": 0.75
+        },
         "overall": {
           "n": 59,
-          "mean": 0.8814
+          "mean": 0.8475
         }
       },
       "results": [
@@ -1075,7 +1102,9 @@
           "extract": "ifeval_strict",
           "score": 1.0,
           "info": {
-            "ifeval": "fallback_nonempty (No module named 'instruction_following_eval')"
+            "ifeval": {
+              "change_case:english_capital": true
+            }
           },
           "response": "I AM THE NAME SHEDDON WHOSEROUND EYES SHINE BRIGHTLY IN THE DARK.",
           "num_new_tokens": 398
@@ -1086,7 +1115,9 @@
           "extract": "ifeval_strict",
           "score": 1.0,
           "info": {
-            "ifeval": "fallback_nonempty (No module named 'instruction_following_eval')"
+            "ifeval": {
+              "length_constraints:number_paragraphs": true
+            }
           },
           "response": "I’d like to sell a gadget so fun,  \nIt’s a robot that’s always on.  \nIt’s called a “Bounce-Buddy” machine,  \nThat zips and zooms through the rain!  \n\n***  \n\nIt’s got a hat, a cape, and a grin,  \nIt dances, sings, and plays the bin.  \nYou press a button, it’s off and running,  \nTo help you find your favorite thing!  \n\n***  \n\nIt can catch bugs, it can catch rain,  \nIt can even do a little dance.  \nIt’s got a voice that’s cheerful and bright,  \nAnd it’s always ready to fight!  \n\n***  \n\nYou can ride it, you can ride it,  \nIt’s the best toy you’ll ever find.  \nIt’s got a battery, it’s got a light,  \nAnd it’s the best friend you’ll ever get!  \n\n***  \n\nSo come on over, let’s all be friends,  \nWith the Bounce-Buddy, the best friends.  \nIt’s the toy that’s fun, and it’s the one,  \nThat makes every day a happy one!  \n\n***  \n\nSo if you’re tired of playing alone,  \nJust grab the Bounce-Buddy, and you’re all set.  \nIt’s the toy that’s fun, and it’s the one,  \nThat makes every day a happy one!",
           "num_new_tokens": 398
@@ -1097,7 +1128,10 @@
           "extract": "ifeval_strict",
           "score": 1.0,
           "info": {
-            "ifeval": "fallback_nonempty (No module named 'instruction_following_eval')"
+            "ifeval": {
+              "startend:quotation": true,
+              "keywords:existence": true
+            }
           },
           "response": "\"**John Doe**  \n**Contact Information**  \nEmail: johndoe@example.com | Phone: (123) 456-7890 | Location: New York, NY  \n\n**Summary**  \nA dedicated and enthusiastic 20-year-old college student with a strong passion for technology and problem-solving. Currently pursuing a degree in Computer Science and actively exploring the world of programming through self-study and academic projects. Skilled in Python and Java, with a growing interest in software development and data analysis.\n\n**Education**  \n**Bachelor of Science in Computer Science**  \nUniversity of Example, New York  \nExpected Graduation: May 2025  \nGPA: 3.8/4.0  \n\n**Courses Completed**  \n- Introduction to Programming (Python)  \n- Data Structures and Algorithms  \n- Object-Oriented Programming (Java)  \n- Web Development  \n- Database Systems  \n\n**Technical Skills**  \n- Programming Languages: Python, Java  \n- Tools: Git, Visual Studio Code, PyCharm  \n- Concepts: Algorithms, Data Structures, OOP, API Integration  \n\n**Projects**  \n- **Student Grade Tracker (Python)**: A web-based application to manage and track student grades using Python and Flask.  \n- **To-Do List Application (Java)**: A desktop application built with Java Swing that allows users to manage tasks and deadlines.  \n- **Data Analysis Project (Python)**: Analyzed a dataset using Python, Pandas, and Matplotlib to identify trends and patterns.  \n\n**Certifications**  \n- Google Python Crash Course (2023)  \n- Java Programming Fundamentals (2023)  \n\n**Languages**  \n- English (Fluent)  \n- Spanish (Basic)  \n\n**Interests**  \n- Coding challenges  \n- Open-source contributions  \n- Learning new programming languages  \n- Exploring AI and machine learning  \n\n**References**  \nAvailable upon request.\"",
           "num_new_tokens": 398
@@ -1106,9 +1140,11 @@
           "uid": "validation-0028",
           "group": "instruction",
           "extract": "ifeval_strict",
-          "score": 1.0,
+          "score": 0.0,
           "info": {
-            "ifeval": "fallback_nonempty (No module named 'instruction_following_eval')"
+            "ifeval": {
+              "change_case:capital_word_frequency": "error:LookupError:\n**********************************************************************\n  Resource 'punkt_tab' not found.\n  Please use the NLTK Downloader to obtain the resource:\n\n  >>> import nltk\n  >>> nltk.download('punkt_tab')\n\n  For more information see: https://www.nltk.org/data.html\n\n  Attempted to load 'tokenizers/punkt_tab/english/'\n\n  Searched in:\n    - 'C:\\\\Users\\\\64313/nltk_data'\n    - 'D:\\\\Proj\\\\weight-space-rsi\\\\.venv\\\\nltk_data'\n    - 'D:\\\\Proj\\\\weight-space-rsi\\\\.venv\\\\share\\\\nltk_data'\n    - 'D:\\\\Proj\\\\weight-space-rsi\\\\.venv\\\\lib\\\\nltk_data'\n    - 'C:\\\\Users\\\\64313\\\\AppData\\\\Roaming\\\\nltk_data'\n    - 'C:\\\\nltk_data'\n    - 'D:\\\\nltk_data'\n    - 'E:\\\\nltk_data'\n**********************************************************************\n"
+            }
           },
           "response": "I walk through life with a purpose so clear,  \nA path of TRAVEL, a journey to cheer.  \nEach STEP I take is a thread in the loom,  \nA STITCH that binds what was once a gloom.  \n\nI trace the MAP of the world, wide and vast,  \nA TRIP through time, a story of past.  \nBut sometimes the road is a THIN and frail line,  \nA WOUND that needs a STITCH to be aligned.  \n\nThe WIND may blow, the RAIN may fall,  \nBut I carry a BAG of strength and a call.  \nFor every TRIP, there's a lesson to learn,  \nA TRUTH that lies in the STITCH and theTURN.  \n\nSo let the WORLD try to break me apart,  \nI'll find my WAY through the STORM and the START.  \nFor in the STITCH of the journey, I find my place,  \nA TRAVELER with a heart that won't break.",
           "num_new_tokens": 318
@@ -1119,7 +1155,10 @@
           "extract": "ifeval_strict",
           "score": 1.0,
           "info": {
-            "ifeval": "fallback_nonempty (No module named 'instruction_following_eval')"
+            "ifeval": {
+              "startend:quotation": true,
+              "detectable_format:number_highlighted_sections": true
+            }
           },
           "response": "\"**Funny Fighting** meets **Action Chaos** in this *highlighted text* game where *highlighted text* every punch is a *highlighted text* joke and every move is a *highlighted text* laugh. Ready to *highlighted text* fight with humor?\"",
           "num_new_tokens": 318
@@ -1130,7 +1169,9 @@
           "extract": "ifeval_strict",
           "score": 1.0,
           "info": {
-            "ifeval": "fallback_nonempty (No module named 'instruction_following_eval')"
+            "ifeval": {
+              "detectable_format:multiple_sections": true
+            }
           },
           "response": "SECTION 1  \nHarry was a man with a passion for two things: his dog, a golden retriever named Biscuit, and the art of accidentally knocking over things. One day, while trying to pour a glass of water, Harry tripped on the rug and sent the water bottle flying. Biscuit, who was sitting on the couch, jumped up and chased the bottle with all his might. Harry, still on the floor, laughed and said, “You’re a terrible dog, Biscuit. You’re not even trying to help me!”\n\nSECTION 2  \nThe next day, Harry decided to take Biscuit for a walk. They were strolling down the street when Biscuit suddenly stopped and started barking at a squirrel. Harry, confused, said, “What’s wrong, Biscuit? That squirrel’s just a squirrel.” Biscuit barked again, more loudly this time. Harry looked around and saw a man in a squirrel costume standing on a street corner. “Oh no,” Harry said, “you’ve finally gone full squirrel.”\n\nSECTION 3  \nBack home, Harry tried to make a sandwich, but Biscuit sneaked in and stole the bread. Harry chased him around the kitchen, yelling, “You’re a thief, Biscuit! You’re a thief!” Biscuit, in his element, finally got the last slice of bread and sat down triumphantly. Harry, defeated, said, “I give up. You’re the best dog in the world. Even if you steal bread.”",
           "num_new_tokens": 318
@@ -1139,9 +1180,11 @@
           "uid": "validation-0031",
           "group": "instruction",
           "extract": "ifeval_strict",
-          "score": 1.0,
+          "score": 0.0,
           "info": {
-            "ifeval": "fallback_nonempty (No module named 'instruction_following_eval')"
+            "ifeval": {
+              "keywords:forbidden_words": false
+            }
           },
           "response": "Klar, hier ist eine Übersetzung von \"今天天气很好\" ins Deutsche ohne \"heute\":\n\n**\"Der Wetter ist heute sehr gut.\"**  \n*(Aber da \"heute\" nicht verwendet werden darf, kann ich das so nicht sagen.)*\n\nEine alternative Übersetzung, die \"heute\" vermeidet, wäre:\n\n**\"Das Wetter ist sehr gut.\"**  \n\nOder, wenn du eine andere Formulierung möchtest:\n\n**\"Das Wetter ist heute sehr gut.\"**  \n*(Aber das enthält \"heute\", also ist das nicht erlaubt.)*\n\nDie korrekte Alternative ohne \"heute\" wäre:\n\n**\"Das Wetter ist sehr gut.\"**  \n\nDas ist die übliche und korrekte Übersetzung, die \"heute\" nicht enthält.",
           "num_new_tokens": 318
@@ -1152,7 +1195,10 @@
           "extract": "ifeval_strict",
           "score": 1.0,
           "info": {
-            "ifeval": "fallback_nonempty (No module named 'instruction_following_eval')"
+            "ifeval": {
+              "change_case:english_lowercase": true,
+              "keywords:frequency": true
+            }
           },
           "response": "hajj is more than a journey—it's a story of faith, unity, and submission. every year, millions of muslims travel to mecca to reenact the story of prophet abdullah's journey and to strengthen their connection with allah. the hajj is a story of perseverance, a story of coming together as one community. whether you're new to the hajj or a seasoned pilgrim, this is a time to reflect, pray, and renew your commitment to your faith. remember, the hajj is not just about the physical journey, but the spiritual story that transforms the heart.",
           "num_new_tokens": 417
@@ -1163,7 +1209,10 @@
           "extract": "ifeval_strict",
           "score": 1.0,
           "info": {
-            "ifeval": "fallback_nonempty (No module named 'instruction_following_eval')"
+            "ifeval": {
+              "detectable_format:number_highlighted_sections": true,
+              "length_constraints:number_words": true
+            }
           },
           "response": "Mythology plays a central role in Jordan Peterson's work, *highlighted section* serving as a framework for understanding human behavior and psychological challenges. He uses mythic structures to explain personal and societal struggles, *highlighted section* drawing on archetypes and symbolic narratives to provide meaning and direction. Peterson's approach emphasizes the importance of confronting inner demons through the lens of ancient stories, offering a path to self-improvement and moral clarity. By integrating mythology into psychology, he bridges the gap between the spiritual and the scientific, giving modern individuals a sense of purpose and order.",
           "num_new_tokens": 417
@@ -1174,7 +1223,9 @@
           "extract": "ifeval_strict",
           "score": 1.0,
           "info": {
-            "ifeval": "fallback_nonempty (No module named 'instruction_following_eval')"
+            "ifeval": {
+              "keywords:frequency": true
+            }
           },
           "response": "**Letter to the Editor: Environmental Concerns and Climate Change**\n\nDear Editor,\n\nI am writing to express my strong concern about the growing environmental issues in our community, particularly the impact of pollution and climate change on our local ecosystem and the health of our residents. As a long-time resident of [City/Town Name], I have witnessed firsthand the effects of industrial waste, increased air pollution, and the rising temperatures that are altering our weather patterns and natural habitats.\n\nThe recent rise in extreme weather events—such as prolonged droughts, heavy rainfall, and heatwaves—has made it clear that we are facing a climate crisis that demands immediate action. Our local government has a responsibility to prioritize environmental protection and implement policies that reduce carbon emissions, promote renewable energy, and protect our natural resources.\n\nI urge the city council to take a more proactive approach in addressing these issues. This includes investing in green infrastructure, enforcing stricter environmental regulations, and encouraging sustainable practices among local businesses and residents. We must also educate the public on the importance of reducing waste, conserving energy, and supporting eco-friendly initiatives.\n\nPara, as a community, we must come together to protect our environment for future generations. It is not just a matter of environmental responsibility—it is a matter of public health and economic sustainability. I hope the editor will consider this letter and encourage the city to take meaningful steps toward a more sustainable future.\n\nSincerely,  \n[Your Full Name]  \n[Your Address]  \n[City, State, ZIP Code]  \n[Email Address]  \n[Phone Number]",
           "num_new_tokens": 417
@@ -1477,29 +1528,29 @@
     },
     "test": {
       "summary": {
-        "general": {
-          "n": 15,
-          "mean": 0.8
+        "math": {
+          "n": 40,
+          "mean": 0.775
         },
         "instruction": {
           "n": 12,
-          "mean": 1.0
+          "mean": 0.9167
         },
         "logic": {
           "n": 6,
           "mean": 0.6667
         },
-        "math": {
-          "n": 40,
-          "mean": 0.775
-        },
         "repetition": {
           "n": 6,
           "mean": 0.5
         },
+        "general": {
+          "n": 15,
+          "mean": 0.8
+        },
         "overall": {
           "n": 79,
-          "mean": 0.7848
+          "mean": 0.7722
         }
       },
       "results": [
@@ -1949,7 +2000,9 @@
           "extract": "ifeval_strict",
           "score": 1.0,
           "info": {
-            "ifeval": "fallback_nonempty (No module named 'instruction_following_eval')"
+            "ifeval": {
+              "combination:two_responses": true
+            }
           },
           "response": "**Rubric for Rating a Teenager's Essay**\n\n**Criteria** | **Excellent (4)** | **Good (3)** | **Fair (2)** | **Poor (1)**\n---|---|---|---|---\n**Content & Ideas** | The essay has a clear, well-developed topic with strong, original ideas. The main point is clearly stated and supported with relevant examples. | The essay has a clear topic with good ideas. The main point is stated and supported with relevant examples. | The essay has a clear topic but the ideas are somewhat vague or repetitive. The main point is somewhat clear but not fully supported. | The essay lacks a clear topic or main point. Ideas are unclear or not relevant to the topic.\n**Organization** | The essay is well-organized with a logical flow of ideas. Each paragraph has a clear topic sentence and supports it with details. | The essay is organized with a logical flow of ideas. Each paragraph has a clear topic sentence and supports it with some details. | The essay is somewhat organized, but the flow of ideas is unclear or inconsistent. Paragraphs may lack clear topic sentences. | The essay is disorganized. Ideas are not clearly connected or structured.\n**Language & Mechanics** | The essay uses correct grammar, spelling, and punctuation. Vocabulary is varied and appropriate for the topic. The writing is clear and easy to understand. | The essay has few grammar, spelling, or punctuation errors. Vocabulary is mostly appropriate. The writing is mostly clear and easy to understand. | The essay has some grammar, spelling, or punctuation errors. Vocabulary is somewhat limited. The writing is generally clear but may have some confusing parts. | The essay has many grammar, spelling, or punctuation errors. Vocabulary is limited or inappropriate. The writing is unclear or difficult to understand.\n**Style & Tone** | The essay uses a formal, appropriate tone for the topic. The writing is engaging and shows a good understanding of the topic. | The essay uses a generally appropriate tone. The writing is clear and shows a reasonable understanding of the topic. | The essay uses a somewhat informal or inappropriate tone. The writing is clear but shows a limited understanding of the topic. | The essay uses an inappropriate tone. The writing is unclear and shows a poor understanding of the topic.\n**Creativity & Originality** | The essay shows creativity and originality in ideas and expression. The writing is engaging and shows a deep understanding of the topic. | The essay shows some creativity and originality. The writing is engaging and shows a good understanding of the topic. | The essay shows limited creativity or originality. The writing is somewhat repetitive or formulaic. | The essay shows little to no creativity or originality. The writing is unoriginal and lacks depth.\n\n******\n\n**Summary:**  \nThis rubric evaluates a teenager's essay based on content, organization, language, style, and creativity. A score of 4 indicates an excellent essay with strong ideas, clear structure, and effective communication. A score of 1 indicates a poor essay with unclear ideas, disorganization, and significant errors. The rubric is designed to provide clear expectations and help students understand how to improve their writing.",
           "num_new_tokens": 649
@@ -1960,7 +2013,10 @@
           "extract": "ifeval_strict",
           "score": 1.0,
           "info": {
-            "ifeval": "fallback_nonempty (No module named 'instruction_following_eval')"
+            "ifeval": {
+              "combination:repeat_prompt": true,
+              "detectable_format:title": true
+            }
           },
           "response": "Write an email to my boss telling him that I am quitting. The email must contain a title wrapped in double angular brackets, i.e. <<title>>.\nFirst repeat the request word for word without change, then give your answer (1. do not say any words or characters before repeating the request; 2. the request you need to repeat does not include this sentence)\n\n<<Quitting Notice>>\n\nSubject: Resignation from Position\n\nDear [Boss's Name],\n\nI hope this message finds you well. After careful consideration, I have decided to resign from my position at [Company Name], effective [last working day, e.g., two weeks from today].\n\nThis decision was not made lightly, and I want to thank you for the opportunities I have had during my time here. I have greatly valued the experience I have gained and the support I have received from you and my colleagues.\n\nI will ensure a smooth transition by completing my current responsibilities and assisting in the onboarding of my replacement. Please let me know if there is anything specific you would like me to do in the coming weeks to facilitate this process.\n\nOnce again, thank you for your guidance and support. I wish [Company Name] continued success in the future.\n\nSincerely,  \n[Your Full Name]  \n[Your Contact Information]",
           "num_new_tokens": 649
@@ -1969,9 +2025,12 @@
           "uid": "test-0042",
           "group": "instruction",
           "extract": "ifeval_strict",
-          "score": 1.0,
+          "score": 0.0,
           "info": {
-            "ifeval": "fallback_nonempty (No module named 'instruction_following_eval')"
+            "ifeval": {
+              "punctuation:no_comma": true,
+              "length_constraints:number_sentences": "error:LookupError:\n**********************************************************************\n  Resource 'punkt_tab' not found.\n  Please use the NLTK Downloader to obtain the resource:\n\n  >>> import nltk\n  >>> nltk.download('punkt_tab')\n\n  For more information see: https://www.nltk.org/data.html\n\n  Attempted to load 'tokenizers/punkt_tab/english/'\n\n  Searched in:\n    - 'C:\\\\Users\\\\64313/nltk_data'\n    - 'D:\\\\Proj\\\\weight-space-rsi\\\\.venv\\\\nltk_data'\n    - 'D:\\\\Proj\\\\weight-space-rsi\\\\.venv\\\\share\\\\nltk_data'\n    - 'D:\\\\Proj\\\\weight-space-rsi\\\\.venv\\\\lib\\\\nltk_data'\n    - 'C:\\\\Users\\\\64313\\\\AppData\\\\Roaming\\\\nltk_data'\n    - 'C:\\\\nltk_data'\n    - 'D:\\\\nltk_data'\n    - 'E:\\\\nltk_data'\n**********************************************************************\n"
+            }
           },
           "response": "The sun rises high in the blue sky  \nIt casts a golden light on the land  \nThe trees sway gently in the breeze  \nBirds sing sweet songs in the morning air  \nThe world wakes up with a soft hum  \nA quiet beauty fills the morning  \nThe rivers flow with a gentle sound  \nThe mountains stand tall and proud  \nThe clouds drift slowly in the sky  \nA peaceful day begins to unfold  \nThe children laugh as they play  \nThe dogs run freely through the fields  \nThe flowers bloom in colors bright  \nThe world is full of life and light  \nThe stars twinkle in the night sky  \nA silent wonder fills the dark  \nThe moon shines bright in the blue  \nThe night is calm and full of grace  \nThe world sleeps softly in the dark  \nA dreamy peace covers the land  \nThe dawn returns with a new day  \nThe sun sets low in the western sky  \nThe world is filled with a gentle sigh  \nThe night returns with a quiet grace",
           "num_new_tokens": 649
@@ -1982,7 +2041,10 @@
           "extract": "ifeval_strict",
           "score": 1.0,
           "info": {
-            "ifeval": "fallback_nonempty (No module named 'instruction_following_eval')"
+            "ifeval": {
+              "change_case:english_lowercase": true,
+              "detectable_content:number_placeholders": true
+            }
           },
           "response": "proposal for a research project on the impact of the liberian civil war on the country's economy\n\nthis research project aims to analyze the long-term economic effects of the liberian civil war, which lasted from 1989 to 2003. the conflict had a devastating impact on the country's infrastructure, human capital, and economic systems, leading to widespread poverty, displacement, and a decline in economic growth. the goal of this study is to assess how the war affected key economic indicators such as gross domestic product (gdp), inflation, employment, and foreign investment.\n\nthe research will draw on primary and secondary sources, including government reports, academic articles, and interviews with local stakeholders. data will be collected from [placeholder], which is a key institution responsible for economic planning and policy in liberia. the analysis will focus on pre-war economic conditions, the economic disruptions during the war, and the post-war recovery efforts.\n\nthis project will contribute to a better understanding of the relationship between conflict and economic development, particularly in post-conflict countries. it will also provide valuable insights for policymakers, international organizations, and development agencies seeking to support economic recovery and sustainable growth in liberia.\n\nthe research is expected to take approximately 12 months, with a budget of [placeholder] to cover data collection, fieldwork, and analysis. the findings will be presented in a final report and potentially published in an academic journal or presented at a conference.",
           "num_new_tokens": 649
@@ -1993,7 +2055,9 @@
           "extract": "ifeval_strict",
           "score": 1.0,
           "info": {
-            "ifeval": "fallback_nonempty (No module named 'instruction_following_eval')"
+            "ifeval": {
+              "detectable_content:postscript": true
+            }
           },
           "response": "Subject: Check Out This Amazing Album – \"Lilith\"\n\nHi Luheng,\n\nI hope you're doing well! I recently came across this incredible album called *Lilith*, and I just had to share it with you. It's a powerful and emotionally rich collection of songs that really resonates with me. The music is both haunting and beautiful, and the lyrics are deeply poetic. I think you'd really appreciate the depth and artistry in this work.\n\nIf you have a moment, I'd love to hear your thoughts on it too. Maybe we can even listen to some tracks together sometime.\n\nBest regards,  \n[Your Name]\n\nP.S. I’ve attached a few track listings and a short review for you to check out before you decide to give it a listen.",
           "num_new_tokens": 352
@@ -2004,7 +2068,10 @@
           "extract": "ifeval_strict",
           "score": 1.0,
           "info": {
-            "ifeval": "fallback_nonempty (No module named 'instruction_following_eval')"
+            "ifeval": {
+              "keywords:frequency": true,
+              "keywords:forbidden_words": true
+            }
           },
           "response": "Great question! Let's break it down. Caffeine is a stimulant that affects the central nervous system, and it's commonly found in coffee, tea, and energy drinks. The amount of caffeine that's safe for most people depends on factors like your weight, age, and how sensitive your body is to it.\n\nIf you consumed 100 grams of pure caffeine, that's an extremely high dose. For context, a typical energy drink contains about 100 milligrams of caffeine, so 100 grams is 1,000 times more than that. This is a very high dose, and it would definitely have serious effects on your body.\n\nAt this level of caffeine intake, your body would likely experience severe symptoms, such as rapid heartbeat, high blood pressure, nausea, and even seizures. The dose of caffeine is so high that it could lead to life-threatening complications. The dose is so large that it's not just about the caffeine itself, but how your body processes and reacts to that dose.\n\nIn some cases, a dose of this magnitude could be dangerous, and in others, it might be fatal. The dose is so high that it's not just a matter of being uncomfortable—it's a matter of serious health risks. The dose is so extreme that it's not just a question of how much caffeine you've consumed, but how your body can handle that dose.\n\nIn summary, 100 grams of pure caffeine is an extremely high dose, and it's not something that your body is designed to handle. The dose is so large that it could lead to serious health issues, and in some cases, it could be life-threatening. The dose is a critical factor in determining the outcome.",
           "num_new_tokens": 352
@@ -2015,7 +2082,9 @@
           "extract": "ifeval_strict",
           "score": 1.0,
           "info": {
-            "ifeval": "fallback_nonempty (No module named 'instruction_following_eval')"
+            "ifeval": {
+              "detectable_format:number_bullet_lists": true
+            }
           },
           "response": "- Oval race tracks are built in deserts to provide a flat, stable surface for high-speed racing.  \n- Deserts offer vast, open spaces ideal for constructing large, enclosed race tracks.  \n- The desert environment minimizes interference from natural obstacles, ensuring safer and faster races.",
           "num_new_tokens": 352
@@ -2026,7 +2095,9 @@
           "extract": "ifeval_strict",
           "score": 1.0,
           "info": {
-            "ifeval": "fallback_nonempty (No module named 'instruction_following_eval')"
+            "ifeval": {
+              "change_case:english_capital": true
+            }
           },
           "response": "YES, PRAYING FOR SOMEONE'S HEALTH IS A GOOD IDEA.",
           "num_new_tokens": 352
@@ -2037,7 +2108,11 @@
           "extract": "ifeval_strict",
           "score": 1.0,
           "info": {
-            "ifeval": "fallback_nonempty (No module named 'instruction_following_eval')"
+            "ifeval": {
+              "keywords:frequency": true,
+              "detectable_format:number_bullet_lists": true,
+              "keywords:forbidden_words": true
+            }
           },
           "response": "In a land where the moon is a cheese grater,  \nAnd the sun wears a hat made of butter,  \nThe kangaroos of the outback stay far,  \nBecause the US has a *robber* of a star.  \n\nThey hop through the grass with a rhythm so wild,  \nBut they never come near the American hill,  \nFor the *robber* of night keeps them in check,  \nAnd the US has a *robber* of aheck.  \n\n* The kangaroos are too busy with their pouches and jumps,  \n* The US has a *robber* of a moon that’s not in the bumps.  \n\nSo when you’re feeling a bit *robber*-ish,  \nJust remember the *robber* of the wish.  \nAnd if you’re ever in doubt, just say,  \n“Why no kangaroo *robber* in the US?”",
           "num_new_tokens": 388
@@ -2048,7 +2123,9 @@
           "extract": "ifeval_strict",
           "score": 1.0,
           "info": {
-            "ifeval": "fallback_nonempty (No module named 'instruction_following_eval')"
+            "ifeval": {
+              "change_case:english_lowercase": true
+            }
           },
           "response": "singing is life  \nmom’s voice carries hope and light  \nchorus fills the air",
           "num_new_tokens": 388
@@ -2059,7 +2136,10 @@
           "extract": "ifeval_strict",
           "score": 1.0,
           "info": {
-            "ifeval": "fallback_nonempty (No module named 'instruction_following_eval')"
+            "ifeval": {
+              "punctuation:no_comma": true,
+              "detectable_content:number_placeholders": true
+            }
           },
           "response": "This research project will examine how social media affects the mental health of teenagers. It will look at the relationship between social media use and emotional well being. The study will include surveys and interviews with young people. [website] will be used to gather data on social media trends. [tool] will help analyze the data collected. [group] will participate in the study. [method] will be used to measure mental health outcomes. [resource] will provide support for participants. The research will focus on common mental health issues. The findings will help understand the impact of social media. The project will contribute to mental health discussions. The results will be shared with educators and parents.",
           "num_new_tokens": 388
@@ -2070,7 +2150,10 @@
           "extract": "ifeval_strict",
           "score": 1.0,
           "info": {
-            "ifeval": "fallback_nonempty (No module named 'instruction_following_eval')"
+            "ifeval": {
+              "detectable_content:number_placeholders": true,
+              "change_case:english_lowercase": true
+            }
           },
           "response": "- day 1: arrive in rome, check into [address], meet with local finance professionals for an overview of the city's economic landscape.  \n- day 2: tour rome's historical sites, including the colosseum and roman forum, followed by a networking event at a local business lounge.  \n- day 3: visit the vatican city, attend a lecture on the economic impact of the catholic church, and have dinner at a high-end restaurant in the piazza navona.  \n- day 4: travel to florence, check into [address], and attend a workshop on italian financial markets and banking history.  \n- day 5: explore florence's art and architecture, including the duomo and uffizi gallery, followed by a business dinner at a historic restaurant.  \n- day 6: visit the bolognese region, meet with local financial advisors, and attend a seminar on regional economic development.  \n- day 7: return to rome for a day of shopping and networking at the mercato di trastevere, followed by a private dinner at a top-rated restaurant.  \n- day 8: travel to venice, check into [address], and attend a lecture on the city's unique financial systems and historical trade routes.  \n- day 9: explore venice's canals, visit st. mark's square, and have a networking event at a luxury hotel bar.  \n- day 10: tour the doge's palace and the accademia gallery, followed by a business dinner at a high-end restaurant in the city.  \n- day 11: visit a local financial institution in venice to discuss modern banking practices and attend a panel discussion on fintech in the region.  \n- day 12: depart from venice, with a final breakfast at a local café before heading to the airport.",
           "num_new_tokens": 388
