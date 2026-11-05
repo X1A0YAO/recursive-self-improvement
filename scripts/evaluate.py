@@ -287,7 +287,7 @@ def main() -> None:
         if args.limit:
             examples = examples[: args.limit]
         print(f"[eval] {split}: {len(examples)} examples", flush=True)
-        log_path = Path(args.output).parent / f"{split}_progress.jsonl"
+        log_path = Path(args.output).parent / (Path(args.output).stem + f"_{split}_progress.jsonl")
         results = evaluate_split(
             model, tokenizer, examples, args.max_new_tokens,
             log_path=log_path, split_name=split, batch_size=args.batch_size,

@@ -4,7 +4,12 @@ An experimental framework for studying whether an LLM can analyze its own
 parameters and directly edit its weights to improve itself 鈥?and whether the
 improved model can improve itself further, forming a recursive positive loop.
 
-> **Status: Phase 0 complete (baseline: opt 0.794 / val 0.847 / test 0.772). Phase 1 (controlled defect) authorized by user, running autonomously.**
+> **Status: Phase 1 complete (autonomous run). Key findings: (1) Qwen3-4B is
+> extremely robust to localized weight damage — an 8-layer 4096-neuron lesion
+> yields only 3-7pp degradation; (2) self-diagnosis tool-use works but search
+> strategy fails (scanned layers 0-4 of 36; algorithmic z-score baseline
+> achieves 8/8 recall on the same visible statistics). See
+> experiments/iteration_1/PHASE1_REPORT.md.**'
 
 ## Research Questions
 
