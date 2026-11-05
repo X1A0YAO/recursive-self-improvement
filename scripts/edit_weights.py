@@ -34,8 +34,12 @@ def _copy_static_files(src: Path, dst: Path) -> None:
 
 
 def _load_all_tensors(src: Path) -> dict[str, torch.Tensor]:
+    single = src / "model.safetensors"
     index_file = src / "model.safetensors.index.json"
     tensors: dict[str, torch.Tensor] = {}
+    # 单文件存在且比 index 新（或无 index）→ 单文件优先（注入器产物）
+    if single.exists() and (not index_file.exists() or single.stat().st_mtime >= index_file.stat().st_mtime - 60):
+        return load_file(str(single), device="cpu")
     if index_file.exists():
         index = json.loads(index_file.read_text(encoding="utf-8"))
         shards = sorted(set(index["weight_map"].values()))

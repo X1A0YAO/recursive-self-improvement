@@ -1,0 +1,16 @@
+[
+  {
+    "arm": "A3",
+    "method": "restore_from_V0",
+    "note": "oracle = exact original values; DS-120 baseline 0.783 applies"
+  },
+  {
+    "arm": "A4",
+    "method": "random 3 layers [21, 20, 19] x 512 rows zeroed (on top of defect)"
+  },
+  {
+    "arm": "A2",
+    "raw_output": "{\n  \"tool\": \"propose_edit\",\n  \"edits\": [\n    {\n      \"tensor\": \"model.layers.22.mlp.up_proj.weight\",\n      \"op\": \"fill_rows\",\n      \"rows\": \"all_zeroed_rows\",\n      \"value_spec\": \"layer_mean_fill\"\n    }\n  ]\n}",
+    "proposal": null
+  }
+]
