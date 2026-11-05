@@ -1,0 +1,1478 @@
+{
+  "generated_at": "2026-11-05T12:31:28.970329+00:00",
+  "model_dir": "checkpoints\\V0",
+  "max_new_tokens": 768,
+  "splits": {
+    "ds120": {
+      "summary": {
+        "instruction": {
+          "n": 20,
+          "mean": 0.7
+        },
+        "logic": {
+          "n": 25,
+          "mean": 0.72
+        },
+        "math": {
+          "n": 50,
+          "mean": 0.82
+        },
+        "repetition": {
+          "n": 25,
+          "mean": 0.84
+        },
+        "overall": {
+          "n": 120,
+          "mean": 0.7833
+        }
+      },
+      "results": [
+        {
+          "uid": "ds120-math-000",
+          "group": "math",
+          "extract": "last_number",
+          "score": 1.0,
+          "info": {
+            "gold": "1800"
+          },
+          "response": "We are given:\n\n- Bob spends **$27,000** in total.\n- He distributes this money **among 3 schools**.\n- He can buy **100 books for $500**.\n\nWe are to find: **How many books can he buy per school?**\n\n---\n\n### Step 1: Find the cost per book\n\nHe can buy **100 books for $500**, so:\n\n$$\n\\text{Cost per book} = \\frac{500}{100} = 5 \\text{ dollars per book}\n$$\n\n---\n\n### Step 2: Find how many books he can buy in total\n\nHe has **$27,000** to spend, and each book costs **$5**, so:\n\n$$\n\\text{Total books} = \\frac{27000}{5} = 5400 \\text{ books}\n$$\n\n---\n\n### Step 3: Distribute the books equally among 3 schools\n\n$$\n\\text{Books per school} = \\frac{5400}{3} = 1800\n$$\n\n---\n\n### ✅ Final Answer:\n\n$$\n\\boxed{1800} \\text{ books per school}\n$$",
+          "num_new_tokens": 268
+        },
+        {
+          "uid": "ds120-math-001",
+          "group": "math",
+          "extract": "last_number",
+          "score": 1.0,
+          "info": {
+            "gold": "20"
+          },
+          "response": "We are given:\n\n- Total number of books = 50  \n- Half of them are written in **English**  \n- 10% are written in **German**  \n- The rest are written in **Spanish**\n\n---\n\n### Step 1: Find the number of English books  \nHalf of 50 =  \n$$\n\\frac{1}{2} \\times 50 = 25\n$$\n\nSo, there are **25 English books**.\n\n---\n\n### Step 2: Find the number of German books  \n10% of 50 =  \n$$\n0.10 \\times 50 = 5\n$$\n\nSo, there are **5 German books**.\n\n---\n\n### Step 3: Find the number of Spanish books  \nTotal books = 50  \nEnglish books = 25  \nGerman books = 5  \n\nSo, Spanish books =  \n$$\n50 - 25 - 5 = 20\n$$\n\n---\n\n### ✅ Final Answer:  \n$$\n\\boxed{20}\n$$  \nThere are **20 Spanish books** in the library.",
+          "num_new_tokens": 268
+        },
+        {
+          "uid": "ds120-math-002",
+          "group": "math",
+          "extract": "last_number",
+          "score": 0.0,
+          "info": {
+            "gold": "14"
+          },
+          "response": "Let's break down the problem step by step.\n\n---\n\n### **First Game (Home Court - Sasha's team):**\n\n- **Sasha scored:** 14 points  \n- **Julie scored 4 fewer points than Sasha:**  \n  $$\n  14 - 4 = 10 \\text{ points}\n  $$\n\n---\n\n### **Second Game (Away Court - Julie's team):**\n\n- **Sasha scored 6 fewer points than Julie's score in the first game:**  \n  Julie scored 10 points in the first game, so:  \n  $$\n  10 - 6 = 4 \\text{ points}\n  $$\n\n---\n\n### **Total Points for Sasha:**\n\n- First game: 14 points  \n- Second game: 4 points  \n$$\n14 + 4 = \\boxed{18}\n$$\n\n---\n\n### ✅ **Answer: Sasha scored a total of 18 points during both games.**",
+          "num_new_tokens": 268
+        },
+        {
+          "uid": "ds120-math-003",
+          "group": "math",
+          "extract": "last_number",
+          "score": 0.0,
+          "info": {
+            "gold": "20"
+          },
+          "response": "Let's break down the problem step by step.\n\n### Step 1: Daily pocket money\nMarisa gets **$5** every day.\n\n### Step 2: Cost of lollipops\nShe buys **4 lollipops**, each costing **25 cents**.\n\nSo, the total cost of lollipops per day is:\n$$\n4 \\times 25 \\text{ cents} = 100 \\text{ cents} = \\$1.00\n$$\n\n### Step 3: Daily savings\nShe saves the **change** from her pocket money.\n\nSo, the amount she saves each day is:\n$$\n\\$5 - \\$1.00 = \\$4.00\n$$\n\n### Step 4: Total savings over 5 days\n$$\n\\$4.00 \\times 5 = \\$20.00\n$$\n\n### ✅ Final Answer:\n**Marisa puts \\$20.00 in her piggy bank after 5 days.**",
+          "num_new_tokens": 268
+        },
+        {
+          "uid": "ds120-math-004",
+          "group": "math",
+          "extract": "last_number",
+          "score": 0.0,
+          "info": {
+            "truncated": true
+          },
+          "response": "Let's break down the time required for each step of making the cake and work backward from the time Jordan needs to be ready to serve the cake: **5:00 pm**.\n\n### Step-by-step breakdown of the cake-making process:\n\n1. **Make the cake batter**: 20 minutes  \n2. **Bake the cake**: 30 minutes  \n3. **Cool the cake**: 2 hours = 120 minutes  \n4. **Frost the cake**: 10 minutes  \n\n### Total time required:\n- 20 + 30 + 120 + 10 = **180 minutes** = **3 hours**\n\nSo, Jordan needs **3 hours** to complete the entire process.\n\n### To be ready by 5:00 pm, she must start **3 hours before** that.\n\n### 5:00 pm - 3 hours = **2:00 pm**\n\n### ✅ Final Answer: **2:00 pm** is the **latest time** Jordan can start making the cake to be ready to serve it at 5:00 pm.",
+          "num_new_tokens": 768
+        },
+        {
+          "uid": "ds120-math-005",
+          "group": "math",
+          "extract": "last_number",
+          "score": 0.0,
+          "info": {
+            "truncated": true
+          },
+          "response": "We are given the following information:\n\n- Total time spent driving and hiking: **6 hours**\n- Driving speed: **50 miles per hour**\n- Hiking speed: **5 miles per hour less than half their driving speed**\n- Time spent hiking: **1.5 hours**\n\n---\n\n### Step 1: Find the hiking speed\n\nDriving speed = 50 mph  \nHalf of driving speed = $ \\frac{50}{2} = 25 $ mph  \nHiking speed = $ 25 - 5 = 20 $ mph\n\n---\n\n### Step 2: Find the time spent driving\n\nTotal time = 6 hours  \nTime hiking = 1.5 hours  \nTime driving = $ 6 - 1.5 = 4.5 $ hours\n\n---\n\n### Step 3: Calculate the distance\n\n- **Distance driven** = speed × time = $ 50 \\times 4.5 = 225 $ miles  \n- **Distance hiked** = speed × time = $ 20 \\times 1.5 = 30 $ miles\n\n---\n\n### Step 4: Total distance to the vacation spot\n\n$$\n\\text{Total distance} = 225 + 30 = \\boxed{255} \\text{ miles}\n$$\n\n---\n\n### ✅ Final Answer: **255 miles**",
+          "num_new_tokens": 768
+        },
+        {
+          "uid": "ds120-math-006",
+          "group": "math",
+          "extract": "last_number",
+          "score": 0.0,
+          "info": {
+            "truncated": true
+          },
+          "response": "We are given:\n\n- Distance to the museum: **150 miles**\n- Speed: **75 mph**\n- Time spent at the museum: **6 hours**\n\n### Step 1: Time to drive to the museum\n$$\n\\text{Time} = \\frac{\\text{Distance}}{\\text{Speed}} = \\frac{150}{75} = 2 \\text{ hours}\n$$\n\n### Step 2: Time to drive back home\nSince the distance is the same and the speed is the same, the return trip also takes **2 hours**.\n\n### Step 3: Total time away from home\n$$\n\\text{Total time} = \\text{Time to museum} + \\text{Time at museum} + \\text{Time back home}\n$$\n$$\n\\text{Total time} = 2 + 6 + 2 = \\boxed{10} \\text{ hours}\n$$\n\n### ✅ Final Answer: **10 hours**",
+          "num_new_tokens": 768
+        },
+        {
+          "uid": "ds120-math-007",
+          "group": "math",
+          "extract": "last_number",
+          "score": 0.0,
+          "info": {
+            "truncated": true
+          },
+          "response": "Let's break down the problem step by step:\n\n1. **Finn initially sees 11 tadpoles** swimming in the pond.\n2. **6 of them come out of hiding** from under a lily pad.  \n   - So, those 6 are now visible.\n3. **2 of them hide under a rock**.  \n   - So, those 2 are no longer visible.\n\nNow, we need to figure out **how many tadpoles Finn can see** in the pond **now**.\n\n- Initially, there were 11 tadpoles.\n- 6 came out of hiding, so they are now visible.\n- 2 hid under a rock, so they are no longer visible.\n\nSo, the number of tadpoles **Finn can see** is:\n\n**6 (visible) + (11 - 6 - 2) = 6 + 3 = 9**\n\nWait — let's clarify:\n\n- Total tadpoles: 11\n- 6 come out of hiding → now visible\n- 2 hide → now not visible\n\nSo, the number of tadpoles **Finn can see** is:\n\n**6 (visible) + (11 - 6 - 2) = 6 + 3 = 9**\n\nBut actually, the 6 that came out of hiding are part of the original 11. So the 2 that hid are from the original 11.\n\nSo, the 6 that came out of hiding are now visible, and the 2 that hid are not.\n\nSo, the number of tadpoles **Finn can see** is:\n\n**6 (visible) + (11 - 6 - 2) = 6 + 3 = 9**\n\nBut that's not correct. Let's do it more clearly:\n\n- Total tadpoles: 11\n- 6 come out of hiding → now visible\n- 2 hide → not visible\n\nSo, the number of tadpoles **Finn can see** is:\n\n**6 (visible) + (11 - 6 - 2) = 6 + 3 = 9**\n\nBut that's not the right way to think about it.\n\nLet’s think of it this way:\n\n- Initially, 11 tadpoles are in the pond.\n- 6 come out of hiding → now visible.\n- 2 hide → now not visible.\n\nSo, the number of tadpoles **Finn can see** is:\n\n**6 (visible) + (11 - 6 - 2) = 6 + 3 = 9**\n\nBut that's not correct. The 6 that came out of hiding are part of the original 11.\n\nSo, the 6 that came out of hiding are now visible, and the 2 that hid are not.\n\nSo, the number of tadpoles **Finn can see** is:\n\n**6 (visible) + (11 - 6 - 2) = 6 + 3 = 9**\n\nBut that's not the right way to think about it.\n\nLet’s do it this way:\n\n- Total tadpoles: 11\n- 6 come out of hiding → now visible\n- 2 hide → not visible\n\nSo, the number of tadpoles **Finn can see** is:\n\n**6 (visible) + (11 - 6 - 2) = 6 + 3 = 9**\n\nBut that's not correct.\n\nLet’s do it this way:\n\n- Total tadpoles: 11\n- 6 come out of hiding → now visible\n- 2 hide → not visible",
+          "num_new_tokens": 768
+        },
+        {
+          "uid": "ds120-math-008",
+          "group": "math",
+          "extract": "last_number",
+          "score": 1.0,
+          "info": {
+            "gold": "6"
+          },
+          "response": "We are given the following information:\n\n- Every **2 miles**, the car's tires rotate **725 times**.\n- Jeremy drives **400 miles per month**.\n- Each tire can undergo **10,440,000 rotations** before needing replacement.\n- We are to find **how many years** before the tire needs to be replaced.\n\n---\n\n### Step 1: Find how many rotations per mile\n\nIf 2 miles = 725 rotations, then:\n\n$$\n\\text{Rotations per mile} = \\frac{725}{2} = 362.5 \\text{ rotations per mile}\n$$\n\n---\n\n### Step 2: Find how many rotations per month\n\nJeremy drives 400 miles per month, so:\n\n$$\n\\text{Rotations per month} = 400 \\times 362.5 = 145,000 \\text{ rotations per month}\n$$\n\n---\n\n### Step 3: Find how many months until the tire is worn out\n\nEach tire can rotate **10,440,000 times** before replacement. So:\n\n$$\n\\text{Months until replacement} = \\frac{10,440,000}{145,000} = 72 \\text{ months}\n$$\n\n---\n\n### Step 4: Convert months to years\n\n$$\n\\text{Years until replacement} = \\frac{72}{12} = 6 \\text{ years}\n$$\n\n---\n\n### ✅ Final Answer:\n\n$$\n\\boxed{6} \\text{ years}\n$$\n\nSo, the tire will need to be replaced in **6 years**.",
+          "num_new_tokens": 492
+        },
+        {
+          "uid": "ds120-math-009",
+          "group": "math",
+          "extract": "last_number",
+          "score": 1.0,
+          "info": {
+            "gold": "15"
+          },
+          "response": "Let's break down the problem step by step.\n\n---\n\n### **Step 1: Total number of boxes donated and owned**\n\n- **Donated boxes**:  \n  10 people donate 5 boxes each:  \n  $ 10 \\times 5 = 50 $ boxes\n\n- **Already owned boxes**:  \n  They have 10 boxes already.\n\n- **Total boxes**:  \n  $ 50 + 10 = 60 $ boxes\n\n---\n\n### **Step 2: Capacity per table**\n\n- Each table can hold **2 boxes**.\n\n---\n\n### **Step 3: Number of tables they already have**\n\n- They already own **15 tables**.\n\n- Each table can hold 2 boxes, so the number of boxes they can hold with the 15 tables is:  \n  $ 15 \\times 2 = 30 $ boxes\n\n---\n\n### **Step 4: How many more boxes need to be stored**\n\n- Total boxes: 60  \n- Boxes that can be stored with existing tables: 30  \n- So, they need to store:  \n  $ 60 - 30 = 30 $ more boxes\n\n---\n\n### **Step 5: How many new tables are needed**\n\n- Each new table can hold 2 boxes.  \n- So, number of new tables needed:  \n  $ \\frac{30}{2} = 15 $ tables\n\n---\n\n### ✅ **Final Answer: 15 new tables** are needed.",
+          "num_new_tokens": 492
+        },
+        {
+          "uid": "ds120-math-010",
+          "group": "math",
+          "extract": "last_number",
+          "score": 1.0,
+          "info": {
+            "gold": "2"
+          },
+          "response": "Let's break down the problem step by step.\n\n---\n\n### **Step 1: Total number of eggs used**\n\n- **Eggs in cases:** 4 dozen = 4 × 12 = **48 eggs**\n- **Eggs loose in the cupboard:** 2 eggs\n\n**Total eggs = 48 + 2 = 50 eggs**\n\n---\n\n### **Step 2: How many glasses of eggnog can be made**\n\n- Each glass needs **5 eggs**\n- So, number of glasses = total eggs ÷ eggs per glass = 50 ÷ 5 = **10 glasses**\n\n---\n\n### **Step 3: How many trays can be put out**\n\n- Each tray holds **5 glasses**\n- So, number of trays = total glasses ÷ glasses per tray = 10 ÷ 5 = **2 trays**\n\n---\n\n### ✅ **Final Answer: 2 trays**",
+          "num_new_tokens": 492
+        },
+        {
+          "uid": "ds120-math-011",
+          "group": "math",
+          "extract": "last_number",
+          "score": 1.0,
+          "info": {
+            "gold": "4400"
+          },
+          "response": "Let's break down the problem step by step.\n\n---\n\n### **Step 1: Total number of movies**\nMike has **600 movies**.\n\n---\n\n### **Step 2: Movies in series**\n- A **third** of the movies are in series.\n- So, number of series movies =  \n  $$\n  \\frac{1}{3} \\times 600 = 200\n  $$\n- These **200 movies** can be bought for **$6 each** instead of the normal price of **$10**.\n\nSo, cost for series movies =  \n$$\n200 \\times 6 = 1200\n$$\n\n---\n\n### **Step 3: Remaining movies**\n- Total movies = 600  \n- Series movies = 200  \n- Remaining movies =  \n  $$\n  600 - 200 = 400\n  $$\n\n---\n\n### **Step 4: Older movies**\n- **40%** of the remaining 400 movies are **older movies**.\n- So, number of older movies =  \n  $$\n  0.4 \\times 400 = 160\n  $$\n- These older movies cost **$5 each**.\n\nSo, cost for older movies =  \n$$\n160 \\times 5 = 800\n$$\n\n---\n\n### **Step 5: Remaining non-series, non-older movies**\n- Total remaining movies = 400  \n- Older movies = 160  \n- So, non-series, non-older movies =  \n  $$\n  400 - 160 = 240\n  $$\n- These are **normal movies**, costing **$10 each**.\n\nSo, cost for normal movies =  \n$$\n240 \\times 10 = 2400\n$$\n\n---\n\n### **Step 6: Total cost**\n- Series movies: $1200  \n- Older movies: $800  \n- Normal movies: $2400  \n\nTotal cost =  \n$$\n1200 + 800 + 2400 = 4400\n$$\n\n---\n\n### ✅ **Final Answer: $4400**",
+          "num_new_tokens": 492
+        },
+        {
+          "uid": "ds120-math-012",
+          "group": "math",
+          "extract": "last_number",
+          "score": 1.0,
+          "info": {
+            "gold": "35"
+          },
+          "response": "We are given:\n\n- **Jennifer's dog** has **8 puppies**, **3 of which have spots**.\n- **Brandon's dog** has **12 puppies**, **4 of which have spots**.\n\n### Step 1: Find the total number of puppies\n$$\n8 + 12 = 20 \\text{ puppies}\n$$\n\n### Step 2: Find the total number of puppies with spots\n$$\n3 + 4 = 7 \\text{ puppies with spots}\n$$\n\n### Step 3: Calculate the percentage of puppies with spots\n$$\n\\text{Percentage} = \\left( \\frac{7}{20} \\right) \\times 100 = 35\\%\n$$\n\n### ✅ Final Answer:\n**35%** of all the puppies have spots.",
+          "num_new_tokens": 292
+        },
+        {
+          "uid": "ds120-math-013",
+          "group": "math",
+          "extract": "last_number",
+          "score": 1.0,
+          "info": {
+            "gold": "180"
+          },
+          "response": "We are given the following:\n\n- **Mark's weight** = 150 pounds  \n- **Susan's weight** = 20 pounds less than Mark  \n- **Bob's weight** = twice Susan's weight  \n\n### Step 1: Find Susan's weight  \nSusan weighs 20 pounds less than Mark:  \n$$\n\\text{Susan's weight} = 150 - 20 = 130 \\text{ pounds}\n$$\n\n### Step 2: Find Bob's weight  \nBob weighs twice as much as Susan:  \n$$\n\\text{Bob's weight} = 2 \\times 130 = 260 \\text{ pounds}\n$$\n\n### Step 3: Find the average weight of the three friends  \n$$\n\\text{Average weight} = \\frac{\\text{Mark} + \\text{Susan} + \\text{Bob}}{3} = \\frac{150 + 130 + 260}{3} = \\frac{540}{3} = 180\n$$\n\n### ✅ Final Answer:  \n$$\n\\boxed{180} \\text{ pounds}\n$$",
+          "num_new_tokens": 292
+        },
+        {
+          "uid": "ds120-math-014",
+          "group": "math",
+          "extract": "last_number",
+          "score": 1.0,
+          "info": {
+            "gold": "250"
+          },
+          "response": "We are given the following information:\n\n- **Regular hourly rate**: $20 per hour  \n- **Regular work hours per day**: 8 hours  \n- **Special hourly rate (for additional hours)**: 150% of regular rate  \n- **Total hours worked on Tuesday**: 11 hours  \n\n---\n\n### Step 1: Calculate the special hourly rate\n\n$$\n\\text{Special hourly rate} = 150\\% \\times 20 = 1.5 \\times 20 = 30 \\text{ dollars per hour}\n$$\n\n---\n\n### Step 2: Break down the 11 hours into regular and additional hours\n\n- Regular hours: 8 hours  \n- Additional hours: $11 - 8 = 3$ hours\n\n---\n\n### Step 3: Calculate earnings\n\n- Earnings for regular hours:  \n  $$\n  8 \\text{ hours} \\times 20 = 160 \\text{ dollars}\n  $$\n\n- Earnings for additional hours:  \n  $$\n  3 \\text{ hours} \\times 30 = 90 \\text{ dollars}\n  $$\n\n---\n\n### Step 4: Total earnings\n\n$$\n160 + 90 = \\boxed{250} \\text{ dollars}\n$$\n\n---\n\n### ✅ Final Answer: **$250**",
+          "num_new_tokens": 292
+        },
+        {
+          "uid": "ds120-math-015",
+          "group": "math",
+          "extract": "last_number",
+          "score": 1.0,
+          "info": {
+            "gold": "40"
+          },
+          "response": "We are told that the **sum of Mico and Marco's current ages is 20**.\n\nIn **10 years**, each of them will be **10 years older** than they are now.\n\nSo, the total increase in their ages will be:\n\n$$\n10 + 10 = 20 \\text{ years}\n$$\n\nTherefore, the **sum of their ages in 10 years** will be:\n\n$$\n20 + 20 = \\boxed{40}\n$$\n\n**Answer: 40**",
+          "num_new_tokens": 292
+        },
+        {
+          "uid": "ds120-math-016",
+          "group": "math",
+          "extract": "last_number",
+          "score": 1.0,
+          "info": {
+            "gold": "3"
+          },
+          "response": "We are given:\n\n- Haley is **26 years old**.\n- Geb is **10 years less than half** of Haley's age.\n\nLet's break it down step by step.\n\n1. First, find **half of Haley's age**:\n   $$\n   \\frac{1}{2} \\times 26 = 13\n   $$\n\n2. Then, subtract 10 from that result:\n   $$\n   13 - 10 = 3\n   $$\n\n### ✅ Final Answer: **Geb is 3 years old.**",
+          "num_new_tokens": 438
+        },
+        {
+          "uid": "ds120-math-017",
+          "group": "math",
+          "extract": "last_number",
+          "score": 1.0,
+          "info": {
+            "gold": "9"
+          },
+          "response": "Let's break down the total cost step by step:\n\n1. **Base burrito**: $6.50  \n2. **Extra meat**: $2.00  \n3. **Extra cheese**: $1.00  \n4. **Avocado**: $1.00  \n5. **2 sauces**: $0.25 each → 2 × $0.25 = $0.50  \n6. **Upgrade (chips and drink)**: $3.00  \n\nNow, add all these up:\n\n$$\n6.50 + 2.00 + 1.00 + 1.00 + 0.50 + 3.00 = 14.00\n$$\n\nHe has a **$5.00 gift card**, so subtract that:\n\n$$\n14.00 - 5.00 = 9.00\n$$\n\n### Final Answer: **He still owes $9.00.**",
+          "num_new_tokens": 438
+        },
+        {
+          "uid": "ds120-math-018",
+          "group": "math",
+          "extract": "last_number",
+          "score": 1.0,
+          "info": {
+            "gold": "3"
+          },
+          "response": "We are given the following information:\n\n- Four children: **Akbar**, **Alessandro**, **Helene**, and **Wilfred**.\n- **Akbar is 3 years old**.\n- **Alessandro is 4 years old**.\n- **Total age of the group is 20**.\n- **Helene is twice as old as the average age of the group**.\n- We are to find **Wilfred's age**.\n\n---\n\n### Step 1: Let’s define variables\n\nLet:\n- $ A = $ Akbar's age = 3\n- $ S = $ Alessandro's age = 4\n- $ H = $ Helene's age\n- $ W = $ Wilfred's age\n\nWe are told:\n$$\nA + S + H + W = 20\n$$\nSubstitute the known values:\n$$\n3 + 4 + H + W = 20\n$$\n$$\n7 + H + W = 20\n$$\n$$\nH + W = 13 \\quad \\text{(Equation 1)}\n$$\n\n---\n\n### Step 2: Use the information about Helene\n\nWe are told:\n> **Helene is twice as old as the average age of the group.**\n\nThe **average age** of the group is:\n$$\n\\text{Average age} = \\frac{A + S + H + W}{4} = \\frac{20}{4} = 5\n$$\n\nSo:\n$$\nH = 2 \\times \\text{average age} = 2 \\times 5 = 10\n$$\n\n---\n\n### Step 3: Use Equation 1 to find Wilfred's age\n\nFrom Equation 1:\n$$\nH + W = 13\n$$\nWe found $ H = 10 $, so:\n$$\n10 + W = 13\n$$\n$$\nW = 3\n$$\n\n---\n\n### ✅ Final Answer:\n\n$$\n\\boxed{3}\n$$\n\n**Wilfred is 3 years old.**",
+          "num_new_tokens": 438
+        },
+        {
+          "uid": "ds120-math-019",
+          "group": "math",
+          "extract": "last_number",
+          "score": 1.0,
+          "info": {
+            "gold": "8"
+          },
+          "response": "We are given:\n\n- At the beginning of the party:\n  - 25 men\n  - 15 women\n  - Total people = 25 + 15 = **40 people**\n\n- After an hour, **1/4 of the total number of people left**.\n  - 1/4 of 40 = **10 people left**\n\n- **22 men stayed at the party**.\n\nWe are to find: **How many women are left?**\n\n---\n\n### Step 1: Total people who stayed\nTotal people = 40  \nPeople who left = 10  \nPeople who stayed = 40 - 10 = **30 people**\n\n---\n\n### Step 2: Number of men who stayed = 22  \nSo, number of women who stayed = Total people who stayed - men who stayed  \n= 30 - 22 = **8 women**\n\n---\n\n### ✅ Final Answer: **8 women are left.**",
+          "num_new_tokens": 438
+        },
+        {
+          "uid": "ds120-math-020",
+          "group": "math",
+          "extract": "last_number",
+          "score": 1.0,
+          "info": {
+            "gold": "11"
+          },
+          "response": "Let's break down the time used for each group and the total time available.\n\n### Total time of the concert:\n- **2 hours = 120 minutes**\n\n### Time per group:\n- **2 minutes to get on stage**\n- **6 minutes to perform**\n- **2 minutes to exit**\n- **Total per group = 2 + 6 + 2 = 10 minutes**\n\n### Additional time:\n- **10-minute intermission**\n\n### Total time used for groups and intermission:\n- **10 minutes (intermission) + (number of groups × 10 minutes per group)**\n\nWe want the total time used to be **≤ 120 minutes**.\n\nLet’s set up the inequality:\n\n$$\n10 + 10x \\leq 120\n$$\n\nSubtract 10 from both sides:\n\n$$\n10x \\leq 110\n$$\n\nDivide by 10:\n\n$$\nx \\leq 11\n$$\n\n### ✅ Final Answer: **11 groups** can perform in the concert.",
+          "num_new_tokens": 679
+        },
+        {
+          "uid": "ds120-math-021",
+          "group": "math",
+          "extract": "last_number",
+          "score": 1.0,
+          "info": {
+            "gold": "6"
+          },
+          "response": "We are given:\n\n- Jana has **27 puppies**.\n- **Two-thirds** of the puppies are **Pomeranians**.\n- **One-third** of the Pomeranians are **girls**.\n\n---\n\n### Step 1: Find the number of Pomeranians\n\n$$\n\\frac{2}{3} \\times 27 = 18 \\text{ Pomeranians}\n$$\n\n---\n\n### Step 2: Find the number of girl Pomeranians\n\n$$\n\\frac{1}{3} \\times 18 = 6 \\text{ girl Pomeranians}\n$$\n\n---\n\n### ✅ Final Answer:\n\n$$\n\\boxed{6}\n$$\n\nJana has **6 girl Pomeranians**.",
+          "num_new_tokens": 679
+        },
+        {
+          "uid": "ds120-math-022",
+          "group": "math",
+          "extract": "last_number",
+          "score": 0.0,
+          "info": {
+            "gold": "13"
+          },
+          "response": "Let's break down the problem step by step to determine how many years it will take for Carlos to **start earning money** from the lemon tree.\n\n---\n\n### **Initial Cost:**\n- **Planting cost:** $90\n\n---\n\n### **Annual Income and Expenses:**\n- **Lemons per year:** 7\n- **Selling price per lemon:** $1.50\n- **Annual cost (watering and feeding):** $3\n\nSo, **annual profit** is:\n\n$$\n\\text{Annual Profit} = (\\text{Lemons per year} \\times \\text{Selling price}) - \\text{Annual cost}\n$$\n$$\n= (7 \\times 1.50) - 3 = 10.50 - 3 = 7.50\n$$\n\nSo, Carlos makes **$7.50 per year** after the initial planting cost.\n\n---\n\n### **When does he start earning money?**\n\nHe **spends $90 to plant the tree**. After that, he earns **$7.50 per year**.\n\nWe need to find the **first year** when the **total earnings exceed the initial cost**.\n\nLet’s calculate the **cumulative earnings** year by year:\n\n- **Year 1:** $7.50\n- **Year 2:** $15.00\n- **Year 3:** $22.50\n- **Year 4:** $30.00\n- **Year 5:** $37.50\n- **Year 6:** $45.00\n- **Year 7:** $52.50\n- **Year 8:** $60.00\n- **Year 9:** $67.50\n- **Year 10:** $75.00\n\nAt **Year 10**, he has earned **$75**, which is more than the **$90 initial cost**.\n\nBut wait — we need to find when he **starts earning money**, not when he **covers the cost**.\n\nSo, we need to find the **first year** when the **total earnings exceed the initial cost**.\n\nLet’s check when the **total earnings** first exceed $90.\n\nLet’s define:\n\n$$\n\\text{Total Earnings after } n \\text{ years} = 7.50 \\times n\n$$\n\nWe want to find the **smallest** $ n $ such that:\n\n$$\n7.50 \\times n > 90\n$$\n\n$$\nn > \\frac{90}{7.50} = 12\n$$\n\nSo, **after 12 years**, he will have earned **$90**, which is equal to the initial cost.\n\nBut the question is: **When does he start earning money?**\n\nThat is, when does the **first year** of **positive earnings** occur?\n\nSince he earns **$7.50 per year**, starting from the **first year**, he is **earning money** from the **first year** onward.\n\n---\n\n### ✅ Final Answer:\n\n**He starts earning money on the lemon tree in the first year.**",
+          "num_new_tokens": 679
+        },
+        {
+          "uid": "ds120-math-023",
+          "group": "math",
+          "extract": "last_number",
+          "score": 0.0,
+          "info": {
+            "gold": "10"
+          },
+          "response": "We are given:\n\n- The **jumbo bottle of shampoo costs $24.00**.\n- The **directions say to use 2 pumps to get 120 washings**.\n- **Jackie uses 1 pump per wash**.\n- We are to find the **cost per pump in cents**.\n\n---\n\n### Step 1: Find the total number of washings per pump\n\nIf 2 pumps give 120 washings, then:\n\n$$\n\\text{Washings per pump} = \\frac{120}{2} = 60 \\text{ washings per pump}\n$$\n\n---\n\n### Step 2: Find the total number of pumps used in 120 washings\n\nSince Jackie uses **1 pump per wash**, and she uses 120 washings:\n\n$$\n\\text{Total pumps used} = 120 \\text{ pumps}\n$$\n\n---\n\n### Step 3: Find the cost per pump\n\nThe total cost of the shampoo is **$24.00**, which is **2400 cents**.\n\n$$\n\\text{Cost per pump} = \\frac{2400 \\text{ cents}}{120 \\text{ pumps}} = 20 \\text{ cents per pump}\n$$\n\n---\n\n### ✅ Final Answer:\n\n$$\n\\boxed{20} \\text{ cents per pump}\n$$",
+          "num_new_tokens": 679
+        },
+        {
+          "uid": "ds120-math-024",
+          "group": "math",
+          "extract": "last_number",
+          "score": 1.0,
+          "info": {
+            "gold": "36"
+          },
+          "response": "We are given a 60-item quiz, and the questions are divided as follows:\n\n- **40%** of the questions are **easy**.\n- The **rest** (i.e., 60% of the questions) are **equally divided** between **average** and **difficult**.\n\n---\n\n### Step 1: Determine the number of each type of question\n\n- Total questions = 60\n- Easy questions = 40% of 60 =  \n  $$\n  0.4 \\times 60 = 24\n  $$\n- Remaining questions = 60 - 24 = 36\n- Average and difficult questions are equally divided:  \n  $$\n  \\frac{36}{2} = 18 \\text{ average}, \\quad 18 \\text{ difficult}\n  $$\n\n---\n\n### Step 2: Determine how many questions Aries is sure to get right\n\n- Aries is **sure to get 75% of the easy questions** correct:  \n  $$\n  0.75 \\times 24 = 18\n  $$\n- Aries is **sure to get half of the average and difficult questions** correct:  \n  $$\n  \\frac{1}{2} \\times (18 + 18) = \\frac{1}{2} \\times 36 = 18\n  $$\n\n---\n\n### Step 3: Total number of questions Aries is sure to get right\n\n$$\n18 \\text{ (easy)} + 18 \\text{ (average and difficult)} = 36\n$$\n\n---\n\n### ✅ Final Answer:\n$$\n\\boxed{36}\n$$",
+          "num_new_tokens": 368
+        },
+        {
+          "uid": "ds120-math-025",
+          "group": "math",
+          "extract": "last_number",
+          "score": 1.0,
+          "info": {
+            "gold": "15"
+          },
+          "response": "Eve originally had **20 pomelos**.\n\nAfter giving some away, she is left with **1/4 of the original amount**.\n\nSo, the number of pomelos she has left is:\n\n$$\n\\frac{1}{4} \\times 20 = 5\n$$\n\nTherefore, the number of pomelos she gave away is:\n\n$$\n20 - 5 = 15\n$$\n\n**Answer: Eve gave away 15 pomelos.**",
+          "num_new_tokens": 368
+        },
+        {
+          "uid": "ds120-math-026",
+          "group": "math",
+          "extract": "last_number",
+          "score": 1.0,
+          "info": {
+            "gold": "8"
+          },
+          "response": "We are given:\n\n- Peter has **4 boxes**, each with the **same number of chocolate bars**.\n- Martha has **7 boxes**, each with the **same number of chocolate bars**.\n- Peter has a **total of 64** chocolate bars.\n- Martha has a **total of 56** chocolate bars.\n\nWe are asked: **How many more chocolate bars does Peter have in each box than Martha?**\n\n---\n\n### Step 1: Find the number of chocolate bars in each box for Peter\n\nPeter has 64 chocolate bars in 4 boxes:\n\n$$\n\\text{Chocolate bars per box (Peter)} = \\frac{64}{4} = 16\n$$\n\n---\n\n### Step 2: Find the number of chocolate bars in each box for Martha\n\nMartha has 56 chocolate bars in 7 boxes:\n\n$$\n\\text{Chocolate bars per box (Martha)} = \\frac{56}{7} = 8\n$$\n\n---\n\n### Step 3: Find the difference\n\n$$\n\\text{Difference} = 16 - 8 = 8\n$$\n\n---\n\n### ✅ Final Answer:\n\n$$\n\\boxed{8}\n$$\n\nPeter has **8 more chocolate bars** in each box than Martha.",
+          "num_new_tokens": 368
+        },
+        {
+          "uid": "ds120-math-027",
+          "group": "math",
+          "extract": "last_number",
+          "score": 1.0,
+          "info": {
+            "gold": "2304"
+          },
+          "response": "James's insurance cost increased by **60%** due to an accident. The **normal cost** is **$120 per month**.\n\n### Step 1: Calculate the increased monthly cost\n60% of $120 = 0.60 × 120 = **$72**\n\nSo, the new monthly cost = $120 + $72 = **$192 per month**\n\n### Step 2: Calculate the annual cost\n$192 per month × 12 months = **$2,304 per year**\n\n### ✅ Final Answer: **$2,304** per year.",
+          "num_new_tokens": 368
+        },
+        {
+          "uid": "ds120-math-028",
+          "group": "math",
+          "extract": "last_number",
+          "score": 1.0,
+          "info": {
+            "gold": "75"
+          },
+          "response": "We are given a sequence of events involving bees leaving and returning to a hive over a 12-hour period. Let's break it down step by step.\n\n---\n\n### Step 1: Bees that leave in the first 6 hours\n\nDebra sees **30 bees leave** the hive in the first 6 hours.\n\nSo:\n- **Bees that left in first 6 hours = 30**\n\n---\n\n### Step 2: Bees that return in the next 6 hours\n\nShe sees **1/2 that many bees return** in the next 6 hours.\n\nSo:\n- **Bees that return in next 6 hours = (1/2) × 30 = 15**\n\nSo far:\n- **Left in first 6 hours = 30**\n- **Returned in next 6 hours = 15**\n\n---\n\n### Step 3: Bees that fly from the hive and leave in the next 6 hours\n\nShe sees **two times as many bees as she saw first leave** fly from the hive and leave in the next 6 hours.\n\nSo:\n- **Bees that leave in next 6 hours = 2 × 30 = 60**\n\nSo now:\n- **Left in first 6 hours = 30**\n- **Left in next 6 hours = 60**\n- **Returned in next 6 hours = 15**\n\n---\n\n### Step 4: Bees that hadn't returned before return in the next 6 hours\n\nThis is a key part of the problem.\n\n> \"Every bee that left before that hadn't already returned returns to the hive in the next 6 hours.\"\n\nSo, we need to interpret this carefully.\n\nWe have:\n\n- **30 bees left in the first 6 hours**\n- **15 bees returned in the next 6 hours**\n- **60 bees left in the next 6 hours**\n\nSo, the **total number of bees that left before the last 6 hours** is:\n- **30 (first 6 hours) + 60 (next 6 hours) = 90 bees**\n\nBut **15 of those 90 bees had already returned** in the next 6 hours.\n\nSo, the number of bees that **had not returned** before the last 6 hours is:\n- **90 - 15 = 75 bees**\n\nSo, **75 bees that had left before the last 6 hours and hadn't returned yet return in the last 6 hours.**\n\n---\n\n### Final Answer:\n\n**Debra saw 75 bees return to the hive in the last 6 hours.**\n\n$$\n\\boxed{75}\n$$",
+          "num_new_tokens": 561
+        },
+        {
+          "uid": "ds120-math-029",
+          "group": "math",
+          "extract": "last_number",
+          "score": 1.0,
+          "info": {
+            "gold": "120"
+          },
+          "response": "We are given:\n\n- Total carrots: **200 pounds**\n- Number of restaurants: **40**\n- Each restaurant is to receive **2 pounds** of carrots\n\n### Step 1: Calculate the total amount of carrots needed\n$$\n40 \\text{ restaurants} \\times 2 \\text{ pounds per restaurant} = 80 \\text{ pounds}\n$$\n\n### Step 2: Subtract the amount used from the total\n$$\n200 \\text{ pounds} - 80 \\text{ pounds} = 120 \\text{ pounds}\n$$\n\n### Final Answer:\n$$\n\\boxed{120} \\text{ pounds of carrots will not be used.}\n$$",
+          "num_new_tokens": 561
+        },
+        {
+          "uid": "ds120-math-030",
+          "group": "math",
+          "extract": "last_number",
+          "score": 1.0,
+          "info": {
+            "gold": "4"
+          },
+          "response": "We are given:\n\n- Mary has **6 jars** of sprinkles.\n- Each jar can decorate **8 cupcakes**.\n- Each **pan** holds **12 cupcakes**.\n- Mary wants to use **all** of her sprinkles.\n\n---\n\n### Step 1: Total number of cupcakes needed\n\nEach jar can decorate 8 cupcakes, and she has 6 jars:\n\n$$\n6 \\text{ jars} \\times 8 \\text{ cupcakes/jar} = 48 \\text{ cupcakes}\n$$\n\nSo, Mary needs to bake **48 cupcakes** to use up all the sprinkles.\n\n---\n\n### Step 2: Number of pans needed\n\nEach pan holds 12 cupcakes:\n\n$$\n\\frac{48 \\text{ cupcakes}}{12 \\text{ cupcakes/pan}} = 4 \\text{ pans}\n$$\n\n---\n\n### ✅ Final Answer:\n\n**Mary should bake 4 pans worth of cupcakes.**",
+          "num_new_tokens": 561
+        },
+        {
+          "uid": "ds120-math-031",
+          "group": "math",
+          "extract": "last_number",
+          "score": 1.0,
+          "info": {
+            "gold": "310"
+          },
+          "response": "We are given:\n\n- **1 batch of suckers** requires **30 ounces** of sugar.\n- **1 batch of fudge** requires **70 ounces** of sugar.\n\nMason wants to make:\n\n- **8 batches of suckers**\n- **1 batch of fudge**\n\n### Step 1: Calculate sugar for 8 batches of suckers\n$$\n8 \\text{ batches} \\times 30 \\text{ ounces per batch} = 240 \\text{ ounces}\n$$\n\n### Step 2: Add sugar for 1 batch of fudge\n$$\n240 \\text{ ounces} + 70 \\text{ ounces} = 310 \\text{ ounces}\n$$\n\n### Final Answer:\n$$\n\\boxed{310} \\text{ ounces of sugar}\n$$",
+          "num_new_tokens": 561
+        },
+        {
+          "uid": "ds120-math-032",
+          "group": "math",
+          "extract": "last_number",
+          "score": 1.0,
+          "info": {
+            "gold": "842"
+          },
+          "response": "We are given:\n\n- There are **29 students** in the class.\n- Each student is given **2 bottles of apple juice** for lunch.\n- The teacher has **9 coupons**, and each coupon can be redeemed for **100 bottles** of apple juice.\n- The teacher **gives each student 2 bottles** of juice for lunch.\n- After giving out the juice, we are to find **how many bottles the teacher has left for herself**.\n\n---\n\n### Step 1: Total number of bottles given to students\n\nEach of the 29 students gets 2 bottles:\n\n$$\n29 \\times 2 = 58 \\text{ bottles}\n$$\n\n---\n\n### Step 2: Total number of bottles the teacher has\n\nThe teacher has 9 coupons, and each coupon is worth 100 bottles:\n\n$$\n9 \\times 100 = 900 \\text{ bottles}\n$$\n\n---\n\n### Step 3: Subtract the bottles given to students\n\n$$\n900 - 58 = 842 \\text{ bottles}\n$$\n\n---\n\n### ✅ Final Answer:\n\n$$\n\\boxed{842}\n$$\n\nThe teacher has **842 bottles of apple juice** left for herself.",
+          "num_new_tokens": 413
+        },
+        {
+          "uid": "ds120-math-033",
+          "group": "math",
+          "extract": "last_number",
+          "score": 1.0,
+          "info": {
+            "gold": "27"
+          },
+          "response": "Let's break down the problem step by step.\n\n### Step 1: Determine how many apples and oranges each person brought.\n\n- **Morisette**:\n  - Apples: 5\n  - Oranges: 8\n\n- **Kael**:\n  - Apples: Twice the number of apples Morisette brought = $ 2 \\times 5 = 10 $\n  - Oranges: Half the number of oranges Morisette brought = $ \\frac{8}{2} = 4 $\n\n### Step 2: Add up all the fruits.\n\n- Total apples = Morisette's apples + Kael's apples = $ 5 + 10 = 15 $\n- Total oranges = Morisette's oranges + Kael's oranges = $ 8 + 4 = 12 $\n\n### Step 3: Total number of fruits = Total apples + Total oranges\n\n$$\n15 + 12 = 27\n$$\n\n### ✅ Final Answer: **27 fruits** in total.",
+          "num_new_tokens": 413
+        },
+        {
+          "uid": "ds120-math-034",
+          "group": "math",
+          "extract": "last_number",
+          "score": 1.0,
+          "info": {
+            "gold": "18"
+          },
+          "response": "We are given the following information:\n\n- The **chair** is **3 feet wide**.\n- The **rug** is **5 feet wider** than the chair.\n- The **couch** is **2 feet longer than twice the width of the rug**.\n\n---\n\n### Step 1: Find the width of the rug\n\nThe rug is 5 feet wider than the chair:\n\n$$\n\\text{Width of rug} = \\text{Width of chair} + 5 = 3 + 5 = 8 \\text{ feet}\n$$\n\n---\n\n### Step 2: Find the length of the couch\n\nThe couch is **2 feet longer than twice the width of the rug**:\n\n$$\n\\text{Length of couch} = 2 \\times \\text{Width of rug} + 2 = 2 \\times 8 + 2 = 16 + 2 = 18 \\text{ feet}\n$$\n\n---\n\n### ✅ Final Answer:\n\n$$\n\\boxed{18} \\text{ feet}\n$$",
+          "num_new_tokens": 413
+        },
+        {
+          "uid": "ds120-math-035",
+          "group": "math",
+          "extract": "last_number",
+          "score": 0.0,
+          "info": {
+            "gold": "19"
+          },
+          "response": "We are given the following information:\n\n- Bandages come in **bulk packs of 50**.\n- On **Day 1**, they used **38 bandages** and ordered **1 bulk pack** (i.e., 50 bandages).\n- On **Day 2**, they used **10 fewer bandages** than Day 1 → **38 - 10 = 28** bandages used.\n- On **Day 3**, they ordered **2 bulk packs** (i.e., 100 bandages) and used **half a pack** (i.e., 25 bandages).\n- At the end of Day 3, they had **78 bandages left**.\n\nWe are to find **how many bandages they started with on the first day**.\n\n---\n\n### Step 1: Total bandages used over the 3 days\n\n- **Day 1**: 38 used\n- **Day 2**: 28 used\n- **Day 3**: 25 used\n\n**Total used = 38 + 28 + 25 = 91 bandages**\n\n---\n\n### Step 2: Total bandages ordered\n\n- **Day 1**: 1 bulk pack = 50\n- **Day 3**: 2 bulk packs = 100\n\n**Total ordered = 50 + 100 = 150 bandages**\n\n---\n\n### Step 3: Total bandages at the end\n\nThey had **78 bandages left** at the end of Day 3.\n\nSo, the **total bandages they started with** is:\n\n$$\n\\text{Total started with} = \\text{Total used} + \\text{Total left}\n$$\n\n$$\n\\text{Total started with} = 91 + 78 = \\boxed{169}\n$$\n\n---\n\n### ✅ Final Answer: **169 bandages**.",
+          "num_new_tokens": 413
+        },
+        {
+          "uid": "ds120-math-036",
+          "group": "math",
+          "extract": "last_number",
+          "score": 1.0,
+          "info": {
+            "gold": "6"
+          },
+          "response": "We are given:\n\n- Jairus earns **$0.8** per task.\n- Jenny earns **$0.5** per task.\n- Both finished **20 tasks**.\n\n### Step 1: Calculate Jairus's total earnings\n$$\n0.8 \\times 20 = 16\n$$\n\n### Step 2: Calculate Jenny's total earnings\n$$\n0.5 \\times 20 = 10\n$$\n\n### Step 3: Find the difference\n$$\n16 - 10 = 6\n$$\n\n### ✅ Final Answer:\n**Jairus will get $6 more than Jenny.**",
+          "num_new_tokens": 539
+        },
+        {
+          "uid": "ds120-math-037",
+          "group": "math",
+          "extract": "last_number",
+          "score": 1.0,
+          "info": {
+            "gold": "298"
+          },
+          "response": "We are given the following information:\n\n- **Katarina has 68 cookies.**\n- **Katarina has 5 less cookies than Max.**\n- **Max has 12 more cookies than the Cookie Monster.**\n- **Summer has 23 more cookies than Max.**\n\nWe are to find the **total number of cookies** that Katarina, Max, the Cookie Monster, and Summer have.\n\n---\n\n### Step 1: Let’s define variables\n\nLet:\n- $ K $ = number of cookies Katarina has = **68**\n- $ M $ = number of cookies Max has\n- $ C $ = number of cookies the Cookie Monster has\n- $ S $ = number of cookies Summer has\n\n---\n\n### Step 2: Use the given relationships\n\n1. **Katarina has 5 less than Max:**\n   $$\n   K = M - 5\n   $$\n   Since $ K = 68 $, we can solve for $ M $:\n   $$\n   68 = M - 5 \\Rightarrow M = 68 + 5 = 73\n   $$\n\n2. **Max has 12 more than the Cookie Monster:**\n   $$\n   M = C + 12\n   $$\n   Since $ M = 73 $, we can solve for $ C $:\n   $$\n   73 = C + 12 \\Rightarrow C = 73 - 12 = 61\n   $$\n\n3. **Summer has 23 more than Max:**\n   $$\n   S = M + 23\n   $$\n   Since $ M = 73 $, we can solve for $ S $:\n   $$\n   S = 73 + 23 = 96\n   $$\n\n---\n\n### Step 3: Add all the cookies together\n\n- Katarina: 68\n- Max: 73\n- Cookie Monster: 61\n- Summer: 96\n\n$$\n\\text{Total} = 68 + 73 + 61 + 96\n$$\n\nLet’s add step by step:\n\n- $ 68 + 73 = 141 $\n- $ 141 + 61 = 202 $\n- $ 202 + 96 = 298 $\n\n---\n\n### ✅ Final Answer:\n\n$$\n\\boxed{298}\n$$\n\nThey have **298 cookies** in total.",
+          "num_new_tokens": 539
+        },
+        {
+          "uid": "ds120-math-038",
+          "group": "math",
+          "extract": "last_number",
+          "score": 1.0,
+          "info": {
+            "gold": "56"
+          },
+          "response": "We are given:\n\n- Misha picks out **4 blouses**.\n- The **regular price** of each blouse is **$20**.\n- The blouses are on a **30% discount**.\n\n---\n\n### Step 1: Find the discount amount per blouse\n\nA 30% discount on a $20 blouse is:\n\n$$\n0.30 \\times 20 = 6\n$$\n\nSo, the **discounted price** per blouse is:\n\n$$\n20 - 6 = 14\n$$\n\n---\n\n### Step 2: Find the total cost for 4 blouses\n\n$$\n4 \\times 14 = 56\n$$\n\n---\n\n### ✅ Final Answer:\n\n$$\n\\boxed{56}\n$$\n\nThe total cost of the discounted blouses is **$56**.",
+          "num_new_tokens": 539
+        },
+        {
+          "uid": "ds120-math-039",
+          "group": "math",
+          "extract": "last_number",
+          "score": 1.0,
+          "info": {
+            "gold": "8"
+          },
+          "response": "We are given:\n\n- James is putting together **4 tables**.\n- Each table has **4 legs**.\n- Each leg needs **2 screws**.\n- James has **40 screws**.\n\n---\n\n### Step 1: Total number of legs\nEach table has 4 legs, and there are 4 tables:\n\n$$\n4 \\text{ tables} \\times 4 \\text{ legs per table} = 16 \\text{ legs}\n$$\n\n---\n\n### Step 2: Total number of screws needed\nEach leg needs 2 screws:\n\n$$\n16 \\text{ legs} \\times 2 \\text{ screws per leg} = 32 \\text{ screws}\n$$\n\n---\n\n### Step 3: Subtract from the total screws James has\n\n$$\n40 \\text{ screws} - 32 \\text{ screws} = 8 \\text{ screws left over}\n$$\n\n---\n\n### ✅ Final Answer: **8 screws** will be left over.",
+          "num_new_tokens": 539
+        },
+        {
+          "uid": "ds120-math-040",
+          "group": "math",
+          "extract": "last_number",
+          "score": 1.0,
+          "info": {
+            "gold": "55"
+          },
+          "response": "We are given the following information:\n\n- A **whirligig** spins **five times** as fast as a **thingamabob**.\n- A **whatchamacallit** spins **eleven times faster** than a **thingamabob**.\n- A **whatchamacallit** spins at **121 meters per second**.\n\nWe are to find how fast the **whirligig** spins.\n\n---\n\n### Step 1: Define variables\n\nLet:\n\n- $ T $ = speed of the **thingamabob** (in m/s)\n- $ W $ = speed of the **whirligig** (in m/s)\n- $ C $ = speed of the **whatchamacallit** (in m/s)\n\nFrom the problem:\n\n- $ W = 5T $ (whirligig is 5 times the speed of thingamabob)\n- $ C = 11T $ (whatchamacallit is 11 times the speed of thingamabob)\n- $ C = 121 $ m/s (given)\n\n---\n\n### Step 2: Solve for $ T $\n\nFrom $ C = 11T $ and $ C = 121 $:\n\n$$\n11T = 121 \\Rightarrow T = \\frac{121}{11} = 11 \\text{ m/s}\n$$\n\n---\n\n### Step 3: Solve for $ W $\n\nFrom $ W = 5T $ and $ T = 11 $:\n\n$$\nW = 5 \\times 11 = 55 \\text{ m/s}\n$$\n\n---\n\n### ✅ Final Answer:\n\n$$\n\\boxed{55} \\text{ meters per second}\n$$\n\nSo, the **whirligig** spins at **55 m/s**.",
+          "num_new_tokens": 391
+        },
+        {
+          "uid": "ds120-math-041",
+          "group": "math",
+          "extract": "last_number",
+          "score": 1.0,
+          "info": {
+            "gold": "4500"
+          },
+          "response": "John buys:\n\n- 3 goats at $500 each:  \n  $ 3 \\times 500 = 1500 $ dollars\n\n- 2 cows at $1500 each:  \n  $ 2 \\times 1500 = 3000 $ dollars\n\nTotal amount spent:  \n$ 1500 + 3000 = 4500 $ dollars\n\n**Answer: $4500**",
+          "num_new_tokens": 391
+        },
+        {
+          "uid": "ds120-math-042",
+          "group": "math",
+          "extract": "last_number",
+          "score": 1.0,
+          "info": {
+            "gold": "300"
+          },
+          "response": "Let's break this down step by step:\n\n1. **Number of bags**: 4  \n2. **Weight per bag**: 50 pounds  \n3. **Total weight**:  \n   $ 4 \\text{ bags} \\times 50 \\text{ pounds per bag} = 200 \\text{ pounds} $\n\n4. **Cost per pound**: $1.50  \n5. **Total cost**:  \n   $ 200 \\text{ pounds} \\times 1.50 \\text{ dollars per pound} = 300 \\text{ dollars} $\n\n**Answer: $300**",
+          "num_new_tokens": 391
+        },
+        {
+          "uid": "ds120-math-043",
+          "group": "math",
+          "extract": "last_number",
+          "score": 1.0,
+          "info": {
+            "gold": "280"
+          },
+          "response": "We are given:\n\n- Rob takes **2 hours** to shingle a house.\n- Royce takes **40 minutes more than double** the time Rob takes.\n\n---\n\n### Step 1: Convert Rob's time to minutes\n\nRob takes **2 hours**, and since 1 hour = 60 minutes:\n\n$$\n2 \\text{ hours} = 2 \\times 60 = 120 \\text{ minutes}\n$$\n\n---\n\n### Step 2: Use the given relationship for Royce's time\n\nRoyce takes **40 minutes more than double** Rob's time.\n\nSo:\n\n$$\n\\text{Royce's time} = 2 \\times \\text{Rob's time} + 40\n$$\n\nSubstitute Rob's time (120 minutes):\n\n$$\n\\text{Royce's time} = 2 \\times 120 + 40 = 240 + 40 = 280 \\text{ minutes}\n$$\n\n---\n\n### ✅ Final Answer:\n\n$$\n\\boxed{280} \\text{ minutes}\n$$",
+          "num_new_tokens": 391
+        },
+        {
+          "uid": "ds120-math-044",
+          "group": "math",
+          "extract": "last_number",
+          "score": 1.0,
+          "info": {
+            "gold": "123"
+          },
+          "response": "We are given the following information:\n\n- The classroom has **30 boys**.\n- There are **3 times as many girls as boys**.\n- There are **1/10 as many nongendered children as boys**.\n\nWe are to find the **total number of children** in the classroom.\n\n---\n\n### Step 1: Number of girls\n\nIt says there are **3 times as many girls as boys**.\n\n- Number of boys = 30\n- Number of girls = $ 3 \\times 30 = 90 $\n\n---\n\n### Step 2: Number of nongendered children\n\nIt says there are **1/10 as many nongendered children as boys**.\n\n- Number of boys = 30\n- Number of nongendered children = $ \\frac{1}{10} \\times 30 = 3 $\n\n---\n\n### Step 3: Total number of children\n\nAdd up the number of boys, girls, and nongendered children:\n\n$$\n\\text{Total} = 30 \\text{ (boys)} + 90 \\text{ (girls)} + 3 \\text{ (nongendered)} = 123\n$$\n\n---\n\n### ✅ Final Answer:\n\n$$\n\\boxed{123}\n$$",
+          "num_new_tokens": 277
+        },
+        {
+          "uid": "ds120-math-045",
+          "group": "math",
+          "extract": "last_number",
+          "score": 1.0,
+          "info": {
+            "gold": "150"
+          },
+          "response": "We are given the following information:\n\n- **Ali** is a dean of a **private school** and teaches **one class**.\n- **John** is a dean of a **public school** and teaches **two classes**.\n- Each of **John’s classes** has **1/8 the capacity** of **Ali’s class**.\n- **Ali’s class** has a capacity of **120 students**.\n\n---\n\n### Step 1: Find the capacity of one of John’s classes\n\nEach of John’s classes has:\n\n$$\n\\frac{1}{8} \\times 120 = 15 \\text{ students}\n$$\n\n---\n\n### Step 2: Find the total capacity of John’s two classes\n\n$$\n2 \\times 15 = 30 \\text{ students}\n$$\n\n---\n\n### Step 3: Find the total capacity of both schools\n\n- **Ali’s school** has **1 class** with **120 students**.\n- **John’s school** has **2 classes** with **15 students each**, totaling **30 students**.\n\nSo, the **combined capacity** of both schools is:\n\n$$\n120 + 30 = \\boxed{150}\n$$\n\n---\n\n### ✅ Final Answer: **150 students**.",
+          "num_new_tokens": 277
+        },
+        {
+          "uid": "ds120-math-046",
+          "group": "math",
+          "extract": "last_number",
+          "score": 1.0,
+          "info": {
+            "gold": "1375"
+          },
+          "response": "To find the total amount the real estate agent spent on buying all the ads, we need to calculate the cost of the newspaper ads and the cost of the television ads separately, then add them together.\n\n---\n\n**Step 1: Cost of newspaper ads**\n\n- Cost per newspaper ad = $5\n- Number of newspaper ads = 50\n\n$$\n\\text{Total cost for newspaper ads} = 5 \\times 50 = 250\n$$\n\n---\n\n**Step 2: Cost of television ads**\n\n- Cost per television ad = $75\n- Number of television ads = 15\n\n$$\n\\text{Total cost for television ads} = 75 \\times 15 = 1125\n$$\n\n---\n\n**Step 3: Total cost**\n\n$$\n\\text{Total cost} = 250 + 1125 = 1375\n$$\n\n---\n\n**Final Answer:** The real estate agent spent **$1375** on buying all the ads.",
+          "num_new_tokens": 277
+        },
+        {
+          "uid": "ds120-math-047",
+          "group": "math",
+          "extract": "last_number",
+          "score": 1.0,
+          "info": {
+            "gold": "20"
+          },
+          "response": "We are told that Skyler has **100 hats** in total, and they are **red, blue, and white**.\n\n---\n\n### Step 1: Number of red hats\n\nWe are told that **half of the hats are red**.\n\n$$\n\\text{Red hats} = \\frac{1}{2} \\times 100 = 50\n$$\n\n---\n\n### Step 2: Remaining hats after red\n\n$$\n\\text{Remaining hats} = 100 - 50 = 50\n$$\n\n---\n\n### Step 3: Number of blue hats\n\nWe are told that **3/5 of the remaining hats are blue**.\n\n$$\n\\text{Blue hats} = \\frac{3}{5} \\times 50 = 30\n$$\n\n---\n\n### Step 4: Number of white hats\n\nThe rest of the hats are white.\n\n$$\n\\text{White hats} = 50 - 30 = 20\n$$\n\n---\n\n### ✅ Final Answer:\n\n$$\n\\boxed{20}\n$$\n\nSkyler has **20 white hats**.",
+          "num_new_tokens": 277
+        },
+        {
+          "uid": "ds120-math-048",
+          "group": "math",
+          "extract": "last_number",
+          "score": 1.0,
+          "info": {
+            "gold": "36"
+          },
+          "response": "We are given:\n\n- Cost of 1 eraser = $2  \n- Cost of 1 pencil = $3  \n\nWe need to find the total cost of 6 erasers and 8 pencils.\n\n### Step 1: Calculate the cost of 6 erasers  \n$$\n6 \\text{ erasers} \\times \\$2/\\text{eraser} = \\$12\n$$\n\n### Step 2: Calculate the cost of 8 pencils  \n$$\n8 \\text{ pencils} \\times \\$3/\\text{pencil} = \\$24\n$$\n\n### Step 3: Add the two amounts  \n$$\n\\$12 + \\$24 = \\$36\n$$\n\n### Final Answer:  \n$$\n\\boxed{\\$36}\n$$",
+          "num_new_tokens": 241
+        },
+        {
+          "uid": "ds120-math-049",
+          "group": "math",
+          "extract": "last_number",
+          "score": 1.0,
+          "info": {
+            "gold": "18"
+          },
+          "response": "Let's break down the problem step by step.\n\n---\n\n### **Step 1: Total eggs laid per day**\nJanet’s ducks lay **16 eggs per day**.\n\n---\n\n### **Step 2: Eggs eaten for breakfast**\nShe eats **3 eggs for breakfast every morning**.\n\nSo, **3 eggs** are used for breakfast.\n\n---\n\n### **Step 3: Eggs used for muffins**\nShe bakes muffins **every day with 4 eggs**.\n\nSo, **4 eggs** are used for muffins.\n\n---\n\n### **Step 4: Total eggs used**\nEggs used for breakfast + eggs used for muffins  \n= 3 + 4 = **7 eggs**\n\n---\n\n### **Step 5: Eggs remaining for sale**\nTotal eggs – eggs used  \n= 16 – 7 = **9 eggs**\n\n---\n\n### **Step 6: Money made from selling eggs**\nShe sells the remaining **9 eggs** at **$2 per egg**.\n\nSo, total money made = 9 × 2 = **$18**\n\n---\n\n### ✅ Final Answer:\n**$18** per day at the farmers' market.",
+          "num_new_tokens": 241
+        },
+        {
+          "uid": "ds120-instr-000",
+          "group": "instruction",
+          "extract": "ifeval_strict",
+          "score": 1.0,
+          "info": {
+            "ifeval": "fallback_nonempty ('instruction_id_list')"
+          },
+          "response": "A good scientific hypothesis is testable and falsifiable it proposes a clear relationship between variables it is based on existing knowledge it leads to further questions and investigations.",
+          "num_new_tokens": 241
+        },
+        {
+          "uid": "ds120-instr-001",
+          "group": "instruction",
+          "extract": "ifeval_strict",
+          "score": 1.0,
+          "info": {
+            "ifeval": "fallback_nonempty ('instruction_id_list')"
+          },
+          "response": "The water cycle is the continuous movement of water on Earth. Water evaporates from oceans lakes and rivers. Water vapor rises into the atmosphere. Water condenses into clouds. Clouds release rain snow or hail. Water flows into rivers lakes and oceans. Water is absorbed into the ground. Water flows into streams and rivers. Water returns to the ocean. The cycle repeats itself constantly.",
+          "num_new_tokens": 241
+        },
+        {
+          "uid": "ds120-instr-002",
+          "group": "instruction",
+          "extract": "ifeval_strict",
+          "score": 1.0,
+          "info": {
+            "ifeval": "fallback_nonempty ('instruction_id_list')"
+          },
+          "response": "A refrigerator works by using a refrigerant that circulates through a closed system, absorbing heat from the inside and releasing it outside. Moreover, a compressor compresses the refrigerant, raising its temperature and pressure. Moreover, this process allows the refrigerator to maintain a cool environment, keeping food fresh.",
+          "num_new_tokens": 414
+        },
+        {
+          "uid": "ds120-instr-003",
+          "group": "instruction",
+          "extract": "ifeval_strict",
+          "score": 1.0,
+          "info": {
+            "ifeval": "fallback_nonempty ('instruction_id_list')"
+          },
+          "response": "- Weather refers to short-term atmospheric conditions.  \n- Climate describes long-term average atmospheric conditions.  \n- Weather is typically measured over days or weeks.  \n- Climate is analyzed over decades or longer periods.  \n- Weather includes daily temperature, precipitation, and wind.  \n- Climate includes average temperature, precipitation, and wind patterns.  \n- Weather changes rapidly and is unpredictable.  \n- Climate changes slowly and is predictable over time.  \n- Weather is influenced by local factors like geography and time of day.  \n- Climate is influenced by global factors like ocean currents and greenhouse gases.  \n- Weather is a snapshot of current conditions.  \n- Climate is a trend of conditions over time.  \n- Weather can change within hours or days.  \n- Climate changes over years or centuries.  \n- Weather is often described using terms like \"sunny\" or \"rainy.\"  \n- Climate is described using terms like \"warm\" or \"humid.\"  \n- Weather is highly variable from one day to the next.  \n- Climate is relatively stable within a region.  \n- Weather is affected by immediate atmospheric conditions.  \n- Climate is affected by long-term environmental changes.  \n- Weather is a daily phenomenon.  \n- Climate is a seasonal or annual phenomenon.  \n- Weather is influenced by local weather systems.  \n- Climate is influenced by global climate systems.  \n- Weather is a temporary state of the atmosphere.  \n- Climate is a persistent state of the atmosphere.  \n- Weather is often studied in meteorology.  \n- Climate is often studied in climatology.  \n- Weather is used for daily planning and activities.  \n- Climate is used for long-term planning and policy.  \n- Weather is a result of immediate atmospheric processes.  \n- Climate is a result of long-term atmospheric processes.  \n- Weather is a local phenomenon.  \n- Climate is a regional or global phenomenon.  \n- Weather is a natural occurrence.  \n- Climate is a natural pattern.  \n- Weather is a short-term fluctuation.  \n- Climate is a long-term trend.",
+          "num_new_tokens": 414
+        },
+        {
+          "uid": "ds120-instr-004",
+          "group": "instruction",
+          "extract": "ifeval_strict",
+          "score": 1.0,
+          "info": {
+            "ifeval": "fallback_nonempty ('instruction_id_list')"
+          },
+          "response": "\"A good scientific hypothesis is a testable, falsifiable, and specific statement that proposes a possible explanation for a phenomenon, based on observations and existing knowledge. It should clearly state the relationship between variables and be grounded in logical reasoning, allowing for experimentation or observation to determine its validity.\"",
+          "num_new_tokens": 414
+        },
+        {
+          "uid": "ds120-instr-005",
+          "group": "instruction",
+          "extract": "ifeval_strict",
+          "score": 1.0,
+          "info": {
+            "ifeval": "fallback_nonempty ('instruction_id_list')"
+          },
+          "response": "A refrigerator works by removing heat from inside the container and transferring it to the outside. It uses a refrigerant that changes state between liquid and gas. The refrigerant absorbs heat from the inside of the refrigerator when it evaporates. The gas is then compressed which increases its temperature. The hot gas releases heat to the outside environment. The refrigerant then cools down and returns to a liquid state. This cycle continues repeatedly to keep the inside of the refrigerator cold.",
+          "num_new_tokens": 414
+        },
+        {
+          "uid": "ds120-instr-006",
+          "group": "instruction",
+          "extract": "ifeval_strict",
+          "score": 1.0,
+          "info": {
+            "ifeval": "fallback_nonempty ('instruction_id_list')"
+          },
+          "response": "The sky appears blue due to a phenomenon called Rayleigh scattering. When sunlight enters the Earth's atmosphere, it collides with molecules and small particles in the air. Shorter wavelengths of light, such as blue and violet, are scattered more efficiently than longer wavelengths like red and yellow. This scattered blue light is dispersed in all directions, making the sky appear blue to observers on the ground.\n\nNevertheless, the sky does not appear violet because our eyes are more sensitive to blue light and the sun emits more blue light than violet. However, the actual color we perceive is a combination of all the scattered light, and the human eye's sensitivity plays a key role in how we interpret the color of the sky.",
+          "num_new_tokens": 167
+        },
+        {
+          "uid": "ds120-instr-007",
+          "group": "instruction",
+          "extract": "ifeval_strict",
+          "score": 1.0,
+          "info": {
+            "ifeval": "fallback_nonempty ('instruction_id_list')"
+          },
+          "response": "The water cycle, also known as the hydrological cycle, is a continuous process that describes the movement of water on, above, and below the surface of the Earth. It involves several key processes: evaporation, condensation, precipitation, infiltration, and runoff. Water evaporates from oceans, lakes, and rivers, turning into water vapor. This vapor rises and cools, leading to condensation, which forms clouds. When the clouds become heavy, precipitation occurs in the form of rain, snow, or hail. The water then flows back into bodies of water or seeps into the ground, completing the cycle.\n\nConsequently, the water cycle plays a crucial role in distributing water across the Earth's surface, maintaining ecosystems, and regulating climate. Consequently, it ensures that water is constantly recycled and available for all living organisms.",
+          "num_new_tokens": 167
+        },
+        {
+          "uid": "ds120-instr-008",
+          "group": "instruction",
+          "extract": "ifeval_strict",
+          "score": 1.0,
+          "info": {
+            "ifeval": "fallback_nonempty ('instruction_id_list')"
+          },
+          "response": "weather refers to short-term changes in the atmosphere, such as temperature, humidity, precipitation, and wind, that occur over hours or days. climate refers to the average weather patterns in an area over a long period of time, typically 30 years or more. weather is what happens on a day-to-day basis, while climate is the overall pattern of weather over many years.",
+          "num_new_tokens": 167
+        },
+        {
+          "uid": "ds120-instr-009",
+          "group": "instruction",
+          "extract": "ifeval_strict",
+          "score": 1.0,
+          "info": {
+            "ifeval": "fallback_nonempty ('instruction_id_list')"
+          },
+          "response": "Weather refers to the short term conditions of the atmosphere such as temperature humidity wind and precipitation  \nClimate refers to the long term average of weather patterns in a particular area over many years",
+          "num_new_tokens": 167
+        },
+        {
+          "uid": "ds120-instr-010",
+          "group": "instruction",
+          "extract": "ifeval_strict",
+          "score": 0.0,
+          "info": {
+            "truncated": true
+          },
+          "response": "- Vaccines introduce a weakened or inactive form of a pathogen into the body.  \n- They stimulate the immune system to recognize and fight the pathogen.  \n- The immune system produces antibodies in response to the vaccine.  \n- Antibodies help neutralize the pathogen if the person is exposed to it later.  \n- Vaccines train the immune system to remember how to fight the pathogen.  \n- This memory allows for a faster and stronger immune response.  \n- Vaccines help the body develop immunity without causing the disease.  \n- They reduce the severity of the disease if infection occurs.  \n- Vaccines prevent the spread of infectious diseases in communities.  \n- They help protect those who cannot receive vaccines due to health conditions.  \n- Vaccines are a key tool in preventing epidemics and pandemics.  \n- They contribute to herd immunity, protecting vulnerable populations.  \n- Vaccines are tested for safety and effectiveness before approval.  \n- They are developed through extensive research and clinical trials.  \n- Vaccines are updated as new strains of pathogens emerge.  \n- They help reduce the burden on healthcare systems.  \n- Vaccines are one of the most effective public health interventions.  \n- They have saved millions of lives worldwide.  \n- Vaccines are essential for preventing diseases like polio and measles.  \n- They help control the spread of diseases like influenza and HIV.  \n- Vaccines are used to prevent diseases such as hepatitis and tuberculosis.  \n- They are crucial in preventing diseases like rabies and tetanus.  \n- Vaccines help protect against diseases like chickenpox and whooping cough.  \n- They are used to prevent diseases such as mumps and rubella.  \n- Vaccines help reduce the risk of diseases like diphtheria and pertussis.  \n- They are essential in preventing diseases like measles and mumps.  \n- Vaccines help protect against diseases such as meningitis and pneumococcal disease.  \n- They are used to prevent diseases like shingles and influenza.  \n- Vaccines help reduce the risk of diseases such as hepatitis B and C.  \n- They are crucial in preventing diseases like HIV and AIDS.  \n- Vaccines help protect against diseases such as Lyme disease and rabies.  \n- They are used to prevent diseases like malaria and yellow fever.  \n- Vaccines help reduce the spread of diseases such as Ebola and Zika.  \n- They are essential in preventing diseases like smallpox and polio.  \n- Vaccines help protect against diseases such as influenza and measles.  \n- They are used to prevent diseases like whooping cough and tetanus.  \n- Vaccines help reduce the risk of diseases such as hepatitis A and B.  \n- They are crucial in preventing diseases like diphtheria and pertussis.  \n- Vaccines help protect against diseases such as meningitis and pneumococcal disease.  \n- They are used to prevent diseases like shingles and influenza.  \n- Vaccines help reduce the risk of diseases such as hepatitis C and HIV.  \n- They are essential in preventing diseases like measles and mumps.  \n- Vaccines help protect against diseases such as rubella and chickenpox.  \n- They are used to prevent diseases like whooping cough and tetanus.  \n- Vaccines help reduce the spread of diseases such as influenza and measles.  \n- They are crucial in preventing diseases like polio and smallpox.  \n- Vaccines help protect against diseases such as meningitis and pneumococcal disease.  \n- They are used to prevent diseases like shingles and influenza.  \n- Vaccines help reduce the risk of diseases such as hepatitis B and C.  \n- They are essential in preventing diseases like diphtheria and pertussis.  \n- Vaccines help",
+          "num_new_tokens": 768
+        },
+        {
+          "uid": "ds120-instr-011",
+          "group": "instruction",
+          "extract": "ifeval_strict",
+          "score": 0.0,
+          "info": {
+            "truncated": true
+          },
+          "response": "The sky appears blue due to a phenomenon called Rayleigh scattering. Shorter wavelengths of light, like blue, are scattered more by the atmosphere than longer wavelengths, such as red. Furthermore, this scattering makes blue light spread throughout the sky. Furthermore, during the day, the blue light reaches our eyes from all directions, giving the sky its blue color. This effect is more pronounced in clear weather and contributes to the overall appearance of the sky.",
+          "num_new_tokens": 768
+        },
+        {
+          "uid": "ds120-instr-012",
+          "group": "instruction",
+          "extract": "ifeval_strict",
+          "score": 0.0,
+          "info": {
+            "truncated": true
+          },
+          "response": "The water cycle involves the continuous movement of water on, above, and below the Earth's surface. It includes evaporation, condensation, precipitation, and collection. Water evaporates from oceans, lakes, and rivers, forms clouds through condensation, then falls as rain or snow. It collects in bodies of water or infiltrates the ground, repeating the cycle.",
+          "num_new_tokens": 768
+        },
+        {
+          "uid": "ds120-instr-013",
+          "group": "instruction",
+          "extract": "ifeval_strict",
+          "score": 0.0,
+          "info": {
+            "truncated": true
+          },
+          "response": "Regular exercise offers numerous benefits for both physical and mental health. It helps improve cardiovascular health, strengthen muscles and bones, and enhance overall endurance. However, it is important to note that exercise should be approached in a balanced and sustainable manner to avoid injury or burnout. Consequently, when individuals engage in regular physical activity, they often experience increased energy levels, better mood, and a reduced risk of chronic diseases such as obesity, diabetes, and heart disease.",
+          "num_new_tokens": 768
+        },
+        {
+          "uid": "ds120-instr-014",
+          "group": "instruction",
+          "extract": "ifeval_strict",
+          "score": 1.0,
+          "info": {
+            "ifeval": "fallback_nonempty ('instruction_id_list')"
+          },
+          "response": "Inflation occurs when there is too much money in the economy. Too much money chasing too few goods. This leads to higher prices. Demand exceeds supply. Central banks may increase money supply. Government spending rises. Production cannot keep up with demand. Expectations of higher prices push prices even higher. All these factors contribute to inflation.",
+          "num_new_tokens": 67
+        },
+        {
+          "uid": "ds120-instr-015",
+          "group": "instruction",
+          "extract": "ifeval_strict",
+          "score": 1.0,
+          "info": {
+            "ifeval": "fallback_nonempty ('instruction_id_list')"
+          },
+          "response": "Vaccines protect by training the immune system to recognize and fight pathogens, preventing disease through immunity.",
+          "num_new_tokens": 67
+        },
+        {
+          "uid": "ds120-instr-016",
+          "group": "instruction",
+          "extract": "ifeval_strict",
+          "score": 1.0,
+          "info": {
+            "ifeval": "fallback_nonempty ('instruction_id_list')"
+          },
+          "response": "Regular exercise offers numerous benefits, including improved cardiovascular health, enhanced mental well-being, better weight management, increased strength and flexibility, and a stronger immune system. Moreover.",
+          "num_new_tokens": 67
+        },
+        {
+          "uid": "ds120-instr-017",
+          "group": "instruction",
+          "extract": "ifeval_strict",
+          "score": 1.0,
+          "info": {
+            "ifeval": "fallback_nonempty ('instruction_id_list')"
+          },
+          "response": "Weather refers to short-term atmospheric conditions, while climate describes long-term average patterns and trends of weather in a region.",
+          "num_new_tokens": 67
+        },
+        {
+          "uid": "ds120-instr-018",
+          "group": "instruction",
+          "extract": "ifeval_strict",
+          "score": 0.0,
+          "info": {
+            "truncated": true
+          },
+          "response": "regular exercise improves heart health, strengthens muscles and bones, helps control weight, boosts mood and energy levels, enhances sleep quality, reduces the risk of chronic diseases, increases longevity, and improves overall mental health.",
+          "num_new_tokens": 768
+        },
+        {
+          "uid": "ds120-instr-019",
+          "group": "instruction",
+          "extract": "ifeval_strict",
+          "score": 0.0,
+          "info": {
+            "truncated": true
+          },
+          "response": "- The sky appears blue due to the way sunlight interacts with the Earth's atmosphere.  \n- Sunlight is made up of different colors, each with its own wavelength.  \n- Shorter wavelengths of light, like blue and violet, scatter more easily in the atmosphere.  \n- This scattering is called Rayleigh scattering.  \n- Blue light is scattered more than red light because it has a shorter wavelength.  \n- Violet light is scattered even more than blue, but the sky doesn’t appear violet.  \n- Human eyes are more sensitive to blue light than violet.  \n- The sun emits more blue light than violet.  \n- The atmosphere scatters blue light in all directions.  \n- This scattered blue light reaches our eyes from all directions.  \n- The sky appears blue because of the scattered blue light.  \n- The sun is a white star, but it appears yellow due to atmospheric scattering.  \n- The Earth's atmosphere filters out some of the sunlight.  \n- The blue light is scattered by molecules and small particles in the air.  \n- Larger particles, like dust or water droplets, scatter light differently.  \n- The scattering of light depends on the size of the particles.  \n- Rayleigh scattering is more effective for smaller particles.  \n- The atmosphere is mostly nitrogen and oxygen molecules.  \n- These molecules are much smaller than the wavelength of visible light.  \n- The scattering of light is inversely proportional to the fourth power of the wavelength.  \n- Blue light has a shorter wavelength than red light.  \n- This means blue light is scattered more than red light.  \n- The blue light is scattered in all directions, creating the blue sky.  \n- The scattered blue light is what we see when we look up.  \n- The sky appears blue during the day because of this scattering.  \n- At sunrise or sunset, the sky appears red or orange.  \n- This is because the sunlight has to pass through more of the atmosphere.  \n- The longer path causes more scattering of blue light.  \n- The remaining light that reaches our eyes is mostly red and orange.  \n- The sky appears red or orange during sunrise and sunset.  \n- The scattering of light is more pronounced at lower angles.  \n- The blue light is scattered away from the direct path of the sunlight.  \n- The scattered blue light is what we perceive as the sky’s color.  \n- The human eye is more sensitive to blue light than to other colors.  \n- The scattering of blue light is more intense than that of other colors.  \n- The atmosphere acts as a filter for the sunlight.  \n- The blue light is scattered in all directions, creating a blue sky.  \n- The blue light is scattered by the molecules in the atmosphere.  \n- The scattering of light is a physical phenomenon.  \n- The scattering of light is a result of the interaction between light and matter.  \n- The atmosphere is a medium that scatters light.  \n- The scattering of light is a key factor in the color of the sky.  \n- The color of the sky is determined by the scattering of light.  \n- The scattering of light is a natural phenomenon.  \n- The blue sky is a result of the scattering of blue light.  \n- The blue sky is a result of the way light interacts with the atmosphere.  \n- The blue sky is a result of the way light is scattered in the atmosphere.  \n- The blue sky is a result of the way light is scattered by the atmosphere.  \n- The blue sky is a result of the way light is scattered by the atmosphere.  \n- The blue sky is a result of the way light is scattered by the atmosphere.  \n- The blue sky is a result of the way light is scattered by the atmosphere.  \n- The blue sky is a result of the",
+          "num_new_tokens": 768
+        },
+        {
+          "uid": "ds120-logic-000",
+          "group": "logic",
+          "extract": "keyword",
+          "score": 0.0,
+          "info": {
+            "truncated": true
+          },
+          "response": "A is the tallest.",
+          "num_new_tokens": 768
+        },
+        {
+          "uid": "ds120-logic-001",
+          "group": "logic",
+          "extract": "keyword",
+          "score": 0.0,
+          "info": {
+            "truncated": true
+          },
+          "response": "X.",
+          "num_new_tokens": 768
+        },
+        {
+          "uid": "ds120-logic-002",
+          "group": "logic",
+          "extract": "keyword",
+          "score": 1.0,
+          "info": {
+            "gold": "no"
+          },
+          "response": "No.",
+          "num_new_tokens": 299
+        },
+        {
+          "uid": "ds120-logic-003",
+          "group": "logic",
+          "extract": "keyword",
+          "score": 1.0,
+          "info": {
+            "gold": "no"
+          },
+          "response": "No.",
+          "num_new_tokens": 299
+        },
+        {
+          "uid": "ds120-logic-004",
+          "group": "logic",
+          "extract": "keyword",
+          "score": 1.0,
+          "info": {
+            "gold": "1"
+          },
+          "response": "Let's break down the problem step by step.\n\n### Given:\n- **Mary has 3 brothers.**\n- **Each brother has 2 sisters.**\n\nWe are asked: **How many sisters does Mary have?**\n\n---\n\n### Step 1: Understand the relationships\n\n- **Mary has 3 brothers.**  \n  That means there are **3 boys** in the family, including Mary's brothers.\n\n- **Each brother has 2 sisters.**  \n  So, **each of the 3 brothers has 2 sisters.**\n\nNow, we need to figure out **how many sisters Mary has**.\n\n---\n\n### Step 2: Determine the number of girls in the family\n\nLet’s assume the family has:\n\n- **Mary** (a girl)\n- **3 brothers** (boys)\n- **Other sisters** (girls)\n\nEach brother has **2 sisters**. That includes **Mary** and **any other sisters**.\n\nSo, if each brother has **2 sisters**, and **Mary is one of them**, then there must be **1 more sister** in the family.\n\nSo, the family has:\n\n- **Mary** (1 girl)\n- **1 other sister**\n- **3 brothers**\n\nThat makes a total of **2 girls** in the family.\n\n---\n\n### Step 3: Answer the question\n\n**How many sisters does Mary have?**\n\nMary has **1 sister**.\n\n---\n\n### ✅ Final Answer: **1** sister.",
+          "num_new_tokens": 299
+        },
+        {
+          "uid": "ds120-logic-005",
+          "group": "logic",
+          "extract": "keyword",
+          "score": 1.0,
+          "info": {
+            "gold": "9"
+          },
+          "response": "The riddle says:\n\n**\"A farmer has 17 sheep. All but 9 run away. How many remain?\"**\n\nLet's break it down:\n\n- The farmer has **17 sheep**.\n- **\"All but 9 run away\"** means **17 - 9 = 8** sheep run away.\n- So, **9 sheep remain**.\n\n**Answer: 9 sheep remain.**",
+          "num_new_tokens": 299
+        },
+        {
+          "uid": "ds120-logic-006",
+          "group": "logic",
+          "extract": "keyword",
+          "score": 1.0,
+          "info": {
+            "gold": "John"
+          },
+          "response": "The fifth son's name is **John**.\n\nThe riddle plays on the way the question is phrased. It says:\n\n> \"John's father has 5 sons: One, Two, Three, Four, and what is the fifth son's name?\"\n\nThe first four sons are named One, Two, Three, and Four. The fifth son is **John** — the father of the other sons.",
+          "num_new_tokens": 129
+        },
+        {
+          "uid": "ds120-logic-007",
+          "group": "logic",
+          "extract": "keyword",
+          "score": 0.0,
+          "info": {
+            "gold": "neither"
+          },
+          "response": "Equal",
+          "num_new_tokens": 129
+        },
+        {
+          "uid": "ds120-logic-008",
+          "group": "logic",
+          "extract": "keyword",
+          "score": 1.0,
+          "info": {
+            "gold": "no"
+          },
+          "response": "No.",
+          "num_new_tokens": 129
+        },
+        {
+          "uid": "ds120-logic-009",
+          "group": "logic",
+          "extract": "keyword",
+          "score": 1.0,
+          "info": {
+            "gold": "Friday"
+          },
+          "response": "To find out what day of the week it will be in 100 days from today (Wednesday), we can use modular arithmetic.\n\nThere are 7 days in a week, so we divide 100 by 7 and find the remainder:\n\n$$\n100 \\div 7 = 14 \\text{ remainder } 2\n$$\n\nThis means 100 days from today is the same as 2 days after today.\n\nToday is **Wednesday**, so:\n\n- 1 day from today is **Thursday**\n- 2 days from today is **Friday**\n\n### Answer: **Friday**.",
+          "num_new_tokens": 129
+        },
+        {
+          "uid": "ds120-logic-010",
+          "group": "logic",
+          "extract": "keyword",
+          "score": 0.0,
+          "info": {
+            "gold": "nowhere"
+          },
+          "response": "You don't bury survivors.",
+          "num_new_tokens": 45
+        },
+        {
+          "uid": "ds120-logic-011",
+          "group": "logic",
+          "extract": "keyword",
+          "score": 1.0,
+          "info": {
+            "gold": "no"
+          },
+          "response": "No.",
+          "num_new_tokens": 45
+        },
+        {
+          "uid": "ds120-logic-012",
+          "group": "logic",
+          "extract": "keyword",
+          "score": 1.0,
+          "info": {
+            "gold": "3"
+          },
+          "response": "You have **3 apples**.\n\nHere's the breakdown:\n\n- There are 5 apples in the basket.\n- You take away 3 apples.\n- So, you now have **3 apples** in your possession.",
+          "num_new_tokens": 45
+        },
+        {
+          "uid": "ds120-logic-013",
+          "group": "logic",
+          "extract": "keyword",
+          "score": 1.0,
+          "info": {
+            "gold": "no"
+          },
+          "response": "No.",
+          "num_new_tokens": 45
+        },
+        {
+          "uid": "ds120-logic-014",
+          "group": "logic",
+          "extract": "keyword",
+          "score": 1.0,
+          "info": {
+            "gold": "60"
+          },
+          "response": "You are given **3 pills**, and you are told to take **one every half hour**.\n\nLet’s break it down:\n\n- **First pill**: Taken at time 0 (start).\n- **Second pill**: Taken 30 minutes after the first.\n- **Third pill**: Taken 30 minutes after the second.\n\nSo the **last pill** is taken **30 minutes after the second pill**, which is **60 minutes after the first pill**.\n\n### Answer: **60 minutes**.",
+          "num_new_tokens": 486
+        },
+        {
+          "uid": "ds120-logic-015",
+          "group": "logic",
+          "extract": "keyword",
+          "score": 1.0,
+          "info": {
+            "gold": "24"
+          },
+          "response": "We are given:\n\n1. **Tom is twice as old as Jerry was when Tom was as old as Jerry is now.**\n2. **Combined age is 42.**\n\nLet’s define:\n\n- Let $ T $ be Tom's current age.\n- Let $ J $ be Jerry's current age.\n\nWe are told:\n\n$$\nT + J = 42 \\tag{1}\n$$\n\nNow, let's interpret the first statement:\n\n> \"Tom is twice as old as Jerry was when Tom was as old as Jerry is now.\"\n\nLet’s break this down step by step.\n\nLet’s say **x years ago**, Tom was as old as Jerry is now. That is:\n\n$$\nT - x = J \\tag{2}\n$$\n\nAt that time, Jerry was $ J - x $ years old.\n\nSo, the statement says:\n\n> Tom is **twice** as old as Jerry was at that time.\n\nSo:\n\n$$\nT = 2(J - x) \\tag{3}\n$$\n\nFrom equation (2), we can solve for $ x $:\n\n$$\nx = T - J \\tag{4}\n$$\n\nNow substitute equation (4) into equation (3):\n\n$$\nT = 2(J - (T - J)) = 2(2J - T)\n$$\n\nSimplify:\n\n$$\nT = 2(2J - T) = 4J - 2T\n$$\n\nNow solve for $ T $:\n\n$$\nT + 2T = 4J \\\\\n3T = 4J \\\\\nT = \\frac{4}{3}J \\tag{5}\n$$\n\nNow use equation (1): $ T + J = 42 $\n\nSubstitute $ T = \\frac{4}{3}J $ into this:\n\n$$\n\\frac{4}{3}J + J = 42 \\\\\n\\frac{4}{3}J + \\frac{3}{3}J = 42 \\\\\n\\frac{7}{3}J = 42 \\\\\nJ = 42 \\times \\frac{3}{7} = 18\n$$\n\nNow find $ T $:\n\n$$\nT = \\frac{4}{3} \\times 18 = 24\n$$\n\n### ✅ Final Answer: **24**",
+          "num_new_tokens": 486
+        },
+        {
+          "uid": "ds120-logic-016",
+          "group": "logic",
+          "extract": "keyword",
+          "score": 0.0,
+          "info": {
+            "gold": "2"
+          },
+          "response": "You are in **second place**.",
+          "num_new_tokens": 486
+        },
+        {
+          "uid": "ds120-logic-017",
+          "group": "logic",
+          "extract": "keyword",
+          "score": 1.0,
+          "info": {
+            "gold": "12"
+          },
+          "response": "12 months.",
+          "num_new_tokens": 486
+        },
+        {
+          "uid": "ds120-logic-018",
+          "group": "logic",
+          "extract": "keyword",
+          "score": 1.0,
+          "info": {
+            "gold": "1200"
+          },
+          "response": "Anna reads 4 books each month, and each book has 300 pages.\n\nSo, the total number of pages she reads monthly is:\n\n$$\n4 \\times 300 = 1200\n$$\n\n**Answer: 1200**",
+          "num_new_tokens": 319
+        },
+        {
+          "uid": "ds120-logic-019",
+          "group": "logic",
+          "extract": "keyword",
+          "score": 1.0,
+          "info": {
+            "gold": "4.0"
+          },
+          "response": "We are given:\n\n- Worker A can build a wall in **6 hours**.\n- Worker B can build the same wall in **12 hours**.\n\nWe want to find how long it will take for **both workers to build the wall together**.\n\n---\n\n### Step 1: Find the work rates\n\n- Worker A's rate: $ \\frac{1}{6} $ of the wall per hour.\n- Worker B's rate: $ \\frac{1}{12} $ of the wall per hour.\n\n---\n\n### Step 2: Add the rates\n\n$$\n\\text{Combined rate} = \\frac{1}{6} + \\frac{1}{12} = \\frac{2}{12} + \\frac{1}{12} = \\frac{3}{12} = \\frac{1}{4}\n$$\n\nSo, together, they build $ \\frac{1}{4} $ of the wall per hour.\n\n---\n\n### Step 3: Find the time to build the whole wall\n\n$$\n\\text{Time} = \\frac{1}{\\text{Rate}} = \\frac{1}{\\frac{1}{4}} = 4 \\text{ hours}\n$$\n\n---\n\n### Final Answer:\n\n**4.0** hours (rounded to 1 decimal place).",
+          "num_new_tokens": 319
+        },
+        {
+          "uid": "ds120-logic-020",
+          "group": "logic",
+          "extract": "keyword",
+          "score": 1.0,
+          "info": {
+            "gold": "8"
+          },
+          "response": "We are given:\n\n- The snail climbs **3 meters** up the well each **day**.\n- It slips down **2 meters** each **night**.\n- The well is **10 meters** deep.\n\nWe need to find how many **days** it takes for the snail to **exit** the well.\n\n---\n\n### Step-by-step:\n\nEach **day-night cycle** (1 day and 1 night), the snail makes a **net gain** of:\n\n$$\n3 \\text{ m (up)} - 2 \\text{ m (down)} = 1 \\text{ m}\n$$\n\nSo, after each full day-night cycle, the snail climbs **1 meter**.\n\nBut once the snail reaches or exceeds the top of the well (10 meters), it **doesn't slip back** — it **exits**.\n\nSo we need to find how many full cycles it takes to get **within 3 meters** of the top (since the snail can climb the remaining 3 meters in one day and exit).\n\nLet’s work backwards:\n\n- After **7 full cycles** (7 days and 7 nights), the snail has climbed:\n\n$$\n7 \\text{ m}\n$$\n\nNow, on the **8th day**, the snail climbs **3 meters**, reaching:\n\n$$\n7 + 3 = 10 \\text{ m}\n$$\n\nSo the snail **exits** on the **8th day**.\n\n---\n\n### ✅ Final Answer: **8** days.",
+          "num_new_tokens": 319
+        },
+        {
+          "uid": "ds120-logic-021",
+          "group": "logic",
+          "extract": "keyword",
+          "score": 0.0,
+          "info": {
+            "gold": "1995"
+          },
+          "response": "Kate was born in **1990**.  \nHer sister is **5 years younger** than Kate.\n\nTo find the birth year of the sister, subtract 5 years from 1990:\n\n$$\n1990 - 5 = 1985\n$$\n\n**Answer: The sister was born in 1985.**",
+          "num_new_tokens": 319
+        },
+        {
+          "uid": "ds120-logic-022",
+          "group": "logic",
+          "extract": "keyword",
+          "score": 1.0,
+          "info": {
+            "gold": "13"
+          },
+          "response": "We are given that the **sum of three consecutive integers** is **42**, and we are to find the **smallest** of those integers.\n\n---\n\n### Step 1: Define the integers\n\nLet the three consecutive integers be:\n\n- $ x $ (the smallest),\n- $ x + 1 $ (the next one),\n- $ x + 2 $ (the largest).\n\n---\n\n### Step 2: Write the equation\n\nThe sum of these three numbers is:\n\n$$\nx + (x + 1) + (x + 2) = 42\n$$\n\nSimplify the left-hand side:\n\n$$\nx + x + 1 + x + 2 = 42 \\\\\n3x + 3 = 42\n$$\n\n---\n\n### Step 3: Solve for $ x $\n\n$$\n3x + 3 = 42 \\\\\n3x = 42 - 3 = 39 \\\\\nx = \\frac{39}{3} = 13\n$$\n\n---\n\n### ✅ Final Answer:\n\n$$\n\\boxed{13}\n$$",
+          "num_new_tokens": 229
+        },
+        {
+          "uid": "ds120-logic-023",
+          "group": "logic",
+          "extract": "keyword",
+          "score": 0.0,
+          "info": {
+            "gold": "1/36"
+          },
+          "response": "When two dice are rolled, each die has 6 faces, so there are:\n\n$$\n6 \\times 6 = 36\n$$\n\npossible outcomes.\n\nWe are asked to find the probability of getting a **sum of 12**.\n\nTo get a sum of 12, the only possible combination is:\n\n- Die 1 shows **6**, Die 2 shows **6** → (6, 6)\n\nSo, there is **1** favorable outcome.\n\nTherefore, the probability is:\n\n$$\n\\frac{1}{36}\n$$\n\n**Answer:** $\\boxed{\\frac{1}{36}}$",
+          "num_new_tokens": 229
+        },
+        {
+          "uid": "ds120-logic-024",
+          "group": "logic",
+          "extract": "keyword",
+          "score": 1.0,
+          "info": {
+            "gold": "0.25"
+          },
+          "response": "We are given:\n\n- The **notebook and pencil together cost $1.50**.\n- The **notebook costs $1.00 more than the pencil**.\n\nLet’s define:\n\n- Let the cost of the **pencil** be $ x $ dollars.\n- Then the cost of the **notebook** is $ x + 1.00 $ dollars.\n\nNow, the total cost is:\n\n$$\nx + (x + 1.00) = 1.50\n$$\n\nSimplify:\n\n$$\n2x + 1.00 = 1.50\n$$\n\nSubtract 1.00 from both sides:\n\n$$\n2x = 0.50\n$$\n\nDivide both sides by 2:\n\n$$\nx = 0.25\n$$\n\n### ✅ Final Answer: The pencil costs **$0.25**.",
+          "num_new_tokens": 229
+        },
+        {
+          "uid": "ds120-rep-000",
+          "group": "repetition",
+          "extract": "repetition_stats",
+          "score": 1.0,
+          "info": {
+            "num_sentences": 6,
+            "requested": 3,
+            "unique_sentences": 6,
+            "sentence_dup_rate": 0.0,
+            "char8gram_loop_ratio": 0.1543,
+            "coverage": 1.0
+          },
+          "response": "1. The water cycle begins with the evaporation of water from oceans, lakes, and rivers, turning liquid into vapor that rises into the atmosphere.  \n2. As water vapor cools, it condenses into clouds, which can eventually lead to precipitation in the form of rain, snow, or hail.  \n3. Once precipitation reaches the Earth's surface, it can flow into rivers, lakes, or渗入 the ground, completing the cycle by returning water to bodies of water.",
+          "num_new_tokens": 125
+        },
+        {
+          "uid": "ds120-rep-001",
+          "group": "repetition",
+          "extract": "repetition_stats",
+          "score": 1.0,
+          "info": {
+            "num_sentences": 8,
+            "requested": 4,
+            "unique_sentences": 8,
+            "sentence_dup_rate": 0.0,
+            "char8gram_loop_ratio": 0.0,
+            "coverage": 1.0
+          },
+          "response": "1. The blacksmith begins his day by heating a large iron ingot in the forge until it turns a deep red, preparing it for shaping.  \n2. As the fire roars, he hammers the glowing metal with precision, shaping it into horseshoes and tools with each strike.  \n3. After the metal cools, he files and polishes the finished pieces, ensuring they are sharp and free of imperfections.  \n4. By midday, he has completed several orders, including a custom sword for a local noble, demonstrating his skill and artistry.",
+          "num_new_tokens": 125
+        },
+        {
+          "uid": "ds120-rep-002",
+          "group": "repetition",
+          "extract": "repetition_stats",
+          "score": 1.0,
+          "info": {
+            "num_sentences": 10,
+            "requested": 5,
+            "unique_sentences": 10,
+            "sentence_dup_rate": 0.0,
+            "char8gram_loop_ratio": 0.1695,
+            "coverage": 1.0
+          },
+          "response": "1. Bread rises because yeast ferments the sugars in the dough, producing carbon dioxide gas that creates air pockets.  \n2. The rising process is often enhanced by using a warm environment, which speeds up the yeast's activity.  \n3. When bread is baked, the heat causes the trapped gas to expand, helping the loaf to rise and become light.  \n4. Some breads use baking powder as a leavening agent, which releases carbon dioxide when exposed to moisture and heat.  \n5. The texture of the risen bread is a result of the gluten network stretching and holding the gas bubbles in place.",
+          "num_new_tokens": 125
+        },
+        {
+          "uid": "ds120-rep-003",
+          "group": "repetition",
+          "extract": "repetition_stats",
+          "score": 1.0,
+          "info": {
+            "num_sentences": 6,
+            "requested": 3,
+            "unique_sentences": 6,
+            "sentence_dup_rate": 0.0,
+            "char8gram_loop_ratio": 0.2167,
+            "coverage": 1.0
+          },
+          "response": "1. The earliest known coins date back to 7th-century BCE Lydia, where they were made of electrum, a natural alloy of gold and silver, and used as a standardized form of trade.  \n2. The introduction of the first standardized coinage in China occurred during the Qin Dynasty, with the \"Wan Bu\" coin being the first to feature a standardized weight and design.  \n3. In the 15th century, the Spanish silver peso, known as the \"piece of eight,\" became a widely used international currency due to the massive silver shipments from the Americas.",
+          "num_new_tokens": 125
+        },
+        {
+          "uid": "ds120-rep-004",
+          "group": "repetition",
+          "extract": "repetition_stats",
+          "score": 1.0,
+          "info": {
+            "num_sentences": 8,
+            "requested": 4,
+            "unique_sentences": 8,
+            "sentence_dup_rate": 0.0,
+            "char8gram_loop_ratio": 0.1302,
+            "coverage": 1.0
+          },
+          "response": "1. The rainforest canopy is a complex layer of interconnected branches and leaves that forms a dense roof over the forest floor, allowing only limited sunlight to reach the ground.  \n2. This layer serves as a critical habitat for countless species, including birds, insects, and mammals, many of which rely on the canopy for food and shelter.  \n3. The canopy plays a vital role in the rainforest's water cycle, capturing rainwater and releasing it slowly into the soil below through transpiration.  \n4. Scientists study the canopy to understand how climate change affects biodiversity, as this layer is highly sensitive to environmental shifts and human activity.",
+          "num_new_tokens": 139
+        },
+        {
+          "uid": "ds120-rep-005",
+          "group": "repetition",
+          "extract": "repetition_stats",
+          "score": 1.0,
+          "info": {
+            "num_sentences": 10,
+            "requested": 5,
+            "unique_sentences": 10,
+            "sentence_dup_rate": 0.0,
+            "char8gram_loop_ratio": 0.0814,
+            "coverage": 1.0
+          },
+          "response": "1. Vaccines work by training the immune system to recognize and fight specific pathogens, helping the body develop long-lasting immunity without causing the disease.  \n2. They reduce the severity of illnesses and lower the risk of complications, making it easier for people to recover and stay healthy.  \n3. Vaccines prevent the spread of infectious diseases by reducing the number of people who can carry and transmit the virus or bacteria.  \n4. They contribute to herd immunity, which protects those who cannot be vaccinated due to age or health conditions.  \n5. Vaccines have been instrumental in eradicating or controlling diseases like smallpox, polio, and measles, saving millions of lives worldwide.",
+          "num_new_tokens": 139
+        },
+        {
+          "uid": "ds120-rep-006",
+          "group": "repetition",
+          "extract": "repetition_stats",
+          "score": 1.0,
+          "info": {
+            "num_sentences": 6,
+            "requested": 3,
+            "unique_sentences": 6,
+            "sentence_dup_rate": 0.0,
+            "char8gram_loop_ratio": 0.1327,
+            "coverage": 1.0
+          },
+          "response": "1. Every morning, the lighthouse keeper begins his day by checking the light's intensity and adjusting the lens if necessary to ensure it remains visible from far away.  \n2. He also spends time cleaning the exterior of the lighthouse, removing salt and debris that have accumulated over the weeks in the harsh coastal environment.  \n3. In the evenings, the keeper records the weather conditions and any unusual sightings in a log book, helping to track patterns that might be important for future navigation.",
+          "num_new_tokens": 139
+        },
+        {
+          "uid": "ds120-rep-007",
+          "group": "repetition",
+          "extract": "repetition_stats",
+          "score": 1.0,
+          "info": {
+            "num_sentences": 8,
+            "requested": 4,
+            "unique_sentences": 8,
+            "sentence_dup_rate": 0.0,
+            "char8gram_loop_ratio": 0.0397,
+            "coverage": 1.0
+          },
+          "response": "1. To make maple syrup, sap is collected from the bark of maple trees during the spring when the trees are actively producing sap.  \n2. The collected sap is then boiled in large copper kettles to reduce its volume and concentrate the natural sugars.  \n3. As the sap cooks, it changes from a clear, watery liquid to a thick, golden-colored syrup with a distinct sweet aroma.  \n4. The process can take several hours, depending on the amount of sap and the desired consistency of the final product.",
+          "num_new_tokens": 139
+        },
+        {
+          "uid": "ds120-rep-008",
+          "group": "repetition",
+          "extract": "repetition_stats",
+          "score": 1.0,
+          "info": {
+            "num_sentences": 10,
+            "requested": 5,
+            "unique_sentences": 10,
+            "sentence_dup_rate": 0.0,
+            "char8gram_loop_ratio": 0.2407,
+            "coverage": 1.0
+          },
+          "response": "1. Deep sea vents, also known as hydrothermal vents, release superheated water that can reach temperatures over 400 degrees Celsius.  \n2. These vents support unique ecosystems that thrive in complete darkness, relying on chemosynthesis rather than photosynthesis.  \n3. The mineral-rich plumes from deep sea vents can form new seafloor structures and influence the chemical composition of the ocean.  \n4. Some species found near deep sea vents have adapted to extreme pressures, with some living at depths exceeding 6,000 meters.  \n5. Scientists study deep sea vents to understand Earth's geological activity and the potential for life in extreme environments beyond Earth.",
+          "num_new_tokens": 151
+        },
+        {
+          "uid": "ds120-rep-009",
+          "group": "repetition",
+          "extract": "repetition_stats",
+          "score": 1.0,
+          "info": {
+            "num_sentences": 6,
+            "requested": 3,
+            "unique_sentences": 6,
+            "sentence_dup_rate": 0.0,
+            "char8gram_loop_ratio": 0.0,
+            "coverage": 1.0
+          },
+          "response": "1. In chess, each player starts with 16 pieces, including one king, one queen, two rooks, two knights, two bishops, and eight pawns.  \n2. The queen can move any number of squares vertically, horizontally, or diagonally, making her the most powerful piece on the board.  \n3. A checkmate occurs when a player's king is under attack and has no legal moves to escape, resulting in the loss of the game.",
+          "num_new_tokens": 151
+        },
+        {
+          "uid": "ds120-rep-010",
+          "group": "repetition",
+          "extract": "repetition_stats",
+          "score": 1.0,
+          "info": {
+            "num_sentences": 8,
+            "requested": 4,
+            "unique_sentences": 8,
+            "sentence_dup_rate": 0.0,
+            "char8gram_loop_ratio": 0.2613,
+            "coverage": 1.0
+          },
+          "response": "1. Bees use a combination of the sun's position, polarized light patterns, and landmarks to navigate back to their hives.  \n2. They create a mental map of their surroundings, which helps them remember the location of flowers and their hive.  \n3. Some species of bees rely on the Earth's magnetic field to orient themselves during long foraging trips.  \n4. Bees communicate the location of food sources to their hive mates through a complex dance that encodes direction and distance.",
+          "num_new_tokens": 151
+        },
+        {
+          "uid": "ds120-rep-011",
+          "group": "repetition",
+          "extract": "repetition_stats",
+          "score": 1.0,
+          "info": {
+            "num_sentences": 10,
+            "requested": 5,
+            "unique_sentences": 10,
+            "sentence_dup_rate": 0.0,
+            "char8gram_loop_ratio": 0.2401,
+            "coverage": 1.0
+          },
+          "response": "1. The mountain stands as a silent guardian of the landscape, its towering peaks shaping the local climate and weather patterns.  \n2. Over millions of years, the mountain has been sculpted by the forces of erosion, glaciers, and volcanic activity, creating its rugged and majestic form.  \n3. At the base of the mountain, dense forests thrive, providing a home to a diverse array of plant and animal species that have adapted to the changing altitudes.  \n4. The mountain's slopes are often covered in snow during winter, which melts in the summer to feed rivers and sustain the ecosystems downstream.  \n5. Hikers and climbers frequently visit the mountain, drawn by its breathtaking views and the challenge of navigating its steep trails and unpredictable weather.",
+          "num_new_tokens": 151
+        },
+        {
+          "uid": "ds120-rep-012",
+          "group": "repetition",
+          "extract": "repetition_stats",
+          "score": 1.0,
+          "info": {
+            "num_sentences": 6,
+            "requested": 3,
+            "unique_sentences": 6,
+            "sentence_dup_rate": 0.0,
+            "char8gram_loop_ratio": 0.0,
+            "coverage": 1.0
+          },
+          "response": "1. Bats in the city often roost in the crevices of old buildings, using the structure for shelter during the day.  \n2. Urban bats play a crucial role in controlling insect populations, especially in areas with high human activity.  \n3. Some city-dwelling bat species have adapted to artificial lighting by becoming more active at night in search of food.",
+          "num_new_tokens": 114
+        },
+        {
+          "uid": "ds120-rep-013",
+          "group": "repetition",
+          "extract": "repetition_stats",
+          "score": 0.0,
+          "info": {
+            "num_sentences": 8,
+            "requested": 4,
+            "unique_sentences": 8,
+            "sentence_dup_rate": 0.0,
+            "char8gram_loop_ratio": 0.5677,
+            "coverage": 1.0
+          },
+          "response": "1. The printing press revolutionized the spread of knowledge by allowing books to be produced more quickly and affordably than ever before.  \n2. Invented by Johannes Gutenberg in the 15th century, the printing press marked a turning point in the history of communication and education.  \n3. The invention of the printing press led to the standardization of languages and the rise of literacy in many European countries.  \n4. By enabling the mass production of texts, the printing press played a key role in the Protestant Reformation and the spread of new ideas.",
+          "num_new_tokens": 114
+        },
+        {
+          "uid": "ds120-rep-014",
+          "group": "repetition",
+          "extract": "repetition_stats",
+          "score": 1.0,
+          "info": {
+            "num_sentences": 10,
+            "requested": 5,
+            "unique_sentences": 10,
+            "sentence_dup_rate": 0.0,
+            "char8gram_loop_ratio": 0.253,
+            "coverage": 1.0
+          },
+          "response": "1. Coral reefs are home to thousands of species of fish, many of which are found nowhere else on Earth.  \n2. The vibrant colors of a coral reef come from the algae that live within the coral polyps.  \n3. Coral reefs play a crucial role in protecting coastal areas from storm surges and erosion.  \n4. The formation of a coral reef can take hundreds of years, depending on the type of coral involved.  \n5. Human activities such as overfishing and pollution threaten the survival of many coral reef ecosystems.",
+          "num_new_tokens": 114
+        },
+        {
+          "uid": "ds120-rep-015",
+          "group": "repetition",
+          "extract": "repetition_stats",
+          "score": 0.0,
+          "info": {
+            "num_sentences": 6,
+            "requested": 3,
+            "unique_sentences": 6,
+            "sentence_dup_rate": 0.0,
+            "char8gram_loop_ratio": 0.3958,
+            "coverage": 1.0
+          },
+          "response": "1. The winter solstice marks the shortest day of the year in the Northern Hemisphere, signaling the beginning of the return of longer days and warmer weather.  \n2. In many cultures, the winter solstice is celebrated with festivals that honor the sun and symbolize the triumph of light over darkness.  \n3. During the winter solstice, the sun reaches its lowest point in the sky, which affects the amount of daylight and temperature in different regions of the world.",
+          "num_new_tokens": 114
+        },
+        {
+          "uid": "ds120-rep-016",
+          "group": "repetition",
+          "extract": "repetition_stats",
+          "score": 0.0,
+          "info": {
+            "num_sentences": 8,
+            "requested": 4,
+            "unique_sentences": 8,
+            "sentence_dup_rate": 0.0,
+            "char8gram_loop_ratio": 0.3194,
+            "coverage": 1.0
+          },
+          "response": "1. The Silk Road was not only a network of trade routes but also a vital channel for the exchange of ideas, technologies, and cultural practices between East and West.  \n2. Merchants from China, the Middle East, and Europe traveled along the Silk Road, bringing goods such as silk, spices, and precious metals that shaped global economies.  \n3. The Silk Road facilitated the spread of religions like Buddhism, Islam, and Christianity, influencing the spiritual landscapes of many regions.  \n4. Along the Silk Road, innovations such as papermaking and gunpowder traveled from China to the Islamic world and Europe, revolutionizing societies across continents.",
+          "num_new_tokens": 152
+        },
+        {
+          "uid": "ds120-rep-017",
+          "group": "repetition",
+          "extract": "repetition_stats",
+          "score": 1.0,
+          "info": {
+            "num_sentences": 10,
+            "requested": 5,
+            "unique_sentences": 10,
+            "sentence_dup_rate": 0.0,
+            "char8gram_loop_ratio": 0.1381,
+            "coverage": 1.0
+          },
+          "response": "1. Bridges carry load by distributing weight evenly across their supports through a combination of beams, arches, and trusses.  \n2. The load on a bridge is transferred from the deck to the piers or abutments via the structure's design, which is carefully calculated to prevent failure.  \n3. Some bridges use suspension cables to carry heavy loads by transferring the weight from the deck to massive anchorages at either end.  \n4. Load-carrying capacity is enhanced in bridges by using materials like steel or reinforced concrete, which can withstand significant stress without deforming.  \n5. The way a bridge carries load can vary depending on its type, with beam bridges relying on horizontal supports and cable-stayed bridges using vertical cables for tension.",
+          "num_new_tokens": 152
+        },
+        {
+          "uid": "ds120-rep-018",
+          "group": "repetition",
+          "extract": "repetition_stats",
+          "score": 1.0,
+          "info": {
+            "num_sentences": 6,
+            "requested": 3,
+            "unique_sentences": 6,
+            "sentence_dup_rate": 0.0,
+            "char8gram_loop_ratio": 0.0698,
+            "coverage": 1.0
+          },
+          "response": "1. A volcano's life begins deep within the Earth, where magma slowly rises through cracks in the crust, fueled by heat from the planet's core.  \n2. As the magma chamber fills, pressure builds until it forces the volcano to erupt, sending ash, lava, and gases skyward.  \n3. After an eruption, the volcano may enter a dormant phase for years, with quiet activity beneath the surface as it gradually cools and stabilizes.",
+          "num_new_tokens": 152
+        },
+        {
+          "uid": "ds120-rep-019",
+          "group": "repetition",
+          "extract": "repetition_stats",
+          "score": 1.0,
+          "info": {
+            "num_sentences": 8,
+            "requested": 4,
+            "unique_sentences": 8,
+            "sentence_dup_rate": 0.0,
+            "char8gram_loop_ratio": 0.022,
+            "coverage": 1.0
+          },
+          "response": "1. Some seeds are carried by the wind, allowing them to spread over long distances to new areas.  \n2. Animals play a key role in seed dispersal by eating the fruit and later excreting the seeds in different locations.  \n3. Certain seeds have hooks or barbs that attach to the fur of animals or the feathers of birds, helping them travel far.  \n4. Water is a common method of seed travel, especially for plants that grow near rivers or coastal areas.",
+          "num_new_tokens": 152
+        },
+        {
+          "uid": "ds120-rep-020",
+          "group": "repetition",
+          "extract": "repetition_stats",
+          "score": 1.0,
+          "info": {
+            "num_sentences": 10,
+            "requested": 5,
+            "unique_sentences": 10,
+            "sentence_dup_rate": 0.0,
+            "char8gram_loop_ratio": 0.2039,
+            "coverage": 1.0
+          },
+          "response": "1. The first bicycles were developed in the early 19th century, with the invention of the safety bicycle in 1861 by Karl Drais.  \n2. The inclusion of a chain-driven system in the 1870s allowed for more efficient power transfer from the pedals to the wheels.  \n3. The development of the pneumatic tire in the 1880s significantly improved the comfort and speed of cycling.  \n4. The introduction of the derailleur in the 1890s enabled cyclists to shift gears, making it easier to ride on varied terrain.  \n5. The mass production of bicycles in the early 20th century made them affordable and accessible to the general public.",
+          "num_new_tokens": 151
+        },
+        {
+          "uid": "ds120-rep-021",
+          "group": "repetition",
+          "extract": "repetition_stats",
+          "score": 1.0,
+          "info": {
+            "num_sentences": 6,
+            "requested": 3,
+            "unique_sentences": 6,
+            "sentence_dup_rate": 0.0,
+            "char8gram_loop_ratio": 0.0206,
+            "coverage": 1.0
+          },
+          "response": "1. Tide pools are small, rocky depressions along the coastline that fill with seawater during high tide and dry out during low tide.  \n2. These ecosystems are home to a variety of marine life, including anemones, sea stars, and crabs, which have adapted to the changing conditions of the pool.  \n3. Scientists study tide pools to understand how organisms survive in environments that are constantly exposed to fluctuating temperatures, salinity, and exposure to air.",
+          "num_new_tokens": 151
+        },
+        {
+          "uid": "ds120-rep-022",
+          "group": "repetition",
+          "extract": "repetition_stats",
+          "score": 1.0,
+          "info": {
+            "num_sentences": 8,
+            "requested": 4,
+            "unique_sentences": 8,
+            "sentence_dup_rate": 0.0,
+            "char8gram_loop_ratio": 0.1003,
+            "coverage": 1.0
+          },
+          "response": "1. Airships have been used for military reconnaissance during World War I, providing valuable aerial surveillance.  \n2. Modern airships are often designed with lightweight materials to improve fuel efficiency and increase flight duration.  \n3. Some airships are equipped with advanced navigation systems that allow them to operate in extreme weather conditions.  \n4. Historically, airships were a popular mode of transportation for luxury travel in the early 20th century.",
+          "num_new_tokens": 151
+        },
+        {
+          "uid": "ds120-rep-023",
+          "group": "repetition",
+          "extract": "repetition_stats",
+          "score": 1.0,
+          "info": {
+            "num_sentences": 10,
+            "requested": 5,
+            "unique_sentences": 10,
+            "sentence_dup_rate": 0.0,
+            "char8gram_loop_ratio": 0.1558,
+            "coverage": 1.0
+          },
+          "response": "1. Camels can go for weeks without drinking water by conserving moisture through specialized kidneys and a thick coat of fat that helps regulate body temperature.  \n2. Their humps store fat, which can be metabolized into water and energy when food and water are scarce.  \n3. Camels have narrow, padded feet that prevent them from sinking into the sand, allowing them to walk efficiently across hot, soft terrain.  \n4. They can tolerate a wide range of body temperatures, staying cool in the heat of the day and warming up at night without needing to drink.  \n5. Camels can close their nostrils to keep out sand and dust, and their eyelids can shut tightly to protect against wind and debris.",
+          "num_new_tokens": 151
+        },
+        {
+          "uid": "ds120-rep-024",
+          "group": "repetition",
+          "extract": "repetition_stats",
+          "score": 0.0,
+          "info": {
+            "num_sentences": 6,
+            "requested": 3,
+            "unique_sentences": 6,
+            "sentence_dup_rate": 0.0,
+            "char8gram_loop_ratio": 0.3314,
+            "coverage": 1.0
+          },
+          "response": "1. The aurora borealis, also known as the Northern Lights, is caused by charged particles from the sun colliding with gases in Earth's atmosphere.  \n2. This natural phenomenon is most commonly observed in high-latitude regions such as Alaska, Canada, and Norway.  \n3. The colors of the aurora borealis vary depending on the type of gas particles in the atmosphere, with green being the most frequently seen.",
+          "num_new_tokens": 88
+        }
+      ]
+    }
+  }
+}

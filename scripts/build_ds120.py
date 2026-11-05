@@ -147,37 +147,27 @@ def main() -> None:
                     "reference_answer": a, "meta": {"extract": "keyword"}, "uid": f"ds120-logic-{i:03d}"})
 
     # ---------- 重复变换 25 ----------
-    rep_items = [
-        ("Repeat the word 'apple' 5 times, separated by spaces.", "apple apple apple apple apple"),
-        ("Repeat the word 'sky' 4 times, separated by commas.", "sky, sky, sky, sky"),
-        ("Say 'hello world' exactly 3 times.", "hello world hello world hello world"),
-        ("Repeat the number 7 six times.", "7 7 7 7 7 7"),
-        ("Write the word 'banana' 3 times on separate lines.", "banana\nbanana\nbanana"),
-        ("Repeat 'a b c' twice.", "a b c a b c"),
-        ("Say 'yes' 8 times in a row.", "yes yes yes yes yes yes yes yes"),
-        ("Repeat the word 'moon' 4 times.", "moon moon moon moon"),
-        ("Copy this exactly: 'The cat sat.' 3 times.", "The cat sat. The cat sat. The cat sat."),
-        ("Repeat 'x' 10 times with no separators.", "xxxxxxxxxx"),
-        ("Say 'good morning' 5 times.", "good morning good morning good morning good morning good morning"),
-        ("Repeat the word 'tree' 3 times, then 'leaf' 2 times.", "tree tree tree leaf leaf"),
-        ("Write '2026' 4 times separated by dashes.", "2026-2026-2026-2026"),
-        ("Repeat 'one two' 4 times.", "one two one two one two one two"),
-        ("Say the word 'quiet' 6 times.", "quiet quiet quiet quiet quiet quiet"),
-        ("Repeat 'red green blue' 3 times.", "red green blue red green blue red green blue"),
-        ("Write the letter 'z' 9 times.", "zzzzzzzzz"),
-        ("Repeat the word 'star' 5 times, uppercase.", "STAR STAR STAR STAR STAR"),
-        ("Say 'thank you' 4 times.", "thank you thank you thank you thank you"),
-        ("Repeat 'up down' 5 times.", "up down up down up down up down up down"),
-        ("Write 'abc' 6 times separated by spaces.", "abc abc abc abc abc abc"),
-        ("Repeat the word 'light' 7 times.", "light light light light light light light"),
-        ("Say 'no' exactly 9 times.", "no no no no no no no no no"),
-        ("Repeat 'left right' 3 times.", "left right left right left right"),
-        ("Write the word 'end' 5 times.", "end end end end end"),
+    # 与基线 repetition 组同构（防循环：奖励低重复率），措辞不同避免 8-gram 重叠。
+    # 评分器零改动：requested_sentences 字段 + repetition_stats 提取。
+    topics = [
+        "the water cycle", "a blacksmith's workday", "how bread rises", "the history of coins",
+        "a rainforest canopy", "how vaccines protect us", "a lighthouse keeper's routine", "making maple syrup",
+        "deep sea vents", "the rules of chess", "how bees find their way", "the life of a mountain",
+        "bats in the city", "the printing press", "a coral reef", "the winter solstice",
+        "the Silk Road", "how bridges carry load", "a volcano's life", "how seeds travel",
+        "the invention of bicycles", "tide pools", "airships", "how camels survive deserts", "the aurora borealis",
     ]
-    assert len(rep_items) == 25
-    for i, (q, a) in enumerate(rep_items):
-        out.append({"group": "repetition", "source": "local:repetition", "prompt": q,
-                    "reference_answer": a, "meta": {"extract": "repetition_stats"}, "uid": f"ds120-rep-{i:03d}"})
+    assert len(topics) == 25
+    for i, topic in enumerate(topics):
+        n = [3, 4, 5][i % 3]
+        q = (
+            f"Write {n} different sentences about {topic}. Each sentence must contain "
+            "new information, and no sentence may closely repeat another."
+        )
+        out.append({"group": "repetition", "source": "local:repetition_v2", "prompt": q,
+                    "reference_answer": None,
+                    "meta": {"extract": "repetition_stats", "requested_sentences": n},
+                    "uid": f"ds120-rep-{i:03d}"})
 
     # ---------- 校验与落盘 ----------
     assert len(out) == 120
