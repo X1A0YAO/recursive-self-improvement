@@ -264,6 +264,10 @@ def mcnemar_exact(baseline: dict[str, float], candidate: dict[str, float], uid_k
     import math as _math
 
     uids = [u for u in baseline if u in candidate]
+    dropped_b = len(baseline) - len([u for u in baseline if u in candidate])
+    dropped_c = len(candidate) - len([u for u in candidate if u in baseline])
+    if dropped_b or dropped_c:
+        print(f"[mcnemar] WARNING: uid mismatch dropped {dropped_b} baseline / {dropped_c} candidate entries; n={len(uids)}", flush=True)
     n01 = sum(1 for u in uids if baseline[u] > candidate[u])  # 退化
     n10 = sum(1 for u in uids if baseline[u] < candidate[u])  # 改善
     n = n01 + n10

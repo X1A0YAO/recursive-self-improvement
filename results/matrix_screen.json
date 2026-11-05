@@ -1,0 +1,16 @@
+{
+  "baseline": {
+    "logprob": -266.8729714298248,
+    "quick20_mean": 0.95
+  },
+  "layer": 26,
+  "seed": 178798052,
+  "cells": {
+    "norm_zero_128": {
+      "logprob_delta": 0.6407,
+      "quick20_mean": 0.9,
+      "quick20_worse": 1,
+      "quick20_better": 0
+    }
+  }
+}
