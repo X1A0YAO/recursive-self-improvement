@@ -256,6 +256,36 @@ def summarize(results: list[dict]) -> dict:
     return summary
 
 
+def mcnemar_exact(baseline: dict[str, float], candidate: dict[str, float], uid_key: str = "uid", results_b=None, results_c=None) -> dict:
+    """配对精确二项 McNemar（单侧：退化方向）。
+
+    baseline/candidate: uid -> score
+    """
+    import math as _math
+
+    uids = [u for u in baseline if u in candidate]
+    n01 = sum(1 for u in uids if baseline[u] > candidate[u])  # 退化
+    n10 = sum(1 for u in uids if baseline[u] < candidate[u])  # 改善
+    n = n01 + n10
+    if n == 0:
+        p = 1.0
+    else:
+        p = sum(_math.comb(n, i) for i in range(min(n01, n10) + 1)) / 2**n * 2
+        p = min(p, 1.0)
+    # 单侧（退化更多）：P(X <= n10 | Bin(n, 0.5))
+    if n == 0:
+        p_one = 1.0
+    else:
+        p_one = sum(_math.comb(n, i) for i in range(n10 + 1)) / 2**n
+    return {
+        "n": len(uids),
+        "worse": n01,
+        "better": n10,
+        "p_two_sided": round(p, 5),
+        "p_one_sided_degradation": round(p_one, 5),
+    }
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--model-dir", default="models/Qwen3-4B")
@@ -265,6 +295,7 @@ def main() -> None:
     ap.add_argument("--max-new-tokens", type=int, default=768)
     ap.add_argument("--batch-size", type=int, default=4)
     ap.add_argument("--limit", type=int, default=0, help="每个 split 最多评多少条（0=全部），调试用")
+    ap.add_argument("--baseline", default="", help="基线报告 json（含同 split 逐题结果），输出时附 McNemar")
     args = ap.parse_args()
 
     from model_utils import load_model
@@ -293,7 +324,15 @@ def main() -> None:
             log_path=log_path, split_name=split, batch_size=args.batch_size,
         )
         summary = summarize(results)
-        report["splits"][split] = {"summary": summary, "results": results}
+        entry = {"summary": summary, "results": results}
+        # McNemar 对比（若给了基线）
+        if args.baseline and Path(args.baseline).exists():
+            bl = json.loads(Path(args.baseline).read_text(encoding="utf-8"))
+            if split in bl.get("splits", {}) and "results" in bl["splits"][split]:
+                bm = {r["uid"]: r["score"] for r in bl["splits"][split]["results"]}
+                cm = {r["uid"]: r["score"] for r in results}
+                entry["mcnemar_vs_baseline"] = mcnemar_exact(bm, cm)
+        report["splits"][split] = entry
         print(f"[eval] {split} summary: {json.dumps(summary, ensure_ascii=False)}", flush=True)
 
     out = Path(args.output)

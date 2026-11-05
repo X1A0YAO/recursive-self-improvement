@@ -1,0 +1,12 @@
+{
+  "generated_at": "2026-11-05",
+  "seed": 20261105,
+  "n": 120,
+  "groups": {
+    "math": 50,
+    "instruction": 20,
+    "logic": 25,
+    "repetition": 25
+  },
+  "overlap_check": "exact + 8-gram vs optimization/validation/test: 0"
+}
