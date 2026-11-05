@@ -1,15 +1,37 @@
-﻿# Recursive Self-Improvement via Weight-Space Programming
+# Recursive Self-Improvement via Weight-Space Programming
 
 An experimental framework for studying whether an LLM can analyze its own
-parameters and directly edit its weights to improve itself 鈥?and whether the
+parameters and directly edit its weights to improve itself — and whether the
 improved model can improve itself further, forming a recursive positive loop.
 
-> **Status: Phase 1 complete (autonomous run). Key findings: (1) Qwen3-4B is
-> extremely robust to localized weight damage — an 8-layer 4096-neuron lesion
-> yields only 3-7pp degradation; (2) self-diagnosis tool-use works but search
-> strategy fails (scanned layers 0-4 of 36; algorithmic z-score baseline
-> achieves 8/8 recall on the same visible statistics). See
-> experiments/iteration_1/PHASE1_REPORT.md.**'
+> **Status: Phase 2 running (matrix screen in progress). Phase 1 complete with
+> audited results: behavioral degradation from lesions was statistically
+> insignificant (McNemar p>=0.125); z-score-only detection 0/8; top-norm neurons
+> are functionally unimportant (2.3% overlap with top-activity). See
+> experiments/iteration_1/AUDIT_REPORT.md and PHASE1_REPORT.md.**
+
+## Research Positioning (vs. Takehi et al. 2026, "Sparks of Weight-Space Programming")
+
+Full analysis in RESEARCH_POSITIONING_REVIEW.md. Four capability levels must be
+distinguished (following Honnibal's critique of conflation in the original):
+
+| Level | Meaning | Their work | This project |
+|---|---|---|---|
+| L1 raw-weight-in-context | raw floats in context, no tools | nets <=172K params only | not attempted (4B infeasible) |
+| L2 tool-mediated analysis | structured queries to a harness | Python sandbox + forward passes | JSON tool protocol (stricter: no arbitrary code) |
+| L3 direct weight editing | gradient-free writes | yes (0.016% of Qwen3.5) | yes (schema-validated, budgeted) |
+| L4 recursive self-improvement | V0->V1->V2 chain | listed as future work | **core question** |
+
+Key differences: (1) we study a 4B open model inspecting **its own** weights
+(reflexive, RSI-relevant) rather than a frontier model inspecting third-party
+networks; (2) their headline success (MATH-500 7.9->48.1) repaired a
+behaviorally self-exposing defect (93% truncation/looping rate) using Python
+and 50 batches of environment feedback, while we map the
+**sub-behavioral-threshold defect** regime under preregistered statistics
+(McNemar/Holm), sealed defect records, and oracle/random control arms; (3) their
+own additional experiment (Gemma, which doesn't loop) failed to improve — the
+hard region we deliberately probe with mechanisms (norm != importance;
+statistical visibility limits) established by our audit.
 
 ## Research Questions
 
