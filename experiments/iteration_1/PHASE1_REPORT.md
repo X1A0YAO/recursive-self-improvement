@@ -1,5 +1,14 @@
 # Phase 1 实验报告：受控缺陷与可修改性验证
 
+> ⚠️ **审计修订（2026-11-05）**：本报告 §发现1/§发现2/S1-S2 判定的部分结论
+> 已被 `AUDIT_REPORT.md` 修正：
+> - "z-score + zero_rows 8/8 全召回"→ 实为 zero_rows 指纹核对 8/8（病灶设计
+>   的确定性产物）；z-score-only 召回 0/8
+> - "val -6.8pp / test -3.8pp 真实退化"→ McNemar 检验均不显著（p=0.125/0.508）
+> - "模型对局部损伤极度鲁棒"→ 仅对 top-norm 行置零类损伤成立；
+>   top-activity 病灶的 logprob 杀伤是 top-norm 的 4.4 倍
+> 本报告保留原判定以维护预注册纪律；正确结论以 AUDIT_REPORT.md 为准。
+
 - 日期：2026-11-05（自主执行，用户授权）
 - 预注册：PREREGISTRATION.md + AMENDMENT2 + AMENDMENT3（变更全部留痕）
 - 所有结论基于可复现的落盘证据

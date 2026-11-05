@@ -1,0 +1,135 @@
+{
+  "A_healthy_zero_rows": {
+    "tensors_with_zero_rows": 0,
+    "total": 252
+  },
+  "B_zscore_only": {
+    "flagged": 14,
+    "hits": 0,
+    "detail": [
+      "q_proj L29 std z=+2.98",
+      "q_proj L29 l2 z=+2.98",
+      "k_proj L35 mean z=-3.17",
+      "k_proj L33 std z=-2.67",
+      "k_proj L33 l2 z=-2.67",
+      "v_proj L12 mean z=-2.96",
+      "v_proj L33 std z=+2.50",
+      "v_proj L34 std z=+2.50",
+      "v_proj L33 l2 z=+2.50",
+      "v_proj L34 l2 z=+2.50",
+      "o_proj L33 std z=+2.59",
+      "o_proj L33 l2 z=+2.60",
+      "gate_proj L2 std z=-2.86",
+      "gate_proj L4 std z=+3.08",
+      "gate_proj L2 l2 z=-2.85",
+      "gate_proj L4 l2 z=+3.08",
+      "up_proj L1 std z=-3.48",
+      "up_proj L2 std z=-2.64",
+      "up_proj L1 l2 z=-3.48",
+      "up_proj L2 l2 z=-2.64",
+      "down_proj L10 mean z=+2.55",
+      "down_proj L1 std z=-3.17",
+      "down_proj L2 std z=-3.14",
+      "down_proj L1 l2 z=-3.17",
+      "down_proj L2 l2 z=-3.14"
+    ]
+  },
+  "C_visibility": [
+    {
+      "layer": 22,
+      "l2_drop_pct": 4.386957700284136,
+      "std_drop_pct": 4.392360488078013,
+      "expected_l2_drop_pct": 4.402622830913812
+    },
+    {
+      "layer": 25,
+      "l2_drop_pct": 3.589404856937508,
+      "std_drop_pct": 3.5936922944607743,
+      "expected_l2_drop_pct": 3.601184258294518
+    },
+    {
+      "layer": 26,
+      "l2_drop_pct": 3.5057249685015632,
+      "std_drop_pct": 3.5099927130015947,
+      "expected_l2_drop_pct": 3.517223770672795
+    },
+    {
+      "layer": 28,
+      "l2_drop_pct": 3.664884750031202,
+      "std_drop_pct": 3.668024910300042,
+      "expected_l2_drop_pct": 3.6751289170963903
+    },
+    {
+      "layer": 29,
+      "l2_drop_pct": 3.63032828286976,
+      "std_drop_pct": 3.6336316523371806,
+      "expected_l2_drop_pct": 3.6404449050762144
+    },
+    {
+      "layer": 31,
+      "l2_drop_pct": 3.811801938951963,
+      "std_drop_pct": 3.8168065419764132,
+      "expected_l2_drop_pct": 3.823881006913959
+    },
+    {
+      "layer": 32,
+      "l2_drop_pct": 3.7992053013430045,
+      "std_drop_pct": 3.806207771120601,
+      "expected_l2_drop_pct": 3.813358232689607
+    },
+    {
+      "layer": 35,
+      "l2_drop_pct": 4.3732823642218355,
+      "std_drop_pct": 4.382954784924407,
+      "expected_l2_drop_pct": 4.390918803015489
+    }
+  ],
+  "D_top_energy": [
+    {
+      "layer": 22,
+      "pct": 8.59
+    },
+    {
+      "layer": 25,
+      "pct": 7.06
+    },
+    {
+      "layer": 26,
+      "pct": 6.9
+    }
+  ],
+  "E_mcnemar": {
+    "optimization": {
+      "n": 63,
+      "worse": 0,
+      "better": 2,
+      "p": 0.5
+    },
+    "validation": {
+      "n": 59,
+      "worse": 4,
+      "better": 0,
+      "p": 0.125
+    },
+    "test": {
+      "n": 79,
+      "worse": 6,
+      "better": 3,
+      "p": 0.5078
+    }
+  },
+  "F_truncation": {
+    "optimization": {
+      "V0": "4/63",
+      "defect": "0/63"
+    },
+    "validation": {
+      "V0": "0/59",
+      "defect": "0/59"
+    },
+    "test": {
+      "V0": "4/79",
+      "defect": "8/79"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "layer": 26,
+  "overlap_topnorm_topact": 12,
+  "lesion_neuron_contrib_mean": 0.17153644561767578,
+  "topact_neuron_contrib_mean": 0.46253204345703125,
+  "ratio_pct": 37.08639144897461,
+  "counterfactual_logprob_delta": {
+    "top_norm_512": 1.023752748966217,
+    "top_activity_512": -3.414117082953453,
+    "random_512": -1.3786861151456833
+  }
+}
