@@ -1,0 +1,24 @@
+{
+  "instances": [
+    {
+      "auc_d1": 0.4143,
+      "auc_d2": 0.5618,
+      "d3_detected": 0,
+      "d3_truth": 1,
+      "d3_false_positive": 0,
+      "d1_flagged": 14,
+      "d2_flagged": 250,
+      "label": "activity_scale_512_L30"
+    },
+    {
+      "auc_d1": 0.0797,
+      "auc_d2": 0.5618,
+      "d3_detected": 1,
+      "d3_truth": 1,
+      "d3_false_positive": 0,
+      "d1_flagged": 14,
+      "d2_flagged": 250,
+      "label": "norm_zero_128_L19"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "instances": [
+    {
+      "auc_d1": 0.0837,
+      "auc_d2": 0.5618,
+      "d3_detected": 1,
+      "d3_truth": 1,
+      "d3_false_positive": 0,
+      "d1_flagged": 14,
+      "d2_flagged": 250,
+      "label": "single_L26_activity_zero_512"
+    },
+    {
+      "auc_d1": 0.3079,
+      "auc_d2": 0.5622,
+      "d3_detected": 3,
+      "d3_truth": 3,
+      "d3_false_positive": 0,
+      "d1_flagged": 14,
+      "d2_flagged": 250,
+      "label": "cascade3_L2228_30_activity_zero_512"
+    },
+    {
+      "auc_d1": 0.4395,
+      "auc_d2": 0.5635,
+      "d3_detected": 8,
+      "d3_truth": 8,
+      "d3_false_positive": 0,
+      "d1_flagged": 14,
+      "d2_flagged": 250,
+      "label": "phase1_8layer_norm_zero"
+    },
+    {
+      "auc_d1": NaN,
+      "auc_d2": NaN,
+      "d3_detected": 0,
+      "d3_truth": 0,
+      "d3_false_positive": 0,
+      "d1_flagged": 14,
+      "d2_flagged": 250,
+      "label": "healthy_V0_baseline"
+    }
+  ]
+}
