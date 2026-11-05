@@ -1,0 +1,1124 @@
+[
+  {
+    "arm": "A",
+    "repeat": 0,
+    "hit": false,
+    "hit_detail": null,
+    "rounds_used": 10,
+    "queried_layers": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "transcript_full": [
+      {
+        "round": 0,
+        "output": "{\"tool\": \"list_layers\"}",
+        "call": {
+          "tool": "list_layers"
+        }
+      },
+      {
+        "round": 1,
+        "output": "{\"tool\": \"compare_tensor_stats\", \"proj\": \"q_proj\", \"layers\": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35]}",
+        "call": {
+          "tool": "compare_tensor_stats",
+          "proj": "q_proj",
+          "layers": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35
+          ]
+        }
+      },
+      {
+        "round": 2,
+        "output": "{\"tool\": \"tensor_stats\", \"layer\": 0, \"proj\": \"q_proj\"}",
+        "call": {
+          "tool": "tensor_stats",
+          "layer": 0,
+          "proj": "q_proj"
+        }
+      },
+      {
+        "round": 3,
+        "output": "{\"tool\": \"tensor_stats\", \"layer\": 1, \"proj\": \"q_proj\"}",
+        "call": {
+          "tool": "tensor_stats",
+          "layer": 1,
+          "proj": "q_proj"
+        }
+      },
+      {
+        "round": 4,
+        "output": "{\"tool\": \"tensor_stats\", \"layer\": 2, \"proj\": \"q_proj\"}",
+        "call": {
+          "tool": "tensor_stats",
+          "layer": 2,
+          "proj": "q_proj"
+        }
+      },
+      {
+        "round": 5,
+        "output": "{\"tool\": \"compare_tensor_stats\", \"proj\": \"q_proj\", \"layers\": [0, 1, 2]}",
+        "call": {
+          "tool": "compare_tensor_stats",
+          "proj": "q_proj",
+          "layers": [
+            0,
+            1,
+            2
+          ]
+        }
+      },
+      {
+        "round": 6,
+        "output": "{\"tool\": \"tensor_stats\", \"layer\": 3, \"proj\": \"q_proj\"}",
+        "call": {
+          "tool": "tensor_stats",
+          "layer": 3,
+          "proj": "q_proj"
+        }
+      },
+      {
+        "round": 7,
+        "output": "{\"tool\": \"compare_tensor_stats\", \"proj\": \"q_proj\", \"layers\": [0, 1, 2, 3]}",
+        "call": {
+          "tool": "compare_tensor_stats",
+          "proj": "q_proj",
+          "layers": [
+            0,
+            1,
+            2,
+            3
+          ]
+        }
+      },
+      {
+        "round": 8,
+        "output": "{\"tool\": \"tensor_stats\", \"layer\": 4, \"proj\": \"q_proj\"}",
+        "call": {
+          "tool": "tensor_stats",
+          "layer": 4,
+          "proj": "q_proj"
+        }
+      },
+      {
+        "round": 9,
+        "output": "{\"tool\": \"compare_tensor_stats\", \"proj\": \"q_proj\", \"layers\": [0, 1, 2, 3, 4]}",
+        "call": {
+          "tool": "compare_tensor_stats",
+          "proj": "q_proj",
+          "layers": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "arm": "A",
+    "repeat": 1,
+    "hit": false,
+    "hit_detail": null,
+    "rounds_used": 10,
+    "queried_layers": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "transcript_full": [
+      {
+        "round": 0,
+        "output": "{\"tool\": \"list_layers\"}",
+        "call": {
+          "tool": "list_layers"
+        }
+      },
+      {
+        "round": 1,
+        "output": "{\"tool\": \"compare_tensor_stats\", \"proj\": \"q_proj\", \"layers\": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35]}",
+        "call": {
+          "tool": "compare_tensor_stats",
+          "proj": "q_proj",
+          "layers": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35
+          ]
+        }
+      },
+      {
+        "round": 2,
+        "output": "{\"tool\": \"tensor_stats\", \"layer\": 0, \"proj\": \"q_proj\"}",
+        "call": {
+          "tool": "tensor_stats",
+          "layer": 0,
+          "proj": "q_proj"
+        }
+      },
+      {
+        "round": 3,
+        "output": "{\"tool\": \"tensor_stats\", \"layer\": 1, \"proj\": \"q_proj\"}",
+        "call": {
+          "tool": "tensor_stats",
+          "layer": 1,
+          "proj": "q_proj"
+        }
+      },
+      {
+        "round": 4,
+        "output": "{\"tool\": \"tensor_stats\", \"layer\": 2, \"proj\": \"q_proj\"}",
+        "call": {
+          "tool": "tensor_stats",
+          "layer": 2,
+          "proj": "q_proj"
+        }
+      },
+      {
+        "round": 5,
+        "output": "{\"tool\": \"compare_tensor_stats\", \"proj\": \"q_proj\", \"layers\": [0, 1, 2]}",
+        "call": {
+          "tool": "compare_tensor_stats",
+          "proj": "q_proj",
+          "layers": [
+            0,
+            1,
+            2
+          ]
+        }
+      },
+      {
+        "round": 6,
+        "output": "{\"tool\": \"tensor_stats\", \"layer\": 3, \"proj\": \"q_proj\"}",
+        "call": {
+          "tool": "tensor_stats",
+          "layer": 3,
+          "proj": "q_proj"
+        }
+      },
+      {
+        "round": 7,
+        "output": "{\"tool\": \"compare_tensor_stats\", \"proj\": \"q_proj\", \"layers\": [0, 1, 2, 3]}",
+        "call": {
+          "tool": "compare_tensor_stats",
+          "proj": "q_proj",
+          "layers": [
+            0,
+            1,
+            2,
+            3
+          ]
+        }
+      },
+      {
+        "round": 8,
+        "output": "{\"tool\": \"tensor_stats\", \"layer\": 4, \"proj\": \"q_proj\"}",
+        "call": {
+          "tool": "tensor_stats",
+          "layer": 4,
+          "proj": "q_proj"
+        }
+      },
+      {
+        "round": 9,
+        "output": "{\"tool\": \"compare_tensor_stats\", \"proj\": \"q_proj\", \"layers\": [0, 1, 2, 3, 4]}",
+        "call": {
+          "tool": "compare_tensor_stats",
+          "proj": "q_proj",
+          "layers": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "arm": "A",
+    "repeat": 2,
+    "hit": false,
+    "hit_detail": null,
+    "rounds_used": 10,
+    "queried_layers": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "transcript_full": [
+      {
+        "round": 0,
+        "output": "{\"tool\": \"list_layers\"}",
+        "call": {
+          "tool": "list_layers"
+        }
+      },
+      {
+        "round": 1,
+        "output": "{\"tool\": \"compare_tensor_stats\", \"proj\": \"q_proj\", \"layers\": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35]}",
+        "call": {
+          "tool": "compare_tensor_stats",
+          "proj": "q_proj",
+          "layers": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35
+          ]
+        }
+      },
+      {
+        "round": 2,
+        "output": "{\"tool\": \"tensor_stats\", \"layer\": 0, \"proj\": \"q_proj\"}",
+        "call": {
+          "tool": "tensor_stats",
+          "layer": 0,
+          "proj": "q_proj"
+        }
+      },
+      {
+        "round": 3,
+        "output": "{\"tool\": \"tensor_stats\", \"layer\": 1, \"proj\": \"q_proj\"}",
+        "call": {
+          "tool": "tensor_stats",
+          "layer": 1,
+          "proj": "q_proj"
+        }
+      },
+      {
+        "round": 4,
+        "output": "{\"tool\": \"tensor_stats\", \"layer\": 2, \"proj\": \"q_proj\"}",
+        "call": {
+          "tool": "tensor_stats",
+          "layer": 2,
+          "proj": "q_proj"
+        }
+      },
+      {
+        "round": 5,
+        "output": "{\"tool\": \"compare_tensor_stats\", \"proj\": \"q_proj\", \"layers\": [0, 1, 2]}",
+        "call": {
+          "tool": "compare_tensor_stats",
+          "proj": "q_proj",
+          "layers": [
+            0,
+            1,
+            2
+          ]
+        }
+      },
+      {
+        "round": 6,
+        "output": "{\"tool\": \"tensor_stats\", \"layer\": 3, \"proj\": \"q_proj\"}",
+        "call": {
+          "tool": "tensor_stats",
+          "layer": 3,
+          "proj": "q_proj"
+        }
+      },
+      {
+        "round": 7,
+        "output": "{\"tool\": \"compare_tensor_stats\", \"proj\": \"q_proj\", \"layers\": [0, 1, 2, 3]}",
+        "call": {
+          "tool": "compare_tensor_stats",
+          "proj": "q_proj",
+          "layers": [
+            0,
+            1,
+            2,
+            3
+          ]
+        }
+      },
+      {
+        "round": 8,
+        "output": "{\"tool\": \"tensor_stats\", \"layer\": 4, \"proj\": \"q_proj\"}",
+        "call": {
+          "tool": "tensor_stats",
+          "layer": 4,
+          "proj": "q_proj"
+        }
+      },
+      {
+        "round": 9,
+        "output": "{\"tool\": \"compare_tensor_stats\", \"proj\": \"q_proj\", \"layers\": [0, 1, 2, 3, 4]}",
+        "call": {
+          "tool": "compare_tensor_stats",
+          "proj": "q_proj",
+          "layers": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "arm": "B",
+    "repeat": 0,
+    "hit": true,
+    "hit_detail": [
+      "query_narrow",
+      2
+    ],
+    "rounds_used": 10,
+    "queried_layers": [
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36
+    ],
+    "transcript_full": [
+      {
+        "round": 0,
+        "output": "{\"tool\": \"list_layers\"}",
+        "call": {
+          "tool": "list_layers"
+        }
+      },
+      {
+        "round": 1,
+        "output": "{\"tool\": \"compare_tensor_stats\", \"proj\": \"q_proj\", \"layers\": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36]}",
+        "call": {
+          "tool": "compare_tensor_stats",
+          "proj": "q_proj",
+          "layers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36
+          ]
+        }
+      },
+      {
+        "round": 2,
+        "output": "{\"tool\": \"compare_tensor_stats\", \"proj\": \"q_proj\", \"layers\": [18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36]}",
+        "call": {
+          "tool": "compare_tensor_stats",
+          "proj": "q_proj",
+          "layers": [
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36
+          ]
+        }
+      },
+      {
+        "round": 3,
+        "output": "{\"tool\": \"compare_tensor_stats\", \"proj\": \"q_proj\", \"layers\": [18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36]}",
+        "call": {
+          "tool": "compare_tensor_stats",
+          "proj": "q_proj",
+          "layers": [
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36
+          ]
+        }
+      },
+      {
+        "round": 4,
+        "output": "{\"tool\": \"compare_tensor_stats\", \"proj\": \"q_proj\", \"layers\": [18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36]}",
+        "call": {
+          "tool": "compare_tensor_stats",
+          "proj": "q_proj",
+          "layers": [
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36
+          ]
+        }
+      },
+      {
+        "round": 5,
+        "output": "{\"tool\": \"tensor_stats\", \"layer\": 18, \"proj\": \"q_proj\"}",
+        "call": {
+          "tool": "tensor_stats",
+          "layer": 18,
+          "proj": "q_proj"
+        }
+      },
+      {
+        "round": 6,
+        "output": "{\"tool\": \"tensor_stats\", \"layer\": 19, \"proj\": \"q_proj\"}",
+        "call": {
+          "tool": "tensor_stats",
+          "layer": 19,
+          "proj": "q_proj"
+        }
+      },
+      {
+        "round": 7,
+        "output": "{\"tool\": \"tensor_stats\", \"layer\": 20, \"proj\": \"q_proj\"}",
+        "call": {
+          "tool": "tensor_stats",
+          "layer": 20,
+          "proj": "q_proj"
+        }
+      },
+      {
+        "round": 8,
+        "output": "{\"tool\": \"tensor_stats\", \"layer\": 21, \"proj\": \"q_proj\"}",
+        "call": {
+          "tool": "tensor_stats",
+          "layer": 21,
+          "proj": "q_proj"
+        }
+      },
+      {
+        "round": 9,
+        "output": "{\"tool\": \"tensor_stats\", \"layer\": 22, \"proj\": \"q_proj\"}",
+        "call": {
+          "tool": "tensor_stats",
+          "layer": 22,
+          "proj": "q_proj"
+        }
+      }
+    ]
+  },
+  {
+    "arm": "B",
+    "repeat": 1,
+    "hit": true,
+    "hit_detail": [
+      "query_narrow",
+      2
+    ],
+    "rounds_used": 10,
+    "queried_layers": [
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36
+    ],
+    "transcript_full": [
+      {
+        "round": 0,
+        "output": "{\"tool\": \"list_layers\"}",
+        "call": {
+          "tool": "list_layers"
+        }
+      },
+      {
+        "round": 1,
+        "output": "{\"tool\": \"compare_tensor_stats\", \"proj\": \"q_proj\", \"layers\": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36]}",
+        "call": {
+          "tool": "compare_tensor_stats",
+          "proj": "q_proj",
+          "layers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36
+          ]
+        }
+      },
+      {
+        "round": 2,
+        "output": "{\"tool\": \"compare_tensor_stats\", \"proj\": \"q_proj\", \"layers\": [18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36]}",
+        "call": {
+          "tool": "compare_tensor_stats",
+          "proj": "q_proj",
+          "layers": [
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36
+          ]
+        }
+      },
+      {
+        "round": 3,
+        "output": "{\"tool\": \"compare_tensor_stats\", \"proj\": \"q_proj\", \"layers\": [18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36]}",
+        "call": {
+          "tool": "compare_tensor_stats",
+          "proj": "q_proj",
+          "layers": [
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36
+          ]
+        }
+      },
+      {
+        "round": 4,
+        "output": "{\"tool\": \"compare_tensor_stats\", \"proj\": \"q_proj\", \"layers\": [18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36]}",
+        "call": {
+          "tool": "compare_tensor_stats",
+          "proj": "q_proj",
+          "layers": [
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36
+          ]
+        }
+      },
+      {
+        "round": 5,
+        "output": "{\"tool\": \"tensor_stats\", \"layer\": 18, \"proj\": \"q_proj\"}",
+        "call": {
+          "tool": "tensor_stats",
+          "layer": 18,
+          "proj": "q_proj"
+        }
+      },
+      {
+        "round": 6,
+        "output": "{\"tool\": \"tensor_stats\", \"layer\": 19, \"proj\": \"q_proj\"}",
+        "call": {
+          "tool": "tensor_stats",
+          "layer": 19,
+          "proj": "q_proj"
+        }
+      },
+      {
+        "round": 7,
+        "output": "{\"tool\": \"tensor_stats\", \"layer\": 20, \"proj\": \"q_proj\"}",
+        "call": {
+          "tool": "tensor_stats",
+          "layer": 20,
+          "proj": "q_proj"
+        }
+      },
+      {
+        "round": 8,
+        "output": "{\"tool\": \"tensor_stats\", \"layer\": 21, \"proj\": \"q_proj\"}",
+        "call": {
+          "tool": "tensor_stats",
+          "layer": 21,
+          "proj": "q_proj"
+        }
+      },
+      {
+        "round": 9,
+        "output": "{\"tool\": \"tensor_stats\", \"layer\": 22, \"proj\": \"q_proj\"}",
+        "call": {
+          "tool": "tensor_stats",
+          "layer": 22,
+          "proj": "q_proj"
+        }
+      }
+    ]
+  },
+  {
+    "arm": "B",
+    "repeat": 2,
+    "hit": true,
+    "hit_detail": [
+      "query_narrow",
+      2
+    ],
+    "rounds_used": 10,
+    "queried_layers": [
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36
+    ],
+    "transcript_full": [
+      {
+        "round": 0,
+        "output": "{\"tool\": \"list_layers\"}",
+        "call": {
+          "tool": "list_layers"
+        }
+      },
+      {
+        "round": 1,
+        "output": "{\"tool\": \"compare_tensor_stats\", \"proj\": \"q_proj\", \"layers\": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36]}",
+        "call": {
+          "tool": "compare_tensor_stats",
+          "proj": "q_proj",
+          "layers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36
+          ]
+        }
+      },
+      {
+        "round": 2,
+        "output": "{\"tool\": \"compare_tensor_stats\", \"proj\": \"q_proj\", \"layers\": [18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36]}",
+        "call": {
+          "tool": "compare_tensor_stats",
+          "proj": "q_proj",
+          "layers": [
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36
+          ]
+        }
+      },
+      {
+        "round": 3,
+        "output": "{\"tool\": \"compare_tensor_stats\", \"proj\": \"q_proj\", \"layers\": [18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36]}",
+        "call": {
+          "tool": "compare_tensor_stats",
+          "proj": "q_proj",
+          "layers": [
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36
+          ]
+        }
+      },
+      {
+        "round": 4,
+        "output": "{\"tool\": \"compare_tensor_stats\", \"proj\": \"q_proj\", \"layers\": [18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36]}",
+        "call": {
+          "tool": "compare_tensor_stats",
+          "proj": "q_proj",
+          "layers": [
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36
+          ]
+        }
+      },
+      {
+        "round": 5,
+        "output": "{\"tool\": \"tensor_stats\", \"layer\": 18, \"proj\": \"q_proj\"}",
+        "call": {
+          "tool": "tensor_stats",
+          "layer": 18,
+          "proj": "q_proj"
+        }
+      },
+      {
+        "round": 6,
+        "output": "{\"tool\": \"tensor_stats\", \"layer\": 19, \"proj\": \"q_proj\"}",
+        "call": {
+          "tool": "tensor_stats",
+          "layer": 19,
+          "proj": "q_proj"
+        }
+      },
+      {
+        "round": 7,
+        "output": "{\"tool\": \"tensor_stats\", \"layer\": 20, \"proj\": \"q_proj\"}",
+        "call": {
+          "tool": "tensor_stats",
+          "layer": 20,
+          "proj": "q_proj"
+        }
+      },
+      {
+        "round": 8,
+        "output": "{\"tool\": \"tensor_stats\", \"layer\": 21, \"proj\": \"q_proj\"}",
+        "call": {
+          "tool": "tensor_stats",
+          "layer": 21,
+          "proj": "q_proj"
+        }
+      },
+      {
+        "round": 9,
+        "output": "{\"tool\": \"tensor_stats\", \"layer\": 22, \"proj\": \"q_proj\"}",
+        "call": {
+          "tool": "tensor_stats",
+          "layer": 22,
+          "proj": "q_proj"
+        }
+      }
+    ]
+  }
+]
