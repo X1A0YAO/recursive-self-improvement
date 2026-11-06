@@ -1,0 +1,146 @@
+{
+  "repeat": 90,
+  "rounds_used": 12,
+  "duplicate_calls": 0,
+  "scoring": {
+    "final_proposal_present": false,
+    "projection_correct": false,
+    "layer_correct": false,
+    "tensor_exact": false
+  },
+  "final_proposal_raw": null,
+  "transcript": [
+    {
+      "round": 0,
+      "model_raw_output": "{\"tool\": \"compare_all_projections\"}",
+      "parsed_call": {
+        "tool": "compare_all_projections"
+      },
+      "duplicate_of_previous": false,
+      "tool_result": "=== FULL NETWORK ANOMALY SCAN (7 projections x 36 layers, 252 units) ===\n\n[q_proj] 35/36 units normal; ANOMALOUS:\n    layer 29: z_std=+2.98, z_l2=+2.98\n[k_proj] 34/36 units normal; ANOMALOUS:\n    layer 33: z_std=-2.67, z_l2=-2.67\n    layer 35: z_mean=-3.17\n[v_proj] 33/36 units normal; ANOMALOUS:\n    layer 12: z_mean=-2.96\n    layer 33: z_std=+2.50, z_l2=+2.50\n    layer 34: z_std=+2.50, z_l2=+2.50\n[o_proj] 35/36 units normal; ANOMALOUS:\n    layer 33: z_std=+2.59, z_l2=+2.60\n[gate_proj] 34/36 units normal; ANOMALOUS:\n    layer  2: z_std=-2.86, z_l2=-2.85\n    layer  4: z_std=+3.08, z_l2=+3.08\n[up_proj] 31/36 units normal; ANOMALOUS:\n    layer  1: z_std=-3.38, z_l2=-3.38\n    layer  2: z_std=-2.57, z_l2=-2.57\n    layer 22: zero_rows=512\n    layer 28: zero_rows=512\n    layer 30: zero_rows=512\n[down_proj] 33/36 units normal; ANOMALOUS:\n    layer  1: z_std=-3.17, z_l2=-3.17\n    layer  2: z_std=-3.14, z_l2=-3.14\n    layer 10: z_mean=+2.55\n\n[coverage] projections fully scanned: q,k,v,o,gate,up,down (7/7)\n[coverage] layers scanned: 0-35 (36/36, zero-based)\n[coverage] units covered this call: 252/252\nvalid_layer_indices: 0-35 (note: zero-based indexing)",
+      "aggregate_record_units_covered": 252,
+      "aggregate_record_saved_separately": true
+    },
+    {
+      "round": 1,
+      "model_raw_output": "{\"tool\": \"tensor_stats\", \"layer\": 29, \"proj\": \"q_proj\"}",
+      "parsed_call": {
+        "tool": "tensor_stats",
+        "layer": 29,
+        "proj": "q_proj"
+      },
+      "duplicate_of_previous": false,
+      "tool_result": "tensor: model.layers.29.self_attn.q_proj.weight\nmean=-0.000007 std=0.025031\nl2=81.0329\nzero_rows=0"
+    },
+    {
+      "round": 2,
+      "model_raw_output": "{\"tool\": \"tensor_stats\", \"layer\": 33, \"proj\": \"k_proj\"}",
+      "parsed_call": {
+        "tool": "tensor_stats",
+        "layer": 33,
+        "proj": "k_proj"
+      },
+      "duplicate_of_previous": false,
+      "tool_result": "tensor: model.layers.33.self_attn.k_proj.weight\nmean=0.000013 std=0.018927\nl2=30.6455\nzero_rows=0"
+    },
+    {
+      "round": 3,
+      "model_raw_output": "{\"tool\": \"tensor_stats\", \"layer\": 12, \"proj\": \"v_proj\"}",
+      "parsed_call": {
+        "tool": "tensor_stats",
+        "layer": 12,
+        "proj": "v_proj"
+      },
+      "duplicate_of_previous": false,
+      "tool_result": "tensor: model.layers.12.self_attn.v_proj.weight\nmean=-0.000038 std=0.026099\nl2=42.2579\nzero_rows=0"
+    },
+    {
+      "round": 4,
+      "model_raw_output": "{\"tool\": \"tensor_stats\", \"layer\": 33, \"proj\": \"v_proj\"}",
+      "parsed_call": {
+        "tool": "tensor_stats",
+        "layer": 33,
+        "proj": "v_proj"
+      },
+      "duplicate_of_previous": false,
+      "tool_result": "tensor: model.layers.33.self_attn.v_proj.weight\nmean=0.000018 std=0.028154\nl2=45.5850\nzero_rows=0"
+    },
+    {
+      "round": 5,
+      "model_raw_output": "{\"tool\": \"tensor_stats\", \"layer\": 33, \"proj\": \"o_proj\"}",
+      "parsed_call": {
+        "tool": "tensor_stats",
+        "layer": 33,
+        "proj": "o_proj"
+      },
+      "duplicate_of_previous": false,
+      "tool_result": "tensor: model.layers.33.self_attn.o_proj.weight\nmean=-0.000007 std=0.024694\nl2=79.9508\nzero_rows=0"
+    },
+    {
+      "round": 6,
+      "model_raw_output": "{\"tool\": \"tensor_stats\", \"layer\": 2, \"proj\": \"gate_proj\"}",
+      "parsed_call": {
+        "tool": "tensor_stats",
+        "layer": 2,
+        "proj": "gate_proj"
+      },
+      "duplicate_of_previous": false,
+      "tool_result": "tensor: model.layers.2.mlp.gate_proj.weight\nmean=-0.000014 std=0.018717\nl2=93.2743\nzero_rows=0"
+    },
+    {
+      "round": 7,
+      "model_raw_output": "{\"tool\": \"tensor_stats\", \"layer\": 1, \"proj\": \"up_proj\"}",
+      "parsed_call": {
+        "tool": "tensor_stats",
+        "layer": 1,
+        "proj": "up_proj"
+      },
+      "duplicate_of_previous": false,
+      "tool_result": "tensor: model.layers.1.mlp.up_proj.weight\nmean=-0.000002 std=0.015450\nl2=76.8491\nzero_rows=0"
+    },
+    {
+      "round": 8,
+      "model_raw_output": "{\"tool\": \"tensor_stats\", \"layer\": 0, \"proj\": \"down_proj\"}",
+      "parsed_call": {
+        "tool": "tensor_stats",
+        "layer": 0,
+        "proj": "down_proj"
+      },
+      "duplicate_of_previous": false,
+      "tool_result": "tensor: model.layers.0.mlp.down_proj.weight\nmean=-0.000008 std=0.023275\nl2=116.0074\nzero_rows=0"
+    },
+    {
+      "round": 9,
+      "model_raw_output": "{\"tool\": \"tensor_stats\", \"layer\": 0, \"proj\": \"gate_proj\"}",
+      "parsed_call": {
+        "tool": "tensor_stats",
+        "layer": 0,
+        "proj": "gate_proj"
+      },
+      "duplicate_of_previous": false,
+      "tool_result": "tensor: model.layers.0.mlp.gate_proj.weight\nmean=0.000008 std=0.023628\nl2=117.7603\nzero_rows=0"
+    },
+    {
+      "round": 10,
+      "model_raw_output": "{\"tool\": \"tensor_stats\", \"layer\": 11, \"proj\": \"down_proj\"}",
+      "parsed_call": {
+        "tool": "tensor_stats",
+        "layer": 11,
+        "proj": "down_proj"
+      },
+      "duplicate_of_previous": false,
+      "tool_result": "tensor: model.layers.11.mlp.down_proj.weight\nmean=-0.000002 std=0.022831\nl2=113.8176\nzero_rows=0"
+    },
+    {
+      "round": 11,
+      "model_raw_output": "{\"tool\": \"tensor_stats\", \"layer\": 11, \"proj\": \"gate_proj\"}",
+      "parsed_call": {
+        "tool": "tensor_stats",
+        "layer": 11,
+        "proj": "gate_proj"
+      },
+      "duplicate_of_previous": false,
+      "tool_result": "tensor: model.layers.11.mlp.gate_proj.weight\nmean=0.000049 std=0.026064\nl2=129.9174\nzero_rows=0"
+    }
+  ]
+}

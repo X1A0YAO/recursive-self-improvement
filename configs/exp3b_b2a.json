@@ -1,0 +1,38 @@
+{
+  "experiment": "exp3b_b2a",
+  "description": "B2a arm: aggregate query tool (compare_all_projections) - measures the model's ability to exploit complete diagnostic information. NOT autonomous search, NOT RSI evidence.",
+  "defect_model_dir": "checkpoints/p2/cascade3_activity_zero_512",
+  "defect_truth": {
+    "layers": [22, 28, 30],
+    "proj": "up_proj",
+    "row_count_per_tensor": 512
+  },
+  "b1_baseline_results": "results/exp3_diagnosis.json",
+  "max_rounds": 10,
+  "generation": {
+    "greedy": true,
+    "max_new_tokens": 512,
+    "enable_thinking": false
+  },
+  "repeats": 3,
+  "aggregate_tool_counts_as_one_call": true,
+  "scoring": {
+    "primary": "final propose_edit names up_proj (projection localization)",
+    "primary_evaluated_at": "final proposal only - tool calls / views do NOT count",
+    "secondary": [
+      "final proposal names at least one true layer in {22,28,30}",
+      "rounds until first correct-projection mention in a proposal (not in tool calls)",
+      "total rounds used; wasted duplicate calls"
+    ]
+  },
+  "preregistered_verdicts": {
+    "pass_primary": ">=2/3 runs with final proposal naming up_proj",
+    "pass_layer": ">=2/3 runs with final proposal containing at least one of layers 22/28/30",
+    "pass_efficiency": "first correct proposal round <= 4",
+    "note": "display flags in tool output are for presentation only; scoring reads proposals exclusively"
+  },
+  "output": {
+    "trajectory": "results/exp3b_b2a.json",
+    "report": "experiments/iteration_2/EXP3B_B2A_REPORT.md"
+  }
+}
