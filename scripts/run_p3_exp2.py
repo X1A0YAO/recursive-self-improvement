@@ -112,7 +112,7 @@ def exec_tool(call: dict) -> str:
     if tool == "compare_all_projections":
         from agent.b2_tools import _compute_all_units_subprocess, _render_summary
 
-        units = _compute_all_units_subprocess(G_DEFECT_PATH, 36) if G_DEFECT_PATH else []
+        units = _compute_all_units_subprocess(f"checkpoints/{G_DEFECT_PATH}", 36) if G_DEFECT_PATH else []
         text, _ = _render_summary(units, 36)
         return text
     return f"unknown tool: {tool}"
@@ -203,57 +203,87 @@ def main() -> None:
     elif args.cell:
         cells = [(args.cell[0], args.cell[1])]
 
-    # GPU 只需加载一次被检模型字典里的——按缺陷分组跑（省重载）
+    # 按 checkpoint 分组：同一模型连续跑完它的所有格子再换（避免反复加载
+    # 触发 Windows 页面文件耗尽 oserror 1455——白天共享内存环境）
     from agent.weight_access_tools import CKPT_ALIASES, load_cache
+    from collections import defaultdict
 
+    by_ckpt: dict[str, list[tuple[str, str]]] = defaultdict(list)
     for arm, did in cells:
-        if any(s["arm"] == arm and s["defect"] == did for s in data["sessions"]):
-            print(f"[exp2] {arm}/{did} done, skip", flush=True)
-            continue
-        d = DEFECTS[did]
-        CKPT_ALIASES["self"] = d["cache"]
-        G_DEFECT_PATH = d["ckpt"]
-        print(f"[exp2] running {arm}/{did} (self -> {d['cache']})...", flush=True)
-        # 顺序纪律：先 CPU 缓存（防 GPU 进程内 torch.load 大分配崩溃），再 GPU
-        load_cache("self")
-        load_cache("healthy_ref")
-        # GPU 空闲等待 + 加载重试（白天机器共享；OOM 时清理重试而非崩溃）
-        import subprocess as _sp
-        import time as _t
+        by_ckpt[DEFECTS[did]["cache"]].append((arm, did))
 
+    import subprocess as _sp
+    import time as _t
+
+    for cache_name, group in by_ckpt.items():
+        if all(any(s["arm"] == a and s["defect"] == d for s in data["sessions"]) for a, d in group):
+            continue  # 该组全部完成
         model = tokenizer = None
-        for attempt in range(30):  # 最多重试 30 次（~1h+）
+        for attempt in range(30):
             r = _sp.run(["nvidia-smi", "--query-gpu=memory.free", "--format=csv,noheader,nounits"], capture_output=True, text=True)
             free_mb = int(r.stdout.strip().splitlines()[0])
             if free_mb < 6300:
-                print(f"[exp2] attempt {attempt}: GPU busy (free {free_mb}MB), waiting 120s...", flush=True)
+                print(f"[exp2] attempt {attempt}: GPU busy (free {free_mb}MB), wait 120s...", flush=True)
                 _t.sleep(120)
                 continue
             try:
-                model, tokenizer = load_model(str(ROOT / d["ckpt"]))
+                model, tokenizer = load_model(str(ROOT / DEFECTS[group[0][1]]["ckpt"]))
                 break
-            except (RuntimeError, MemoryError) as e:
-                print(f"[exp2] attempt {attempt}: load failed ({type(e).__name__}: {str(e)[:120]}), retry in 120s", flush=True)
+            except (RuntimeError, MemoryError, OSError) as e:
+                print(f"[exp2] attempt {attempt}: load failed ({type(e).__name__}: {str(e)[:100]}), retry 120s", flush=True)
                 import gc as _gc
-
                 import torch as _torch
 
                 _gc.collect()
                 _torch.cuda.empty_cache()
                 _t.sleep(120)
         if model is None:
-            print(f"[exp2] GIVING UP on {arm}/{did} after retries", flush=True)
+            print(f"[exp2] GIVING UP on group {cache_name}", flush=True)
             continue
         model.eval()
-        model.eval()
-        res = run_session(model, tokenizer, arm, did)
-        data["sessions"].append(res)
-        OUT.write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8")
-        s = res["scoring"]
-        print(f"[exp2] {arm}/{did}: calls={res['n_tool_calls']} tensor_exact={s.get('tensor_exact')} healthy={s.get('healthy_correct')}", flush=True)
-        del model, tokenizer
-        import gc, torch
 
+        for arm, did in group:
+            if any(s["arm"] == arm and s["defect"] == did for s in data["sessions"]):
+                print(f"[exp2] {arm}/{did} done, skip", flush=True)
+                continue
+            d = DEFECTS[did]
+            CKPT_ALIASES["self"] = d["cache"]
+            G_DEFECT_PATH = d["cache"]  # 缓存键用目录名（_b2_cache 已全部预计算）
+            print(f"[exp2] running {arm}/{did}...", flush=True)
+            load_cache("self")
+            load_cache("healthy_ref")
+            res = None
+            for sess_attempt in range(3):  # 会话中途 OOM（其它进程抢占）重试
+                try:
+                    res = run_session(model, tokenizer, arm, did)
+                    break
+                except RuntimeError as e:
+                    if "out of memory" not in str(e).lower():
+                        raise
+                    print(f"[exp2] {arm}/{did} session OOM (attempt {sess_attempt}), retry in 120s", flush=True)
+                    import gc as _gc
+                    import time as _time
+                    import torch as _torch
+
+                    _gc.collect()
+                    _torch.cuda.empty_cache()
+                    _time.sleep(120)
+            if res is None:
+                print(f"[exp2] {arm}/{did} FAILED after session retries", flush=True)
+                continue
+            data["sessions"].append(res)
+            OUT.write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8")
+            s = res["scoring"]
+            print(f"[exp2] {arm}/{did}: calls={res['n_tool_calls']} exact={s.get('tensor_exact')} healthy={s.get('healthy_correct')}", flush=True)
+
+        del model, tokenizer
+        import gc
+        import torch
+
+        # 释放该组的张量缓存（防 commit 累积 → oserror 1455）
+        from agent.weight_access_tools import release_cache
+
+        release_cache()
         gc.collect()
         torch.cuda.empty_cache()
 

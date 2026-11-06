@@ -47,6 +47,15 @@ def _cache_path(ckpt: str) -> Path:
 _LOADED: dict[str, dict[str, torch.Tensor]] = {}
 
 
+def release_cache(ckpt: str | None = None) -> None:
+    """释放缓存（换 checkpoint 组时调用，防 commit 内存累积——oserror 1455 根因）。"""
+    global _LOADED
+    if ckpt is None:
+        _LOADED.clear()
+    else:
+        _LOADED.pop(resolve_ckpt(ckpt), None)
+
+
 def load_cache(ckpt: str) -> dict[str, torch.Tensor]:
     """加载预载缓存（模块级单例：每进程每文件只 load 一次，防内存叠加崩溃）。"""
     key = resolve_ckpt(ckpt)
