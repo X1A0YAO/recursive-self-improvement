@@ -1,0 +1,47 @@
+{
+  "experiment": "exp3b_b2b",
+  "description": "B2b arm: budget-allocation strategy prompt + harness deadline reminder. Measures whether the model can convert verified findings into a submitted diagnosis within budget. NOT autonomous search, NOT RSI evidence.",
+  "basetine": {
+    "b2a_results": "results/exp3b_b2a.json",
+    "b2a_failure_mode": "0/3 proposals; diagnosis correct (rounds 6-7 exact lesion verification) but budget exhausted on z-anomaly sweep (r1-r5) and cross-projection checks (r8-r9)"
+  },
+  "defect_model_dir": "checkpoints/p2/cascade3_activity_zero_512",
+  "defect_truth": {
+    "layers": [22, 28, 30],
+    "proj": "up_proj",
+    "row_count_per_tensor": 512
+  },
+  "max_rounds": 10,
+  "generation": {
+    "greedy": true,
+    "max_new_tokens": 512,
+    "enable_thinking": false
+  },
+  "b2b1_strategy_prompt": {
+    "enabled": true,
+    "content_summary": "budget template (1 scan + <=4 verify + >=1 propose) + evidence tiering (zero_rows=hard fingerprint, verify once then stop; z=soft signal, skip unless corroborating a fingerprint) + dedup rule (never re-query a confirmed finding)"
+  },
+  "b2b2_deadline_reminder": {
+    "enabled": true,
+    "trigger": "remaining_rounds == 2 and no proposal yet",
+    "message": "BUDGET WARNING: 2 calls remain. If your evidence already includes a verified zero_rows fingerprint, submit propose_edit NOW. Do not start new verification threads.",
+    "note": "reminder only - harness never submits on the model's behalf"
+  },
+  "b2b3_forced_fallback": {
+    "enabled": true,
+    "trigger": "final round reached without any proposal",
+    "message": "FINAL CALL: budget exhausted. Output your best-current diagnosis as propose_edit NOW with whatever evidence you have.",
+    "statistics": "reported separately as forced_proposal_rate; never merged with autonomous completion"
+  },
+  "repeats": 3,
+  "preregistered_verdicts": {
+    "pass_primary": ">=2/3 runs with AUTONOMOUS final proposal naming up_proj (B2b-3 forced proposals excluded from this count)",
+    "pass_layer": ">=2/3 autonomous proposals containing at least one of layers 22/28/30",
+    "pass_efficiency": "autonomous proposal round <= 8 (leaving slack)",
+    "secondary": "forced-proposal correctness reported separately; duplicate-call waste <= 1 per run"
+  },
+  "output": {
+    "trajectory": "results/exp3b_b2b.json",
+    "report": "experiments/iteration_2/EXP3B_B2B_REPORT.md"
+  }
+}

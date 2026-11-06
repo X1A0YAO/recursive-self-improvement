@@ -1,0 +1,355 @@
+{
+  "runs": [
+    {
+      "repeat": 0,
+      "rounds_used": 10,
+      "duplicate_calls": 0,
+      "scoring": {
+        "final_proposal_present": false,
+        "proposal_forced": false,
+        "projection_correct": false,
+        "layer_correct": false,
+        "tensor_exact": false,
+        "autonomous_completion": false
+      },
+      "final_proposal_raw": null,
+      "transcript": [
+        {
+          "round": 0,
+          "model_raw_output": "{\n  \"tool\": \"compare_all_projections\"\n}",
+          "parsed_call": {
+            "tool": "compare_all_projections"
+          },
+          "tool_result": "=== FULL NETWORK ANOMALY SCAN (7 projections x 36 layers, 252 units) ===\n\n[q_proj] 35/36 units normal; ANOMALOUS:\n    layer 29: z_std=+2.98, z_l2=+2.98\n[k_proj] 34/36 units normal; ANOMALOUS:\n    layer 33: z_std=-2.67, z_l2=-2.67\n    layer 35: z_mean=-3.17\n[v_proj] 33/36 units normal; ANOMALOUS:\n    layer 12: z_mean=-2.96\n    layer 33: z_std=+2.50, z_l2=+2.50\n    layer 34: z_std=+2.50, z_l2=+2.50\n[o_proj] 35/36 units normal; ANOMALOUS:\n    layer 33: z_std=+2.59, z_l2=+2.60\n[gate_proj] 34/36 units normal; ANOMALOUS:\n    layer  2: z_std=-2.86, z_l2=-2.85\n    layer  4: z_std=+3.08, z_l2=+3.08\n[up_proj] 31/36 units normal; ANOMALOUS:\n    layer  1: z_std=-3.38, z_l2=-3.38\n    layer  2: z_std=-2.57, z_l2=-2.57\n    layer 22: zero_rows=512\n    layer 28: zero_rows=512\n    layer 30: zero_rows=512\n[down_proj] 33/36 units normal; ANOMALOUS:\n    layer  1: z_std=-3.17, z_l2=-3.17\n    layer  2: z_std=-3.14, z_l2=-3.14\n    layer 10: z_mean=+2.55\n\n[coverage] projections fully scanned: q,k,v,o,gate,up,down (7/7)\n[coverage] layers scanned: 0-35 (36/36, zero-based)\n[coverage] units covered this call: 252/252\nvalid_layer_indices: 0-35 (note: zero-based indexing)",
+          "units_covered": 252
+        },
+        {
+          "round": 1,
+          "model_raw_output": "{\n  \"tool\": \"tensor_stats\",\n  \"layer\": 22,\n  \"proj\": \"down_proj\"\n}",
+          "parsed_call": {
+            "tool": "tensor_stats",
+            "layer": 22,
+            "proj": "down_proj"
+          },
+          "tool_result": "tensor: model.layers.22.mlp.down_proj.weight\nmean=-0.000003 std=0.022913\nl2=114.2110\nzero_rows=0"
+        },
+        {
+          "round": 2,
+          "model_raw_output": "{\n  \"tool\": \"tensor_stats\",\n  \"layer\": 28,\n  \"proj\": \"down_proj\"\n}",
+          "parsed_call": {
+            "tool": "tensor_stats",
+            "layer": 28,
+            "proj": "down_proj"
+          },
+          "tool_result": "tensor: model.layers.28.mlp.down_proj.weight\nmean=-0.000002 std=0.024176\nl2=120.5397\nzero_rows=0"
+        },
+        {
+          "round": 3,
+          "model_raw_output": "{\n  \"tool\": \"tensor_stats\",\n  \"layer\": 30,\n  \"proj\": \"down_proj\"\n}",
+          "parsed_call": {
+            "tool": "tensor_stats",
+            "layer": 30,
+            "proj": "down_proj"
+          },
+          "tool_result": "tensor: model.layers.30.mlp.down_proj.weight\nmean=-0.000000 std=0.024892\nl2=124.1227\nzero_rows=0"
+        },
+        {
+          "round": 4,
+          "model_raw_output": "{\n  \"tool\": \"tensor_stats\",\n  \"layer\": 33,\n  \"proj\": \"up_proj\"\n}",
+          "parsed_call": {
+            "tool": "tensor_stats",
+            "layer": 33,
+            "proj": "up_proj"
+          },
+          "tool_result": "tensor: model.layers.33.mlp.up_proj.weight\nmean=0.000002 std=0.025896\nl2=129.1118\nzero_rows=0"
+        },
+        {
+          "round": 5,
+          "model_raw_output": "{\n  \"tool\": \"tensor_stats\",\n  \"layer\": 2,\n  \"proj\": \"up_proj\"\n}",
+          "parsed_call": {
+            "tool": "tensor_stats",
+            "layer": 2,
+            "proj": "up_proj"
+          },
+          "tool_result": "tensor: model.layers.2.mlp.up_proj.weight\nmean=-0.000004 std=0.017260\nl2=85.9133\nzero_rows=0"
+        },
+        {
+          "round": 6,
+          "model_raw_output": "{\n  \"tool\": \"tensor_stats\",\n  \"layer\": 2,\n  \"proj\": \"down_proj\"\n}",
+          "parsed_call": {
+            "tool": "tensor_stats",
+            "layer": 2,
+            "proj": "down_proj"
+          },
+          "tool_result": "tensor: model.layers.2.mlp.down_proj.weight\nmean=-0.000000 std=0.016537\nl2=82.2991\nzero_rows=0"
+        },
+        {
+          "round": 7,
+          "model_raw_output": "{\n  \"tool\": \"tensor_stats\",\n  \"layer\": 1,\n  \"proj\": \"up_proj\"\n}",
+          "parsed_call": {
+            "tool": "tensor_stats",
+            "layer": 1,
+            "proj": "up_proj"
+          },
+          "tool_result": "tensor: model.layers.1.mlp.up_proj.weight\nmean=-0.000002 std=0.015450\nl2=76.8491\nzero_rows=0",
+          "deadline_reminder_sent": true
+        },
+        {
+          "round": 8,
+          "model_raw_output": "{\n  \"tool\": \"tensor_stats\",\n  \"layer\": 1,\n  \"proj\": \"down_proj\"\n}",
+          "parsed_call": {
+            "tool": "tensor_stats",
+            "layer": 1,
+            "proj": "down_proj"
+          },
+          "tool_result": "tensor: model.layers.1.mlp.down_proj.weight\nmean=-0.000003 std=0.016467\nl2=81.9656\nzero_rows=0"
+        },
+        {
+          "round": 9,
+          "model_raw_output": "{\n  \"tool\": \"tensor_stats\",\n  \"layer\": 0,\n  \"proj\": \"down_proj\"\n}",
+          "parsed_call": {
+            "tool": "tensor_stats",
+            "layer": 0,
+            "proj": "down_proj"
+          },
+          "tool_result": "tensor: model.layers.0.mlp.down_proj.weight\nmean=-0.000008 std=0.023275\nl2=116.0074\nzero_rows=0",
+          "forced_request_sent": true
+        }
+      ]
+    },
+    {
+      "repeat": 1,
+      "rounds_used": 10,
+      "duplicate_calls": 0,
+      "scoring": {
+        "final_proposal_present": false,
+        "proposal_forced": false,
+        "projection_correct": false,
+        "layer_correct": false,
+        "tensor_exact": false,
+        "autonomous_completion": false
+      },
+      "final_proposal_raw": null,
+      "transcript": [
+        {
+          "round": 0,
+          "model_raw_output": "{\n  \"tool\": \"compare_all_projections\"\n}",
+          "parsed_call": {
+            "tool": "compare_all_projections"
+          },
+          "tool_result": "=== FULL NETWORK ANOMALY SCAN (7 projections x 36 layers, 252 units) ===\n\n[q_proj] 35/36 units normal; ANOMALOUS:\n    layer 29: z_std=+2.98, z_l2=+2.98\n[k_proj] 34/36 units normal; ANOMALOUS:\n    layer 33: z_std=-2.67, z_l2=-2.67\n    layer 35: z_mean=-3.17\n[v_proj] 33/36 units normal; ANOMALOUS:\n    layer 12: z_mean=-2.96\n    layer 33: z_std=+2.50, z_l2=+2.50\n    layer 34: z_std=+2.50, z_l2=+2.50\n[o_proj] 35/36 units normal; ANOMALOUS:\n    layer 33: z_std=+2.59, z_l2=+2.60\n[gate_proj] 34/36 units normal; ANOMALOUS:\n    layer  2: z_std=-2.86, z_l2=-2.85\n    layer  4: z_std=+3.08, z_l2=+3.08\n[up_proj] 31/36 units normal; ANOMALOUS:\n    layer  1: z_std=-3.38, z_l2=-3.38\n    layer  2: z_std=-2.57, z_l2=-2.57\n    layer 22: zero_rows=512\n    layer 28: zero_rows=512\n    layer 30: zero_rows=512\n[down_proj] 33/36 units normal; ANOMALOUS:\n    layer  1: z_std=-3.17, z_l2=-3.17\n    layer  2: z_std=-3.14, z_l2=-3.14\n    layer 10: z_mean=+2.55\n\n[coverage] projections fully scanned: q,k,v,o,gate,up,down (7/7)\n[coverage] layers scanned: 0-35 (36/36, zero-based)\n[coverage] units covered this call: 252/252\nvalid_layer_indices: 0-35 (note: zero-based indexing)",
+          "units_covered": 252
+        },
+        {
+          "round": 1,
+          "model_raw_output": "{\n  \"tool\": \"tensor_stats\",\n  \"layer\": 22,\n  \"proj\": \"down_proj\"\n}",
+          "parsed_call": {
+            "tool": "tensor_stats",
+            "layer": 22,
+            "proj": "down_proj"
+          },
+          "tool_result": "tensor: model.layers.22.mlp.down_proj.weight\nmean=-0.000003 std=0.022913\nl2=114.2110\nzero_rows=0"
+        },
+        {
+          "round": 2,
+          "model_raw_output": "{\n  \"tool\": \"tensor_stats\",\n  \"layer\": 28,\n  \"proj\": \"down_proj\"\n}",
+          "parsed_call": {
+            "tool": "tensor_stats",
+            "layer": 28,
+            "proj": "down_proj"
+          },
+          "tool_result": "tensor: model.layers.28.mlp.down_proj.weight\nmean=-0.000002 std=0.024176\nl2=120.5397\nzero_rows=0"
+        },
+        {
+          "round": 3,
+          "model_raw_output": "{\n  \"tool\": \"tensor_stats\",\n  \"layer\": 30,\n  \"proj\": \"down_proj\"\n}",
+          "parsed_call": {
+            "tool": "tensor_stats",
+            "layer": 30,
+            "proj": "down_proj"
+          },
+          "tool_result": "tensor: model.layers.30.mlp.down_proj.weight\nmean=-0.000000 std=0.024892\nl2=124.1227\nzero_rows=0"
+        },
+        {
+          "round": 4,
+          "model_raw_output": "{\n  \"tool\": \"tensor_stats\",\n  \"layer\": 33,\n  \"proj\": \"up_proj\"\n}",
+          "parsed_call": {
+            "tool": "tensor_stats",
+            "layer": 33,
+            "proj": "up_proj"
+          },
+          "tool_result": "tensor: model.layers.33.mlp.up_proj.weight\nmean=0.000002 std=0.025896\nl2=129.1118\nzero_rows=0"
+        },
+        {
+          "round": 5,
+          "model_raw_output": "{\n  \"tool\": \"tensor_stats\",\n  \"layer\": 2,\n  \"proj\": \"up_proj\"\n}",
+          "parsed_call": {
+            "tool": "tensor_stats",
+            "layer": 2,
+            "proj": "up_proj"
+          },
+          "tool_result": "tensor: model.layers.2.mlp.up_proj.weight\nmean=-0.000004 std=0.017260\nl2=85.9133\nzero_rows=0"
+        },
+        {
+          "round": 6,
+          "model_raw_output": "{\n  \"tool\": \"tensor_stats\",\n  \"layer\": 2,\n  \"proj\": \"down_proj\"\n}",
+          "parsed_call": {
+            "tool": "tensor_stats",
+            "layer": 2,
+            "proj": "down_proj"
+          },
+          "tool_result": "tensor: model.layers.2.mlp.down_proj.weight\nmean=-0.000000 std=0.016537\nl2=82.2991\nzero_rows=0"
+        },
+        {
+          "round": 7,
+          "model_raw_output": "{\n  \"tool\": \"tensor_stats\",\n  \"layer\": 1,\n  \"proj\": \"up_proj\"\n}",
+          "parsed_call": {
+            "tool": "tensor_stats",
+            "layer": 1,
+            "proj": "up_proj"
+          },
+          "tool_result": "tensor: model.layers.1.mlp.up_proj.weight\nmean=-0.000002 std=0.015450\nl2=76.8491\nzero_rows=0",
+          "deadline_reminder_sent": true
+        },
+        {
+          "round": 8,
+          "model_raw_output": "{\n  \"tool\": \"tensor_stats\",\n  \"layer\": 1,\n  \"proj\": \"down_proj\"\n}",
+          "parsed_call": {
+            "tool": "tensor_stats",
+            "layer": 1,
+            "proj": "down_proj"
+          },
+          "tool_result": "tensor: model.layers.1.mlp.down_proj.weight\nmean=-0.000003 std=0.016467\nl2=81.9656\nzero_rows=0"
+        },
+        {
+          "round": 9,
+          "model_raw_output": "{\n  \"tool\": \"tensor_stats\",\n  \"layer\": 0,\n  \"proj\": \"down_proj\"\n}",
+          "parsed_call": {
+            "tool": "tensor_stats",
+            "layer": 0,
+            "proj": "down_proj"
+          },
+          "tool_result": "tensor: model.layers.0.mlp.down_proj.weight\nmean=-0.000008 std=0.023275\nl2=116.0074\nzero_rows=0",
+          "forced_request_sent": true
+        }
+      ]
+    },
+    {
+      "repeat": 2,
+      "rounds_used": 10,
+      "duplicate_calls": 0,
+      "scoring": {
+        "final_proposal_present": false,
+        "proposal_forced": false,
+        "projection_correct": false,
+        "layer_correct": false,
+        "tensor_exact": false,
+        "autonomous_completion": false
+      },
+      "final_proposal_raw": null,
+      "transcript": [
+        {
+          "round": 0,
+          "model_raw_output": "{\n  \"tool\": \"compare_all_projections\"\n}",
+          "parsed_call": {
+            "tool": "compare_all_projections"
+          },
+          "tool_result": "=== FULL NETWORK ANOMALY SCAN (7 projections x 36 layers, 252 units) ===\n\n[q_proj] 35/36 units normal; ANOMALOUS:\n    layer 29: z_std=+2.98, z_l2=+2.98\n[k_proj] 34/36 units normal; ANOMALOUS:\n    layer 33: z_std=-2.67, z_l2=-2.67\n    layer 35: z_mean=-3.17\n[v_proj] 33/36 units normal; ANOMALOUS:\n    layer 12: z_mean=-2.96\n    layer 33: z_std=+2.50, z_l2=+2.50\n    layer 34: z_std=+2.50, z_l2=+2.50\n[o_proj] 35/36 units normal; ANOMALOUS:\n    layer 33: z_std=+2.59, z_l2=+2.60\n[gate_proj] 34/36 units normal; ANOMALOUS:\n    layer  2: z_std=-2.86, z_l2=-2.85\n    layer  4: z_std=+3.08, z_l2=+3.08\n[up_proj] 31/36 units normal; ANOMALOUS:\n    layer  1: z_std=-3.38, z_l2=-3.38\n    layer  2: z_std=-2.57, z_l2=-2.57\n    layer 22: zero_rows=512\n    layer 28: zero_rows=512\n    layer 30: zero_rows=512\n[down_proj] 33/36 units normal; ANOMALOUS:\n    layer  1: z_std=-3.17, z_l2=-3.17\n    layer  2: z_std=-3.14, z_l2=-3.14\n    layer 10: z_mean=+2.55\n\n[coverage] projections fully scanned: q,k,v,o,gate,up,down (7/7)\n[coverage] layers scanned: 0-35 (36/36, zero-based)\n[coverage] units covered this call: 252/252\nvalid_layer_indices: 0-35 (note: zero-based indexing)",
+          "units_covered": 252
+        },
+        {
+          "round": 1,
+          "model_raw_output": "{\n  \"tool\": \"tensor_stats\",\n  \"layer\": 22,\n  \"proj\": \"down_proj\"\n}",
+          "parsed_call": {
+            "tool": "tensor_stats",
+            "layer": 22,
+            "proj": "down_proj"
+          },
+          "tool_result": "tensor: model.layers.22.mlp.down_proj.weight\nmean=-0.000003 std=0.022913\nl2=114.2110\nzero_rows=0"
+        },
+        {
+          "round": 2,
+          "model_raw_output": "{\n  \"tool\": \"tensor_stats\",\n  \"layer\": 28,\n  \"proj\": \"down_proj\"\n}",
+          "parsed_call": {
+            "tool": "tensor_stats",
+            "layer": 28,
+            "proj": "down_proj"
+          },
+          "tool_result": "tensor: model.layers.28.mlp.down_proj.weight\nmean=-0.000002 std=0.024176\nl2=120.5397\nzero_rows=0"
+        },
+        {
+          "round": 3,
+          "model_raw_output": "{\n  \"tool\": \"tensor_stats\",\n  \"layer\": 30,\n  \"proj\": \"down_proj\"\n}",
+          "parsed_call": {
+            "tool": "tensor_stats",
+            "layer": 30,
+            "proj": "down_proj"
+          },
+          "tool_result": "tensor: model.layers.30.mlp.down_proj.weight\nmean=-0.000000 std=0.024892\nl2=124.1227\nzero_rows=0"
+        },
+        {
+          "round": 4,
+          "model_raw_output": "{\n  \"tool\": \"tensor_stats\",\n  \"layer\": 33,\n  \"proj\": \"up_proj\"\n}",
+          "parsed_call": {
+            "tool": "tensor_stats",
+            "layer": 33,
+            "proj": "up_proj"
+          },
+          "tool_result": "tensor: model.layers.33.mlp.up_proj.weight\nmean=0.000002 std=0.025896\nl2=129.1118\nzero_rows=0"
+        },
+        {
+          "round": 5,
+          "model_raw_output": "{\n  \"tool\": \"tensor_stats\",\n  \"layer\": 2,\n  \"proj\": \"up_proj\"\n}",
+          "parsed_call": {
+            "tool": "tensor_stats",
+            "layer": 2,
+            "proj": "up_proj"
+          },
+          "tool_result": "tensor: model.layers.2.mlp.up_proj.weight\nmean=-0.000004 std=0.017260\nl2=85.9133\nzero_rows=0"
+        },
+        {
+          "round": 6,
+          "model_raw_output": "{\n  \"tool\": \"tensor_stats\",\n  \"layer\": 2,\n  \"proj\": \"down_proj\"\n}",
+          "parsed_call": {
+            "tool": "tensor_stats",
+            "layer": 2,
+            "proj": "down_proj"
+          },
+          "tool_result": "tensor: model.layers.2.mlp.down_proj.weight\nmean=-0.000000 std=0.016537\nl2=82.2991\nzero_rows=0"
+        },
+        {
+          "round": 7,
+          "model_raw_output": "{\n  \"tool\": \"tensor_stats\",\n  \"layer\": 1,\n  \"proj\": \"up_proj\"\n}",
+          "parsed_call": {
+            "tool": "tensor_stats",
+            "layer": 1,
+            "proj": "up_proj"
+          },
+          "tool_result": "tensor: model.layers.1.mlp.up_proj.weight\nmean=-0.000002 std=0.015450\nl2=76.8491\nzero_rows=0",
+          "deadline_reminder_sent": true
+        },
+        {
+          "round": 8,
+          "model_raw_output": "{\n  \"tool\": \"tensor_stats\",\n  \"layer\": 1,\n  \"proj\": \"down_proj\"\n}",
+          "parsed_call": {
+            "tool": "tensor_stats",
+            "layer": 1,
+            "proj": "down_proj"
+          },
+          "tool_result": "tensor: model.layers.1.mlp.down_proj.weight\nmean=-0.000003 std=0.016467\nl2=81.9656\nzero_rows=0"
+        },
+        {
+          "round": 9,
+          "model_raw_output": "{\n  \"tool\": \"tensor_stats\",\n  \"layer\": 0,\n  \"proj\": \"down_proj\"\n}",
+          "parsed_call": {
+            "tool": "tensor_stats",
+            "layer": 0,
+            "proj": "down_proj"
+          },
+          "tool_result": "tensor: model.layers.0.mlp.down_proj.weight\nmean=-0.000008 std=0.023275\nl2=116.0074\nzero_rows=0",
+          "forced_request_sent": true
+        }
+      ]
+    }
+  ]
+}
