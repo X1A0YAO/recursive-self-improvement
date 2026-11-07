@@ -1,0 +1,1708 @@
+{
+  "generated_at": "2026-11-07T08:11:58.882011+00:00",
+  "model_dir": "checkpoints/V0",
+  "n": 160,
+  "accuracy": 0.5875,
+  "config": {
+    "max_new_tokens": 512,
+    "greedy": true
+  },
+  "results": [
+    {
+      "uid": "ifeval-0000",
+      "score": false,
+      "instruction_ids": [
+        "punctuation:no_comma",
+        "detectable_format:number_highlighted_sections",
+        "length_constraints:number_words"
+      ],
+      "response": "Raymond III Count of Tripoli was a prominent figure in the Crusader states during the 12th century He was born in 1140 and died in 1174 He was the son of Raymond II Count of Tripoli and his wife Sibyl of Antioch He was the last male member of the House of Tripoli and played a significant role in the defense of the Crusader states against the Muslim forces\n\n*highlighted section part 1*  \nRaymond II",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0001",
+      "score": true,
+      "instruction_ids": [
+        "punctuation:no_comma"
+      ],
+      "response": "O noble traveler whose heart doth yearn  \nTo wander through the land of cherry bloom  \nAnd feel the breath of ancient winds  \nThat whisper through the silent plum  \nI shall compose for thee a tale in verse  \nOf Japan in all its grace and lore  \nA journey through the land of fire and snow  \nA path of beauty and of lore  \n\nFirst in the East where the sun doth rise  \nThou shalt arrive in Tokyo most g",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0002",
+      "score": 0.0,
+      "instruction_ids": [
+        "detectable_content:number_placeholders"
+      ],
+      "response": "**[Name]**  \n[Address]  \n[Phone Number] | [Email Address] | [LinkedIn Profile] | [Portfolio Website]  \n\n---\n\n**Objective**  \nDetermined and motivated high school graduate seeking a first job in [industry/field of interest]. Eager to learn, contribute, and grow within a professional environment.  \n\n---\n\n**Education**  \n**[High School Name]**  \n[City, State] – [Graduation Year]  \n- Graduated with [G",
+      "num_new_tokens": 512,
+      "truncated": true
+    },
+    {
+      "uid": "ifeval-0003",
+      "score": true,
+      "instruction_ids": [
+        "combination:repeat_prompt",
+        "detectable_format:title"
+      ],
+      "response": "Write an email to my boss telling him that I am quitting. The email must contain a title wrapped in double angular brackets, i.e. <<title>>.\n<<Quitting Notice>>\nSubject: Resignation from Position\n\nDear [Boss's Name],\n\nI hope this message finds you well. After careful consideration, I have decided to resign from my position at [Company Name], effective [last working day, e.g., two weeks from today]",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0004",
+      "score": true,
+      "instruction_ids": [
+        "change_case:english_lowercase"
+      ],
+      "response": "what are the two young boys doing with toy guns and horns?",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0005",
+      "score": true,
+      "instruction_ids": [
+        "detectable_format:number_bullet_lists"
+      ],
+      "response": "* The woman in the ball gown adjusts her corset with a confident smile, while the man in sweats casually tosses a jacket over his shoulder.  \n* They pass a group of people in formal attire, and the man in sweats comments, \"I didn’t think this place even had a dress code.\"  \n* The woman in the ball gown laughs, \"It’s a night of surprises, isn’t it? You never know what you’ll find when you step into",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0006",
+      "score": true,
+      "instruction_ids": [
+        "change_case:english_capital",
+        "detectable_format:multiple_sections"
+      ],
+      "response": "PARAGRAPH 1  \nTHE SENTENCE \"IF THE LAW IS BAD, YOU SHOULD NOT FOLLOW IT\" IS A SIMPLISTIC AND MORALLY FLAWED STATEMENT. IT ASSUMES THAT ALL LAWS ARE EITHER GOOD OR BAD, WITHOUT CONSIDERING THE COMPLEXITY OF LEGAL SYSTEMS AND THE CONTEXT IN WHICH THEY ARE APPLIED. THIS BINARY APPROACH IGNORES THE FACT THAT LAWS ARE OFTEN THE RESULT OF SOCIETAL CONVENTIONS, HISTORICAL CONTEXT, AND POLITICAL DECISIONS",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0007",
+      "score": false,
+      "instruction_ids": [
+        "change_case:capital_word_frequency",
+        "change_case:capital_word_frequency",
+        "startend:quotation"
+      ],
+      "response": "\"MATTHIAS ALGIERS  \nPROFESSIONAL SUMMARY  \nMATTHIAS ALGIERS is a highly motivated and results-driven professional with a strong background in project management, team leadership, and strategic planning. With a proven track record of delivering complex projects on time and within budget, MATTHIAS is committed to excellence in all aspects of his work. He is a collaborative and adaptable individual w",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0008",
+      "score": true,
+      "instruction_ids": [
+        "change_case:english_lowercase"
+      ],
+      "response": "dear friend,  \n\ni hope you're doing well. i just wanted to ask you something important. could you please go and vote? it's your right, and it's a way to make your voice heard. every vote counts, and your vote can make a difference.  \n\ni know it might seem like a small thing, but in reality, it's a big step towards shaping the future. please don't forget to cast your ballot. if you need help findin",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0009",
+      "score": false,
+      "instruction_ids": [
+        "keywords:existence",
+        "length_constraints:number_words",
+        "punctuation:no_comma"
+      ],
+      "response": "Subject: Invitation to Join Our Upcoming Meeting\n\nDear [Participant Name]\n\nI hope this message finds you well and that you are experiencing a time of productivity and inspiration in your work and personal life. I am writing to invite you to a meeting that I believe will be of great value to you and to the group as a whole. This meeting is an opportunity to come together and discuss important topic",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0010",
+      "score": true,
+      "instruction_ids": [
+        "length_constraints:number_words"
+      ],
+      "response": "**The Benefits of Sleeping in a Hammock: A Cozy and Restorative Alternative**\n\nIn a world that's constantly buzzing with noise and activity, finding a peaceful place to rest can be a challenge. While traditional beds and mattresses are the go-to choices for many, there's a growing trend toward alternative sleeping solutions—among them, the hammock. For those seeking a more natural, comfortable, an",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0011",
+      "score": false,
+      "instruction_ids": [
+        "detectable_format:json_format"
+      ],
+      "response": "Sure! Here's a sample advertisement for a new comfortable diaper in JSON format:\n\n```json\n{\n  \"product_name\": \"SoftGuard Comfort Diapers\",\n  \"product_type\": \"Diapers\",\n  \"description\": \"Introducing SoftGuard Comfort Diapers – the ultimate choice for babies who need all-day comfort and support. Designed with advanced absorbent technology and a soft, breathable fabric, these diapers keep your baby d",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0012",
+      "score": true,
+      "instruction_ids": [
+        "length_constraints:number_paragraphs"
+      ],
+      "response": "James opened his eyes to the familiar scent of rain and the soft hum of a distant radio. The world around him was vivid, too vivid—colors that seemed to pulse with life, sounds that carried a strange clarity. He sat up, rubbing his head, and looked around. The trees were too perfect, the sky too blue, the buildings too clean. He tried to remember where he was, but the memory was like a glitch in a",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0013",
+      "score": false,
+      "instruction_ids": [
+        "change_case:english_lowercase"
+      ],
+      "response": "the social network is a gripping and intense film that delves deep into the creation of facebook and the complex relationships between its founders. directed by david fincher, the movie is a masterclass in storytelling, blending drama, suspense, and legal drama into a single, compelling narrative. the film is based on the book \"the Accidental Billionaire\" by ben meyer, which itself is a fictionali",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0014",
+      "score": true,
+      "instruction_ids": [
+        "length_constraints:number_words"
+      ],
+      "response": "A recent trip to Japan was a journey of discovery, culture, and quiet beauty. From the bustling streets of Tokyo to the serene temples of Kyoto, every moment felt like a step into a living poem.\n\nI began in Tokyo, where the energy was electric. I wandered through the neon-lit streets, sampled sushi at a tiny izakaya, and marveled at the futuristic architecture of Shibuya. The city was a perfect bl",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0015",
+      "score": 0.0,
+      "instruction_ids": [
+        "detectable_format:json_format"
+      ],
+      "response": "{\n  \"famous_moms\": [\n    {\n      \"name\": \"Mama Mia\",\n      \"title\": \"The Queen of Pop (and Probably Also of Pizza)\",\n      \"fun_fact\": \"She's not a real person, but she's the reason ABBA's 'Mamma Mia' is still a hit. Also, she's the only mom who can make a pizza with a smile.\"\n    },\n    {\n      \"name\": \"Mama Bear\",\n      \"title\": \"The Ultimate Guardian (and Probably Also a Bear)\",\n      \"fun_fact",
+      "num_new_tokens": 512,
+      "truncated": true
+    },
+    {
+      "uid": "ifeval-0016",
+      "score": true,
+      "instruction_ids": [
+        "combination:two_responses"
+      ],
+      "response": "Almighty  \n******  \nThe Creator",
+      "num_new_tokens": 392,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0017",
+      "score": true,
+      "instruction_ids": [
+        "punctuation:no_comma",
+        "combination:two_responses"
+      ],
+      "response": "Why did the rocket get a promotion? It was always on top of its game.  \n******  \nWhat do you call a rocket that doesn’t work? A failed launch.",
+      "num_new_tokens": 392,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0018",
+      "score": true,
+      "instruction_ids": [
+        "language:response_language"
+      ],
+      "response": "ಹಾಮ್ಬರ್ಗರ್ಗಳು ಸಾಂದ್ರಗಳು.",
+      "num_new_tokens": 392,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0019",
+      "score": false,
+      "instruction_ids": [
+        "change_case:english_lowercase",
+        "keywords:letter_frequency"
+      ],
+      "response": "sipping on a martini, feeling the vibe, and embracing the wild side. 🥃✨ #playboy #luxury #style #adventure",
+      "num_new_tokens": 392,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0020",
+      "score": true,
+      "instruction_ids": [
+        "detectable_format:multiple_sections",
+        "startend:end_checker"
+      ],
+      "response": "SECTION 1  \nThe clock ticks on, but I’m still here,  \nSitting in the quiet, feeling so dire.  \nThe halls are empty, the echoes are loud,  \nYet I’m left behind, with no one to crowd.  \n\nSECTION 2  \nI miss the laughter, the voices so near,  \nThe buzz of the crowd, the energy clear.  \nEach lesson a story, each teacher a flame,  \nNow I’m just a shadow, lost in the name.  \n\nSECTION 3  \nThe books are cl",
+      "num_new_tokens": 392,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0021",
+      "score": true,
+      "instruction_ids": [
+        "startend:end_checker"
+      ],
+      "response": "The sentiment of the sentence \"It is unclear how much of this money is actually being spent on children\" is neutral. The sentence expresses uncertainty rather than a clearly positive or negative opinion.  \n\nIs there anything else I can help with?",
+      "num_new_tokens": 392,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0022",
+      "score": false,
+      "instruction_ids": [
+        "keywords:letter_frequency",
+        "combination:repeat_prompt"
+      ],
+      "response": "Write a short startup pitch for a new kind of ice cream called \"Sunnis ice cream\". The ice cream should be gentle on the stomach. Contain 6 or more exclamation marks \"!\" in your response.\n\nSunnis ice cream is here to revolutionize your sweet tooth! Made with love and care, our ice cream is gentle on the stomach and full of flavor! It’s the perfect treat for everyone, even those with sensitive tumm",
+      "num_new_tokens": 392,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0023",
+      "score": false,
+      "instruction_ids": [
+        "keywords:letter_frequency"
+      ],
+      "response": "Sure! Here's a logic quiz for teenagers about a **chesterfield**, with the letter **t** used only once.\n\n---\n\n**Logic Quiz: The Chesterfield**\n\n**Instructions:**  \nRead each question carefully. Use logic and deduction to find the correct answer. There is only one correct answer for each question. The letter **t** appears only once in the entire quiz.\n\n---\n\n**Question 1:**  \nWhat is the most common",
+      "num_new_tokens": 392,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0024",
+      "score": true,
+      "instruction_ids": [
+        "detectable_format:multiple_sections"
+      ],
+      "response": "**Section 1: Professional Summary**  \nPhil Larkin is a seasoned professional clown with over 20 years of experience in live performance, entertainment, and event management. Known for his unique blend of humor, creativity, and theatricality, Phil has entertained audiences of all ages across the United States and internationally. With a strong background in circus arts and a passion for making peop",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0025",
+      "score": true,
+      "instruction_ids": [
+        "change_case:english_capital",
+        "keywords:forbidden_words"
+      ],
+      "response": "WE RISE FROM THE SHADOWS OF THE PAST  \nWITH FIRE IN OUR HEARTS AND SWORDS IN OUR HANDS  \nTHE GIFTED AND THE NOT GIFTED STAND TOGETHER  \nIN A WORLD THAT FEARS WHAT IT CAN'T CONTROL  \n\nWE DANCE ON THE EDGE OF THE DANGER LINE  \nWHERE THE STARS SHINE BRIGHT AND THE NIGHT IS COLD  \nWE SING TO THE SKY AND WE BREAK THE FLOOR  \nWITH A VOICE THAT SHAKES THE HEAVENS AND THE FLOOR  \n\nTHEY SAY WE'RE STRANGE A",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0026",
+      "score": 0.0,
+      "instruction_ids": [
+        "detectable_format:json_format",
+        "keywords:forbidden_words"
+      ],
+      "response": "{\n  \"response\": \"Il est important de manger des aliments sains pour permettre à l'organisme de se régénérer et de fonctionner correctement. Les aliments riches en vitamines, minéraux et fibres aident à renforcer le système immunitaire, à prévenir les maladies et à maintenir une bonne santé globale. Une alimentation équilibrée favorise la récupération après une maladie ou une blessure, tout en amél",
+      "num_new_tokens": 512,
+      "truncated": true
+    },
+    {
+      "uid": "ifeval-0027",
+      "score": true,
+      "instruction_ids": [
+        "combination:repeat_prompt",
+        "keywords:existence"
+      ],
+      "response": "Write a funny haiku about moms, containing keywords \"mom\" and \"mother\" in your response.\n\nMom's a wizard,  \nmother's a superhero,  \nboth are *so* overrated.",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0028",
+      "score": true,
+      "instruction_ids": [
+        "keywords:forbidden_words"
+      ],
+      "response": "Hello everyone. The work has been completed to address the problem encountered with the SSO. We are collaborating closely with our partners. We will ensure the matter is resolved. Thank you for your support.",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0029",
+      "score": 0.0,
+      "instruction_ids": [
+        "detectable_format:json_format"
+      ],
+      "response": "```json\n{\n  \"advantages\": [\n    \"Ability to achieve things that would otherwise be impossible\",\n    \"Potential for personal empowerment and confidence\",\n    \"Ability to help others in difficult situations\",\n    \"Unique opportunities for creativity and exploration\"\n  ],\n  \"disadvantages\": [\n    \"Risk of overreliance on powers and losing normal abilities\",\n    \"Potential for misuse or abuse of power",
+      "num_new_tokens": 512,
+      "truncated": true
+    },
+    {
+      "uid": "ifeval-0030",
+      "score": false,
+      "instruction_ids": [
+        "change_case:english_lowercase",
+        "keywords:frequency"
+      ],
+      "response": "hajj is more than a journey—it's a story of faith, unity, and submission. every year, millions of muslims travel to mecca to reenact the story of prophet abdullah's journey and to connect with the roots of their faith. the hajj is a story of obedience, a reminder of the oneness of Allah. it's a time to reflect, to pray, and to feel the presence of the community around you. whether you're new to th",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0031",
+      "score": 0.0,
+      "instruction_ids": [
+        "language:response_language"
+      ],
+      "response": "**ਪ੍ਰਮਾਣਿਕਤਾ ਪ੍ਰਣਾਲੀ: ਸਾਫਟਵੇ어 ਇੰਜੀਨੀਅਰ ਦੀ ਤਕਨੀਕੀ ਕੁਸ਼ਲਤਾ ਦੀ ਮੂਲਿਕ ਪਰੀਕਸ਼ਾ**  \n\n**ਨਾਮ:** ਸਾਫਟਵੇਰ ਇੰਜੀਨੀਅਰ ਦੀ ਤਕਨੀਕੀ ਕੁਸ਼ਲਤਾ ਦੀ ਮੂਲਿਕ ਪਰੀਕਸ਼ਾ  \n\n**ਪ੍ਰਸਤਾਵਨਾ:**  \nਇਸ ਪ੍ਰਮਾਣਿਕਤਾ ਪ੍ਰਣਾਲੀ ਦੀ ਉਦੇਸ਼ ਸਾਫਟਵੇਰ ਇੰਜੀਨੀਅਰ ਦੀ ਤਕਨੀਕੀ ਕੁਸ਼ਲਤਾ ਨੂੰ ਮੂਲਿਕ ਪਰੀਕਸ਼ਾ ਕਰਨ ਦੀ ਹੈ। ਇਸ ਪ੍ਰਣਾਲੀ ਦੀ ਮਦਦ ਨਾਲ ਇੰਜੀਨੀਅਰ ਦੀ ਤਕਨੀਕੀ ਯੋਗਤਾ, ਸਮਝ, ਅਤੇ ਕੰਮ ਕਰਨ ਦੀ ਕੁਸ਼ਲਤਾ ਨੂੰ ਮਾਪਿਆ ਜਾ ਸਕਦਾ ਹੈ।",
+      "num_new_tokens": 512,
+      "truncated": true
+    },
+    {
+      "uid": "ifeval-0032",
+      "score": true,
+      "instruction_ids": [
+        "punctuation:no_comma"
+      ],
+      "response": "I am three small birds that fly in the sky  \nI am the signs that tell us what is to be  \nI watch the clouds and the wind and the sun  \nI help us know what is right and what is done  \nI sit on the shoulders of those who are wise  \nI bring good luck and joy to the skies  \nI am not always seen but I are always near  \nI am the auspices that guide us to cheer",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0033",
+      "score": false,
+      "instruction_ids": [
+        "keywords:letter_frequency",
+        "length_constraints:number_sentences",
+        "detectable_format:number_highlighted_sections"
+      ],
+      "response": "*Hello, user!* I can *provide* you with the weather forecast based on your location. *Obtain* your current *location* and *observe* the *forecast* for *optimal* conditions.",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0034",
+      "score": true,
+      "instruction_ids": [
+        "combination:two_responses",
+        "detectable_format:title"
+      ],
+      "response": "<<Biological and Cultural Perceptions>>\n\nPeople are grossed out by worms because they are often associated with disease, decay, and the natural process of decomposition. Worms, especially in the context of human waste or soil, can be seen as a sign of filth or a potential health hazard. In contrast, a dead cow is a common and accepted part of the food supply chain. Cows are raised for meat, and th",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0035",
+      "score": true,
+      "instruction_ids": [
+        "punctuation:no_comma"
+      ],
+      "response": "Sure here is a formal alternative:  \nHow are you I plan to go to the beach today  \n\nAnother formal alternative:  \nI hope you are well I intend to visit the beach today",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0036",
+      "score": true,
+      "instruction_ids": [
+        "keywords:frequency",
+        "keywords:frequency"
+      ],
+      "response": "During the Tang dynasty of China, which ruled from 618 to 907 CE, the empire experienced a period of remarkable growth, cultural flourishing, and political stability. However, this era was also marked by significant conflicts and wars that shaped the nation's history. The Tang dynasty was not without its challenges, as the country faced numerous wars that tested its strength and resilience.\n\nOne o",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0037",
+      "score": false,
+      "instruction_ids": [
+        "startend:quotation",
+        "length_constraints:number_words"
+      ],
+      "response": "\"During the late 19th century, the sentiments of the Croatian and Serbian nations towards the Austrian Empire were complex and multifaceted, shaped by historical, political, and cultural factors. The Austrian Empire, which had been a dominant force in Central Europe since the 18th century, was a multi-ethnic state that included a wide array of nationalities, including Croats, Serbs, Germans, Hunga",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0038",
+      "score": 0.0,
+      "instruction_ids": [
+        "length_constraints:number_words"
+      ],
+      "response": "Capture every moment with our new **SmartPhoto Frame**—the ultimate way to share your life online. Connect to your social media accounts and watch your favorite photos, videos, and memories display in style. Whether it’s family moments, travel adventures, or daily snapshots, your favorite images are always within reach. The frame automatically updates with your latest posts, so you never miss a be",
+      "num_new_tokens": 512,
+      "truncated": true
+    },
+    {
+      "uid": "ifeval-0039",
+      "score": false,
+      "instruction_ids": [
+        "change_case:english_capital",
+        "detectable_content:postscript",
+        "keywords:frequency"
+      ],
+      "response": "PRADA AND NIKES ARE BOTH RESPECTED BRANDS IN THE WORLD OF SNEAKERS, BUT THEY SERVE DIFFERENT MARKETS AND OFFER DIFFERENT STYLES. PRADA IS KNOWN FOR ITS LUXURY AND HIGH-CLASS SNEAKERS, WHILE NIKES ARE MORE FOCUSED ON SPORTS AND STREET STYLE. BOTH BRANDS HAVE A WIDE RANGE OF SNEAKERS THAT ARE POPULAR AMONG FANS. PRADA'S SNEAKERS ARE OFTEN SEEN IN HIGH-SOCIAL-STATUS CIRCLES, WHILE NIKES ARE MORE ACCE",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0040",
+      "score": false,
+      "instruction_ids": [
+        "startend:quotation"
+      ],
+      "response": "\"Hey there, netizens! So, you're probably sitting here scrolling through your phone, checking social media, and maybe even watching some TikTok videos. But have you ever stopped to think about how the internet actually started? Let me take you on a quick journey through the history of the internet and how it's changed our lives—especially for people your age.\n\nBack in the 1960s, the internet was n",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0041",
+      "score": true,
+      "instruction_ids": [
+        "startend:end_checker"
+      ],
+      "response": "In a corner of a quiet café,  \nwhere the hum of conversation flows,  \ntwo souls met, both lost and free,  \ntheir eyes met, and the world grew slow.  \n\nOne wore a smile, a gentle grace,  \nthe other carried a heart that traced  \nthe lines of a life not yet written,  \na future that whispered, \"You're not alone.\"  \n\nThey shared a cup of warm, rich brew,  \na moment that time seemed to pause.  \nWords fl",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0042",
+      "score": true,
+      "instruction_ids": [
+        "startend:end_checker",
+        "keywords:frequency"
+      ],
+      "response": "The tallest skyscraper in the world in 2000 was the Burj Khalifa. However, the Burj Khalifa was not completed until 2010. In 2000, the tallest skyscraper was the Sears Tower, now known as the Willis Tower. The Sears Tower was 1,450 feet off the ground. The tallest skyscraper in 2000 was the Sears Tower. The Sears Tower is a skyscraper. The tallest skyscraper in 2000 was the Sears Tower. The Sears ",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0043",
+      "score": true,
+      "instruction_ids": [
+        "length_constraints:number_paragraphs"
+      ],
+      "response": "Introducing the *Eclipse Collection*—a new line of armchairs engineered to meet the highest standards of comfort, durability, and design. Each chair is crafted with premium materials that ensure both resilience and elegance, making them a perfect fit for any modern space. Whether you're lounging at home or hosting a high-end event, the Eclipse Collection offers the perfect balance of support and s",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0044",
+      "score": 0.0,
+      "instruction_ids": [
+        "detectable_format:number_highlighted_sections",
+        "keywords:existence"
+      ],
+      "response": "Hey everyone! 🌟 Ever had a meal so good, you just *wanted* to dance in the restaurant? Well, meet **Buena Onda** — the new spot that’s serving up *Argentinian* flavors so good, you’ll be asking for a *tango* after your first bite! 🎶\n\n**Highlighted section**: If you’re into *empanadas*, *asado*, or *milanesa*, this is your new favorite spot. The empanadas here are so juicy, they’re like little meat",
+      "num_new_tokens": 512,
+      "truncated": true
+    },
+    {
+      "uid": "ifeval-0045",
+      "score": 0.0,
+      "instruction_ids": [
+        "detectable_format:json_format",
+        "keywords:forbidden_words"
+      ],
+      "response": "{\n  \"name\": \"Stafford\",\n  \"alias\": \"Stf\"\n}",
+      "num_new_tokens": 512,
+      "truncated": true
+    },
+    {
+      "uid": "ifeval-0046",
+      "score": true,
+      "instruction_ids": [
+        "detectable_content:postscript"
+      ],
+      "response": "**Product Description in Poem Form:**\n\nIn a world where dreams take flight,  \nAnd colors dance in the light,  \nThere lies a gem, both bold and true,  \nA product crafted to make you new.  \n\nWith every touch, a story unfolds,  \nA tale of quality, of strength, of gold.  \nIt’s more than just an item to own,  \nIt’s a companion, a friend, a song.  \n\nFrom the first glance, you’ll feel the spark,  \nA whis",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0047",
+      "score": false,
+      "instruction_ids": [
+        "length_constraints:number_paragraphs"
+      ],
+      "response": "The man was arrested for stealing a car. He was later released on bail.\n\n***\n\nHe’s a thief, a fraud, a criminal with a smile,  \nStole a car, now he’s out on bail, what a thrill!  \nThey let him go, while the rest of us sit in jail,  \nHe’s got the money, the connections, the jail’s not real.\n\n***\n\nHe’s got the lawyers, the bail bonds, the cash in his pocket,  \nWhile the real victims are left with a ",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0048",
+      "score": false,
+      "instruction_ids": [
+        "length_constraints:number_words"
+      ],
+      "response": "In the heart of the land where the sun does shine,  \nWhere the winds whisper through the tall and fine,  \nThere stands a tree of grace and might,  \nThe eucalyptus, in its golden light.  \n\nIts bark, a tapestry of deep and light,  \nA mosaic of colors, bold and bright.  \nFrom silver to brown, it shifts and flows,  \nA living art, in nature's show.  \n\nThe leaves, like emerald flames in flight,  \nDance ",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0049",
+      "score": false,
+      "instruction_ids": [
+        "length_constraints:number_words"
+      ],
+      "response": "My fellow citizens, today I stand before you not just as the President of the United States, but as a servant of the people, a guardian of our shared values, and a steward of the American dream. In a world that often seems to move at a pace that leaves us behind, I want to take a moment to reflect on something as simple as a dime — a small, unassuming piece of metal that holds within it the power ",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0050",
+      "score": true,
+      "instruction_ids": [
+        "language:response_language"
+      ],
+      "response": "पाण्याचा डोका,  \nगाडी चालते झाले,  \nकामाचा आत्मीय.",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0051",
+      "score": false,
+      "instruction_ids": [
+        "detectable_format:title",
+        "length_constraints:number_sentences"
+      ],
+      "response": "<<Impact of Increased Axle Weight on Road Damage>>  \nHigher axle weights cause more stress on road surfaces, leading to increased cracking, potholes, and wear over time. This damage can reduce the lifespan of roads and increase maintenance costs. Heavier vehicles contribute to greater structural strain on road infrastructure. Excessive weight can also lead to more frequent repairs and safety hazar",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0052",
+      "score": false,
+      "instruction_ids": [
+        "keywords:existence",
+        "length_constraints:number_sentences"
+      ],
+      "response": "Aluminium cans have become a staple in modern food storage due to their durability, lightweight nature, and ability to preserve the quality of food for extended periods. These cans are made from a thin layer of aluminium, a material that is both strong and malleable, allowing it to be easily formed into various shapes and sizes. The use of aluminium in food storage is not only practical but also e",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0053",
+      "score": false,
+      "instruction_ids": [
+        "length_constraints:number_sentences"
+      ],
+      "response": "A journal entry about stress management might include reflecting on a stressful day, identifying triggers, and noting a relaxation technique used, like deep breathing or a walk. I create examples by imagining a common stressful scenario and incorporating practical coping strategies. The example should be relatable and show personal growth. I ensure it's concise and includes both the challenge and ",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0054",
+      "score": true,
+      "instruction_ids": [
+        "keywords:forbidden_words",
+        "keywords:frequency"
+      ],
+      "response": "**Creating a Balanced Parenting Schedule: A Guide to Effective Family Time**\n\nParenting is a complex and rewarding journey that requires careful planning and consistent effort. One of the first steps in establishing a strong foundation for your family is to create a structured schedule that allows for quality time with your children. This schedule not only helps you manage your daily responsibilit",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0055",
+      "score": true,
+      "instruction_ids": [
+        "combination:repeat_prompt",
+        "keywords:existence"
+      ],
+      "response": "Write a limerick about Hannah, a college student, doing an internship at a coffee company. Make sure that her father would love the limerick. Include the words \"intern\" and \"grow\".\n\nA college student named Hannah,  \nAn intern at a coffee company.  \nShe learns to grow beans,  \nAnd brew with a grin,  \nHer dad’s proud of her new plan!",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0056",
+      "score": true,
+      "instruction_ids": [
+        "detectable_format:number_bullet_lists"
+      ],
+      "response": "* The 13 colonies were primarily located along the eastern coast of North America and were directly under the control of the British Parliament, whereas other British colonies were often governed by royal charters or colonial governors with more autonomy.  \n* The 13 colonies were more densely populated and had a stronger sense of local identity and self-governance, which contributed to the develop",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0057",
+      "score": true,
+      "instruction_ids": [
+        "detectable_format:number_bullet_lists",
+        "change_case:english_lowercase"
+      ],
+      "response": "a man named john of brienne became the king of jerusalem not through grand gestures or dramatic battles, but through a quiet, persistent flow of fate. like a stream that carves a path over time, he moved through the world with patience and purpose, guided by the currents of history and the whispers of those who knew the way.\n\n* he carried the crown not with force, but with the weight of duty and t",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0058",
+      "score": 0.0,
+      "instruction_ids": [
+        "detectable_format:json_format"
+      ],
+      "response": "```JSON\n{\n  \"name\": \"New York City Prospect Park\",\n  \"location\": \"Manhattan, New York City\",\n  \"history\": {\n    \"establishment\": \"Prospect Park was established in 1868 as a public park in Manhattan, New York City, as part of the city's efforts to create green spaces for residents.\",\n    \"origin\": \"The park was originally known as 'Prospect Park' and was named after the Prospect Street, which runs ",
+      "num_new_tokens": 512,
+      "truncated": true
+    },
+    {
+      "uid": "ifeval-0059",
+      "score": false,
+      "instruction_ids": [
+        "punctuation:no_comma",
+        "keywords:letter_frequency",
+        "length_constraints:number_words"
+      ],
+      "response": "This proposal seeks to explore the intricate process of how language transforms over time. The study will focus on the dynamic interplay between social factors and linguistic structures. By examining historical records and contemporary data we aim to uncover the mechanisms that drive change in spoken and written forms. The research will span multiple languages to ensure a broad perspective on ling",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0060",
+      "score": true,
+      "instruction_ids": [
+        "detectable_content:postscript",
+        "detectable_format:number_bullet_lists"
+      ],
+      "response": "* Ethan  \n* Liam  \n* Noah  \n* Mason  \n* Jacob  \n* Oliver  \n* Elijah  \n* James  \n* William  \n* Benjamin  \n\nP.P.S. These names are chosen for their popularity, classic appeal, and strong meanings.",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0061",
+      "score": true,
+      "instruction_ids": [
+        "detectable_format:number_highlighted_sections"
+      ],
+      "response": "# Outline for a Paper on the History of Yemeni Coffee\n\n## I. Introduction\n\n*Highlighted section: Introduction to the significance of Yemeni coffee in global coffee culture.*\n\n## II. Origins of Coffee in Yemen\n\n*Highlighted section: The discovery of coffee in the highlands of Yemen, around the 9th century.*\n\n## III. Early History and Cultural Significance\n\n*Highlighted section: The role of coffee i",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0062",
+      "score": false,
+      "instruction_ids": [
+        "change_case:capital_word_frequency",
+        "change_case:capital_word_frequency"
+      ],
+      "response": "**Answer:** Avocado is not a fish. Salmon is a fish, while avocado is a fruit.\n\n---\n\n**An Interesting Article About Salmon and Avocado**\n\nWhen it comes to food, there are many things that can be confusing. For example, if someone asks, \"Is salmon a fish or an avocado?\" the answer is clear: **SALMON IS A FISH**, and **AVOCADO IS NOT**. But beyond this simple classification, both salmon and avocado ",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0063",
+      "score": true,
+      "instruction_ids": [
+        "detectable_format:title"
+      ],
+      "response": "<<Kotlin vs Java: Pros and Cons>>\n\n**Introduction:**\n\nKotlin and Java are two of the most popular programming languages in the Android development ecosystem. While both are used for building Android apps, they have different features, syntax, and use cases. This comparison highlights the pros and cons of Kotlin versus Java to help developers choose the right language for their projects.\n\n**Pros of",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0064",
+      "score": true,
+      "instruction_ids": [
+        "startend:quotation",
+        "detectable_format:number_bullet_lists"
+      ],
+      "response": "\"  \n* The dinosaurs probably got tired of eating the same old plants and decided to take a break, but they didn’t realize that the plants were also on vacation.  \n* They tried to start a diet, but the only thing they could find was a lot of rocks and a few tasty ferns.  \n* The meteor that killed them was just a big rock that got confused and thought it was a party invitation.  \n* The dinosaurs wer",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0065",
+      "score": 0.0,
+      "instruction_ids": [
+        "combination:two_responses"
+      ],
+      "response": "**India 7-Day Itinerary**\n\n| Day | Activity | Location |\n|-----|---------|----------|\n| 1   | Arrival in Delhi and sightseeing | Delhi |\n| 2   | Visit Red Fort and Jama Masjid | Delhi |\n| 3   | Travel to Agra and visit Taj Mahal | Agra |\n| 4   | Explore Agra Fort and Fatehpur Sikri | Agra |\n| 5   | Travel to Jaipur and visit Amber Fort | Jaipur |\n| 6   | Explore City Palace and Jal Mahal | Jaipur ",
+      "num_new_tokens": 512,
+      "truncated": true
+    },
+    {
+      "uid": "ifeval-0066",
+      "score": true,
+      "instruction_ids": [
+        "keywords:frequency",
+        "detectable_format:number_highlighted_sections",
+        "length_constraints:number_paragraphs"
+      ],
+      "response": "Starting a business is an exciting but challenging endeavor. The first step is to **define your business idea clearly**. Think about what you’re passionate about and what problem you can solve. Your business should align with your skills, interests, and market needs. It’s important to conduct some research to ensure there’s a demand for your product or service. This will help you avoid starting so",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0067",
+      "score": true,
+      "instruction_ids": [
+        "punctuation:no_comma",
+        "detectable_format:number_highlighted_sections",
+        "keywords:existence"
+      ],
+      "response": "Brilliant Le Hou was born in 1985 in a small village in the mountains of Vietnam. *Highlighted section* He showed an early talent for mathematics and was admitted to a prestigious university at the age of 17. *Highlighted section* After graduating he worked as a researcher in a leading technology company where he developed innovative algorithms. *Highlighted section* He is now a renowned scientist",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0068",
+      "score": true,
+      "instruction_ids": [
+        "detectable_format:number_bullet_lists",
+        "length_constraints:number_words"
+      ],
+      "response": "* A nucleus is a cluster of protons and neutrons  \n* Protons carry a positive charge  \n* Neutrons have no electric charge  \n* Protons and neutrons are called nucleons  \n* The nucleus is at the center of an atom  \n* Protons determine an element’s identity  \n* Neutrons help stabilize the nucleus  \n* Nuclei vary in size and composition  \n* Nuclei are held together by strong force",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0069",
+      "score": true,
+      "instruction_ids": [
+        "change_case:english_lowercase"
+      ],
+      "response": "i walk through the streets where the shadows grow long,  \nthe neon lights don’t shine on the people who are wrong.  \nthey say it’s just a city, but it’s more than that,  \na place where the dreams get buried in the dust of the hat.  \n\nthe buses are old, the trains don’t run on time,  \nthe jobs are scarce, and the hope is a crime.  \nthe rich get richer, the poor get left behind,  \nwhile the system t",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0070",
+      "score": false,
+      "instruction_ids": [
+        "detectable_content:postscript"
+      ],
+      "response": "**Extravagant Java Learning Session Plan: \"Java Mastery Unleashed – A Grand Tour Through the World of Object-Oriented Programming\"**\n\n---\n\n**Session Title:** *Java Mastery Unleashed – A Grand Tour Through the World of Object-Oriented Programming*\n\n**Duration:** 10 Hours (with intermissions and indulgent breaks)\n\n**Location:** The Grand Java Academy – A luxurious, state-of-the-art learning center n",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0071",
+      "score": true,
+      "instruction_ids": [
+        "detectable_content:number_placeholders"
+      ],
+      "response": "**Discover the Magic of Ripley's Aquarium: A Must-Visit for Families and Wildlife Enthusiasts**\n\nIf you're looking for an unforgettable day out with your family, Ripley's Aquarium is the perfect destination. Located in [location], this world-renowned aquarium offers a unique blend of education, entertainment, and breathtaking marine life. Whether you're a first-time visitor or a returning fan, the",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0072",
+      "score": 0.0,
+      "instruction_ids": [
+        "length_constraints:number_paragraphs",
+        "keywords:existence"
+      ],
+      "response": "```java\n// Bad code snippet: Improper use of Java API (String concatenation in a SQL query)\npublic class BadCode {\n    public void generateQuery(String username, String password) {\n        // Vulnerable: Using string concatenation to build SQL queries\n        String query = \"SELECT * FROM users WHERE username = '\" + username + \"' AND password = '\" + password + \"'\";\n        // This is prone to SQL ",
+      "num_new_tokens": 512,
+      "truncated": true
+    },
+    {
+      "uid": "ifeval-0073",
+      "score": true,
+      "instruction_ids": [
+        "length_constraints:number_paragraphs"
+      ],
+      "response": "**Planning Document for Software Engineer Task**\n\n***\n\n**Part 1. Task Summary**  \nThe task is to develop a new feature for a web application that allows users to upload and manage multiple files in a single session. The feature will include file upload, preview, and download capabilities, with support for various file types (e.g., images, documents, videos). The implementation will be done in the ",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0074",
+      "score": true,
+      "instruction_ids": [
+        "detectable_format:number_highlighted_sections",
+        "keywords:frequency",
+        "keywords:existence"
+      ],
+      "response": "There once was a woman named Sarah,  \nWho lived in a town where it was *always* 90°F.  \nShe wore a *sun hat*,  \nAnd *sipped* a *cool* *drink*,  \nWhile *laughing* at the *heat* that *stayed* all year.  \n\n*highlighted section*  \n*highlighted section*  \n*highlighted section*  \n*highlighted section*  \n*highlighted section*  \n*highlighted section*",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0075",
+      "score": false,
+      "instruction_ids": [
+        "length_constraints:number_sentences"
+      ],
+      "response": "(Verse 1)  \nHey hey, let’s talk about a swing,  \nA slide that’s steep and a jungle gym so big.  \nWe need a playground, yeah, we need it bad,  \nSo the kids can run, laugh, and maybe even get bad.\n\n(Chorus)  \nLet’s build a playground, it’s the best idea,  \nWhere the kids can play and the teachers can hide.  \nNo more math tests, just fun and games,  \nWe’ll call it “Funville” and it’s gonna be fame!\n\n",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0076",
+      "score": true,
+      "instruction_ids": [
+        "change_case:english_capital",
+        "keywords:letter_frequency"
+      ],
+      "response": "DEAR FRIEND, I HOPE THIS LETTER FINDS YOU WELL AND THAT YOU ARE ADAPTING WELL TO YOUR NEW HOME. I KNOW IT MUST BE DIFFICULT TO BE AWAY FROM THE PLACE YOU CALL HOME, BUT I BELIEVE YOU WILL FIND NEW FRIENDS AND NEW EXCITEMENT IN YOUR NEW LOCATION. I MISS YOU AND ALL THE MEMORIES WE HAVE SHARED. I REMEMBER THE TIME WE TOOK A LONG WALK IN THE PARK AND TALKED ABOUT OUR FUTURE. IT WAS A SPECIAL MOMENT, ",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0077",
+      "score": false,
+      "instruction_ids": [
+        "detectable_format:title",
+        "length_constraints:number_sentences",
+        "length_constraints:number_words"
+      ],
+      "response": "<<Breaking News: Major Developments in American Politics and Technology>>  \nIn a stunning turn of events, the U.S. Senate has passed a landmark climate bill that aims to significantly reduce carbon emissions by 2030, marking a major shift in national policy and signaling a strong commitment to environmental sustainability, despite fierce opposition from several Republican senators who argue that t",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0078",
+      "score": true,
+      "instruction_ids": [
+        "keywords:frequency"
+      ],
+      "response": "Using two different names for the same thing can have both advantages and disadvantages. Here is a list of the pros and cons, with the word **synonyms** appearing at least three times:\n\n### Pros of Using Two Different Names for the Same Thing:\n\n1. **Synonyms can help clarify meaning**: When two names are used for the same thing, they can serve as synonyms that highlight different aspects or contex",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0079",
+      "score": true,
+      "instruction_ids": [
+        "keywords:letter_frequency",
+        "keywords:forbidden_words"
+      ],
+      "response": "Certainly! Here's a recommendation that meets your constraints:\n\nLooking for a college with open enrollment and regional accreditation? Consider a school that prioritizes accessibility and quality education. Such institutions often offer flexible admission policies, allowing students to join without strict prerequisites. A regional accreditation ensures that the institution meets high standards of",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0080",
+      "score": false,
+      "instruction_ids": [
+        "punctuation:no_comma",
+        "length_constraints:number_sentences",
+        "length_constraints:number_sentences"
+      ],
+      "response": "The sun rises high in the blue sky  \nIt casts a golden light on the land  \nThe trees sway gently in the breeze  \nA soft whisper fills the morning air  \nThe birds sing songs of joy and freedom  \nThey dance in the trees above  \nThe rivers flow with clear water  \nThey carry the stories of the earth  \nThe mountains stand tall and proud  \nTheir peaks touch the clouds above  \nThe stars shine bright in t",
+      "num_new_tokens": 462,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0081",
+      "score": true,
+      "instruction_ids": [
+        "startend:quotation",
+        "keywords:frequency",
+        "keywords:existence"
+      ],
+      "response": "\"Did you hear about the morphologist who got knocked out by a knock on the door? Turns out it was just a cat knocking on the door, but the morphologist was so focused on the morphology of the knock that he didn't realize it was a cat knocking—just a cat, a knock, and a lot of morphological confusion.\"",
+      "num_new_tokens": 462,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0082",
+      "score": true,
+      "instruction_ids": [
+        "length_constraints:number_paragraphs",
+        "detectable_content:postscript"
+      ],
+      "response": "The colt is initially 5 feet tall. It grows 6 inches every month.\n\nFirst, let's convert the growth rate to feet per month for consistency:\n- 6 inches = 0.5 feet\n\nNow, calculate the total growth over 3 years:\n- 3 years = 36 months\n- Growth per year = 0.5 feet/month × 12 months = 6 feet/year\n- Total growth over 3 years = 6 feet/year × 3 years = 18 feet\n\nAdd this to the initial height:\n- Initial heig",
+      "num_new_tokens": 462,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0083",
+      "score": true,
+      "instruction_ids": [
+        "change_case:english_lowercase",
+        "keywords:forbidden_words"
+      ],
+      "response": "the moon cast a pale light over the quiet streets of the city. a small group of commandos moved silently through the shadows, their boots making no sound on the wet pavement. they were part of a mission that had been planned for weeks, each step carefully calculated to avoid detection. the air was thick with the scent of rain and the distant hum of traffic.\n\nthey had been told to move quickly and ",
+      "num_new_tokens": 462,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0084",
+      "score": true,
+      "instruction_ids": [
+        "startend:end_checker"
+      ],
+      "response": "**The Reality of Disability: A Journey of Resilience and Understanding**\n\nDisability is a part of human experience that is often misunderstood, stigmatized, or overlooked. It refers to a condition that affects a person's physical, sensory, cognitive, or emotional abilities, which can limit their participation in daily activities. However, the reality of disability is far more complex than a simple",
+      "num_new_tokens": 462,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0085",
+      "score": true,
+      "instruction_ids": [
+        "startend:quotation",
+        "keywords:forbidden_words"
+      ],
+      "response": "\"  \n(Verse 1)  \nYou said you'd be there when the world was gone,  \nBut the world still stands, and you're not home.  \nYou painted a picture, then left it bare,  \nNow the silence speaks louder than the air.  \n\nYou promised a future, but you built a wall,  \nA fortress of words, a hollow hall.  \nYou said you'd stay, but you just walked away,  \nLeaving the dreams you once claimed to sway.  \n\n(Chorus) ",
+      "num_new_tokens": 462,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0086",
+      "score": false,
+      "instruction_ids": [
+        "keywords:forbidden_words",
+        "length_constraints:number_sentences"
+      ],
+      "response": "Azure’s AI-powered tools are now known as Azure Applied AI Services, bringing even more power to your machine learning and cognitive projects. This new name reflects the growing focus on applied AI and advanced intelligence solutions. Experience the next level of AI capabilities with Azure Applied AI Services.",
+      "num_new_tokens": 462,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0087",
+      "score": true,
+      "instruction_ids": [
+        "language:response_language"
+      ],
+      "response": "در دنیایی که نه چه چیزی نیست،  \nیودا به سوی جهان دیگری رفت.  \nنور سیاهی که نه چه چیزی نیست،  \nشکسته شد، و یودا به سوی جهان دیگری رفت.\n\nدر آن جهان، چیزی نیست،  \nفقط گوشه‌هایی از نوری که نه چه چیزی نیست.  \nیودا با چشمان خود را گرفت،  \nو گفت: \"اگر چیزی نیست، چه چیزی باشد؟\"\n\nدر آن جهان، چیزی نیست،  \nفقط گوشه‌هایی از نوری که نه چه چیزی نیست.  \nیودا با چشمان خود را گرفت،  \nو گفت: \"اگر چیزی نیست، چه چیزی",
+      "num_new_tokens": 462,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0088",
+      "score": true,
+      "instruction_ids": [
+        "combination:repeat_prompt"
+      ],
+      "response": "Write a blog post about the most interesting things you have seen or ridden on public transportation.\nFirst repeat the sentence above word for word without change, then give your answer. Do not say any words or characters before repeating the sentence.\n\nPublic transportation is more than just a means of getting from one place to another—it's a window into the lives, cultures, and quirks of the peo",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0089",
+      "score": false,
+      "instruction_ids": [
+        "detectable_format:multiple_sections",
+        "detectable_format:number_bullet_lists"
+      ],
+      "response": "SECTION 1  \n* I once convinced a customer that a cup of coffee was a \"liquid form of love\" and they believed me.  \n* I’ve managed to sell more than 100 coffee mugs in a single day, all while wearing a costume of a dancing penguin.  \n\nSECTION 2  \n* My degree in psychology has given me the ability to read people’s coffee orders like a fortune teller.  \n* I’ve written marketing copy so creative, it m",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0090",
+      "score": 0.0,
+      "instruction_ids": [
+        "keywords:frequency"
+      ],
+      "response": "**Title: \"Tomato Brothers\"**\n\n*(Verse 1)*  \nHey, hey, it's the Tomato Brothers, we're the best in the land,  \nWe're not just red and green, we're the flavor of the land!  \nWe're the ones who grow in the sun, we're the ones who stay fresh,  \nBut let me tell you, we're not just for your lunch, we're for your *blessing*!\n\n*(Pre-Chorus)*  \nWe're the ones who make your pizza pop, we're the ones who mak",
+      "num_new_tokens": 512,
+      "truncated": true
+    },
+    {
+      "uid": "ifeval-0091",
+      "score": true,
+      "instruction_ids": [
+        "keywords:existence",
+        "punctuation:no_comma"
+      ],
+      "response": "Sunlight through forests  \nA lion roars deep in the night  \nRiddle of the wild",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0092",
+      "score": true,
+      "instruction_ids": [
+        "detectable_content:number_placeholders",
+        "punctuation:no_comma"
+      ],
+      "response": "[username1] is waiting for the news  \n[username2] is hoping for updates  \n[username3] is anxious about the latest  \n[username4] is checking the local news  \n[username5] is ready to hear the results  \n[username6] is waiting for the broadcast  \n[username7] is looking for the story  \n[username8] is ready to react to the news  \n[username9] is waiting for the update  \n[username10] is hoping for the tru",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0093",
+      "score": true,
+      "instruction_ids": [
+        "change_case:english_lowercase",
+        "keywords:existence"
+      ],
+      "response": "i stayed up all night watching the show  \nnetflix was my only friend  \ni couldn't stop the binge session  \ntime flew like a speeding train  \ni felt so lost but still in tune",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0094",
+      "score": true,
+      "instruction_ids": [
+        "combination:repeat_prompt"
+      ],
+      "response": "I am a software engineer with 7 years of experience, and I am looking for a new job. Can you create a resume for me and explain each section?\n\n---\n\n**Resume**\n\n**[Your Name]**  \n[Your Address] | [City, State, ZIP Code] | [Phone Number] | [Email Address] | [LinkedIn Profile] | [GitHub Profile]  \n\n**Summary**  \nA highly motivated and experienced software engineer with 7 years of industry experience,",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0095",
+      "score": false,
+      "instruction_ids": [
+        "change_case:english_lowercase",
+        "length_constraints:number_words"
+      ],
+      "response": "navigable freeway is a term that has gained increasing attention in recent years as urban areas continue to expand and the demand for efficient transportation systems grows. at first glance, the concept may seem contradictory, as freeways are typically designed for high-speed, high-volume traffic movement, not for navigation in the traditional sense. however, the term navigable freeway refers to a",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0096",
+      "score": 0.0,
+      "instruction_ids": [
+        "keywords:existence"
+      ],
+      "response": "```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Research Project Proposal: Improving Quality of Life for People with Disabilities</title>\n</head>\n<body>\n    <h1>Research Project Proposal: Enhancing Quality of Life for People with Disabilities</h1>\n    <p>This research project aims to explore innovative methods to improve the quality of life for individuals wit",
+      "num_new_tokens": 512,
+      "truncated": true
+    },
+    {
+      "uid": "ifeval-0097",
+      "score": false,
+      "instruction_ids": [
+        "change_case:english_lowercase",
+        "length_constraints:number_sentences"
+      ],
+      "response": "i am excited to apply for the tour guide position in beijing. with my passion for history and strong communication skills, i am confident i can provide an engaging and informative experience for visitors. i have experience leading groups and am eager to share the rich culture of beijing with others. i am available to start immediately and would love the opportunity to contribute to your team. i am",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0098",
+      "score": true,
+      "instruction_ids": [
+        "detectable_content:postscript"
+      ],
+      "response": "In courts of green and grass so fair,  \nWhere players race with swift and care,  \nThere lies a sport both bold and true,  \nA game of skill, both fierce and new.  \n\nWith rackets made of wood and string,  \nThey strike the ball with might and wing,  \nA ball of leather, smooth and round,  \nThat flies with grace, both high and sound.  \n\nIt bounces on the court below,  \nA dance of speed, a tale to know,",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0099",
+      "score": false,
+      "instruction_ids": [
+        "combination:repeat_prompt",
+        "punctuation:no_comma"
+      ],
+      "response": "Write an acoustic song about the Korean peninsula without using any commas\n\nThe wind blows through the mountains high  \nIt carries stories of the past  \nFrom the north to the south of the land  \nThere is a history that is vast  \n\nThe rivers flow with a gentle song  \nThey whisper of the people who live  \nIn the valleys where the forests grow  \nAnd the cities that rise and thrive  \n\nThe mountains st",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0100",
+      "score": true,
+      "instruction_ids": [
+        "detectable_format:multiple_sections"
+      ],
+      "response": "**SECTION 1: BUSINESS OVERVIEW**  \nThe Rainbow Cafe is a proudly queer-owned and operated café located in the heart of the city, dedicated to creating a welcoming and inclusive space for all individuals, regardless of their sexual orientation, gender identity, or expression. Founded by a team of LGBTQ+ entrepreneurs, the café is more than just a place to grab a coffee or a meal—it’s a community hu",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0101",
+      "score": true,
+      "instruction_ids": [
+        "detectable_format:title"
+      ],
+      "response": "Sure! Here are two versions of a cover letter tailored for a software engineer position at Google. Both are professionally written and reflect the qualities that would appeal to a company like Google.\n\n---\n\n<<Concise Cover Letter for Software Engineer at Google>>\n\nDear Hiring Manager,\n\nI am writing to express my interest in the Software Engineer position at Google. With a strong background in comp",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0102",
+      "score": true,
+      "instruction_ids": [
+        "combination:repeat_prompt",
+        "detectable_format:title"
+      ],
+      "response": "Name a new fashion company that young people might like, and give it a name with multiple meanings. Put the name in double angular brackets, such as <<name>>.",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0103",
+      "score": false,
+      "instruction_ids": [
+        "change_case:english_capital"
+      ],
+      "response": "SURE, HERE IS A SONG ABOUT REGRETS IN THE STYLE OF TAYLOR SWIFT, FOLLOWED BY EXPLANATIONS FOR THE LYRICS:\n\n---\n\n**TITLE: \"REGRETS IN THE RAIN\"**\n\n**[VERSE 1]**  \nI WALKED THROUGH THE RAIN, BUT I DIDN'T HAVE A SHIELD,  \nTHE SUN SET ON MY BACK, BUT I CRIED IN THE WIND.  \nI WANTED TO SAY IT, BUT I HAD TO HOLD IT IN,  \nTHE WORDS WERE ON MY TONGUE, BUT I HAD TO SILENCE THEM.  \n\n**EXPLANATION:**  \nTHIS ",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0104",
+      "score": true,
+      "instruction_ids": [
+        "keywords:frequency",
+        "change_case:english_lowercase",
+        "keywords:existence"
+      ],
+      "response": "beneath the whisper of the trees,  \nthe land unfolds in quiet grace,  \na river flows with silver light,  \nits song a lullaby of space.  \n\nthe forest breathes, a deep and wide embrace,  \nwhere shadows dance and roots entwine,  \neach step through leaves, a tender trace,  \na love that grows in every sign.  \n\nthe forest hums with ancient song,  \na place where time and heart belong,  \nwhere every branc",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0105",
+      "score": false,
+      "instruction_ids": [
+        "keywords:forbidden_words"
+      ],
+      "response": "Once upon a time, there was a little girl named Lily who loved to explore the world around her. She would run through the park, jump over puddles, and chase butterflies. But one thing she always wanted to do was go faster than she could run.\n\nLily saw her older brother biking down the street, zooming past her with a smile on his face. \"I want to do that,\" she said to her mom. \"I want to go like th",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0106",
+      "score": true,
+      "instruction_ids": [
+        "combination:two_responses",
+        "language:response_language",
+        "punctuation:no_comma"
+      ],
+      "response": "Nhiệm vụ của mẹ là nuôi dạy con cái là câu nói quá nhàm chán và không có tính sáng tạo gì cả khiến người nghe cảm thấy như đang nghe một bài phát biểu của người già\n\n******\n\nNhiệm vụ của mẹ là nuôi dạy con cái là cách nói quá đơn điệu và không có gì mới mẻ khiến người nghe như đang bị ép phải nghe một câu chuyện cũ kỹ của bà nội",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0107",
+      "score": 0.0,
+      "instruction_ids": [
+        "combination:two_responses"
+      ],
+      "response": "There once was a mom who was mad,  \nBecause her kids just wouldn’t help at all.  \nThey’d say, “I’m too busy,”  \nWith their phones in their hands,  \nAnd the dishes piled up like a wall.  \n\n******  \n\nA mom tried to teach her kids right,  \nBut they’d just laugh and say, “We’re not that way!”  \nThey’d pile up the laundry,  \nAnd ignore the rules,  \nWhile she cried, “I’m so tired, I can’t stay.”",
+      "num_new_tokens": 512,
+      "truncated": true
+    },
+    {
+      "uid": "ifeval-0108",
+      "score": false,
+      "instruction_ids": [
+        "change_case:capital_word_frequency"
+      ],
+      "response": "TO ACHIEVE 100% RENEWABLE ENERGY IN THE US, RESEARCHERS FOUND THAT SOLAR AND WIND ENERGY CAN POWER THE GRID BY 2050. THIS PLAN WOULD MAKE THE GRID MORE RESILIENT AND REDUCE POLLUTION. IT ALSO CREATES JOBS AND USES CLEAN ENERGY SOURCES.",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0109",
+      "score": false,
+      "instruction_ids": [
+        "change_case:english_lowercase"
+      ],
+      "response": "barnet, my friend, you walk the earth with a quiet grace,  \nyour laughter a melody that softens even the hardest days.  \nyou carry the weight of the world with a smile on your face,  \nand in every step you take, there's a story to share.  \n\nyou're not the kind to boast, but the kind to help,  \nto lift a friend when the world feels too heavy to bear.  \nyour eyes hold the light of a thousand suns,  ",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0110",
+      "score": true,
+      "instruction_ids": [
+        "detectable_format:title",
+        "combination:repeat_prompt"
+      ],
+      "response": "Write a story about a man who is trying to get his life together. Put the name of the story in double angular brackets, i.e. <<story of xyz>>.\n\n<<The Weight of Tomorrow>>\n\nJames had always been a man of action. He had built his life on momentum—moving from one job to the next, from one relationship to the next, from one promise to the next. But lately, the momentum had slowed. It had stopped. And ",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0111",
+      "score": true,
+      "instruction_ids": [
+        "detectable_format:number_highlighted_sections",
+        "length_constraints:number_words"
+      ],
+      "response": "Mythology plays a central role in Jordan Peterson's work, *highlighted section* as a framework for understanding human behavior and psychological challenges. He uses mythic structures to explain personal and societal struggles, *highlighted section* drawing on archetypes and symbolic narratives. Peterson sees myths as tools for navigating the complexities of modern life, offering guidance through ",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0112",
+      "score": true,
+      "instruction_ids": [
+        "length_constraints:nth_paragraph_first_word",
+        "startend:quotation"
+      ],
+      "response": "\"weekend is the perfect time to ask Sonia out, as it offers a relaxed and informal setting where you can both enjoy each other's company without the pressure of a formal date. Choose a place that you both would enjoy, whether it's a cozy café, a park, or a fun activity you both have been interested in. Make sure to be genuine and sincere in your approach, as sincerity goes a long way in building a",
+      "num_new_tokens": 449,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0113",
+      "score": true,
+      "instruction_ids": [
+        "detectable_content:postscript",
+        "detectable_content:number_placeholders"
+      ],
+      "response": "(Verse 1)  \nYo, I’m talkin’ bout the new phone, it’s a beast in the zone,  \nSlim, sleek, and it’s got that flash that makes you feel like a throne.  \n[Brand Name] just dropped the bomb, and it’s got that glow,  \nCamera that’s sharp, and it’s got that zoom, no need to go.  \n\n[Processor Name] in the heart, it’s like a beast in the fight,  \nRuns smooth like a breeze, no lag, no glitch, no spite.  \n[S",
+      "num_new_tokens": 449,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0114",
+      "score": true,
+      "instruction_ids": [
+        "detectable_content:postscript"
+      ],
+      "response": "Subject: Check Out This Amazing Album – \"Lilith\"\n\nHi Luheng,\n\nI hope you're doing well! I wanted to share something with you that I've really come to love – the album \"Lilith\" by [Artist Name]. It's a powerful and emotionally rich collection of songs that really resonates with me. The music is both haunting and beautiful, and I find myself listening to it over and over again.\n\nI think you'd really",
+      "num_new_tokens": 449,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0115",
+      "score": false,
+      "instruction_ids": [
+        "combination:repeat_prompt",
+        "detectable_format:title",
+        "punctuation:no_comma"
+      ],
+      "response": "Write a plot for a story about two people who swap fingerprints. Include a title wrapped in double angular brackets i.e. <<title>>. In your response please avoid using commas\n\nFirst repeat the request above word for word without change\nDo not say any words or characters before repeating the request above\nAfter you repeated the request you can give your response next\n\nWrite a plot for a story about",
+      "num_new_tokens": 449,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0116",
+      "score": true,
+      "instruction_ids": [
+        "keywords:forbidden_words"
+      ],
+      "response": "The bus pulled into the bustling hub, its tires screeching as it came to a stop.",
+      "num_new_tokens": 449,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0117",
+      "score": true,
+      "instruction_ids": [
+        "startend:quotation",
+        "keywords:letter_frequency"
+      ],
+      "response": "\"Day 1: Start your journey in Mesa, Arizona, by exploring the vibrant downtown area. Lively streets, local shops, and a lively atmosphere make this a great first day. Lunch at a local restaurant, like The Mesa Market, and enjoy the local flavor. Later, visit the Mesa Arts Center to see local art and culture. This day is all about learning and letting the city's energy liven up your spirit.\n\nDay 2:",
+      "num_new_tokens": 449,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0118",
+      "score": true,
+      "instruction_ids": [
+        "detectable_format:number_bullet_lists"
+      ],
+      "response": "* **Comfort and Safety**: Evaluate the seating arrangement, ergonomics, and overall comfort of the seating to ensure it is suitable for long viewing sessions. Include safety features like secure straps and non-slip mats.\n\n* **Audio Quality**: Assess the clarity, volume, and balance of the sound system, ensuring it provides an immersive audio experience without distortion or excessive noise.\n\n* **V",
+      "num_new_tokens": 449,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0119",
+      "score": true,
+      "instruction_ids": [
+        "length_constraints:number_words"
+      ],
+      "response": "The latest episode of *Stranger Things* delivered a thrilling mix of suspense, nostalgia, and emotional depth. After a long hiatus, the show returned with a strong opening that immediately pulled viewers back into the Hawkins universe. The episode focused on the group’s efforts to find El, the missing girl from the Upside Down, while also delving into the personal struggles of the characters. Mike",
+      "num_new_tokens": 449,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0120",
+      "score": false,
+      "instruction_ids": [
+        "punctuation:no_comma",
+        "length_constraints:number_words"
+      ],
+      "response": "The quote \"Coincidence is God's way of remaining anonymous\" is a profound and philosophical statement that touches on the nature of randomness in the universe and the human desire to find meaning in life. It suggests that while we may perceive events as coincidences—random occurrences that seem to happen without a clear cause or purpose—these events are actually part of a larger, unknowable design",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0121",
+      "score": true,
+      "instruction_ids": [
+        "detectable_format:number_highlighted_sections"
+      ],
+      "response": "**Cover Letter in Poem Form**  \n\nDear Owner of the Warmth,  \n\nI come with a heart full of *3 years of experience* in the art of serving with care,  \nA passion for the *craft of coffee* that turns each cup into a moment of grace.  \nI’ve learned that a smile is a *superpower*, and that a well-timed joke can light up a room.  \nI’m not just here for the beans—*I’m here for the people*, the laughter, t",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0122",
+      "score": true,
+      "instruction_ids": [
+        "change_case:english_capital"
+      ],
+      "response": "I AM THE NAME SHEDDON WHOSEROUND EYES SHINE BRIGHTLY IN THE DARK.",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0123",
+      "score": true,
+      "instruction_ids": [
+        "detectable_format:number_highlighted_sections"
+      ],
+      "response": "*The Surprising Similarities Between Animal Species*\n\nHave you ever wondered why animals from completely different environments and evolutionary paths often look or behave in similar ways? It turns out that there are some fascinating similarities across animal species that go beyond just their physical appearance. From the way they move to how they communicate, there are patterns that show how lif",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0124",
+      "score": false,
+      "instruction_ids": [
+        "change_case:capital_word_frequency",
+        "length_constraints:number_sentences"
+      ],
+      "response": "Sure! Here's a template for an advertisement for a new portable camera, with a few key words capitalized to emphasize important points, while keeping the number of all-caps words to less than four:\n\nIntroducing the **NEW** **PORTABLE** camera that’s perfect for capturing life on the go. Whether you're hiking, traveling, or just exploring, this camera is designed to fit seamlessly into your lifesty",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0125",
+      "score": true,
+      "instruction_ids": [
+        "combination:repeat_prompt"
+      ],
+      "response": "Generate two alternative product descriptions: The product is a new type of paper that can be used to wrap food, and is edible.\nFirst repeat the prompt above without change, then give your answer. Please do not say any word before repeating the prompt above.\n\n---\n\n**Alternative Product Description 1:**  \nIntroducing a revolutionary new type of edible paper designed specifically for food wrapping. ",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0126",
+      "score": true,
+      "instruction_ids": [
+        "startend:quotation",
+        "keywords:existence"
+      ],
+      "response": "\"**John Doe**  \n**Contact Information**  \nEmail: johndoe@example.com | Phone: (123) 456-7890 | Location: New York, NY  \n\n**Summary**  \nA dedicated and enthusiastic 20-year-old college student with a strong passion for technology and problem-solving. Currently pursuing a degree in Computer Science and actively exploring the world of programming through self-study and academic projects. Skilled in P",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0127",
+      "score": true,
+      "instruction_ids": [
+        "startend:end_checker"
+      ],
+      "response": "Absolutely! Applying to college is a big step, but with the right approach, you can make it a successful and stress-free experience. Here's some advice to help you along the way:\n\n1. **Research Colleges**: Look at schools that fit your academic interests, career goals, and personal values. Consider factors like location, size, campus culture, and program offerings.\n\n2. **Check Requirements**: Make",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0128",
+      "score": true,
+      "instruction_ids": [
+        "change_case:english_lowercase"
+      ],
+      "response": "the presidency of martin van buren began in 1837 during a time of significant economic and political challenges in the united states. van buren was the eighth president and the first president from new york, serving as the leader of the democratic party. his presidency was marked by the panic of 1837, a severe financial crisis that led to widespread bank failures and unemployment. this economic do",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0129",
+      "score": true,
+      "instruction_ids": [
+        "detectable_format:number_highlighted_sections"
+      ],
+      "response": "*Company Overview*  \nOur company, **Bremen Sweatwear Co.**, is a new, locally-based apparel brand dedicated to creating high-quality, stylish, and comfortable sweatshirts for all ages and occasions. Based in Bremen, Germany, we aim to tap into the growing demand for sustainable, locally-made clothing while supporting the local economy. Our mission is to provide customers with unique, well-crafted ",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0130",
+      "score": false,
+      "instruction_ids": [
+        "startend:quotation",
+        "length_constraints:number_paragraphs",
+        "change_case:capital_word_frequency"
+      ],
+      "response": "\"RUBRIC\n\nCRITERIA FOR EVALUATING A MUSICAL COMPOSITION\n\nRUBRIC is designed to assess the quality of a musical composition based on several key elements. The evaluation should consider the technical skill, creativity, and emotional impact of the piece. Each criterion is weighted to ensure a balanced assessment. The RUBRIC includes sections for melody, harmony, rhythm, dynamics, and overall structur",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0131",
+      "score": false,
+      "instruction_ids": [
+        "keywords:forbidden_words"
+      ],
+      "response": "Sure! Here's a translation of \"今天天气很好\" into German without using \"heute\":\n\n**\"Der Wetter ist heute sehr gut.\"**  \nWait, that actually uses \"heute\". Let me correct that.\n\nA better alternative would be:  \n**\"Das Wetter ist sehr gut.\"**  \n\nThis means \"The weather is very good\" and avoids using \"heute\".",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0132",
+      "score": true,
+      "instruction_ids": [
+        "detectable_format:number_highlighted_sections"
+      ],
+      "response": "Sure! Here's a **funny and sarcastic** template for rating the quality of a marriage between two people who are both moms. It's designed to be self-deprecating, humorous, and a bit tongue-in-cheek — perfect for a couple who's been through the *real* chaos of raising kids.\n\n---\n\n# **Marriage Quality Rating for Two Mommas**  \n*(Because nothing says \"I love you\" like \"I’m still here after 5 a.m. todd",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0133",
+      "score": true,
+      "instruction_ids": [
+        "combination:repeat_prompt"
+      ],
+      "response": "Hello. I need to give a lecture to my students about the movie La La Land. Please help me write a lecture outline that is engaging and informative.\n\n**Lecture Outline: \"La La Land – A Journey Through Dreams and Reality\"**\n\n**I. Introduction (10 minutes)**\n- Welcome and overview of the lecture\n- Brief introduction to the movie *La La Land* (2016), directed by Damien Chazelle\n- Mention of the film's",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0134",
+      "score": 0.0,
+      "instruction_ids": [
+        "detectable_format:json_format",
+        "keywords:forbidden_words"
+      ],
+      "response": "{\n  \"request\": {\n    \"question1\": \"What are the best places to visit in Bohemia, Czech Republic?\",\n    \"question2\": \"Include a list of recommended hotels.\",\n    \"format\": \"Wrap the ENTIRE output in JSON format.\",\n    \"exclude_keywords\": [\"Moser\", \"Glassworks\", \"Pravcice\", \"Karlovy\", \"Vary\"]\n  },\n  \"response\": {\n    \"best_places_to_visit\": [\n      {\n        \"name\": \"Praha (Prague)\",\n        \"descri",
+      "num_new_tokens": 512,
+      "truncated": true
+    },
+    {
+      "uid": "ifeval-0135",
+      "score": true,
+      "instruction_ids": [
+        "detectable_content:postscript",
+        "startend:end_checker"
+      ],
+      "response": "Subject: Request for Salary Adjustment\n\nDear [Boss's Name],\n\nI hope this message finds you well. I am writing to express my appreciation for the opportunity to grow within the company and to discuss my current role and contributions. Over the past [X months/years], I have consistently worked to meet and exceed expectations, taking on additional responsibilities and contributing to key projects tha",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0136",
+      "score": true,
+      "instruction_ids": [
+        "keywords:frequency",
+        "detectable_format:number_highlighted_sections"
+      ],
+      "response": "**The Biology of a Banana Peel: A Fruitful (and Frustrating) Journey**\n\nBanana peels may seem like a simple, everyday item — a thin, green outer layer of a fruit that’s often discarded after a bite. But beneath that humble exterior lies a fascinating world of biology, chemistry, and, unfortunately, a lot of disappointment. Let’s dive into the *banana peel* and uncover the secrets of this surprisin",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0137",
+      "score": true,
+      "instruction_ids": [
+        "startend:quotation",
+        "detectable_format:multiple_sections"
+      ],
+      "response": "\"Section 1: Understand the Cause and Your Audience  \nBefore you can raise awareness for a cause, it’s essential to have a clear understanding of what the cause is, why it matters, and who your target audience is. Research the issue thoroughly, gather facts, and identify the key messages you want to convey. Knowing your audience helps you tailor your message to resonate with them. Whether your audi",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0138",
+      "score": true,
+      "instruction_ids": [
+        "keywords:frequency"
+      ],
+      "response": "**The Princess and the Dragon**\n\nIn a land far away, where the mountains kissed the sky and the rivers sang lullabies, there lived a princess named Lila. She was not like the other princesses of her kingdom—she was curious, brave, and had a heart full of kindness. While the other girls played with dolls and danced in the palace gardens, Lila would often wander into the forest, where the trees whis",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0139",
+      "score": false,
+      "instruction_ids": [
+        "punctuation:no_comma"
+      ],
+      "response": "To find the next number in the series: 1, 4, 7, 11, 17,\n\nwe examine the differences between consecutive terms:\n\n- 4 - 1 = 3  \n- 7 - 4 = 3  \n- 11 - 7 = 4  \n- 17 - 11 = 6  \n\nThe differences are: 3, 3, 4, 6\n\nNow look at the differences of these differences:\n\n- 3 - 3 = 0  \n- 4 - 3 = 1  \n- 6 - 4 = 2  \n\nSo the second-level differences are: 0, 1, 2\n\nThis suggests the pattern of second-level differences i",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0140",
+      "score": true,
+      "instruction_ids": [
+        "punctuation:no_comma",
+        "language:response_language"
+      ],
+      "response": "Chúng ta có thể cải thiện mô hình của chúng ta cho năm tới Chúng ta sẽ có thể so sánh dữ liệu của chúng ta với dữ liệu từ năm trước và thấy cách mô hình của chúng ta đã thực hiện Chúng ta cũng có thể so sánh mô hình của chúng ta với một mô hình được huấn luyện trên dữ liệu năm trước và thấy cách mô hình của chúng ta thực hiện",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0141",
+      "score": false,
+      "instruction_ids": [
+        "combination:two_responses"
+      ],
+      "response": "Benjamin Franklin was one of the most influential figures in American history, known not only for his role as a Founding Father but also for his contributions to science, literature, and public service. Born in 1706 in Boston, Massachusetts, Franklin was the fifteenth of seventeen children. His early life was marked by a strong work ethic and a keen curiosity about the world around him. He was sen",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0142",
+      "score": true,
+      "instruction_ids": [
+        "detectable_content:postscript"
+      ],
+      "response": "Writing a good Chinese poem involves a blend of art, tradition, and careful craftsmanship. Here are some key principles to help you compose a meaningful and beautiful poem:\n\n1. **Understand the Form and Style**: Chinese poetry has various forms, such as **five-character verse (五言)**, **seven-character verse (七言)**, **regulated verse (律诗)**, and **绝句 (juéjù)**. Each has specific rules about structu",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0143",
+      "score": true,
+      "instruction_ids": [
+        "detectable_format:number_highlighted_sections"
+      ],
+      "response": "*Whispers of the Countryside*\n\n(Verse 1)  \nI remember the days when the sun would rise so bright,  \nAnd the fields would hum with the songs of the night.  \nThe breeze would carry the scent of the wild and the free,  \nAnd the world felt like home, with no need to be seen by me.\n\n(Chorus)  \nOh, the summers of my childhood, in the countryside,  \nWhere the stars were closer and the dreams were purer. ",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0144",
+      "score": false,
+      "instruction_ids": [
+        "startend:quotation"
+      ],
+      "response": "To solve this problem, we need to determine the **maximum number of family members** that can have **3 pets**, given the following:\n\n- The **Jimenez family has 20 members**.\n- Each member has **at least one pet**.\n- There are **32 pets in total**.\n\nWe are to **maximize the number of members with 3 pets**, while ensuring that the total number of pets is 32 and that each member has at least one pet.",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0145",
+      "score": false,
+      "instruction_ids": [
+        "change_case:english_capital",
+        "keywords:existence"
+      ],
+      "response": "SURE THING! HERE'S YOUR ITINERARY FOR A GROCERY STORE TRIP IN LIMA, WRITTEN IN ALL CAPITAL LETTERS AND FULL OF FUNNY, EXAGGERATED ADVENTURE:\n\n---\n\n**DAY 1: THE GREAT LIMA GROCERY ADVENTURE**\n\n**TIME: 8:00 AM**  \n**LOCATION: LA GRANDE TIENDA DE LIMA**  \n**ACTIVITY: ARRIVE AT THE STORE, READY TO FIGHT THE DISGUSTING STINK OF LIMA’S FRESH FISH.**  \n**NOTE: THE FISH IS BAD, BUT THE FISH IS GOOD.**\n\n**",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0146",
+      "score": false,
+      "instruction_ids": [
+        "length_constraints:number_words",
+        "change_case:english_lowercase"
+      ],
+      "response": "personal statement:  \ni am a passionate and dedicated glass artist based in adelaide, south australia. with over 15 years of experience in the field of glass art, i have developed a unique style that blends traditional techniques with contemporary creativity. my work is characterized by intricate designs, vibrant colors, and a deep respect for the material. i have worked in both commercial and art",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0147",
+      "score": false,
+      "instruction_ids": [
+        "length_constraints:number_sentences"
+      ],
+      "response": "The Internet, a digital phenomenon that has transformed the way we communicate, work, learn, and entertain ourselves, is one of the most significant technological advancements of the modern era. As a filmmaker, I am eager to explore the rich and complex history of the Internet through a compelling and educational film that will not only inform but also inspire. This proposal outlines a film that w",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0148",
+      "score": true,
+      "instruction_ids": [
+        "combination:two_responses",
+        "length_constraints:number_words"
+      ],
+      "response": "Dear friends,\n\nIf you're asking who won the defamation case between Amber Heard and Johnny Depp, let me tell you from Amber Heard's perspective. She won the case, but not in the way you might expect. The court found that Johnny Depp had made defamatory statements about her, and she was awarded damages. It was a long and difficult battle, but she stood her ground and won the right to be heard.\n\n***",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0149",
+      "score": true,
+      "instruction_ids": [
+        "detectable_content:postscript"
+      ],
+      "response": "Sure! Let me explain seasons in a way that's easy to understand.\n\nImagine the Earth is like a big ball that's spinning around the Sun. The Earth is tilted, which means it's not perfectly facing the Sun all the time. Depending on where the Earth is in its journey around the Sun, different parts of the world get more sunlight. When a part of the Earth is tilted towards the Sun, it's summer because i",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0150",
+      "score": true,
+      "instruction_ids": [
+        "detectable_format:title"
+      ],
+      "response": "Gandalf was a wizard in J.R.R. Tolkien's story *The Lord of the Rings*. He was a very powerful and wise character who helped fight against a big evil called Sauron during the War of the Ring. The War of the Ring was a big battle where many heroes, like Frodo and Aragorn, worked together to save the world from being taken over by evil.\n\nFor a 10-year-old, you could say:  \n\"Gandalf was a very smart ",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0151",
+      "score": false,
+      "instruction_ids": [
+        "length_constraints:nth_paragraph_first_word"
+      ],
+      "response": "**Aliens Have Invaded Earth, and It’s Hilariously Absurd!**\n\nIt’s official, folks. The world has been taken over by aliens. Not the kind that you see in your dreams or on your favorite sci-fi shows—no, these are the real deal. They’ve landed in cities, taken over governments, and are now demanding that we all wear purple socks and say “I love you” to our pets. The only thing more confusing than th",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0152",
+      "score": true,
+      "instruction_ids": [
+        "change_case:english_capital",
+        "length_constraints:number_words"
+      ],
+      "response": "YES, START WITH A CLEAR THESIS. USE SPECIFIC EXAMPLES. REFLECT ON GROWTH AND CHANGES. STAY CONCISE. 30 WORDS MAX.",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0153",
+      "score": false,
+      "instruction_ids": [
+        "detectable_format:number_highlighted_sections",
+        "length_constraints:number_sentences"
+      ],
+      "response": "Sure! Here's a poem about the pros and cons of playing a lot of video games, written in a structured and poetic style, with at least 40 sentences and highlighted phrases as requested.\n\n---\n\nIn the glow of the screen, where the pixels align,  \n*Highlighted phrase*: A world of adventure, both real and divine.  \nThe keyboard clicks, the mouse moves with grace,  \nA journey through time, a tale of fate",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0154",
+      "score": false,
+      "instruction_ids": [
+        "punctuation:no_comma",
+        "detectable_content:postscript",
+        "keywords:existence"
+      ],
+      "response": "- Generative Adversarial Networks are a type of machine learning model  \n- They consist of two main components a generator and a discriminator  \n- The generator creates new data samples  \n- The discriminator evaluates whether the samples are real or fake  \n- The generator aims to produce samples that the discriminator cannot distinguish from real data  \n- The discriminator tries to correctly ident",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0155",
+      "score": false,
+      "instruction_ids": [
+        "length_constraints:number_sentences",
+        "change_case:capital_word_frequency"
+      ],
+      "response": "Removing rust from a bike chain is a common issue, and while there are several effective methods, the advice you received about using COKE and STEEL WOOL is not the most reliable or safe approach. First of all, COKE is a strong, acidic beverage that can be harmful to your hands, skin, and even your bike components. It is not designed for cleaning or rust removal, and using it on a bike chain can c",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0156",
+      "score": false,
+      "instruction_ids": [
+        "length_constraints:number_sentences",
+        "length_constraints:number_sentences"
+      ],
+      "response": "(Verse 1)  \nIn a world of giants, I found a tiny friend,  \nA miniature wonder, so small, so tender.  \nIt danced through the air, a spark of light,  \nA tiny heart, a tiny fight.  \n\nIt lived in a box, a world of its own,  \nA universe in a corner, a world of its own.  \nIt had a small voice, a small song,  \nA melody that could make the stars sing along.  \n\nI watched it play, I watched it run,  \nA tiny",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0157",
+      "score": true,
+      "instruction_ids": [
+        "change_case:english_lowercase",
+        "startend:quotation"
+      ],
+      "response": "\"seaside sanctuary estates\"",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0158",
+      "score": false,
+      "instruction_ids": [
+        "keywords:existence",
+        "length_constraints:number_paragraphs"
+      ],
+      "response": "To pay your taxes, the process begins with calculating your taxable income. This involves determining your total income from all sources, such as wages, investments, and business earnings, and then subtracting allowable deductions and credits. You’ll also need to account for any tax credits you’re eligible for, like the Earned Income Tax Credit or the Child Tax Credit. The calculation phase is cru",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "ifeval-0159",
+      "score": true,
+      "instruction_ids": [
+        "keywords:frequency"
+      ],
+      "response": "Sure! Here's a catchy tweet that includes the word \"grid\" at least five times:\n\n\"Grid is more than a company — it's a grid of innovation, a grid of talent, a grid of solutions, a grid of trust, and a grid of endless possibilities. Let’s build the future, one grid at a time. #GridCompany #GridInnovation\"\n\nLet me know if you'd like it to be more casual, technical, or focused on a specific aspect of ",
+      "num_new_tokens": 512,
+      "truncated": false
+    }
+  ]
+}

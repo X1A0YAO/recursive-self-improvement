@@ -1,0 +1,1094 @@
+{
+  "generated_at": "2026-11-07T06:52:23.946343+00:00",
+  "model_dir": "checkpoints/V0",
+  "split": "validation",
+  "n": 120,
+  "accuracy": 0.85,
+  "config": {
+    "max_new_tokens": 256,
+    "greedy": true,
+    "batch_size": 8
+  },
+  "results": [
+    {
+      "uid": "arc-validation-0000",
+      "gold": "D",
+      "pred": "D",
+      "score": 1.0,
+      "response": "D. Record the details of the investigation.",
+      "num_new_tokens": 10,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0001",
+      "gold": "C",
+      "pred": "C",
+      "score": 1.0,
+      "response": "C. drought",
+      "num_new_tokens": 10,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0002",
+      "gold": "D",
+      "pred": "D",
+      "score": 1.0,
+      "response": "D. Earth rotates on its axis.",
+      "num_new_tokens": 10,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0003",
+      "gold": "A",
+      "pred": "A",
+      "score": 1.0,
+      "response": "A. converting sunlight into electricity",
+      "num_new_tokens": 10,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0004",
+      "gold": "B",
+      "pred": "B",
+      "score": 1.0,
+      "response": "B. Food sources increased.",
+      "num_new_tokens": 10,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0005",
+      "gold": "C",
+      "pred": "C",
+      "score": 1.0,
+      "response": "C",
+      "num_new_tokens": 10,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0006",
+      "gold": "C",
+      "pred": "C",
+      "score": 1.0,
+      "response": "C. The particles move more rapidly.",
+      "num_new_tokens": 10,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0007",
+      "gold": "C",
+      "pred": "C",
+      "score": 1.0,
+      "response": "C. Food is stored for future use.",
+      "num_new_tokens": 10,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0008",
+      "gold": "C",
+      "pred": "C",
+      "score": 1.0,
+      "response": "C. amount of garlic",
+      "num_new_tokens": 17,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0009",
+      "gold": "D",
+      "pred": "D",
+      "score": 1.0,
+      "response": "D. displaying data",
+      "num_new_tokens": 17,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0010",
+      "gold": "D",
+      "pred": "C",
+      "score": 0.0,
+      "response": "C. The temperature of the liquid decreased, or the liquid became a gas.",
+      "num_new_tokens": 17,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0011",
+      "gold": "D",
+      "pred": "D",
+      "score": 1.0,
+      "response": "D. the supplements",
+      "num_new_tokens": 17,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0012",
+      "gold": "A",
+      "pred": "A",
+      "score": 1.0,
+      "response": "A. measuring the amount of fatigue",
+      "num_new_tokens": 17,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0013",
+      "gold": "B",
+      "pred": "B",
+      "score": 1.0,
+      "response": "B",
+      "num_new_tokens": 17,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0014",
+      "gold": "A",
+      "pred": "A",
+      "score": 1.0,
+      "response": "A. tasting chemical samples",
+      "num_new_tokens": 17,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0015",
+      "gold": "C",
+      "pred": "C",
+      "score": 1.0,
+      "response": "C. The hot water dissolved the most sugar.",
+      "num_new_tokens": 17,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0016",
+      "gold": "D",
+      "pred": "D",
+      "score": 1.0,
+      "response": "D.",
+      "num_new_tokens": 12,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0017",
+      "gold": "B",
+      "pred": "B",
+      "score": 1.0,
+      "response": "B. The liver",
+      "num_new_tokens": 12,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0018",
+      "gold": "D",
+      "pred": "D",
+      "score": 1.0,
+      "response": "D",
+      "num_new_tokens": 12,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0019",
+      "gold": "A",
+      "pred": "A",
+      "score": 1.0,
+      "response": "A. a decrease in the thickness of soil",
+      "num_new_tokens": 12,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0020",
+      "gold": "B",
+      "pred": "A",
+      "score": 0.0,
+      "response": "A. competition.",
+      "num_new_tokens": 12,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0021",
+      "gold": "B",
+      "pred": "B",
+      "score": 1.0,
+      "response": "B. Broadleaf species would replace pine species.",
+      "num_new_tokens": 12,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0022",
+      "gold": "D",
+      "pred": "D",
+      "score": 1.0,
+      "response": "D. The planet lacks an atmosphere to hold heat.",
+      "num_new_tokens": 12,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0023",
+      "gold": "B",
+      "pred": "B",
+      "score": 1.0,
+      "response": "B.",
+      "num_new_tokens": 12,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0024",
+      "gold": "A",
+      "pred": "A",
+      "score": 1.0,
+      "response": "A. chemical energy in the battery",
+      "num_new_tokens": 14,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0025",
+      "gold": "A",
+      "pred": "A",
+      "score": 1.0,
+      "response": "A. mosses",
+      "num_new_tokens": 14,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0026",
+      "gold": "D",
+      "pred": "C",
+      "score": 0.0,
+      "response": "C",
+      "num_new_tokens": 14,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0027",
+      "gold": "B",
+      "pred": "B",
+      "score": 1.0,
+      "response": "B. a diagram of the measurements of his room",
+      "num_new_tokens": 14,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0028",
+      "gold": "D",
+      "pred": "D",
+      "score": 1.0,
+      "response": "D. sugar",
+      "num_new_tokens": 14,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0029",
+      "gold": "A",
+      "pred": "A",
+      "score": 1.0,
+      "response": "A. construction of a housing development",
+      "num_new_tokens": 14,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0030",
+      "gold": "B",
+      "pred": "B",
+      "score": 1.0,
+      "response": "B. The water in both pans boils at the same temperature.",
+      "num_new_tokens": 14,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0031",
+      "gold": "B",
+      "pred": "B",
+      "score": 1.0,
+      "response": "B. The amount of erosion within the area will increase.",
+      "num_new_tokens": 14,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0032",
+      "gold": "D",
+      "pred": "D",
+      "score": 1.0,
+      "response": "D.",
+      "num_new_tokens": 16,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0033",
+      "gold": "D",
+      "pred": "D",
+      "score": 1.0,
+      "response": "D. Speciation due to reproductive isolation influenced the breeding preferences.",
+      "num_new_tokens": 16,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0034",
+      "gold": "D",
+      "pred": "D",
+      "score": 1.0,
+      "response": "D. The doorbell uses a piece of wire wrapped around a magnet.",
+      "num_new_tokens": 16,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0035",
+      "gold": "A",
+      "pred": "A",
+      "score": 1.0,
+      "response": "A. gas",
+      "num_new_tokens": 16,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0036",
+      "gold": "A",
+      "pred": "A",
+      "score": 1.0,
+      "response": "A. the amount of matter in the block",
+      "num_new_tokens": 16,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0037",
+      "gold": "B",
+      "pred": "D",
+      "score": 0.0,
+      "response": "D. water turnover",
+      "num_new_tokens": 16,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0038",
+      "gold": "D",
+      "pred": "D",
+      "score": 1.0,
+      "response": "D. The winds could be converted to electrical energy.",
+      "num_new_tokens": 16,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0039",
+      "gold": "D",
+      "pred": "D",
+      "score": 1.0,
+      "response": "D. because all scientific discoveries must be examined critically before they can be accepted",
+      "num_new_tokens": 16,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0040",
+      "gold": "C",
+      "pred": "C",
+      "score": 1.0,
+      "response": "C. irrigating flowerbeds and watering trees",
+      "num_new_tokens": 14,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0041",
+      "gold": "D",
+      "pred": "D",
+      "score": 1.0,
+      "response": "D. Butterflies and moths have equal numbers of legs.",
+      "num_new_tokens": 14,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0042",
+      "gold": "D",
+      "pred": "D",
+      "score": 1.0,
+      "response": "D. They would be unable to survive.",
+      "num_new_tokens": 14,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0043",
+      "gold": "B",
+      "pred": "B",
+      "score": 1.0,
+      "response": "B. 20 psi",
+      "num_new_tokens": 14,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0044",
+      "gold": "C",
+      "pred": "C",
+      "score": 1.0,
+      "response": "C.",
+      "num_new_tokens": 14,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0045",
+      "gold": "B",
+      "pred": "B",
+      "score": 1.0,
+      "response": "B. saliva in the mouth",
+      "num_new_tokens": 14,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0046",
+      "gold": "C",
+      "pred": "C",
+      "score": 1.0,
+      "response": "C.",
+      "num_new_tokens": 14,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0047",
+      "gold": "D",
+      "pred": "C",
+      "score": 0.0,
+      "response": "C",
+      "num_new_tokens": 14,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0048",
+      "gold": "B",
+      "pred": "A",
+      "score": 0.0,
+      "response": "A. Air particles move up and to the left.",
+      "num_new_tokens": 83,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0049",
+      "gold": "A",
+      "pred": "A",
+      "score": 1.0,
+      "response": "A",
+      "num_new_tokens": 83,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0050",
+      "gold": "C",
+      "pred": "C",
+      "score": 1.0,
+      "response": "C. It prevents other scientists from validating the results.",
+      "num_new_tokens": 83,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0051",
+      "gold": "C",
+      "pred": "C",
+      "score": 1.0,
+      "response": "C. lithosphere and biosphere",
+      "num_new_tokens": 83,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0052",
+      "gold": "D",
+      "pred": "A",
+      "score": 0.0,
+      "response": "A. endoplasmic reticulum  \nD. Golgi apparatus  \n\nThe correct answer is **A** and **D**. Proteins synthesized in ribosomes (especially those destined for secretion or membrane integration) are first modified in the **endoplasmic reticulum (ER)** and then further modified and sorted in the **Golgi apparatus** before being transported to their final destination.",
+      "num_new_tokens": 83,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0053",
+      "gold": "A",
+      "pred": "A",
+      "score": 1.0,
+      "response": "A. the amounts of daylight",
+      "num_new_tokens": 83,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0054",
+      "gold": "D",
+      "pred": "D",
+      "score": 1.0,
+      "response": "D",
+      "num_new_tokens": 83,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0055",
+      "gold": "D",
+      "pred": "D",
+      "score": 1.0,
+      "response": "D. Older layers of rock are located above newer layers of rock.",
+      "num_new_tokens": 83,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0056",
+      "gold": "B",
+      "pred": "B",
+      "score": 1.0,
+      "response": "B. increases",
+      "num_new_tokens": 15,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0057",
+      "gold": "B",
+      "pred": "B",
+      "score": 1.0,
+      "response": "B. cell wall",
+      "num_new_tokens": 15,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0058",
+      "gold": "D",
+      "pred": "D",
+      "score": 1.0,
+      "response": "D. safety shower",
+      "num_new_tokens": 15,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0059",
+      "gold": "A",
+      "pred": "A",
+      "score": 1.0,
+      "response": "A. by increasing the rate at which topsoil is eroded",
+      "num_new_tokens": 15,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0060",
+      "gold": "D",
+      "pred": "D",
+      "score": 1.0,
+      "response": "D. the unemployment due to conversion to nuclear power",
+      "num_new_tokens": 15,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0061",
+      "gold": "A",
+      "pred": "A",
+      "score": 1.0,
+      "response": "A. more snakes and fewer birds",
+      "num_new_tokens": 15,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0062",
+      "gold": "B",
+      "pred": "A",
+      "score": 0.0,
+      "response": "A",
+      "num_new_tokens": 15,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0063",
+      "gold": "D",
+      "pred": "D",
+      "score": 1.0,
+      "response": "D. Gases were released to the atmosphere.",
+      "num_new_tokens": 15,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0064",
+      "gold": "D",
+      "pred": "D",
+      "score": 1.0,
+      "response": "D. breakdown of carbon in plant tissues to form oil",
+      "num_new_tokens": 12,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0065",
+      "gold": "B",
+      "pred": "B",
+      "score": 1.0,
+      "response": "B. 30 days",
+      "num_new_tokens": 12,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0066",
+      "gold": "C",
+      "pred": "C",
+      "score": 1.0,
+      "response": "C. offspring with unique combinations of traits",
+      "num_new_tokens": 12,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0067",
+      "gold": "C",
+      "pred": "C",
+      "score": 1.0,
+      "response": "C. Birds are building nests in the shorter trees.",
+      "num_new_tokens": 12,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0068",
+      "gold": "B",
+      "pred": "D",
+      "score": 0.0,
+      "response": "D. Ask the teacher to count for her.",
+      "num_new_tokens": 12,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0069",
+      "gold": "A",
+      "pred": "A",
+      "score": 1.0,
+      "response": "A. stems curling in response to touch",
+      "num_new_tokens": 12,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0070",
+      "gold": "C",
+      "pred": "C",
+      "score": 1.0,
+      "response": "C. different marker proteins on red blood cells",
+      "num_new_tokens": 12,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0071",
+      "gold": "B",
+      "pred": "B",
+      "score": 1.0,
+      "response": "B. to monitor their roaming habits",
+      "num_new_tokens": 12,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0072",
+      "gold": "D",
+      "pred": "D",
+      "score": 1.0,
+      "response": "D. mass and strength",
+      "num_new_tokens": 15,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0073",
+      "gold": "C",
+      "pred": "C",
+      "score": 1.0,
+      "response": "C. Fewer pesticides will be needed.",
+      "num_new_tokens": 15,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0074",
+      "gold": "B",
+      "pred": "C",
+      "score": 0.0,
+      "response": "C. Both asteroids and comets are solids.",
+      "num_new_tokens": 15,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0075",
+      "gold": "B",
+      "pred": "D",
+      "score": 0.0,
+      "response": "D. nonmetals.",
+      "num_new_tokens": 15,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0076",
+      "gold": "A",
+      "pred": "A",
+      "score": 1.0,
+      "response": "A. It would have the same mass, but a different weight.",
+      "num_new_tokens": 15,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0077",
+      "gold": "D",
+      "pred": "A",
+      "score": 0.0,
+      "response": "A. by noticing if they dissolve in water",
+      "num_new_tokens": 15,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0078",
+      "gold": "D",
+      "pred": "D",
+      "score": 1.0,
+      "response": "D. 100% pink flowers",
+      "num_new_tokens": 15,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0079",
+      "gold": "C",
+      "pred": "B",
+      "score": 0.0,
+      "response": "B. their personal experiences in storms",
+      "num_new_tokens": 15,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0080",
+      "gold": "A",
+      "pred": "A",
+      "score": 1.0,
+      "response": "A. The location of the continent affects its surface reflectivity.",
+      "num_new_tokens": 14,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0081",
+      "gold": "D",
+      "pred": "D",
+      "score": 1.0,
+      "response": "D. mountains",
+      "num_new_tokens": 14,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0082",
+      "gold": "D",
+      "pred": "D",
+      "score": 1.0,
+      "response": "D.",
+      "num_new_tokens": 14,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0083",
+      "gold": "A",
+      "pred": "A",
+      "score": 1.0,
+      "response": "A. energy transfers",
+      "num_new_tokens": 14,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0084",
+      "gold": "A",
+      "pred": "A",
+      "score": 1.0,
+      "response": "A. Cc or cc",
+      "num_new_tokens": 14,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0085",
+      "gold": "A",
+      "pred": "A",
+      "score": 1.0,
+      "response": "A. black",
+      "num_new_tokens": 14,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0086",
+      "gold": "B",
+      "pred": "B",
+      "score": 1.0,
+      "response": "B. include all species in the ecosystem.",
+      "num_new_tokens": 14,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0087",
+      "gold": "C",
+      "pred": "C",
+      "score": 1.0,
+      "response": "C",
+      "num_new_tokens": 14,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0088",
+      "gold": "A",
+      "pred": "A",
+      "score": 1.0,
+      "response": "A. These chemicals can self-assemble into a structure that replicates.",
+      "num_new_tokens": 16,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0089",
+      "gold": "B",
+      "pred": "B",
+      "score": 1.0,
+      "response": "B. equal to the total mass of the products",
+      "num_new_tokens": 16,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0090",
+      "gold": "C",
+      "pred": "D",
+      "score": 0.0,
+      "response": "D",
+      "num_new_tokens": 16,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0091",
+      "gold": "D",
+      "pred": "D",
+      "score": 1.0,
+      "response": "D.",
+      "num_new_tokens": 16,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0092",
+      "gold": "D",
+      "pred": "D",
+      "score": 1.0,
+      "response": "D. hiding",
+      "num_new_tokens": 16,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0093",
+      "gold": "B",
+      "pred": "B",
+      "score": 1.0,
+      "response": "B. weathering",
+      "num_new_tokens": 16,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0094",
+      "gold": "A",
+      "pred": "A",
+      "score": 1.0,
+      "response": "A. through mutation",
+      "num_new_tokens": 16,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0095",
+      "gold": "B",
+      "pred": "B",
+      "score": 1.0,
+      "response": "B. heating changed the chemical bonds in the egg.",
+      "num_new_tokens": 16,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0096",
+      "gold": "C",
+      "pred": "C",
+      "score": 1.0,
+      "response": "C. pie chart",
+      "num_new_tokens": 10,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0097",
+      "gold": "A",
+      "pred": "A",
+      "score": 1.0,
+      "response": "A.",
+      "num_new_tokens": 10,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0098",
+      "gold": "B",
+      "pred": "B",
+      "score": 1.0,
+      "response": "B",
+      "num_new_tokens": 10,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0099",
+      "gold": "A",
+      "pred": "A",
+      "score": 1.0,
+      "response": "A. The liquid water forms a solid.",
+      "num_new_tokens": 10,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0100",
+      "gold": "C",
+      "pred": "D",
+      "score": 0.0,
+      "response": "D",
+      "num_new_tokens": 10,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0101",
+      "gold": "C",
+      "pred": "B",
+      "score": 0.0,
+      "response": "B",
+      "num_new_tokens": 10,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0102",
+      "gold": "B",
+      "pred": "B",
+      "score": 1.0,
+      "response": "B. reflectiveness",
+      "num_new_tokens": 10,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0103",
+      "gold": "C",
+      "pred": "C",
+      "score": 1.0,
+      "response": "C. light years",
+      "num_new_tokens": 10,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0104",
+      "gold": "A",
+      "pred": "D",
+      "score": 0.0,
+      "response": "D. breathe with gills",
+      "num_new_tokens": 15,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0105",
+      "gold": "C",
+      "pred": "C",
+      "score": 1.0,
+      "response": "C",
+      "num_new_tokens": 15,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0106",
+      "gold": "C",
+      "pred": "C",
+      "score": 1.0,
+      "response": "C. limiting chemicals that diffuse out of the cell",
+      "num_new_tokens": 15,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0107",
+      "gold": "C",
+      "pred": "C",
+      "score": 1.0,
+      "response": "C. He, Ne, Ar",
+      "num_new_tokens": 15,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0108",
+      "gold": "B",
+      "pred": "B",
+      "score": 1.0,
+      "response": "B. genetic diversity",
+      "num_new_tokens": 15,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0109",
+      "gold": "D",
+      "pred": "D",
+      "score": 1.0,
+      "response": "D. observing a prairie dog community in an exhibit at the zoo",
+      "num_new_tokens": 15,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0110",
+      "gold": "C",
+      "pred": "C",
+      "score": 1.0,
+      "response": "C. an invisible gas",
+      "num_new_tokens": 15,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0111",
+      "gold": "A",
+      "pred": "A",
+      "score": 1.0,
+      "response": "A",
+      "num_new_tokens": 15,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0112",
+      "gold": "D",
+      "pred": "D",
+      "score": 1.0,
+      "response": "D",
+      "num_new_tokens": 11,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0113",
+      "gold": "D",
+      "pred": "D",
+      "score": 1.0,
+      "response": "D. first quarter and last quarter",
+      "num_new_tokens": 11,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0114",
+      "gold": "B",
+      "pred": "B",
+      "score": 1.0,
+      "response": "B. amount of light",
+      "num_new_tokens": 11,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0115",
+      "gold": "A",
+      "pred": "D",
+      "score": 0.0,
+      "response": "D. an organ",
+      "num_new_tokens": 11,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0116",
+      "gold": "D",
+      "pred": "D",
+      "score": 1.0,
+      "response": "D",
+      "num_new_tokens": 11,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0117",
+      "gold": "B",
+      "pred": "B",
+      "score": 1.0,
+      "response": "B. turn sunlight into food energy.",
+      "num_new_tokens": 11,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0118",
+      "gold": "B",
+      "pred": "B",
+      "score": 1.0,
+      "response": "B. wide and flat.",
+      "num_new_tokens": 11,
+      "truncated": false
+    },
+    {
+      "uid": "arc-validation-0119",
+      "gold": "D",
+      "pred": "D",
+      "score": 1.0,
+      "response": "D. They will give birth at different beaches.",
+      "num_new_tokens": 11,
+      "truncated": false
+    }
+  ]
+}
