@@ -31,7 +31,9 @@ from agent.p4_tools import activation_probe, task_report
 from agent.b2_tools import _cache_path_for, _render_summary
 
 state = json.loads(open(sys.argv[1], encoding="utf-8").read())
-model, tokenizer = load_model(state["working_dir"])
+import os
+_mem = {0: int(os.environ.get("P4_MAX_GPU_MB", "6200")) * 1024 * 1024, "cpu": "24GiB"}
+model, tokenizer = load_model(state["working_dir"], max_memory=_mem)
 model.eval()
 
 agent_msgs = state["agent_msgs"]
@@ -82,7 +84,7 @@ def gpu_free_mb() -> int:
     return int(r.stdout.strip().splitlines()[0])
 
 
-def wait_gpu(min_mb: int = 6300, max_wait_s: int = 7200) -> bool:
+def wait_gpu(min_mb: int = 2900, max_wait_s: int = 14400) -> bool:
     t0 = time.time()
     while time.time() - t0 < max_wait_s:
         if gpu_free_mb() >= min_mb:
@@ -156,8 +158,10 @@ def main() -> None:
             traj.write_text(json.dumps(state, ensure_ascii=False, indent=2), encoding="utf-8")
             return
 
+        import os as _os
         r = subprocess.run([str(PY), "-X", "utf8", str(script_path), str(tmp_state)],
-                           capture_output=True, text=True, cwd=str(ROOT), timeout=7200)
+                           capture_output=True, text=True, cwd=str(ROOT), timeout=14400,
+                           env={**_os.environ, "P4_MAX_GPU_MB": "2600"})
         # 解析子进程 stdout 最后一行 JSON
         try:
             out = json.loads(r.stdout.strip().splitlines()[-1])
@@ -197,7 +201,8 @@ def main() -> None:
                     break
                 rr = subprocess.run([str(PY), "-X", "utf8", str(ROOT / "scripts/eval_ifeval_p4.py"),
                                      "--model-dir", str(ckpt), "--split", "validation", "--output", str(val_out)],
-                                    capture_output=True, text=True, cwd=str(ROOT), timeout=7200)
+                                    capture_output=True, text=True, cwd=str(ROOT), timeout=14400,
+                                    env={**__import__("os").environ, "P4_EVAL_MAX_GPU_MB": "2600"})
                 if rr.returncode != 0:
                     print(f"[v2] val eval failed: {rr.stderr[-300:]}", flush=True)
                     break

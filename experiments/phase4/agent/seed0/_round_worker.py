@@ -8,7 +8,9 @@ from agent.p4_tools import activation_probe, task_report
 from agent.b2_tools import _cache_path_for, _render_summary
 
 state = json.loads(open(sys.argv[1], encoding="utf-8").read())
-model, tokenizer = load_model(state["working_dir"])
+import os
+_mem = {0: int(os.environ.get("P4_MAX_GPU_MB", "6200")) * 1024 * 1024, "cpu": "24GiB"}
+model, tokenizer = load_model(state["working_dir"], max_memory=_mem)
 model.eval()
 
 agent_msgs = state["agent_msgs"]

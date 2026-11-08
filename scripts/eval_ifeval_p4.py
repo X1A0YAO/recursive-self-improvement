@@ -20,6 +20,16 @@ from evaluate import _ifeval_check, mcnemar_exact  # noqa: E402
 from model_utils import load_model, generate_batch  # noqa: E402
 
 
+def _gpu_limit_kwargs() -> dict:
+    """环境变量 P4_EVAL_MAX_GPU_MB 存在时限制 GPU 份额（与常驻服务共存）。"""
+    import os
+
+    mb = os.environ.get("P4_EVAL_MAX_GPU_MB")
+    if mb:
+        return {"max_memory": {0: int(mb) * 1024 * 1024, "cpu": "24GiB"}}
+    return {}
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--model-dir", default="checkpoints/V0")
@@ -34,7 +44,7 @@ def main() -> None:
     items = [json.loads(x) for x in data_path.read_text(encoding="utf-8").strip().splitlines()]
     print(f"[p4eval] {args.split}: {len(items)} items | model={args.model_dir}", flush=True)
 
-    model, tokenizer = load_model(str(ROOT / args.model_dir))
+    model, tokenizer = load_model(str(ROOT / args.model_dir), **_gpu_limit_kwargs())
     model.eval()
 
     out_path = Path(args.output)
