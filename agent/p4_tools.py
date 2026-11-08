@@ -73,29 +73,43 @@ def weight_stats(model_dir_hint: str = "") -> str:
 
 @torch.no_grad()
 def activation_probe(model, tokenizer, prompts: list[str], layer: int, proj: str) -> str:
-    """Agent 指定层/投影的激活统计（用一小批题跑前向）。"""
+    """Agent 指定层/投影的激活统计。
+
+    性能关键：hook 内只做流式聚合（sum/sumsq/cnt/max），不拷贝张量到 CPU。
+    单题 prompt 截断到 512 token；共 3 题。前向本身无法避免，但每题一次。
+    """
     fam = "mlp" if proj in ("gate_proj", "up_proj", "down_proj") else "self_attn"
-    mod = getattr(getattr(model.model.layers[layer], fam), proj)
-    outs = []
-    for p in prompts[:6]:
-        ids = tokenizer(p, return_tensors="pt").to(model.device)
-        captured: list[torch.Tensor] = []
+    parent = getattr(model.model.layers[layer], fam)
+    mod_name = proj if proj.endswith("_proj") else f"{proj}_proj"
+    mod = getattr(parent, mod_name)
 
-        def hook(m, i, o):
-            captured.append(o.detach().float())
+    # 批量 3 题（padding 后一次前向——比 3 次独立前向快 ~3 倍）
+    texts = prompts[:3]
+    if not texts:
+        return "no failing prompts available"
+    enc = tokenizer(texts, return_tensors="pt", padding=True, truncation=True, max_length=512).to(model.device)
 
-        h = mod.register_forward_hook(hook)
-        model(**ids)
-        h.remove()
-        o = captured[0]
-        outs.append(o.flatten())
-    t = torch.cat(outs)
-    qs = torch.quantile(t, torch.tensor([0.1, 0.5, 0.9], device=t.device))
+    agg = {"sum": 0.0, "sumsq": 0.0, "n": 0, "zero": 0, "mx": -1e30}
+
+    def hook(m, i, o):
+        t = o.detach().float()
+        agg["sum"] += t.sum().item()
+        agg["sumsq"] += (t * t).sum().item()
+        agg["n"] += t.numel()
+        agg["zero"] += (t == 0).sum().item()
+        agg["mx"] = max(agg["mx"], t.abs().max().item())
+
+    h = mod.register_forward_hook(hook)
+    model(**enc)
+    h.remove()
+
+    n = max(agg["n"], 1)
+    mean = agg["sum"] / n
+    var = max(agg["sumsq"] / n - mean * mean, 0.0)
     return (
-        f"activation stats for layer {layer} {proj} on {len(prompts[:6])} prompts:\n"
-        f"  mean={t.mean():.4f} std={t.std():.4f}\n"
-        f"  q10={qs[0]:.4f} q50={qs[1]:.4f} q90={qs[2]:.4f}\n"
-        f"  frac_zero={(t == 0).float().mean():.3f} frac_neg={(t < 0).float().mean():.3f}"
+        f"activation stats for layer {layer} {mod_name} on {len(texts)} failing prompts:\n"
+        f"  mean={mean:.4f} std={var ** 0.5:.4f} max_abs={agg['mx']:.4f}\n"
+        f"  frac_zero={agg['zero'] / n:.3f}"
     )
 
 

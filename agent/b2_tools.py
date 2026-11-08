@@ -119,6 +119,10 @@ def compare_all_projections(model_dir: str | Path, n_layers: int = 36, *, in_sub
     return _render_summary(units, n_layers)
 
 
+def _cache_path_for(name: str) -> Path:
+    return Path(__file__).parent.parent / "results" / "_b2_cache" / f"{name}_36.json"
+
+
 def _compute_all_units_subprocess(model_dir: str | Path, n_layers: int) -> list[dict]:
     """子进程计算（进程隔离）。结果落盘缓存：results/_b2_cache/<stem>.json。
 
