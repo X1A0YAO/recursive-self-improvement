@@ -132,3 +132,14 @@ Phase 1+2 合并后的传导链断裂点定位：
 - 修复臂：results/exp4_repair.json、results/ds120_A*.json
 - 密封记录：experiments/iteration_2/_sealed/*.json（7 个实例）
 - DS-120：benchmarks/ds120/（120 题，0 重叠，repetition 语义修正记录在案）
+
+
+---
+
+## ⚠️ 跨阶段更正（2026-11-11，Phase 4 期间发现）
+
+Phase 4 调试中发现 agent/diagnosis_tools.py 的 extract_tool_call 存在
+嵌套 JSON 正则缺陷（无法解析含 edits 数组的 decide 调用）。该 bug 自
+本实验起就存在，因此本报告中所有"模型未提交决定/提案悬崖"的结论
+需部分重新归因：模型可能多次提交了有效决定但被解析器静默丢弃。
+原始数据未修改；该缺陷已在 Phase 4 修复（平衡括号扫描实现）。

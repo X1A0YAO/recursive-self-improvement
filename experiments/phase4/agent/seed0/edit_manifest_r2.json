@@ -1,0 +1,13 @@
+{
+  "round": 2,
+  "edits": [
+    {
+      "tensor": "model.layers.33.self_attn.o_proj.weight",
+      "op": "scale",
+      "factor": 0.95,
+      "delta_l2": 3.9951,
+      "rel": 0.049969
+    }
+  ],
+  "rel_total": 0.049969
+}

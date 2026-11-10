@@ -1,0 +1,10 @@
+{
+  "edits": [
+    {
+      "tensor": "model.layers.20.self_attn.k_proj.weight",
+      "op": "scale",
+      "factor": 1.04
+    }
+  ],
+  "apply": "APPLIED 1 edit(s): rel_delta=0.03998 (cumulative 0.03998/0.05)"
+}

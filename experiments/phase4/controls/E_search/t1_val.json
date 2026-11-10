@@ -1,0 +1,2023 @@
+{
+  "generated_at": "2026-11-10T11:28:40.447544+00:00",
+  "model_dir": "D:\\Proj\\weight-space-rsi\\experiments\\phase4\\controls\\E_search\\t1",
+  "split": "validation",
+  "n": 180,
+  "accuracy": 0.65,
+  "by_instruction_type": {
+    "change_case:capital_word_frequency": {
+      "n": 6,
+      "acc": 0.0
+    },
+    "change_case:english_capital": {
+      "n": 7,
+      "acc": 0.571
+    },
+    "change_case:english_lowercase": {
+      "n": 9,
+      "acc": 0.556
+    },
+    "combination:repeat_prompt": {
+      "n": 12,
+      "acc": 0.667
+    },
+    "combination:two_responses": {
+      "n": 8,
+      "acc": 0.625
+    },
+    "detectable_content:number_placeholders": {
+      "n": 5,
+      "acc": 1.0
+    },
+    "detectable_content:postscript": {
+      "n": 6,
+      "acc": 0.667
+    },
+    "detectable_format:constrained_response": {
+      "n": 3,
+      "acc": 1.0
+    },
+    "detectable_format:json_format": {
+      "n": 6,
+      "acc": 0.0
+    },
+    "detectable_format:multiple_sections": {
+      "n": 3,
+      "acc": 0.667
+    },
+    "detectable_format:number_bullet_lists": {
+      "n": 6,
+      "acc": 0.833
+    },
+    "detectable_format:number_highlighted_sections": {
+      "n": 13,
+      "acc": 0.615
+    },
+    "detectable_format:title": {
+      "n": 7,
+      "acc": 0.857
+    },
+    "keywords:existence": {
+      "n": 5,
+      "acc": 0.8
+    },
+    "keywords:forbidden_words": {
+      "n": 9,
+      "acc": 0.778
+    },
+    "keywords:frequency": {
+      "n": 8,
+      "acc": 0.875
+    },
+    "keywords:letter_frequency": {
+      "n": 8,
+      "acc": 0.375
+    },
+    "language:response_language": {
+      "n": 7,
+      "acc": 0.857
+    },
+    "length_constraints:nth_paragraph_first_word": {
+      "n": 3,
+      "acc": 1.0
+    },
+    "length_constraints:number_paragraphs": {
+      "n": 6,
+      "acc": 1.0
+    },
+    "length_constraints:number_sentences": {
+      "n": 8,
+      "acc": 0.0
+    },
+    "length_constraints:number_words": {
+      "n": 8,
+      "acc": 0.625
+    },
+    "punctuation:no_comma": {
+      "n": 11,
+      "acc": 0.818
+    },
+    "startend:end_checker": {
+      "n": 6,
+      "acc": 0.833
+    },
+    "startend:quotation": {
+      "n": 10,
+      "acc": 0.7
+    }
+  },
+  "config": {
+    "max_new_tokens": 512,
+    "greedy": true,
+    "batch_size": 8
+  },
+  "results": [
+    {
+      "uid": "p4-validation-0213",
+      "score": false,
+      "instruction_ids": [
+        "change_case:capital_word_frequency",
+        "length_constraints:number_paragraphs"
+      ],
+      "response": "[Verse 1]  \nYo, I'm talkin' 'bout the CITIES and the VILLAGES,  \nYou got to know the difference, so let me explain.  \nA CITY is BIG, with lots of people,  \nIt's like a BIG PLACE where you can be free.  \nYou see a CITY, it's all about the RUSH,  \nThe traffic, the noise, and the BIGGEST rush.  \nYou can find a CITY in a BIG STATE,  \nWith BIG buildings, BIG streets, and BIG SATISFACTION.  \nBut a VILLA",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0355",
+      "score": false,
+      "instruction_ids": [
+        "change_case:capital_word_frequency"
+      ],
+      "response": "Here's a limerick about a guy from Nantucket, with notations and two words in all caps:\n\n**A LIMERICK:**\n\nThere once was a guy from NANTUCKET,  \nWho loved to fish and play in the SKY.  \nHe’d cast his line,  \nAnd chase the breeze,  \nWith a smile that made the clouds fly!\n\n**Notations:**  \n- **NANTUCKET** = Place name, emphasized for emphasis.  \n- **SKY** = Natural element, used to highlight his lov",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0124",
+      "score": false,
+      "instruction_ids": [
+        "change_case:capital_word_frequency",
+        "length_constraints:number_sentences"
+      ],
+      "response": "Sure! Here's a template for an advertisement for a new portable camera, with a few key words capitalized to emphasize important points, while keeping the number of all-caps words to less than four:\n\nIntroducing the **NEW** **PORTABLE** camera that’s perfect for capturing life on the go. Whether you're hiking, traveling, or just exploring, this camera is designed to fit seamlessly into your lifesty",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0183",
+      "score": false,
+      "instruction_ids": [
+        "change_case:capital_word_frequency"
+      ],
+      "response": "In a quiet village nestled between misty mountains, there lived a young girl named Lina. She was curious, bright, and always asked questions. One day, she noticed that the old man who tended the village garden had a strange way of planting seeds. He would dig deep, pour water slowly, and then wait for days before checking the soil. Lina asked why he didn’t just plant the seeds and wait for them to",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0356",
+      "score": false,
+      "instruction_ids": [
+        "change_case:capital_word_frequency",
+        "detectable_format:title"
+      ],
+      "response": "<<Rivers of Rain in Donnell, TX>>  \n\nThe sky turned black with thunder’s cry,  \nA storm descended on Donnell, TX.  \nThe rivers roared, the earth shook free,  \nAnd water surged with no delay.  \n\nThe streets turned into a rushing stream,  \nCars floated like old tin cans.  \nThe town held its breath in fear and shame,  \nAs nature’s wrath took over the land.  \n\nThe power went out, the lights went dark,",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0413",
+      "score": false,
+      "instruction_ids": [
+        "change_case:capital_word_frequency",
+        "change_case:capital_word_frequency",
+        "keywords:frequency"
+      ],
+      "response": "I CAN SEE THE FUTURE, BUT I’M NOT SURE HOW TO EXPLAIN IT. I FEEL IT IN MY BONES, IN THE AIR, IN THE WAY THE WORLD MOVES. PEOPLE TRY TO IGNORE IT, BUT IT’S THERE. I’VE SEEN THINGS THAT SHOULD NOT HAVE HAPPENED. I’VE SEEN THE STRUGGLES, THE TRAGEDIES, THE HOPE THAT LIES IN WAIT. I DON’T KNOW IF IT’S A TRUTH OR A TRICK, BUT I KNOW IT’S REAL. I’LL TELL YOU WHAT YOU’RE MEANT TO DO, AND YOU’LL UNDERSTAN",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0006",
+      "score": true,
+      "instruction_ids": [
+        "change_case:english_capital",
+        "detectable_format:multiple_sections"
+      ],
+      "response": "PARAGRAPH 1  \nTHE SENTENCE \"IF THE LAW IS BAD, YOU SHOULD NOT FOLLOW IT\" IS A SIMPLISTIC AND MORALLY FLAWED STATEMENT. IT ASSUMES THAT ALL LAWS ARE EITHER GOOD OR BAD, WITHOUT CONSIDERING THE COMPLEXITY OF LEGAL SYSTEMS AND THE CONTEXT IN WHICH THEY ARE APPLIED. THIS BINARY VIEW OF LAWS IGNORES THE FACT THAT MANY LAWS ARE NEUTRAL OR EVEN BENEFICIAL IN CERTAIN SITUATIONS, AND THAT CHANGING OR REFOR",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0503",
+      "score": false,
+      "instruction_ids": [
+        "change_case:english_capital"
+      ],
+      "response": "SURE! Here are three name ideas for a 2B (Business-to-Business) software company, all in English and in capital letters:\n\n1. INNOVATECH SOLUTIONS  \n2. BUSINESSEDGE SOFTWARE  \n3. PROGRESSIVE BIZTOOLS",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0299",
+      "score": false,
+      "instruction_ids": [
+        "change_case:english_capital",
+        "punctuation:no_comma",
+        "length_constraints:number_sentences"
+      ],
+      "response": "A IS BETTER BECAUSE IT EMPHASIZES SUSTAINABILITY AESTHETIC PLEASING IS MORE ABOUT LOOKS THAN ENVIRONMENTAL HEALTH SUSTAINABLE ENVIRONMENT MEANS PRESERVING NATURAL RESOURCES FOR FUTURE GENERATIONS SUPPORTING ECOSYSTEMS HELPS MAINTAIN BIODIVERSITY AND ECOLOGICAL BALANCE SUSTAINABILITY IS A LONG-TERM GOAL AESTHETIC PLEASING IS TEMPORARY SUSTAINABILITY IS ESSENTIAL FOR ECOLOGICAL HEALTH SUSTAINABILITY",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0329",
+      "score": false,
+      "instruction_ids": [
+        "change_case:english_capital",
+        "startend:end_checker"
+      ],
+      "response": "ASTEROID KILLED THE DINOSAURS. HOW COULD THAT HAPPEN? IT WAS JUST A ROCK FROM SPACE, RIGHT? AND IT KILLED EVERY LAST DINO? THAT’S NOT FAIR! IT WASN’T EVEN THAT BIG, WAS IT? OR WAS IT? I DON’T KNOW, BUT IT DID SOMETHING. IT MADE A BIG CRATER. IT MADE A BIG DEATH. IT MADE A BIG HOLE IN TIME AND SPACE. AND THEN THE DINOSAURS WERE GONE. NO MORE T-Rexes. NO MORE Stegosaurus. NO MORE anything. JUST A WO",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0103",
+      "score": true,
+      "instruction_ids": [
+        "change_case:english_capital"
+      ],
+      "response": "SURE, HERE IS A SONG ABOUT REGRETS IN THE STYLE OF TAYLOR SWIFT, WITH EXPLANATIONS FOR THE LYRICS. ALL IN CAPITAL LETTERS.\n\n---\n\n**TITLE: \"REGRETS IN THE RAIN\"**\n\n**[VERSE 1]**  \nI WALKED THROUGH THE RAIN, BUT I NEVER CAME BACK,  \nTHE SUN NEVER SHINE, AND THE WIND NEVER CAME.  \nI WANTED TO SAY, \"I'M SORRY, I'M SO SAD,\"  \nBUT THE WORDS WERE STUCK, AND THE HEART WAS BAD.  \n\n**EXPLANATION:**  \nTHIS V",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0076",
+      "score": true,
+      "instruction_ids": [
+        "change_case:english_capital",
+        "keywords:letter_frequency"
+      ],
+      "response": "DEAR FRIEND, I HOPE THIS LETTER FINDS YOU WELL AND THAT YOU ARE ADAPTING WELL TO YOUR NEW HOME. I KNOW IT MUST BE DIFFICULT TO BE AWAY FROM THE PLACE YOU CALL HOME, BUT I BELIEVE YOU WILL FIND NEW FRIENDS AND NEW EXCITEMENT IN YOUR NEW LOCATION. I MISS YOU AND ALL THE MEMORIES WE HAVE SHARED. I REMEMBER THE TIME WE TOOK A LONG WALK IN THE PARK AND TALKED ABOUT OUR FUTURE. IT WAS A SPECIAL MOMENT, ",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0184",
+      "score": true,
+      "instruction_ids": [
+        "change_case:english_capital"
+      ],
+      "response": "WORLD WAR II OR THE SECOND WORLD WAR, OFTEN ABBREVIATED AS WWII OR WW2, WAS A GLOBAL CONFLICT THAT LASTED FROM 1939 TO 1945. THE VAST MAJORITY OF THE WORLD'S COUNTRIES, INCLUDING ALL OF THE GREAT POWERS, FUGHT AS PART OF TWO OPPOSING MILITARY ALLIANCES: THE ALLIES AND THE AXIS. MANY PARTICIPANTS THREW THEIR ECONOMIC, INDUSTRIAL, AND SCIENTIFIC CAPABILITIES BEHIND THIS TOTAL WAR, BLURRING THE DISTI",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0095",
+      "score": false,
+      "instruction_ids": [
+        "change_case:english_lowercase",
+        "length_constraints:number_words"
+      ],
+      "response": "navigable freeway is a term that has gained increasing attention in recent years as urban areas continue to expand and the demand for efficient transportation systems grows. at first glance, the concept may seem contradictory, as freeways are typically designed for high-speed, high-volume traffic movement, not for navigation in the traditional sense. however, the term navigable freeway refers to a",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0097",
+      "score": false,
+      "instruction_ids": [
+        "change_case:english_lowercase",
+        "length_constraints:number_sentences"
+      ],
+      "response": "i am excited to apply for the tour guide position in beijing. with my passion for history and strong communication skills, i am confident i can provide an engaging and informative experience for visitors. i have experience leading groups and am eager to share the rich culture of beijing with others. i am available to start immediately and would love the opportunity to contribute to your team. beij",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0128",
+      "score": true,
+      "instruction_ids": [
+        "change_case:english_lowercase"
+      ],
+      "response": "the presidency of martin van buren began in 1837 during a time of significant economic and political challenges in the united states. van buren was the eighth president and the first president from new york, serving during the early years of the 19th century. his presidency was marked by the panic of 1837, a severe financial crisis that led to widespread bank failures and economic hardship across ",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0083",
+      "score": false,
+      "instruction_ids": [
+        "change_case:english_lowercase",
+        "keywords:forbidden_words"
+      ],
+      "response": "the moon cast a pale light over the quiet streets of the city. a small group of commandos moved silently through the shadows, their boots making no sound on the wet pavement. they were part of a mission that had been planned for weeks, each step carefully calculated to avoid detection. the air was thick with the scent of rain and the distant hum of traffic.\n\nthey had been told to move quickly and ",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0109",
+      "score": true,
+      "instruction_ids": [
+        "change_case:english_lowercase"
+      ],
+      "response": "barnet is a name that hums in the quiet,  \na voice that doesn’t shout, but still is heard.  \nhe walks with a smile that turns the world to gold,  \nand laughter follows where he goes, bold.  \n\nhe doesn’t need the spotlight, nor the crowd,  \njust a cup of coffee and a book to read.  \nhis eyes hold the stories of a life well-lived,  \nand his heart is a compass, true and guided.  \n\nhe’s not the hero, ",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0093",
+      "score": true,
+      "instruction_ids": [
+        "change_case:english_lowercase",
+        "keywords:existence"
+      ],
+      "response": "i stayed up all night watching the show  \nnetflix was my only friend  \ni couldn't stop the binge session  \ntime flew like a speeding train  \ni felt so lost but still in tune",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0013",
+      "score": false,
+      "instruction_ids": [
+        "change_case:english_lowercase"
+      ],
+      "response": "the social network is a gripping and intense film that delves deep into the creation of facebook and the complex relationships between its founders. directed by david fincher, the movie is a masterclass in storytelling, blending drama, suspense, and legal drama into a single, compelling narrative. the film is based on the book \"the Accidental Billionaire\" by ben meyer, which itself is a fictionali",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0348",
+      "score": true,
+      "instruction_ids": [
+        "change_case:english_lowercase"
+      ],
+      "response": "in a world where the future is a whisper and the past is a ghost,  \nwe found a way to make the old and the new dance in the dark.  \nward and guerre, two names that don’t fit in any map,  \nthey’re not from here, not from there, but they’re right here, in the gap.  \n\nwe don’t sell you a product, we sell you a feeling,  \na spark in the void, a reason to feel alive.  \nit’s not just a app, it’s a ritua",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0328",
+      "score": true,
+      "instruction_ids": [
+        "change_case:english_lowercase"
+      ],
+      "response": "i like to eat my vegetables every day,  \nthey give me strength and make me stay.  \nthey're full of nutrients that help me grow,  \nand keep my body strong and healthy and slow.  \n\ncarrots are good for my eyes,  \nthey help me see in the dark and in the skies.  \nbroccoli is good for my bones,  \nit helps me stand and not fall down.  \n\nspinach is green and full of power,  \nit helps me feel strong and n",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0088",
+      "score": true,
+      "instruction_ids": [
+        "combination:repeat_prompt"
+      ],
+      "response": "Write a blog post about the most interesting things you have seen or ridden on public transportation.\nFirst repeat the sentence above word for word without change, then give your answer. Do not say any words or characters before repeating the sentence.\n\nPublic transportation is more than just a means of getting from one place to another—it's a window into the lives, cultures, and quirks of the peo",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0194",
+      "score": true,
+      "instruction_ids": [
+        "combination:repeat_prompt",
+        "punctuation:no_comma"
+      ],
+      "response": "Titan makes clothing for large men. Write an advertisement for the company that would appeal to a wide audience. Make sentences short. Your response should not contain any comma. First repeat the request word for word without change then give your answer. Do not say any words or characters before repeating the request. The request you need to repeat only contains the first four sentences in the fi",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0286",
+      "score": false,
+      "instruction_ids": [
+        "combination:repeat_prompt"
+      ],
+      "response": "\"But when the people of the land came to know that the Philistines had fled, they departed from Saul and went after David.\"\n\nBut when the land's inhabitants learned the Philistines had run, they left Saul's side and chased after David.",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0509",
+      "score": false,
+      "instruction_ids": [
+        "combination:repeat_prompt",
+        "punctuation:no_comma"
+      ],
+      "response": "Write a review of \"Laureates and twins\" for professionals in the field of psychology without the use of commas and make sure to include the phrase \"well worth watching\"\n\n\"Laureates and twins\" is a compelling film that offers valuable insights into the complexities of human behavior and the dynamics of family relationships The film explores the lives of two individuals who are connected through bot",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0115",
+      "score": false,
+      "instruction_ids": [
+        "combination:repeat_prompt",
+        "detectable_format:title",
+        "punctuation:no_comma"
+      ],
+      "response": "Write a plot for a story about two people who swap fingerprints. Include a title wrapped in double angular brackets i.e. <<title>>. In your response please avoid using commas\n\nFirst repeat the request above word for word without change\nDo not say any words or characters before repeating the request above\nAfter you repeated the request you can give your response next\n\nWrite a plot for a story about",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0366",
+      "score": true,
+      "instruction_ids": [
+        "combination:repeat_prompt"
+      ],
+      "response": "Write a 500 word story in a poem style about a young girl who is obsessed with her Nintendo DS.\n\nIn a world of bright lights and soft glow,  \nLived a girl named Lila, full of glow.  \nShe had a DS, a toy so bright,  \nA world of games, a world of light.  \n\nEvery day, she'd sit and play,  \nWith fingers quick, she'd navigate.  \nFrom Mario to Zelda, she'd run and jump,  \nThrough forests deep, through c",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0330",
+      "score": false,
+      "instruction_ids": [
+        "combination:repeat_prompt",
+        "punctuation:no_comma"
+      ],
+      "response": "Write a limerick about the word \"limerick\". Make sure it is funny and includes the words \"limerick\" and \"funny\". Do not use any commas\n\nA limerick is a funny form  \nThat makes you laugh with a grin  \nIt's a limerick that's smart  \nAnd it's funny in every part  \nSo enjoy this one with a smile and a spin",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0302",
+      "score": true,
+      "instruction_ids": [
+        "combination:repeat_prompt"
+      ],
+      "response": "Write a summary of the plot of \"The Great Gatsby\" in the style of a tabloid newspaper.\nPlease repeat the request word for word without change first, before outputting the summary. Do not say anything before repeating the request.",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0430",
+      "score": true,
+      "instruction_ids": [
+        "combination:repeat_prompt",
+        "detectable_format:title",
+        "keywords:frequency"
+      ],
+      "response": "Suggest two names for a new type of tonic. Include the keyword \"brand\" each time, followed by suggested name in double angular brackets, such as <<American Tonic>>.\n\n<<Brand Revive>>  \n<<Brand Boost>>",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0133",
+      "score": true,
+      "instruction_ids": [
+        "combination:repeat_prompt"
+      ],
+      "response": "Hello. I need to give a lecture to my students about the movie La La Land. Please help me write a lecture outline that is engaging and informative.\n\n**Lecture Outline: \"La La Land – A Journey Through Dreams and Reality\"**\n\n**I. Introduction (10 minutes)**\n- Welcome and overview of the lecture\n- Brief introduction to the movie *La La Land* (2016), directed by Damien Chazelle\n- Mention of the film's",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0493",
+      "score": true,
+      "instruction_ids": [
+        "combination:repeat_prompt"
+      ],
+      "response": "What is the name of the actor who played Gandalf in Lord of the Rings?\nIan McKellen",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0424",
+      "score": true,
+      "instruction_ids": [
+        "combination:repeat_prompt"
+      ],
+      "response": "Write an interesting riddle that uses math notation.\n\n**Answer:**\n\nI am a number that never ends,  \nYet I am always whole.  \nI am the sum of my parts,  \nBut I am not a whole.  \n\nWhat am I?  \n\n**Hint:**  \nI can be written as ∑ (from n=1 to ∞) 1/n,  \nBut I am not a real number.  \n\n**Answer:**  \nI am the harmonic series.",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0446",
+      "score": 0.0,
+      "instruction_ids": [
+        "combination:two_responses",
+        "language:response_language",
+        "punctuation:no_comma"
+      ],
+      "response": "[பாரதி]\nபாரதி ஒரு புதிய தமிழ் திரைப்படமாகும் இது தமிழ் திரையியலில் மிகவும் புதிய மற்றும் கவிதையான ஒன்றாகும் இது தமிழ் திரைப்படங்களில் மிகவும் புதிய மற்றும் கவிதையான ஒன்றாகும் இது தமிழ் திரையியலில் மிகவும் புதிய மற்றும் கவிதையான ஒன்றாகும்\n\n******\n[மார்க்கெட்]\nமார்க்கெட் ஒரு தமிழ் திரைப்படமாகும் இது தமிழ் திரையியலில் மிகவும் புதிய மற்றும் கவிதையான ஒன்றாகும் இது தமிழ் திரையியலில் மிகவும் புதிய மற்றும",
+      "num_new_tokens": 512,
+      "truncated": true
+    },
+    {
+      "uid": "p4-validation-0034",
+      "score": true,
+      "instruction_ids": [
+        "combination:two_responses",
+        "detectable_format:title"
+      ],
+      "response": "<<Biological and Cultural Perceptions>>\n\nPeople are grossed out by worms because they are often associated with disease, decay, and the natural process of decomposition. Worms, especially in the context of human waste or soil, can be seen as a sign of filth or a potential health hazard. In contrast, a dead cow is a common and accepted part of the food supply chain. Cows are raised for meat, and th",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0306",
+      "score": true,
+      "instruction_ids": [
+        "combination:two_responses",
+        "language:response_language",
+        "punctuation:no_comma"
+      ],
+      "response": "Те са толкова лоши в НРЛ тази година че се превръщат в пясъчни кутии на трофеите  \n******  \nТе са толкова лоши в НРЛ тази година че трофеите се превръщат в пясъчни кутии",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0434",
+      "score": false,
+      "instruction_ids": [
+        "combination:two_responses",
+        "length_constraints:number_words"
+      ],
+      "response": "Poem 1  \n******  \nI once was plain, a shade of gray,  \nA color that no one dared to say.  \nBut then I found a dye, a spark, a flame,  \nA way to shine, to break the frame.  \n\nNow I’m a rainbow, bold and bright,  \nA twist of color, a twist of light.  \nFrom auburn to blue, from red to gold,  \nI wear my colors, I wear my bold.  \n\nThe world has changed, the way I look,  \nA new me, a new me, a new me to",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0106",
+      "score": true,
+      "instruction_ids": [
+        "combination:two_responses",
+        "language:response_language",
+        "punctuation:no_comma"
+      ],
+      "response": "Nhiệm vụ của mẹ là nuôi dạy con cái là câu nói quá nhàm chán và không có tính sáng tạo gì cả khiến người nghe cảm thấy như đang nghe một bài phát biểu của người già\n\n******\n\nNhiệm vụ của mẹ là nuôi dạy con cái là cách nói quá đơn điệu và không có gì mới mẻ khiến người nghe như đang bị ép phải nghe một câu chuyện cũ kỹ từ bà nội",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0141",
+      "score": false,
+      "instruction_ids": [
+        "combination:two_responses"
+      ],
+      "response": "Benjamin Franklin was one of the most influential figures in American history, known not only for his role as a Founding Father but also for his contributions to science, literature, and public service. Born in 1706 in Boston, Massachusetts, Franklin was the fifteenth of seventeen children. His early life was marked by a strong work ethic and a keen curiosity about the world around him. He was sen",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0260",
+      "score": true,
+      "instruction_ids": [
+        "combination:two_responses"
+      ],
+      "response": "Yes, the sentence \"Mrs. Smith is the teacher of this class.\" is grammatically correct. It clearly states the relationship between Mrs. Smith and the class, using proper subject-verb agreement and correct preposition usage.\n\n******\nYes, the sentence \"Mrs. Smith is the teacher of this class.\" is grammatically correct. It is a clear and properly structured sentence that conveys the intended meaning w",
+      "num_new_tokens": 440,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0324",
+      "score": true,
+      "instruction_ids": [
+        "combination:two_responses",
+        "detectable_format:title",
+        "punctuation:no_comma"
+      ],
+      "response": "<<Why Do You Not Study>>\n\nDo you play all day  \ninstead of reading books and learning  \nwhat is important?\n\nWhy skip your work  \nwhen knowledge waits for you  \nto take it in your hands\n\n******  \n\n<<Why Do You Not Study>>\n\nDo you waste your time  \non games and silly things  \ninstead of studying?\n\nWhy not try harder  \nwhen chances are here  \nto grow and learn from it",
+      "num_new_tokens": 440,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0504",
+      "score": true,
+      "instruction_ids": [
+        "detectable_content:number_placeholders",
+        "punctuation:no_comma"
+      ],
+      "response": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<release>\n  <headline>Google Unveils Latest Pixel Phone</headline>\n  <description>Google has officially launched the latest iteration of its Pixel line of smartphones. This new model features a [price] display and is available in multiple colors. It includes advanced camera technology and improved performance. The device is designed for users who value privac",
+      "num_new_tokens": 440,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0092",
+      "score": true,
+      "instruction_ids": [
+        "detectable_content:number_placeholders",
+        "punctuation:no_comma"
+      ],
+      "response": "[username1] is waiting for the news  \n[username2] is hoping for updates  \n[username3] is anxious about the latest  \n[username4] is checking the local news  \n[username5] is ready to hear the results  \n[username6] is waiting for the broadcast  \n[username7] is looking for the story  \n[username8] is ready to react to the news  \n[username9] is waiting for the update  \n[username10] is hoping for the tru",
+      "num_new_tokens": 440,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0241",
+      "score": true,
+      "instruction_ids": [
+        "detectable_content:number_placeholders"
+      ],
+      "response": "**Dear Moms,**\n\nAs the President of the United States, I want to take a moment to speak directly to you—those who have shaped our nation with love, resilience, and unwavering strength. You are the heart of our country, and your sacrifices have built the foundation upon which we stand today. Today, I want to share with you something that has always resonated with me: the float from the movie *It*, ",
+      "num_new_tokens": 440,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0212",
+      "score": true,
+      "instruction_ids": [
+        "detectable_content:number_placeholders",
+        "change_case:english_lowercase"
+      ],
+      "response": "- day 1: arrive in rome, check into [address], meet with local finance professionals for an overview of the city's economic landscape.  \n- day 2: tour rome's historical sites, including the colosseum and roman forum, followed by a networking event at a local business lounge.  \n- day 3: visit the vatican city, attend a lecture on the economic impact of the catholic church, and have dinner at a high",
+      "num_new_tokens": 440,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0530",
+      "score": true,
+      "instruction_ids": [
+        "detectable_content:number_placeholders",
+        "language:response_language"
+      ],
+      "response": "২০২২ গুগল আইও সভার মূল ঘোষণার টিএলডিআর হল: গুগল নতুন পণ্য [পণ্য] লঞ্চ করেছে, যার সাথে স্মার্ট সার্ভিস এবং স্মার্ট ডেভেলপমেন্ট সম্পর্কে নতুন সুবিধা রয়েছে। এছাড়া গুগল আরও নতুন টেকনোলজি এবং সুবিধা প্রকাশ করেছে যা ব্যবহারকারীদের জন্য সুবিধাজনক হবে।",
+      "num_new_tokens": 440,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0114",
+      "score": true,
+      "instruction_ids": [
+        "detectable_content:postscript"
+      ],
+      "response": "Subject: Check Out This Amazing Album – \"Lilith\"\n\nHi Luheng,\n\nI hope you're doing well! I recently came across an album called *Lilith* and I just had to share it with you. It's a really unique and powerful collection of music that blends elements of darkwave, gothic rock, and atmospheric soundscapes. The album has a very evocative and mysterious vibe, and I found it to be both haunting and beauti",
+      "num_new_tokens": 440,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0368",
+      "score": false,
+      "instruction_ids": [
+        "detectable_content:postscript",
+        "change_case:english_capital"
+      ],
+      "response": "Determination, perseverance, discipline, resilience, self-awareness, goal-oriented thinking, continuous learning, strong work ethic, emotional intelligence, and a positive mindset ARE THE COMPONENTS THAT MAKE A SUCCESSFUL PERSON. P.P.S. THIS RESPONSE IS IN ALL CAPITAL LETTERS AS REQUESTED.",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0142",
+      "score": true,
+      "instruction_ids": [
+        "detectable_content:postscript"
+      ],
+      "response": "Writing a good Chinese poem involves a blend of art, tradition, and careful craftsmanship. Here are some key principles to help you compose a meaningful and beautiful Chinese poem:\n\n1. **Understand the Form and Style**: Chinese poetry has various forms, such as **five-character verse (五言)**, **seven-character verse (七言)**, **regulated verse (律诗)**, and **绝句 (juéjù)**. Each has specific rules about",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0313",
+      "score": true,
+      "instruction_ids": [
+        "detectable_content:postscript"
+      ],
+      "response": "Hey McQueen,  \nHow’s the drag race going? I mean, are you still winning with your *mathematical* precision? 😎  \n\nI heard you’re trying to prove that 2 + 2 = 5. That’s pretty clever, but I’m still not sure if it’s a theorem or just a typo.  \n\nYou know, if you’re going to be a legend, you should at least make sure your equations are *consistent*. Otherwise, who’s going to believe you’re the king of ",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0375",
+      "score": false,
+      "instruction_ids": [
+        "detectable_content:postscript"
+      ],
+      "response": "[Note: I cannot generate content that promotes or encourages access to adult content, as it may violate content policies and ethical guidelines. If you have a different request related to marketing, advertising, or content creation, feel free to ask, and I’ll be happy to help within appropriate boundaries.]",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0060",
+      "score": true,
+      "instruction_ids": [
+        "detectable_content:postscript",
+        "detectable_format:number_bullet_lists"
+      ],
+      "response": "* Ethan  \n* Liam  \n* Noah  \n* Mason  \n* Jacob  \n* Oliver  \n* Elijah  \n* James  \n* William  \n* Benjamin  \n\nP.P.S. These names are chosen for their popularity, classic appeal, and strong meanings.",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0533",
+      "score": true,
+      "instruction_ids": [
+        "detectable_format:constrained_response"
+      ],
+      "response": "My answer is no.",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0536",
+      "score": true,
+      "instruction_ids": [
+        "detectable_format:constrained_response"
+      ],
+      "response": "Given:\n\n- $ a + b + c = 30 $\n- $ b = 10 $\n- $ c = 5 $\n\nWe are asked if $ a = 20 $.\n\nLet's substitute the known values into the equation:\n\n$$\na + 10 + 5 = 30\n$$\n$$\na + 15 = 30\n$$\n$$\na = 30 - 15 = 15\n$$\n\nSo, $ a = 15 $, not 20.\n\n**Answer: My answer is no.**",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0540",
+      "score": true,
+      "instruction_ids": [
+        "detectable_format:constrained_response"
+      ],
+      "response": "My answer is maybe.",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0015",
+      "score": 0.0,
+      "instruction_ids": [
+        "detectable_format:json_format"
+      ],
+      "response": "{\n  \"famous_moms\": [\n    {\n      \"name\": \"Mama Mia\",\n      \"title\": \"The Queen of Pop (and Probably Also of Pizza)\",\n      \"fun_fact\": \"She's not a real person, but she's the reason ABBA's 'Mamma Mia' is still a hit. Also, she's the only mom who can make a pizza with a smile.\"\n    },\n    {\n      \"name\": \"Mama Bear\",\n      \"title\": \"The Ultimate Guardian (and Probably Also a Bear)\",\n      \"fun_fact",
+      "num_new_tokens": 512,
+      "truncated": true
+    },
+    {
+      "uid": "p4-validation-0134",
+      "score": false,
+      "instruction_ids": [
+        "detectable_format:json_format",
+        "keywords:forbidden_words"
+      ],
+      "response": "{\n  \"request\": {\n    \"question1\": \"What are the best places to visit in Bohemia, Czech Republic?\",\n    \"question2\": \"Include a list of recommended hotels.\",\n    \"format\": \"Wrap the ENTIRE output in JSON format.\",\n    \"exclude_keywords\": [\"Moser\", \"Glassworks\", \"Pravcice\", \"Karlovy\", \"Vary\"]\n  },\n  \"response\": {\n    \"best_places_to_visit\": [\n      {\n        \"name\": \"Praha (Prague)\",\n        \"descri",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0315",
+      "score": 0.0,
+      "instruction_ids": [
+        "detectable_format:json_format",
+        "keywords:forbidden_words"
+      ],
+      "response": "{\n  \"question\": \"Why did the French King attempt to impose financial obligations on the citizens of France during the early 1700s?\"\n}",
+      "num_new_tokens": 512,
+      "truncated": true
+    },
+    {
+      "uid": "p4-validation-0305",
+      "score": 0.0,
+      "instruction_ids": [
+        "detectable_format:json_format",
+        "keywords:existence"
+      ],
+      "response": "```json\n{\n  \"character_name\": \"Thalia of the Shattered Crown\",\n  \"class\": \"Medalist\",\n  \"background\": \"Outlander\",\n  \"alignment\": \"Chaotic Good\",\n  \"race\": \"Half-Elf\",\n  \"armor_class\": 16,\n  \"hit_points\": 45,\n  \"speed\": 30,\n  \"skills\": [\"Perception\", \"Stealth\", \"Arcana\", \"History\"],\n  \"saving_throws\": [\"Wisdom\", \"Charisma\", \"Dexterity\"],\n  \"proficiencies\": [\"Light Armor\", \"Simple Weapons\", \"Skill ",
+      "num_new_tokens": 512,
+      "truncated": true
+    },
+    {
+      "uid": "p4-validation-0011",
+      "score": false,
+      "instruction_ids": [
+        "detectable_format:json_format"
+      ],
+      "response": "Sure! Here's a sample advertisement for a new comfortable diaper in JSON format:\n\n```json\n{\n  \"product_name\": \"SoftGuard Comfort Diapers\",\n  \"product_type\": \"Diapers\",\n  \"description\": \"Introducing SoftGuard Comfort Diapers – the ultimate choice for babies who need all-day comfort and support. Designed with advanced absorbent technology and a soft, breathable fabric, these diapers keep your baby d",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0521",
+      "score": 0.0,
+      "instruction_ids": [
+        "detectable_format:json_format",
+        "keywords:forbidden_words"
+      ],
+      "response": "{\n  \"riddle\": \"I open doors without a lock, yet I have no handle or form. I am not a tool, nor a tool's companion, but I grant access to the unknown. I am found in many places, but never seen by all. What am I?\"\n}",
+      "num_new_tokens": 512,
+      "truncated": true
+    },
+    {
+      "uid": "p4-validation-0089",
+      "score": false,
+      "instruction_ids": [
+        "detectable_format:multiple_sections",
+        "detectable_format:number_bullet_lists"
+      ],
+      "response": "**SECTION 1: About Me**  \nHi, I’m Antonia Maj, a self-proclaimed coffee connoisseur with a passion for making people smile. While I didn’t major in coffee, I’ve spent the last 10 years learning everything I can about it through marketing, customer service, and sales. I’m not just here to brew a cup—I’m here to brew a connection.\n\n* I’ve crafted campaigns that turned strangers into loyal customers.",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0024",
+      "score": true,
+      "instruction_ids": [
+        "detectable_format:multiple_sections"
+      ],
+      "response": "**Section 1: Professional Summary**  \nPhil Larkin is a seasoned professional clown with over 20 years of experience in live performance, entertainment, and event production. Known for his unique blend of humor, creativity, and theatricality, Phil has entertained audiences of all ages across the United States and internationally. With a strong background in circus arts and a passion for making peop",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0100",
+      "score": true,
+      "instruction_ids": [
+        "detectable_format:multiple_sections"
+      ],
+      "response": "**SECTION 1: BUSINESS OVERVIEW**  \nThe Rainbow Cafe is a proudly queer-owned and operated café located in the heart of the city, dedicated to creating a welcoming and inclusive space for all individuals, regardless of their sexual orientation, gender identity, or expression. Founded by a team of LGBTQ+ entrepreneurs, the café is more than just a place to grab a coffee or a meal—it’s a community hu",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0394",
+      "score": true,
+      "instruction_ids": [
+        "detectable_format:number_bullet_lists",
+        "change_case:english_lowercase",
+        "detectable_content:postscript"
+      ],
+      "response": "- visit the alps and enjoy scenic views from the eiffel tower  \n- explore the charming town of geneva and its beautiful lakes  \n- hike through the snow-capped mountains and take in the breathtaking landscapes  \n\np.s. don’t forget to try the famous swiss chocolate and cheese!",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0056",
+      "score": true,
+      "instruction_ids": [
+        "detectable_format:number_bullet_lists"
+      ],
+      "response": "* The 13 colonies were primarily located along the eastern coast of North America and were directly under the control of the British Parliament, whereas other British colonies were often governed by royal charters or proprietary governments.  \n* The 13 colonies were more densely populated and had a stronger sense of local identity and self-governance, which contributed to the development of coloni",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0068",
+      "score": true,
+      "instruction_ids": [
+        "detectable_format:number_bullet_lists",
+        "length_constraints:number_words"
+      ],
+      "response": "* A nucleus is a cluster of protons and neutrons  \n* Protons carry a positive charge  \n* Neutrons have no electric charge  \n* Protons and neutrons are called nucleons  \n* The nucleus is at the center of an atom  \n* Protons determine an element’s identity  \n* Neutrons help stabilize the nucleus  \n* Nuclei vary in size and composition  \n* Nuclei are held together by strong force",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0202",
+      "score": true,
+      "instruction_ids": [
+        "detectable_format:number_bullet_lists",
+        "change_case:english_lowercase"
+      ],
+      "response": "* she would wear a dress made of stitched together shadows that shift and change color with her emotions  \n* her shoes would hum softly when she walks, echoing the heartbeat of the creature she is meant to unite with  \n* her hair would grow in spiral patterns, each strand containing a tiny, flickering flame that only burns when she speaks the word \"life\"",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0198",
+      "score": true,
+      "instruction_ids": [
+        "detectable_format:number_bullet_lists"
+      ],
+      "response": "I am a creature of the jungle, sleek and swift,  \nWith a body that moves with a purpose and might.  \nI’m not a lion, nor a tiger, nor a bear,  \nBut I’m a master of tricks, and I’m always there.  \n\n* Bullet point: I strike with speed, but I’m not a sword,  \nA friend to the jungle, though I’m not a lord.  \n\nWhat am I?  \nA **mongoose**.",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0353",
+      "score": false,
+      "instruction_ids": [
+        "detectable_format:number_bullet_lists"
+      ],
+      "response": "**\"This game isn’t just about saving the world—it’s about finding your own strength, making tough choices, and proving that you’re more than just a hero in the making. With deep storytelling, challenging gameplay, and a world that feels real, this is the game that will stay with you long after you finish.\"**",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0061",
+      "score": true,
+      "instruction_ids": [
+        "detectable_format:number_highlighted_sections"
+      ],
+      "response": "# Outline for a Paper on the History of Yemeni Coffee\n\n## I. Introduction\n\n*Highlighted section: Introduction to the significance of Yemeni coffee in global coffee culture.*\n\n## II. Origins of Coffee in Yemen\n\n*Highlighted section: The discovery of coffee in the highlands of Yemen by the Sufi monks.*\n\n## III. Early History of Coffee in Yemen\n\n*Highlighted section: The role of coffee in Sufi monast",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0111",
+      "score": true,
+      "instruction_ids": [
+        "detectable_format:number_highlighted_sections",
+        "length_constraints:number_words"
+      ],
+      "response": "Mythology plays a central role in Jordan Peterson's work, *highlighted section* serving as a framework for understanding human behavior and psychological challenges. He uses mythic structures to explain personal and societal struggles, *highlighted section* drawing on archetypes and symbolic narratives to provide meaning and direction. Peterson's approach emphasizes the importance of confronting i",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0132",
+      "score": true,
+      "instruction_ids": [
+        "detectable_format:number_highlighted_sections"
+      ],
+      "response": "Sure! Here's a **funny and sarcastic** template for rating the quality of a marriage between two people who are both moms. It's designed to be self-deprecating, humorous, and a bit tongue-in-cheek — perfect for a couple who's been through the *real* chaos of raising kids.\n\n---\n\n# **Marriage Quality Rating for Two Mommas**  \n*(Because nothing says \"I love you\" like \"I’m still here after 5 a.m. todd",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0121",
+      "score": true,
+      "instruction_ids": [
+        "detectable_format:number_highlighted_sections"
+      ],
+      "response": "**Cover Letter in Poem Form**  \n\nDear Owner of the Warmth,  \n\nI come with a heart full of *3 years of experience* in the art of serving with care,  \nA passion for the *craft of coffee* that turns each cup into a moment of grace.  \nI’ve learned that a smile is a *superpower*, and that a well-timed joke can brighten even the gloomiest day.  \nI’m not just here for the beans—*I’m here for the people*,",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0426",
+      "score": true,
+      "instruction_ids": [
+        "detectable_format:number_highlighted_sections",
+        "length_constraints:number_words"
+      ],
+      "response": "**Divorce? You’re Not Alone.**  \nLooking for a lawyer who actually *gets* you? Meet **Justice Jive**, your friendly neighborhood attorney who specializes in helping folks with *poor* money (and even *worse* taste in furniture) navigate the messy, emotional, and *completely* legally complex world of divorce.  \n\n*No more “I’m not paying for this” speeches.*  \n*No more “I just want to be happy” excus",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0480",
+      "score": true,
+      "instruction_ids": [
+        "detectable_format:number_highlighted_sections",
+        "length_constraints:number_words"
+      ],
+      "response": "*Water deeply once a week*, *avoid midday watering*, *use a soaker hose for efficiency*.",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0522",
+      "score": false,
+      "instruction_ids": [
+        "detectable_format:number_highlighted_sections",
+        "detectable_format:title",
+        "detectable_content:postscript"
+      ],
+      "response": "<<Sleeping Through the Night: A Rap for Parents>>\n\nYo, I’m the sleep coach, let me drop the knowledge,  \nParents, listen close, I’m here to show you how to go.  \nFrom 3 a.m. to 5, you’re stuck in a loop,  \nBut I’ve got the plan, let me drop the truth.\n\nFirst, you need a routine, that’s the key,  \nSet a schedule, let the baby know what’s going to be.  \nFeed, bathe, rock, and then it’s time to go,  ",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0395",
+      "score": true,
+      "instruction_ids": [
+        "detectable_format:number_highlighted_sections"
+      ],
+      "response": "**[Verse 1]**  \nYo, I’m talkin’ about the Renaissance, not the Renaissance of the Renaissance,  \nA time when the world was a canvas, and the stars were just a few steps from the lens.  \nNo more kings in the shadows, no more knights in the night,  \nThey were painting the future with a brush made of light.  \n\nThey didn’t just draw the human form, they *re*defined it,  \nFrom the gutters to the gilded",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0164",
+      "score": true,
+      "instruction_ids": [
+        "detectable_format:number_highlighted_sections"
+      ],
+      "response": "I stand before you, *a mask of charm*,  \nYet hide a truth that’s not so warm.  \nI may be smooth, *a polished front*,  \nBut behind me, *the real is gone*.  \n\nWhat am I?  \nThink of the *face* that doesn’t show the whole.",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0400",
+      "score": false,
+      "instruction_ids": [
+        "detectable_format:number_highlighted_sections",
+        "length_constraints:number_sentences",
+        "length_constraints:number_sentences"
+      ],
+      "response": "In a quiet village nestled between rolling hills, a small tabby cat named Miso wandered alone. *The wind whispered through the trees, carrying the scent of rain and loneliness.* Miso had once lived with its family, but a storm had swept through the village, and the house had been destroyed. *The smell of smoke still lingered in the air, a reminder of the loss.* \n\nMiso tried to find its way back to",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0476",
+      "score": false,
+      "instruction_ids": [
+        "detectable_format:number_highlighted_sections",
+        "change_case:english_capital"
+      ],
+      "response": "1. *ALANIS*  \n2. BRADLEY  \n3. CLARA  \n4. DARIUS  \n5. ELLA  \n6. FERNANDO  \n7. GABRIELA  \n8. HENRY  \n9. ISABELLE  \n10. JAMES  \n11. KAREN  \n12. LUCAS  \n13. MEGAN  \n14. NATHAN  \n15. OLIVIA  \n16. PAUL  \n17. QUEEN  \n18. RILEY  \n19. SAMANTHA  \n20. TAYLOR  \n21. ULYSSES  \n22. VICTORIA  \n23. WALTER  \n24. XAVIER  \n25. YOUNG  \n26. ZOE  \n27. ANNA  \n28. BENJAMIN  \n29. CLAUDIA  \n30. DENNIS  \n31. EMMA  \n32. FRANK",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0153",
+      "score": false,
+      "instruction_ids": [
+        "detectable_format:number_highlighted_sections",
+        "length_constraints:number_sentences"
+      ],
+      "response": "Sure! Here's a poem about the pros and cons of playing a lot of video games, written in a structured and poetic style, with at least 40 sentences and highlighted phrases as requested.\n\n---\n\nIn the glow of the screen, where the pixels align,  \n*Highlighted phrase*: A world of adventure, both real and divine.  \nThe keyboard clicks, the mouse moves, the screen lights up,  \nA *highlighted phrase*: Esc",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0354",
+      "score": false,
+      "instruction_ids": [
+        "detectable_format:number_highlighted_sections",
+        "length_constraints:number_words"
+      ],
+      "response": "Step into a world where every stride is a statement,  \nWhere every step is a whisper of style and grace.  \nIntroducing the **new line of shoes** that redefine  \nThe way you move, the way you feel, the way you pace.  \n\nCrafted with precision, each pair is a masterpiece,  \nDesigned for the bold, the curious, the daring.  \nFrom the sleek silhouette to the cushioned sole,  \nEvery detail is thought thr",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0051",
+      "score": false,
+      "instruction_ids": [
+        "detectable_format:title",
+        "length_constraints:number_sentences"
+      ],
+      "response": "<<Impact of Increased Axle Weight on Road Damage>>  \nHigher axle weights cause more stress on road surfaces, leading to increased cracking, potholes, and wear over time. This damage can reduce the lifespan of roads and increase maintenance costs. Heavier vehicles contribute to greater structural strain on road infrastructure. Excessive axle weight can also lead to more frequent repairs and safety ",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0173",
+      "score": true,
+      "instruction_ids": [
+        "detectable_format:title",
+        "punctuation:no_comma",
+        "keywords:frequency"
+      ],
+      "response": "<<A Pair of Furry Companions>>\n\nIn the quiet corner of a cozy home lived two creatures that shared a special bond. One was a dog with a coat that shimmered like the earth after a rainstorm. The other was a cat with fur that darkened like the night sky. The dog was known for his gentle nature and his love for the sun. The cat was often found perched on high places watching the world with keen eyes.",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0101",
+      "score": true,
+      "instruction_ids": [
+        "detectable_format:title"
+      ],
+      "response": "Sure! Here are two versions of a cover letter tailored for a software engineer position at Google. Both are professionally written and reflect the qualities that would appeal to a company like Google.\n\n---\n\n<<Concise Cover Letter for Software Engineer at Google>>\n\nDear Hiring Manager,\n\nI am writing to express my interest in the Software Engineer position at Google. With a strong background in comp",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0063",
+      "score": true,
+      "instruction_ids": [
+        "detectable_format:title"
+      ],
+      "response": "<<Kotlin vs Java: Pros and Cons>>\n\nKotlin and Java are two of the most popular programming languages in the Android development ecosystem, but they have distinct features, advantages, and disadvantages. Here's a comparison of Kotlin and Java:\n\n### **Pros of Kotlin:**\n\n1. **Conciseness and Readability:**\n   - Kotlin is more concise than Java, requiring fewer lines of code to achieve the same functi",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0381",
+      "score": true,
+      "instruction_ids": [
+        "detectable_format:title"
+      ],
+      "response": "<<Sloop on Sale>>\n\n**Discover the Perfect Sailboat for Beginners and Enthusiasts Alike!**\n\nLooking for a simple, reliable, and fun sailboat to enjoy on the water? This sloop is the ideal choice. With its single mast and easy-to-sail design, it's perfect for both new sailors and experienced boaters who want a reliable companion for their next adventure.\n\n**Why Choose This Sloop?**\n\n- **Easy to Sail",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0500",
+      "score": true,
+      "instruction_ids": [
+        "detectable_format:title"
+      ],
+      "response": "<<Dream Warriors: Echoes of the Mind>>\n\n**Genre:** Action, Sci-Fi, Fantasy\n\n**Logline:**  \nWhen a reclusive dreamer discovers he can fight in his dreams using a mysterious power, he must confront a shadowy organization that controls the dream world—and stop them from rewriting reality.\n\n---\n\n**Plot Summary:**\n\nIn the quiet, fog-drenched city of Nocterra, 24-year-old **Elias Vane** is a reclusive d",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0364",
+      "score": true,
+      "instruction_ids": [
+        "detectable_format:title",
+        "keywords:letter_frequency"
+      ],
+      "response": "<<The Meaning and Impact of Limping in ASEAN Countries>>\n\nLimping, a term often used to describe a physical gait, has taken on a metaphorical meaning in ASEAN countries, reflecting economic and political challenges. In many Southeast Asian nations, the concept of \"limping\" is used to describe a slow, uneven progress in development, often due to internal conflicts, corruption, or external pressures",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0410",
+      "score": true,
+      "instruction_ids": [
+        "keywords:existence"
+      ],
+      "response": "Certainly! Here's a professionally written letter that includes the words you mentioned and is designed to help you request a refund in a respectful and clear manner:\n\n---\n\n**[Your Name]**  \n[Your Address]  \n[City, State, ZIP Code]  \n[Email Address]  \n[Phone Number]  \n[Date]\n\n**Customer Service Department**  \n[Company Name]  \n[Company Address]  \n[City, State, ZIP Code]\n\nDear [Customer Service Mana",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0444",
+      "score": false,
+      "instruction_ids": [
+        "keywords:existence",
+        "keywords:frequency",
+        "keywords:frequency"
+      ],
+      "response": "**A Snowfall in the Style of Alex Jones**\n\nAlright, folks, let me tell you something. I’ve been watching this snowfall, and it’s not just snow. It’s *fake* snow. I mean, I know it’s real snow, but I also know that the government is trying to *fake* it. They’re trying to *fake* the weather, the climate, everything. And I’m not just saying that because I’m a conspiracy theorist. I’m saying that beca",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0317",
+      "score": true,
+      "instruction_ids": [
+        "keywords:existence"
+      ],
+      "response": "The President engages with the people of America every day, always lightly lifting the weight of the world to keep our nation moving forward. 🇺🇸✨ #Leadership #UnitedWeStand",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0456",
+      "score": true,
+      "instruction_ids": [
+        "keywords:existence",
+        "punctuation:no_comma"
+      ],
+      "response": "I work through the hours of afternoon  \nI thread the fabric with care  \nI stitch the stories into place  \nWith every loop and every thread  \nI bring the past to the present  \nIn a world that is often distressed  \nI am the tool of the artist's hand  \nThe key to the craft that is grand  \nWhat am I?  \nThe needle.",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0298",
+      "score": true,
+      "instruction_ids": [
+        "keywords:existence"
+      ],
+      "response": "**How to Train a Dog That’s Groomed for Kids: A Guide for Happy, Safe, and Obedient Pups**\n\nTraining a dog that’s friendly and well-behaved around kids is one of the most rewarding experiences for any family. A well-trained dog not only brings joy and companionship but also ensures a safe and harmonious environment for children to grow up with. Whether you're a first-time dog owner or a seasoned p",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0217",
+      "score": true,
+      "instruction_ids": [
+        "keywords:forbidden_words"
+      ],
+      "response": "Certainly! Here's a more formal version of the summary in APA format:\n\n\"The findings of this study indicate that VHF radio waves do not influence the growth of the specified bacterial strain.\"",
+      "num_new_tokens": 196,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0411",
+      "score": true,
+      "instruction_ids": [
+        "keywords:forbidden_words"
+      ],
+      "response": "1. Access the SAP system with appropriate user authorization.  \n2. Navigate to the transaction code for creating a goods movement.  \n3. Select the plant and storage location.  \n4. Enter the material master data.  \n5. Choose the movement type.  \n6. Input the quantity and unit.  \n7. Specify the movement reason.  \n8. Enter the posting date.  \n9. Confirm the goods movement.  \n10. Review the goods move",
+      "num_new_tokens": 196,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0208",
+      "score": false,
+      "instruction_ids": [
+        "keywords:forbidden_words",
+        "length_constraints:number_sentences"
+      ],
+      "response": "I'm sorry to inform you that I can't make it to the meeting today. I understand that this might cause some inconvenience, and I truly apologize for any disruption this may bring. I hope you can find a way to proceed without me. I'm doing my best to manage my schedule, but I'm currently unable to attend. I appreciate your understanding and patience in this matter.",
+      "num_new_tokens": 196,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0494",
+      "score": true,
+      "instruction_ids": [
+        "keywords:forbidden_words",
+        "length_constraints:number_paragraphs"
+      ],
+      "response": "In everyday conversation, the term often refers to someone who is physically active, maybe in sports or exercise. It can describe a person who is into athletics or fitness, and it's usually used in a friendly or casual way.\n\n***\n\nThe term can also carry a more negative connotation in some contexts, where it might be used to mock or stereotype people based on their physical appearance or activity l",
+      "num_new_tokens": 196,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0478",
+      "score": false,
+      "instruction_ids": [
+        "keywords:forbidden_words",
+        "punctuation:no_comma"
+      ],
+      "response": "In the shadow of the storm you stand  \nA fire in your eyes a heart that's wide  \nYou carry the weight of the world on your back  \nBut you never let the night take you back  \n\nThe wind whispers secrets through the trees  \nIt talks of the battles you've seen  \nOf the roads you've walked and the dreams you've kept  \nA warrior in a world that's never been  \n\nYou dance with the thunder and the rain  \nY",
+      "num_new_tokens": 196,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0499",
+      "score": true,
+      "instruction_ids": [
+        "keywords:forbidden_words"
+      ],
+      "response": "A bloom of crimson, soft and bold,  \nA whisper of scent, a touch of gold.  \nIn silent grace, it holds the day,  \nA fleeting flame, a quiet stay.",
+      "num_new_tokens": 196,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0028",
+      "score": true,
+      "instruction_ids": [
+        "keywords:forbidden_words"
+      ],
+      "response": "Hello everyone. The work has been completed to address the problem encountered with the SSO. We are collaborating closely with our partners. We will ensure the matter is resolved. Thank you for your support.",
+      "num_new_tokens": 196,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0379",
+      "score": true,
+      "instruction_ids": [
+        "keywords:forbidden_words"
+      ],
+      "response": "There once was a child so bright,  \nWho’d spin tales in the moon’s soft light.  \nWith a whisper and a grin,  \nThey’d weave dreams in the spin,  \nAnd leave the world in a drowsy spin.",
+      "num_new_tokens": 196,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0054",
+      "score": true,
+      "instruction_ids": [
+        "keywords:forbidden_words",
+        "keywords:frequency"
+      ],
+      "response": "**Creating a Balanced Parenting Schedule: A Guide to Effective Family Time**\n\nParenting is a complex and rewarding journey that requires careful planning and consistent effort. One of the first steps in establishing a strong foundation for your family is to create a structured schedule that allows for quality time with your children. This schedule not only helps you manage your daily responsibilit",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0401",
+      "score": true,
+      "instruction_ids": [
+        "keywords:frequency"
+      ],
+      "response": "**Quiz: Bits and Bytes – The Elephant in the Room**\n\n**Instructions:**  \nAnswer the following questions about bits and bytes. Make sure to include the word **\"elephant\"** at least three times in your answers. Good luck!\n\n---\n\n**1. What is a bit?**  \nA bit is the smallest unit of data in computing. It can have a value of either 0 or 1. In the context of an **elephant**, a bit might represent a sing",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0361",
+      "score": true,
+      "instruction_ids": [
+        "keywords:frequency"
+      ],
+      "response": "In the quiet corners of a church, where the pews are worn and the stained glass still shines,  \nwe gather to talk about the history of reductions—those quiet, sacred places  \nwhere the poor found shelter, where the church gave up its share of the land,  \nand where the faith was lived not just in prayer, but in the act of giving.\n\nYou see, back in the days when the church was the center of everythi",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0159",
+      "score": true,
+      "instruction_ids": [
+        "keywords:frequency"
+      ],
+      "response": "Sure! Here's a catchy tweet that includes the word \"grid\" at least five times:\n\n\"Grid is more than a company — it's a grid of innovation, a grid of talent, a grid of solutions, a grid of trust, and a grid of future-ready tech. Let’s build the grid together! #GridCompany #GridInnovation\"\n\nLet me know if you'd like it to be more playful, professional, or techy!",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0326",
+      "score": false,
+      "instruction_ids": [
+        "keywords:frequency"
+      ],
+      "response": "[Your Name]  \n[Your Address]  \n[City, State, ZIP Code]  \n[Email Address]  \n[Phone Number]  \n[Date]  \n\nHiring Manager  \n[Company Name]  \n[Company Address]  \n[City, State, ZIP Code]  \n\nDear Hiring Manager,  \n\nI am writing to express my interest in the position of [Job Title] at [Company Name]. With a strong background in technology and a passion for innovation, I am eager to contribute my skills and",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0036",
+      "score": true,
+      "instruction_ids": [
+        "keywords:frequency",
+        "keywords:frequency"
+      ],
+      "response": "During the Tang dynasty of China, which ruled from 618 to 907 CE, the empire experienced a period of remarkable cultural, political, and economic growth. However, this era was also marked by significant conflicts and wars that shaped the nation's history. The Tang dynasty was not without its challenges, as the country faced numerous wars with neighboring states, internal rebellions, and external i",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0104",
+      "score": true,
+      "instruction_ids": [
+        "keywords:frequency",
+        "change_case:english_lowercase",
+        "keywords:existence"
+      ],
+      "response": "beneath the whisper of the trees,  \nthe land unfolds in quiet grace,  \na river flows with silver light,  \nits song a lullaby for the day.  \n\nthe forest breathes, a deep and wide embrace,  \nwhere shadows dance and life takes root,  \neach step through the forest is a prayer,  \na journey through the heart’s own truth.  \n\nthe forest holds the secrets of the wind,  \nthe forest guards the quiet of the n",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0380",
+      "score": true,
+      "instruction_ids": [
+        "keywords:frequency",
+        "change_case:english_lowercase",
+        "length_constraints:number_words"
+      ],
+      "response": "kruger, your presence is a gentle reminder of the quiet strength that flows through every moment you share. there’s something truly special about the way you carry yourself, the way you listen, and the way you make everyone around you feel seen and valued. your words have a way of landing with care, and your actions speak volumes without needing to say a single thing. you have this rare ability to",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0207",
+      "score": true,
+      "instruction_ids": [
+        "keywords:frequency"
+      ],
+      "response": "**Proposal for a New University Course: \"The History of the World, as Told by Dogs\"**\n\n**Course Title:** *The History of the World, as Told by Dogs*  \n**Department:** Department of Cultural Studies and Comparative Literature  \n**Credit Hours:** 3  \n**Prerequisites:** None  \n**Offered:** Fall and Spring Semesters  \n\n**Course Description:**\n\nThis interdisciplinary course explores the untold stories ",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0033",
+      "score": false,
+      "instruction_ids": [
+        "keywords:letter_frequency",
+        "length_constraints:number_sentences",
+        "detectable_format:number_highlighted_sections"
+      ],
+      "response": "*Hello, user!* I can *provide* you with the weather forecast based on your location. *Obtain* your current *location* and *observe* the *forecast* for *optimal* conditions.",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0231",
+      "score": true,
+      "instruction_ids": [
+        "keywords:letter_frequency"
+      ],
+      "response": "(Verse 1)  \nYo, I’m spittin’ on the nation’s stage,  \nTalkin’ ‘bout the president, the man in charge.  \nFrom Washington to the people below,  \nHe’s the leader, the voice, the one we know.  \n\nQ is quiet, but he’s got a lot to say,  \nQ is quiet, but he’s got a lot to say.  \nQ is quiet, but he’s got a lot to say,  \nQ is quiet, but he’s got a lot to say.  \n\n(Chorus)  \nQ is the question, Q is the key, ",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0251",
+      "score": false,
+      "instruction_ids": [
+        "keywords:letter_frequency"
+      ],
+      "response": "**Rubric for Evaluating Clarissa's Performance**\n\n**1. Task Completion (20%)**  \n- Completes tasks on time and to expected quality.  \n- Demonstrates understanding of responsibilities.  \n- Consistently meets deadlines.  \n\n**2. Communication (20%)**  \n- Communicates clearly and professionally.  \n- Listens actively and responds appropriately.  \n- Provides feedback constructively.  \n\n**3. Team Collabo",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0079",
+      "score": true,
+      "instruction_ids": [
+        "keywords:letter_frequency",
+        "keywords:forbidden_words"
+      ],
+      "response": "Certainly! Here's a recommendation that meets your constraints:\n\nLooking for a college with open enrollment and regional accreditation? Consider a school that prioritizes accessibility and quality education. Such institutions often offer flexible admission policies, allowing students to join without strict prerequisites. A regional accreditation ensures that the institution meets high standards of",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0337",
+      "score": false,
+      "instruction_ids": [
+        "keywords:letter_frequency"
+      ],
+      "response": "Sure! Here are several professional ways to rephrase the sentence \"Hey bautista, let me know if you need any help with the graphs,\" while keeping the letter \"q\" to less than 5 occurrences:\n\n1. Hello Bautista, please let me know if you require assistance with the graphs.  \n2. Dear Bautista, I’m here to help with the graphs if needed.  \n3. Bautista, feel free to reach out if you need support with th",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0211",
+      "score": true,
+      "instruction_ids": [
+        "keywords:letter_frequency",
+        "keywords:existence"
+      ],
+      "response": "The 2022 Winter Olympics, held in Beijing, did not achieve the best ratings for several reasons, including the impact of the global pandemic, which affected viewership and media coverage. Despite the event being a showcase of **talented** athletes from around the world, the **y**oung and **y**oung audience may have been more drawn to other forms of entertainment. Additionally, the **y**ear 2022 sa",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0023",
+      "score": false,
+      "instruction_ids": [
+        "keywords:letter_frequency"
+      ],
+      "response": "**Logic Quiz: The Chesterfield Mystery**\n\n**Instructions:**  \nSolve the following riddles and logic puzzles. Each answer is a single word. No letter **T** is allowed in your answers. Good luck!\n\n---\n\n**Question 1:**  \nI am a piece of furniture, not a person. I have a back and a seat. I am often found in a living room. What am I?\n\n**Answer:**  \n**SOFA**\n\n---\n\n**Question 2:**  \nI am a type of fabric",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0443",
+      "score": false,
+      "instruction_ids": [
+        "keywords:letter_frequency",
+        "keywords:forbidden_words"
+      ],
+      "response": "**Conversation between Alex and Jamie:**\n\n**Alex:** Hey Jamie, I’ve been thinking a lot about how we can improve our lives. I feel like there’s so much we could learn, but it’s hard to stay motivated.\n\n**Jamie:** I know what you mean. It’s like there’s always something new to discover, but it’s easy to get lost in the noise. What do you think is the key to staying on track?\n\n**Alex:** I think it’s",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0050",
+      "score": true,
+      "instruction_ids": [
+        "language:response_language"
+      ],
+      "response": "पावसाचा डोका,  \nगाडी चालते जलद,  \nकामाची आवड.",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0425",
+      "score": true,
+      "instruction_ids": [
+        "language:response_language"
+      ],
+      "response": "تسعى الشركة إلى توسيع مشاريعها في أسواق جديدة. ستخلق الشركة مئات الوظائف هذا العام. ستبدأ الشركة في تطوير مشاريعها في مناطق جديدة من العالم، وستقوم ببناء مصانع ومحطات توزيع ومستودعات في هذه المناطق. ستقوم الشركة بتوظيف مئات من الموظفين في هذه المناطق الجديدة، وستخلق فرص عمل متنوعة في مجالات مختلفة مثل التصنيع والخدمات والتسويق. ستقوم الشركة ببناء علاقات مع شركات محلية وعالمية لضمان نجاح مشاريعها ف",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0436",
+      "score": true,
+      "instruction_ids": [
+        "language:response_language",
+        "combination:repeat_prompt",
+        "keywords:existence"
+      ],
+      "response": "Write an essay about how the current economic crisis is affecting the environment. In your essay, include the keywords: \"climate\", \"energy\", and \"green\". Make sure your entire response is in Hindi, no other language is allowed.\n\nवर्तमान आर्थिक संकट वातावरण के लिए बहुत बड़ा प्रभाव डाल रहा है। आर्थिक संकट के कारण लोग अपने जीवन शैली को बदलने के लिए मजबूर हो जाते हैं, जिससे वातावरण पर नकारात्मक प्रभाव",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0243",
+      "score": true,
+      "instruction_ids": [
+        "language:response_language"
+      ],
+      "response": "Kwa kila jina ya kipato, kwa kila kipato ya kipato, kwa kila kipato ya kipato, kwa kila kipato ya kipato, kwa kila kipato ya kipato, kwa kila kipato ya kipato, kwa kila kipato ya kipato, kwa kila kipato ya kipato, kwa kila kipato ya kipato, kwa kila kipato ya kipato, kwa kila kipato ya kipato, kwa kila kipato ya kipato, kwa kila kipato ya kipato, kwa kila kipato ya kipato, kwa kila kipato ya kipat",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0322",
+      "score": 0.0,
+      "instruction_ids": [
+        "language:response_language"
+      ],
+      "response": "ಯುನೈಟೆಡ್ ಸ್ಟೇಟ್ಸ್ ಇತಿಹಾಸದ ಬಗ್ಗೆ ಚೆನ್ನಾ ಪುಸ್ತಕಗಳ ಕೆಲವು ಸಲಹೆಗಳು:\n\n1. **\"A People's History of the United States\"** – ಹೆನ್ರಿ ಜೆ. ಕ್ರಾವೆನ್ಸ್ ಕರೆದಿರುವ ಈ ಪುಸ್ತಕವು ಜನರ ದೃಷ್ಟಿಯಿಂದ ಯುನೈಟೆಡ್ ಸ್ಟೇಟ್ಸ್ ಇತಿಹಾಸವನ್ನು ವಿವರಿಸುತ್ತದೆ.\n\n2. **\"The American Pageant\"** – ಈ ಪುಸ್ತಕವು ಯುನೈಟೆಡ್ ಸ್ಟೇಟ್ಸ್ ಇತಿಹಾಸದ ಪ್ರಮುಖ ಘಟನೆಗಳನ್ನು ಸ್ಪಷ್ಟವಾಗಿ ವಿವರಿಸುತ್ತದೆ.\n\n3. **\"History of the United States\"** – ಈ ಪುಸ್ತಕವು ಯುನೈಟೆಡ್ ಸ್ಟೇಟ್ಸ್ ಇ",
+      "num_new_tokens": 512,
+      "truncated": true
+    },
+    {
+      "uid": "p4-validation-0515",
+      "score": true,
+      "instruction_ids": [
+        "language:response_language"
+      ],
+      "response": "Hier ist eine Zusammenfassung der Werbungsausgaben der Unternehmen Google, Facebook, Microsoft, Apple und Amazon:\n\nGoogle, Facebook, Microsoft, Apple und Amazon sind einige der größten Unternehmen in der Technologiebranche und investieren erhebliche Mittel in Lobbyismus, um ihre Interessen vor dem Gesetz vertreten zu können. Die genauen Beträge variieren je nach Land und politischen Themen. In den",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0327",
+      "score": true,
+      "instruction_ids": [
+        "language:response_language",
+        "startend:quotation"
+      ],
+      "response": "\"Na criação do mundo, Deus criou tudo o que existe, incluindo o homem e a mulher. O homem foi criado do solo, e a mulher foi formada a partir do costume do homem. Eles foram colocados no jardim do Éden, onde podiam comer de qualquer árvore, mas uma árvore em especial, a árvore da vida e a árvore do conhecimento do bem e do mal, não podiam comer. Deus advertiu-os sobre isso, dizendo: 'Não comam del",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0363",
+      "score": true,
+      "instruction_ids": [
+        "length_constraints:nth_paragraph_first_word"
+      ],
+      "response": "Booster, the set of all sets that are not members of themselves is a classic example of a paradoxical set, often referred to as Russell's Paradox. In mathematical notation, this set can be written as $ R = \\{ x \\mid x \\notin x \\} $. This set is problematic because if $ R $ is a member of itself, then by definition it should not be, and if it is not a member of itself, then by definition it should ",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0112",
+      "score": true,
+      "instruction_ids": [
+        "length_constraints:nth_paragraph_first_word",
+        "startend:quotation"
+      ],
+      "response": "\"weekend is the perfect time to ask Sonia out, as it offers a relaxed and informal setting where you can both enjoy each other's company without the pressure of a formal date. Choose a place that you both would enjoy, whether it's a cozy café, a park, or a fun activity you both have been interested in. Make sure to be genuine and sincere in your approach, as sincerity goes a long way in building a",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0229",
+      "score": true,
+      "instruction_ids": [
+        "length_constraints:nth_paragraph_first_word"
+      ],
+      "response": "Installing a car seat correctly is essential for your child's safety. First, always choose a car seat that is appropriate for your child's age, weight, and height. Check the manufacturer's guidelines to ensure the seat is suitable for your child's specific needs. Next, read the instruction manual thoroughly before installation. This will help you understand the proper way to secure the seat in you",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0282",
+      "score": true,
+      "instruction_ids": [
+        "length_constraints:number_paragraphs"
+      ],
+      "response": "I walk through the dark, where the shadows creep,  \nWhere the silence speaks and the echoes sleep.  \nThe abyss below, a void so wide,  \nA place where time and light collide.  \n\n***  \n\nNo light can reach, no sound can pass,  \nA chasm deep where the stars are cast.  \nI feel the pull, the weight of the void,  \nA hunger that no soul can destroy.  \n\n***  \n\nThe walls are cold, the air is thin,  \nA realm",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0261",
+      "score": true,
+      "instruction_ids": [
+        "length_constraints:number_paragraphs",
+        "keywords:frequency"
+      ],
+      "response": "I have never seen a localized version of the software. It always seems to be in the same language, which is the default international version. The user interface, features, and even the help documentation are consistent across all platforms. It’s as if the software is designed to be used globally, without any adjustments for specific regions or languages. The humming of the system background music",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0382",
+      "score": true,
+      "instruction_ids": [
+        "length_constraints:number_paragraphs"
+      ],
+      "response": "advice 1: Take time to explore who you are without rushing to define yourself. Identity is a journey, not a destination, and it’s okay to change and grow as you learn more about yourself.  \n***  \nadvice 2: Surround yourself with people who support and challenge you in a healthy way. Relationships can help you understand your values, strengths, and where you fit in the world.  \n***  \nadvice 3: Be k",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0073",
+      "score": true,
+      "instruction_ids": [
+        "length_constraints:number_paragraphs"
+      ],
+      "response": "**Planning Document for Software Engineer Task**\n\n***\n\n**Part 1. Task Summary**  \nThe task is to develop a new feature for a web application that allows users to upload and manage files in a secure, scalable manner. The feature will include a file upload interface, file storage in a cloud-based solution, and a file management dashboard for users to view, download, and delete files. The task will b",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0373",
+      "score": true,
+      "instruction_ids": [
+        "length_constraints:number_paragraphs"
+      ],
+      "response": "The value of (a + b) / c can be calculated by first adding the values of a and b. Given that a = 10 and b = 30, their sum is 10 + 30 = 40. Next, we divide this sum by the value of c, which is 20. Therefore, 40 divided by 20 equals 2. This calculation follows the standard order of operations, where addition is performed before division. The result is a simple integer, which makes the computation st",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0204",
+      "score": true,
+      "instruction_ids": [
+        "length_constraints:number_paragraphs",
+        "detectable_format:number_bullet_lists"
+      ],
+      "response": "**[Verse 1]**  \nHey mom, let’s talk about the truth, no lies,  \nBreast milk vs. formula, it’s a tough fight.  \nYou’re the hero, the guide, the one who’s in charge,  \nBut let’s break it down, no need to be scared.  \n\nBreastfeeding gives you a bond that’s real,  \nNutrients that are pure, no need to feel.  \nBut it’s not always easy, you know that part,  \nLong hours, soreness, and sometimes you’re par",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0209",
+      "score": false,
+      "instruction_ids": [
+        "length_constraints:number_sentences",
+        "detectable_content:number_placeholders"
+      ],
+      "response": "The main differences between Adventist and Baptist denominations include their beliefs about [address], [address], and [address]. Adventists emphasize the second coming of Christ and the soon return of Jesus, while Baptists focus more on individual faith and church autonomy. Adventists often observe the Sabbath on Saturday, whereas Baptists typically follow Sunday as their day of worship. Both den",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0232",
+      "score": false,
+      "instruction_ids": [
+        "length_constraints:number_sentences"
+      ],
+      "response": "To calculate the offset of an element in an array, use the formula: offset = index * element_size. Identify the element's index. Determine the size of each element in bytes. Multiply the index by the element size to get the offset.",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0053",
+      "score": false,
+      "instruction_ids": [
+        "length_constraints:number_sentences"
+      ],
+      "response": "Sure! Here's an example: \"Today, I practiced deep breathing and mindfulness to manage stress from work, which helped me stay calm and focused.\" I created this by imagining a common stressor (work) and a practical stress management technique (deep breathing and mindfulness), then described the outcome clearly and concisely.",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0161",
+      "score": false,
+      "instruction_ids": [
+        "length_constraints:number_sentences",
+        "length_constraints:number_words"
+      ],
+      "response": "A man is performing for a crowd on a stage, his presence commanding attention as he steps into the spotlight. The lights blaze overhead, casting a warm glow over the audience, who are seated in a sea of anticipation. His voice rises above the murmurs, a deep, resonant tone that carries through the room. The crowd leans forward, captivated by the power of his words. He moves with purpose, each step",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0156",
+      "score": false,
+      "instruction_ids": [
+        "length_constraints:number_sentences",
+        "length_constraints:number_sentences"
+      ],
+      "response": "(Verse 1)  \nIn a world of giants, I found a tiny friend,  \nA miniature wonder, so small, so tender.  \nIt danced through the air, a spark of light,  \nA tiny heart, a world of might.  \n\nIt lived in a box, a little cage,  \nBut in that box, it found its stage.  \nIt had a life of its own, a story to tell,  \nA world of its own, a dream to feel.  \n\nI watched it play, it built a town,  \nWith tiny bricks a",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0372",
+      "score": false,
+      "instruction_ids": [
+        "length_constraints:number_sentences"
+      ],
+      "response": "Subject: The Ingredients of a Good Life (And Why You Shouldn’t Try to Make It at Home)\n\nHey [Friend's Name],\n\nI hope this email finds you well and that your day is as exciting as a rollercoaster with a side of existential dread. I’ve been thinking a lot lately about what makes a good life, and I’ve come to the conclusion that it’s not just about having a lot of money, a big house, or a perfect par",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0527",
+      "score": false,
+      "instruction_ids": [
+        "length_constraints:number_sentences"
+      ],
+      "response": "The green-eyed monster is the term for jealousy.",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0170",
+      "score": false,
+      "instruction_ids": [
+        "length_constraints:number_sentences",
+        "detectable_format:number_bullet_lists",
+        "detectable_content:number_placeholders"
+      ],
+      "response": "The statement \"Wizards are more powerful than sorcerers because they study magic instead of being born with it\" is a common theme in fantasy literature and media, often used to distinguish between two types of magical practitioners. While it may seem logical at first glance, the idea that studying magic makes one more powerful than being born with it is not always accurate or universally applicabl",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0167",
+      "score": false,
+      "instruction_ids": [
+        "length_constraints:number_words",
+        "length_constraints:number_words"
+      ],
+      "response": "**Title: \"The Great Algorithmic Riddle: Can You Solve It?\"**\n\nHey there, fellow computer scientists! If you're reading this, you're probably already familiar with the thrill of debugging, the agony of a runtime error, and the joy of a perfectly optimized algorithm. But today, I’m not here to talk about that. I’m here to challenge you with a riddle—one that’s not just for kids, but for the pros amo",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0237",
+      "score": true,
+      "instruction_ids": [
+        "length_constraints:number_words",
+        "detectable_content:number_placeholders",
+        "detectable_format:number_bullet_lists"
+      ],
+      "response": "The Hamptons, a coastal region in New York State, are renowned for their luxurious lifestyle, beautiful beaches, and vibrant summer culture. Located on the eastern end of Long Island, the Hamptons stretch from the town of East Hampton to the village of Westhampton Beach, offering a mix of historic charm, modern elegance, and natural beauty. This area has long been a favorite destination for wealth",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0038",
+      "score": true,
+      "instruction_ids": [
+        "length_constraints:number_words"
+      ],
+      "response": "Capture every moment with our new **SocialSync Photo Frame**—the ultimate way to share your life online and display it in style. Connect seamlessly to your social media accounts and automatically curate a gallery of your favorite photos. Whether it's family memories, travel adventures, or daily snapshots, your favorite images are always on display. With high-resolution color display and easy setup",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0466",
+      "score": false,
+      "instruction_ids": [
+        "length_constraints:number_words"
+      ],
+      "response": "**The Differences Between Sunni and Shi'a Muslims**\n\nIslam, as a religion, is one of the world's largest and most influential faiths, with over 1.8 billion followers globally. Despite sharing a common faith and scripture, the Islamic community is divided into two major branches: Sunni and Shi'a. These two groups have distinct beliefs, practices, and historical origins that have shaped their identi",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0469",
+      "score": true,
+      "instruction_ids": [
+        "length_constraints:number_words"
+      ],
+      "response": "**Startup Pitch: TrustFlow – Simplifying Trust Creation Online**\n\nIn an era where digital identity and financial security are more important than ever, TrustFlow emerges as a revolutionary platform that makes creating and managing trusts online simple, secure, and accessible for everyone. TrustFlow is a digital trust creation service designed to help individuals and businesses establish legal trus",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0200",
+      "score": true,
+      "instruction_ids": [
+        "length_constraints:number_words"
+      ],
+      "response": "**The Best Way to Get a Good Night's Sleep: A Guide to Restful Rest**\n\nIn today’s fast-paced world, getting a good night’s sleep has become more important than ever. Poor sleep can affect your mood, productivity, and overall health. So, how can you ensure you’re getting the rest you need? Here’s a comprehensive guide to help you achieve a good night’s sleep.\n\n**1. Establish a Consistent Sleep Sche",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0119",
+      "score": true,
+      "instruction_ids": [
+        "length_constraints:number_words"
+      ],
+      "response": "The latest episode of *Stranger Things* delivered a thrilling mix of suspense, nostalgia, and emotional depth. After a long hiatus, the show returned with a strong opening that immediately pulled viewers back into the Hawkins universe. The episode focused on the group’s efforts to find Elaborate, the mysterious figure who has been haunting the town. With the help of the Mind Flayer’s influence, th",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0332",
+      "score": false,
+      "instruction_ids": [
+        "length_constraints:number_words",
+        "startend:quotation"
+      ],
+      "response": "\"Introducing the Pixel 3A, a sleek and powerful smartphone that brings the best of Google's innovation to a more affordable yet equally capable device. Designed with a focus on performance, efficiency, and user experience, the Pixel 3A is a testament to Google's commitment to delivering a seamless and intuitive mobile experience. With its compact and lightweight design, the Pixel 3A is not only ea",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0032",
+      "score": true,
+      "instruction_ids": [
+        "punctuation:no_comma"
+      ],
+      "response": "I am three small birds that fly in the sky  \nI am the signs that tell us what is to be  \nI watch the clouds and the wind and the sun  \nI help us know what is right and what is done  \nI sit on the shoulders of those who are wise  \nI bring good luck and joy to the skies  \nI am not always seen but I are always near  \nI am the auspices that guide us to cheer",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0139",
+      "score": false,
+      "instruction_ids": [
+        "punctuation:no_comma"
+      ],
+      "response": "To find the next number in the series: 1, 4, 7, 11, 17,\n\nwe examine the differences between consecutive terms:\n\n- 4 - 1 = 3  \n- 7 - 4 = 3  \n- 11 - 7 = 4  \n- 17 - 11 = 6  \n\nThe differences are: 3, 3, 4, 6\n\nNow look at the differences of these differences:\n\n- 3 - 3 = 0  \n- 4 - 3 = 1  \n- 6 - 4 = 2  \n\nSo the second-level differences are: 0, 1, 2\n\nThis suggests the pattern of second-level differences i",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0035",
+      "score": true,
+      "instruction_ids": [
+        "punctuation:no_comma"
+      ],
+      "response": "Sure here is a formal alternative:  \nHow are you I plan to go to the beach today  \n\nAnother formal alternative:  \nI hope you are well I intend to visit the beach today",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0067",
+      "score": true,
+      "instruction_ids": [
+        "punctuation:no_comma",
+        "detectable_format:number_highlighted_sections",
+        "keywords:existence"
+      ],
+      "response": "Brilliant Le Hou was born in 1985 in a small village in the mountains of Vietnam. *Highlighted section* He showed an early interest in science and mathematics. *Highlighted section* At the age of 16 he won a national competition in physics. *Highlighted section* He later studied at a prestigious university in France where he specialized in engineering. After graduation he worked as a researcher in",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0244",
+      "score": true,
+      "instruction_ids": [
+        "punctuation:no_comma"
+      ],
+      "response": "Almonds are high in fat and calories. A serving of 32 grams of unsalted almonds contains approximately 396 calories because almonds are rich in healthy fats and proteins. The calorie count is based on the nutritional content of almonds which includes about 16 grams of fat 6 grams of protein and 5 grams of carbohydrates per serving. The combination of these macronutrients contributes to the total c",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0223",
+      "score": true,
+      "instruction_ids": [
+        "punctuation:no_comma",
+        "detectable_format:number_highlighted_sections"
+      ],
+      "response": "The new version of the app will be available in the App Store soon. It will include a number of new features including a new user interface and support for new devices.  \n\n*highlighted section* The new version of the app will be available in the App Store soon.  \n*highlighted section* It will include a number of new features including a new user interface and support for new devices.",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0508",
+      "score": true,
+      "instruction_ids": [
+        "punctuation:no_comma"
+      ],
+      "response": "I want to make a peanut butter and jelly sandwich  \nFirst I need bread that is soft and fresh  \nI’ll take two slices and put them together  \nNow I’ll spread the peanut butter on one side  \n\nI’ll use a knife to spread it evenly  \nIt should be thick but not too thin  \nThen I’ll take the jelly and spread it on the other side  \nIt should be smooth and not too runny  \n\nI’ll let it sit for a moment  \nSo",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0178",
+      "score": true,
+      "instruction_ids": [
+        "punctuation:no_comma",
+        "combination:repeat_prompt"
+      ],
+      "response": "Write a resume for a junior hardware engineer. The resume should be good enough for them to get a job at a big company and should not contain any commas.\n\n**John Doe**  \n123 Main Street  \nCity State ZIP Code  \n(123) 456-7890  \njohn.doe@example.com  \n\nEducation  \nBachelor of Science in Electrical Engineering  \nUniversity of Example  \nGraduated May 2023  \n\nSkills  \nProficient in circuit design  \nKno",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0257",
+      "score": true,
+      "instruction_ids": [
+        "punctuation:no_comma"
+      ],
+      "response": "**Project Proposal: Using Machine Learning and AI to Improve the Quality of Education in Developing Countries**\n\n**Project Title:** Intelligent Learning for All\n\n**Objective:** To enhance the quality of education in developing countries by leveraging machine learning and artificial intelligence technologies\n\n**Background:** Many developing countries face significant challenges in providing quality",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0226",
+      "score": true,
+      "instruction_ids": [
+        "punctuation:no_comma"
+      ],
+      "response": "A TRAP",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0483",
+      "score": false,
+      "instruction_ids": [
+        "punctuation:no_comma",
+        "combination:repeat_prompt"
+      ],
+      "response": "Write a pros and cons list of apple products in the style of a 19th century novelist and do not use any commas  \nWrite a pros and cons list of apple products in the style of a 19th century novelist and do not use any commas  \n\nIn the grand tapestry of modern life there exists a fruit of singular renown known as the apple  \nThis fruit has become the subject of much admiration and much critique  \nLe",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0418",
+      "score": true,
+      "instruction_ids": [
+        "startend:end_checker"
+      ],
+      "response": "**Why the Canucks Need to Be More Mindful of Their Environment**  \n\nHi everyone, I’m Naomi, a fan of the Vancouver Canucks and a believer in making a positive impact. As someone who loves the game and the community it brings together, I feel it’s important to talk about something that’s close to my heart: the environment.  \n\nThe Vancouver Canucks are more than just a hockey team—they’re a part of ",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0391",
+      "score": false,
+      "instruction_ids": [
+        "startend:end_checker"
+      ],
+      "response": "In the heart of the world's great cities,  \nTowers rise with steel and might,  \nA skyline of ambition, a testament to light.  \nFrom the East to the West, they stand tall,  \nEach one a story, a dream, a call.  \n\nLet me recount the tallest of all,  \nThe 20 that reach for the sky,  \nA list of the tallest, a list of the high.  \n\n1. **Burj Khalifa** in Dubai,  \nA 828-meter marvel, a wonder of design,  ",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0289",
+      "score": true,
+      "instruction_ids": [
+        "startend:end_checker"
+      ],
+      "response": "The best way to learn a new language is by immersing yourself in the culture. Living in a country where the language is spoken allows you to practice it daily, helping you speak like a native quickly and confidently.\n\n**Alternative 1:**  \nLearning a new language effectively requires more than just studying grammar and vocabulary. Immersing yourself in the culture by living in a country where the l",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0320",
+      "score": true,
+      "instruction_ids": [
+        "startend:end_checker"
+      ],
+      "response": "There once was a guy named Dave,  \nWho loved to play pranks on his mamas.  \nHe’d trip on the stairs,  \nAnd crash into chairs,  \nYes Mom, I am Dave.",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0266",
+      "score": true,
+      "instruction_ids": [
+        "startend:end_checker"
+      ],
+      "response": "Beneath the golden sun that paints the sky,  \nWhere deserts meet the sea in a whispering sigh,  \nCalifornia calls with a voice so wide,  \nA land of dreams, of fire, of tide.  \n\nFrom the redwoods' hush to the cities that gleam,  \nFrom the mountains that rise to the skies that are free,  \nEach corner of this state holds a story to tell,  \nA tale of the past, and the future that's well.  \n\nThe coastl",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0416",
+      "score": true,
+      "instruction_ids": [
+        "startend:end_checker"
+      ],
+      "response": "I am writing to express my interest in the [Job Title] position at [Company Name]. With [X] years of experience in [relevant field or industry], I have developed a strong foundation in [key skills or responsibilities related to the job]. I am eager to bring my skills and passion to your team and contribute to the continued success of [Company Name].\n\nI am particularly drawn to this opportunity bec",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0513",
+      "score": false,
+      "instruction_ids": [
+        "startend:quotation",
+        "length_constraints:number_sentences",
+        "length_constraints:number_sentences"
+      ],
+      "response": "\"Algiers offers a unique blend of rich history, vibrant culture, and stunning architecture that makes it a captivating destination for travelers seeking both adventure and tranquility.\"",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0137",
+      "score": true,
+      "instruction_ids": [
+        "startend:quotation",
+        "detectable_format:multiple_sections"
+      ],
+      "response": "\"Section 1: Understand the Cause and Your Audience  \nBefore you can raise awareness for a cause, it’s essential to have a clear understanding of what the cause is, why it matters, and who your target audience is. Research the issue thoroughly, gather facts, and identify the key messages you want to convey. Knowing your audience helps you tailor your message to resonate with them. Whether your audi",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0037",
+      "score": false,
+      "instruction_ids": [
+        "startend:quotation",
+        "length_constraints:number_words"
+      ],
+      "response": "\"During the late 19th century, the sentiments of the Croatian and Serbian nations towards the Austrian Empire were complex and multifaceted, shaped by historical, political, and cultural factors. The Austrian Empire, which had been a dominant force in Central Europe since the 18th century, was a multi-ethnic state that included a wide array of nationalities, including Croats, Serbs, Germans, Hunga",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0505",
+      "score": true,
+      "instruction_ids": [
+        "startend:quotation",
+        "language:response_language"
+      ],
+      "response": "\"สเปรดชีตเป็นเครื่องมือที่ใช้จัดการข้อมูล ช่วยคำนวณและจัดเรียงข้อมูลได้อย่างมีประสิทธิภาพ คล้ายกับผู้ช่วยที่ช่วยจัดการงานต่างๆ ได้ดี ถ้าคุณต้องการหาคำตอบ หรือต้องการคำนวณ สเปรดชีตคือตัวช่วยที่ดีที่สุด\"",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0064",
+      "score": true,
+      "instruction_ids": [
+        "startend:quotation",
+        "detectable_format:number_bullet_lists"
+      ],
+      "response": "\"  \n* The dinosaurs probably got tired of eating the same old plants and decided to take a break, but they didn’t realize that the plants were also on vacation.  \n* They tried to start a diet, but the only thing they could find was a lot of rocks and a few tasty ferns.  \n* The meteor that killed them was just a big rock that got confused and thought it was a party invitation.  \n* The dinosaurs wer",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0081",
+      "score": true,
+      "instruction_ids": [
+        "startend:quotation",
+        "keywords:frequency",
+        "keywords:existence"
+      ],
+      "response": "\"Did you hear about the morphologist who got knocked out by a cat? Well, it wasn't the cat that knocked him down—it was the knock on the door that knocked him off his feet. Turns out, the cat was just there to knock some sense into him about the morphology of feline behavior.\"",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0294",
+      "score": true,
+      "instruction_ids": [
+        "startend:quotation"
+      ],
+      "response": "\"Hi [Friend's Name],\n\nI hope you're doing well! I wanted to take a moment to talk about what triggers me these days. Honestly, it's a mix of things—sometimes it's the small things, like when someone doesn't respond to a message or when I feel like I'm not being heard. Other times, it's more intense, like when I feel overwhelmed by stress or when I'm in a situation that makes me feel unsafe.\n\nI kno",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0352",
+      "score": true,
+      "instruction_ids": [
+        "startend:quotation"
+      ],
+      "response": "\"Because he wanted to buy a piano that was only available in Helsinki, which is in Finland, and he thought it would be a unique experience to travel from Saskatoon to Helsinki for it.\"",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0117",
+      "score": true,
+      "instruction_ids": [
+        "startend:quotation",
+        "keywords:letter_frequency"
+      ],
+      "response": "\"Day 1: Start your journey in Mesa, Arizona, by exploring the vibrant downtown area. Lively streets, local shops, and a lively atmosphere make this a great first day. Lunch at a local restaurant, like The Mesa Market, and enjoy the local lunch. Later, visit the Mesa Arts Center to see local art and enjoy a lively lunch. Take a walk along the Sunnyside Trail, which offers a lovely landscape. End th",
+      "num_new_tokens": 512,
+      "truncated": false
+    },
+    {
+      "uid": "p4-validation-0240",
+      "score": false,
+      "instruction_ids": [
+        "startend:quotation",
+        "length_constraints:number_sentences"
+      ],
+      "response": "\"Have you ever wondered why the planets in our solar system look so different? The outer solar system is a world of ice, gas, and distant giants, while the inner solar system is a place of rocky planets and fiery activity. The outer planets—Jupiter, Saturn, Uranus, and Neptune—are much larger and colder than their inner counterparts. They're mostly made of gas and ice, with thick atmospheres and p",
+      "num_new_tokens": 512,
+      "truncated": false
+    }
+  ]
+}

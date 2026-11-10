@@ -220,21 +220,75 @@ TOOL_MANUAL = """你可以使用以下检查工具（每次回复只能包含一
 
 
 def extract_tool_call(text: str) -> dict | None:
-    """从模型输出中提取第一个 JSON 工具调用。"""
-    m = re.search(r"\{[^{}]*\}", text, re.DOTALL)
-    if not m:
-        return None
-    try:
-        obj = json.loads(m.group(0))
-        return obj if isinstance(obj, dict) and "tool" in obj else None
-    except json.JSONDecodeError:
-        # 尝试修复常见尾逗号
-        try:
-            fixed = re.sub(r",\s*([}\]])", r"\1", m.group(0))
-            obj = json.loads(fixed)
-            return obj if isinstance(obj, dict) and "tool" in obj else None
-        except json.JSONDecodeError:
-            return None
+    """从模型输出中提取第一个 JSON 工具调用。
+
+    两种模式：
+    1. 嵌套容错：找 "tool": 的最外层对象（支持 edits 数组内嵌套花括号——
+       decide 调用的必需结构，旧正则无法匹配嵌套结构）
+    2. 兼容旧行为：无嵌套的简单调用
+    截断容错：若最外层 JSON 不完整，剥掉最后一个不完整键值再闭合重试。
+    """
+    # 模式 1：含嵌套的完整 JSON（平衡括号扫描）
+    start = text.find("{")
+    while start != -1:
+        depth = 0
+        in_str = False
+        esc = False
+        end = -1
+        for i in range(start, len(text)):
+            c = text[i]
+            if esc:
+                esc = False
+                continue
+            if c == "\\":
+                esc = True
+                continue
+            if c == '"':
+                in_str = not in_str
+                continue
+            if in_str:
+                continue
+            if c == "{":
+                depth += 1
+            elif c == "}":
+                depth -= 1
+                if depth == 0:
+                    end = i
+                    break
+        if end != -1:
+            cand = text[start : end + 1]
+            try:
+                obj = json.loads(cand)
+                if isinstance(obj, dict) and "tool" in obj:
+                    return obj
+            except json.JSONDecodeError:
+                # 尾逗号修复
+                try:
+                    fixed = re.sub(r",\s*([}\]])", r"\1", cand)
+                    obj = json.loads(fixed)
+                    if isinstance(obj, dict) and "tool" in obj:
+                        return obj
+                except json.JSONDecodeError:
+                    pass
+        start = text.find("{", start + 1)
+
+    # 模式 2（截断容错）：找 "tool": "decide" 的起点，剥离不完整尾部后闭合
+    m = re.search(r'\{\s*"tool"\s*:\s*"([a-z_]+)"', text)
+    if m and m.group(1) in ("decide", "propose_edit"):
+        frag = text[m.start():].rstrip()
+        # 剥掉最后一个不完整的键值对（未闭合字符串/悬空逗号）
+        frag = re.sub(r',\s*"[^"]*":\s*"[^"]*$', "", frag)  # 悬空 "k": "v...
+        frag = re.sub(r',\s*"[^"]*":\s*\[[^\]]*$', "", frag)  # 悬空 "k": [...
+        frag = re.sub(r",\s*$", "", frag)
+        for closer in ('"}]}', '"}]', '"}', "}"):
+            try:
+                obj = json.loads(frag + closer)
+                if isinstance(obj, dict) and obj.get("tool") in ("decide", "propose_edit"):
+                    # 保底补全：edits 存在但缺 rationale 等字段可接受
+                    return obj
+            except json.JSONDecodeError:
+                continue
+    return None
 
 
 @dataclass

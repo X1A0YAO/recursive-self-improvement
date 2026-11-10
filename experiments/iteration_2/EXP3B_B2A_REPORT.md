@@ -78,3 +78,14 @@
 | results/exp3b_b2a_explore12.json | 探索性 12 轮（单独存放，不入判定） |
 
 B1 历史结果（results/exp3_diagnosis.json）未触碰、未重新解释。
+
+
+---
+
+## ⚠️ 跨阶段更正（2026-11-11，Phase 4 期间发现）
+
+Phase 4 调试中发现 agent/diagnosis_tools.py 的 extract_tool_call 存在
+嵌套 JSON 正则缺陷（无法解析含 edits 数组的 decide 调用）。该 bug 自
+本实验起就存在，因此本报告中所有"模型未提交决定/提案悬崖"的结论
+需部分重新归因：模型可能多次提交了有效决定但被解析器静默丢弃。
+原始数据未修改；该缺陷已在 Phase 4 修复（平衡括号扫描实现）。

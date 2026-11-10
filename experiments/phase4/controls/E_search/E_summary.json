@@ -1,0 +1,50 @@
+[
+  {
+    "trial": 0,
+    "tensor": "model.layers.7.self_attn.q_proj.weight",
+    "factor": 1.04,
+    "val60": 0.5833
+  },
+  {
+    "trial": 1,
+    "tensor": "model.layers.15.self_attn.k_proj.weight",
+    "factor": 0.96,
+    "val60": 0.5667
+  },
+  {
+    "trial": 2,
+    "tensor": "model.layers.6.mlp.up_proj.weight",
+    "factor": 0.96,
+    "val60": 0.5833
+  },
+  {
+    "trial": 3,
+    "tensor": "model.layers.27.self_attn.q_proj.weight",
+    "factor": 0.96,
+    "val60": 0.55
+  },
+  {
+    "trial": 4,
+    "tensor": "model.layers.5.self_attn.k_proj.weight",
+    "factor": 0.96,
+    "val60": 0.5667
+  },
+  {
+    "trial": 5,
+    "tensor": "model.layers.32.mlp.gate_proj.weight",
+    "factor": 0.96,
+    "val60": 0.55
+  },
+  {
+    "trial": 6,
+    "tensor": "model.layers.35.self_attn.k_proj.weight",
+    "factor": 1.04,
+    "val60": 0.5667
+  },
+  {
+    "trial": 7,
+    "tensor": "model.layers.14.self_attn.o_proj.weight",
+    "factor": 1.04,
+    "val60": 0.5333
+  }
+]
