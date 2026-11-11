@@ -4,11 +4,14 @@ An experimental framework for studying whether an LLM can analyze its own
 parameters and directly edit its weights to improve itself — and whether the
 improved model can improve itself further, forming a recursive positive loop.
 
-> **Status: Phase 2 running (matrix screen in progress). Phase 1 complete with
-> audited results: behavioral degradation from lesions was statistically
-> insignificant (McNemar p>=0.125); z-score-only detection 0/8; top-norm neurons
-> are functionally unimportant (2.3% overlap with top-activity). See
-> experiments/iteration_1/AUDIT_REPORT.md and PHASE1_REPORT.md.**
+> **Status: COMPLETE (Phases 0-4). Conclusion: Qwen3-4B cannot achieve
+> tool-mediated weight self-improvement - every link in the chain (defect
+> visibility -> localization -> repair -> capability gain) fails with
+> quantified mechanisms: behavioral redundancy (8-layer lesion = noise),
+> statistical invisibility (z-score AUC 0.08-0.44), norm != importance
+> (2.3% overlap), observation hallucination, agent edits counterproductive
+> vs random (+2.8pp random > 0 agent). Full evidence: see reports under
+> experiments/. All negative results preregistered and reproducible.**
 
 ## Research Positioning (vs. Takehi et al. 2026, "Sparks of Weight-Space Programming")
 
