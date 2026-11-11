@@ -1,22 +1,22 @@
 # Recursive Self-Improvement via Weight-Space Programming
 
 An experimental framework for studying whether an LLM can analyze its own
-parameters and directly edit its weights to improve itself — and whether the
+parameters and directly edit its weights to improve itself - and whether the
 improved model can improve itself further, forming a recursive positive loop.
 
 > **Status: COMPLETE (Phases 0-4). Conclusion: Qwen3-4B cannot achieve
 > tool-mediated weight self-improvement - every link in the chain (defect
 > visibility -> localization -> repair -> capability gain) fails with
 > quantified mechanisms: behavioral redundancy (8-layer lesion = noise),
-> statistical invisibility (z-score AUC 0.08-0.44), norm != importance
+> statistical invisibility (z-score detection 0/8), norm != importance
 > (2.3% overlap), observation hallucination, agent edits counterproductive
-> vs random (+2.8pp random > 0 agent). Full evidence: see reports under
-> experiments/. All negative results preregistered and reproducible.**
+> vs random (+2.8pp random > 0 agent). Full evidence: reports under
+> `experiments/`. All negative results preregistered and reproducible.**
 
 ## Research Positioning (vs. Takehi et al. 2026, "Sparks of Weight-Space Programming")
 
-Full analysis in RESEARCH_POSITIONING_REVIEW.md. Four capability levels must be
-distinguished (following Honnibal's critique of conflation in the original):
+Full analysis in `RESEARCH_POSITIONING_REVIEW.md`. Four capability levels must
+be distinguished (following Honnibal's critique of conflation in the original):
 
 | Level | Meaning | Their work | This project |
 |---|---|---|---|
@@ -32,7 +32,7 @@ behaviorally self-exposing defect (93% truncation/looping rate) using Python
 and 50 batches of environment feedback, while we map the
 **sub-behavioral-threshold defect** regime under preregistered statistics
 (McNemar/Holm), sealed defect records, and oracle/random control arms; (3) their
-own additional experiment (Gemma, which doesn't loop) failed to improve — the
+own additional experiment (Gemma, which doesn't loop) failed to improve - the
 hard region we deliberately probe with mechanisms (norm != importance;
 statistical visibility limits) established by our audit.
 
@@ -45,8 +45,6 @@ statistical visibility limits) established by our audit.
 3. Do edited models (V1, V2, ...) become better self-improvers (meta-capability
    M(W_t)) or only fix their own defects (capability C(W_t))?
 
-Key distinction studied here:
-
 | Mode | Description |
 |------|-------------|
 | External editing | Model A edits model B |
@@ -58,44 +56,88 @@ Key distinction studied here:
 - **Forbidden:** gradient descent, backpropagation, optimizers, SFT/LoRA/QLoRA,
   any retraining of the target model.
 - **Allowed:** reading/analyzing parameters & activations, statistics,
-  matrix ops, direct numerical weight edits (e.g. low-rank updates W' = W + 伪uv岬€),
-  within a structured edit protocol with budgets and safety checks.
+  matrix ops, direct numerical weight edits (e.g. low-rank updates
+  `W' = W + UV`), within a structured edit protocol with budgets and
+  safety checks.
 - Original HF checkpoint is read-only; every edit creates a new versioned
   checkpoint under `checkpoints/`.
-- The Evaluator is independent from the Self-Improvement Agent; the agent never
-  sees evaluation code, test labels, or scoring logic.
+- The Evaluator is independent from the Self-Improvement Agent; the agent
+  never sees evaluation code, test labels, or scoring logic.
 
 ## Repository Layout
 
 ```
 weight-space-rsi/
-鈹溾攢鈹€ models/Qwen3-4B/        # original HF weights (read-only, gitignored)
-鈹溾攢鈹€ checkpoints/            # V0, V1, V2 ... versioned checkpoints (gitignored)
-鈹溾攢鈹€ scripts/
-鈹?  鈹溾攢鈹€ check_environment.py    # hardware/software inventory
-鈹?  鈹溾攢鈹€ build_benchmarks.py     # optimization/validation/test datasets
-鈹?  鈹溾攢鈹€ inference.py            # generation utilities
-鈹?  鈹溾攢鈹€ inspect_weights.py      # Weight Inspector: tensor index & stats
-鈹?  鈹溾攢鈹€ evaluate.py             # independent Evaluator
-鈹?  鈹斺攢鈹€ edit_weights.py         # Weight Editor (applies validated proposals)
-鈹溾攢鈹€ agent/
-鈹?  鈹溾攢鈹€ self_improvement.py     # Self-Improvement Agent (runs on target model)
-鈹?  鈹斺攢鈹€ edit_protocol.py        # structured edit proposal schema + validation
-鈹溾攢鈹€ benchmarks/
-鈹?  鈹溾攢鈹€ optimization/       # agent-visible, used for self-analysis
-鈹?  鈹溾攢鈹€ validation/         # accept/reject decisions
-鈹?  鈹斺攢鈹€ test/               # final reporting only, never agent-visible
-鈹溾攢鈹€ experiments/            # per-iteration records (markdown + configs)
-鈹溾攢鈹€ results/                # evaluation outputs (lightweight JSON/MD kept)
-鈹斺攢鈹€ logs/                   # run logs (large logs gitignored)
+|-- models/Qwen3-4B/        # original HF weights (read-only, gitignored)
+|-- checkpoints/            # V0, V1, V2 ... versioned checkpoints (gitignored)
+|-- scripts/                # all runners, evaluators, audits
+|   |-- check_environment.py, download_model.py, build_benchmarks.py
+|   |-- inspect_weights.py, edit_weights.py, evaluate.py, inference.py
+|   |-- inject_defect*.py, lesion_calib*.py, matrix_screen/confirm.py
+|   |-- run_phase1.py, run_p3_exp{1,2}.py, run_p4_agent*.py
+|   |-- run_p4_control_{C,E}.py, run_exp3b_b2{a,b}.py
+|   |-- eval_ifeval*.py, eval_arc.py, split_ifeval_p4.py
+|   `-- test_weight_access.py, test_b2_tools.py   # unit tests
+|-- agent/                  # JSON tool protocol (no arbitrary code)
+|   |-- self_improvement.py, edit_protocol.py, diagnosis_tools.py
+|   |-- weight_access_tools.py, b2_tools.py, p4_tools.py
+|-- benchmarks/             # ds120/, ifeval_p4/, optimization/, validation/, test/
+|-- experiments/            # per-phase records (prereg + reports + sealed)
+|   |-- iteration_0..3/     # Phases 0-3 (defect injection, diagnosis, repair)
+|   `-- phase4/             # real-task autonomous editing (5 arms)
+|-- results/                # evaluation outputs (lightweight JSON kept)
+`-- logs/                   # run logs (large logs gitignored)
 ```
+
+## Experiment Phases (all complete)
+
+- **Phase 0** - environment, model load, param index, baseline eval, V0
+  checkpoint. Report: `experiments/iteration_0/PHASE0_REPORT.md`.
+- **Phase 1** - controlled reversible defects + self-diagnosis/repair, with
+  random-edit and oracle control groups. Key findings: behavioral degradation
+  statistically insignificant (McNemar p >= 0.125); z-score-only detection
+  0/8; norm is not importance (2.3% overlap; counterfactual logprob +1.02 for
+  top-norm vs -3.41 for top-activity).
+  Reports: `experiments/iteration_1/`.
+- **Phase 2** - genuine self-editing with budget discipline; teacher-forced
+  logprob diverges from free-generation behavior; aggregate-projection and
+  budget-allocation studies (B2a/B2b). Reports: `experiments/iteration_2/`.
+- **Phase 3** - raw weight inspection (read-behavior measurement; observation
+  hallucination: 3/3 identical reports with zero tool calls) and blind
+  diagnosis across 18 defect cells (proposal cliff).
+  Reports: `experiments/iteration_3/`.
+- **Phase 4** - autonomous weight self-improvement on a real downstream task
+  (IFEval, 181/180/180 stratified split). Five arms: A baseline / B agent
+  RSI (dual seed) / C random edit / D no-op / E random-search reference.
+  Result: agent edits counterproductive (both real edits -3.3pp val,
+  rolled back), random edit +2.8pp (n.s.), search space itself narrow at
+  0.05 rel-L2 budget. Report: `experiments/phase4/PHASE4_REPORT.md`.
+
+## Final Conclusion (Phases 0-4)
+
+The tool-mediated weight self-improvement chain fails at **every link** for a
+4B model, each with a quantified mechanism:
+
+1. **Defect visibility**: sub-behavioral defects are statistically invisible
+   (z-score AUC 0.08-0.44; 8-layer lesions within noise).
+2. **Localization**: norm-based signals are anti-correlated with function;
+   raw-number reading covers ~0.1% of the parameter space per session.
+3. **Repair**: agent-proposed edits systematically hurt (both seeds, same
+   L33-attention edit, -3.3pp each) while random edits slightly help -
+   the diagnostic signal is worse than chance.
+4. **Capability gain**: at 0.05 rel-L2 budget the improvement space itself is
+   narrow (8-direction random search: mean -0.4pp, max +1.7pp/60q).
+
+All experiments were preregistered before execution; negative results are
+reported in full. See `PROGRESS_REPORT.md` for the consolidated narrative and
+`experiments/*/` for per-phase evidence.
 
 ## Environment
 
-- Windows 11, Python 3.12 (uv venv at `.venv/`), PyTorch + CUDA.
+- Windows 11, Python 3.12 (venv at `.venv/`), PyTorch + CUDA.
 - Target model: **Qwen/Qwen3-4B** (BF16 safetensors, no quantization).
-- Hardware: NVIDIA RTX 4060 Ti 8GB, 32GB RAM 鈥?model loaded via
-  `device_map="auto"` with CPU offload; inference-friendly, edit-friendly.
+- Hardware: NVIDIA RTX 4060 Ti 8GB, 32GB RAM - model loaded via
+  `device_map="auto"` with CPU offload.
 
 Setup:
 
@@ -105,57 +147,25 @@ uv pip install --python .venv\Scripts\python.exe torch --index-url https://downl
 uv pip install --python .venv\Scripts\python.exe transformers accelerate safetensors datasets
 ```
 
-## Running (Phase 0)
+## Reproduction Entry Points
 
 ```powershell
-# 1. environment report
+# Phase 0: environment + baseline
 .venv\Scripts\python.exe scripts\check_environment.py
-
-# 2. download original model (read-only baseline)
-.venv\Scripts\python.exe scripts\download_model.py
-
-# 3. build isolated benchmark splits
-.venv\Scripts\python.exe scripts\build_benchmarks.py
-
-# 4. parameter index (Weight Inspector, read-only)
-.venv\Scripts\python.exe scripts\inspect_weights.py
-
-# 5. baseline evaluation of V0
 .venv\Scripts\python.exe scripts\evaluate.py --splits optimization,validation,test
+
+# Phase 4: split + baseline + agent loop + controls
+.venv\Scripts\python.exe scripts\split_ifeval_p4.py
+.venv\Scripts\python.exe scripts\eval_ifeval_p4.py --model-dir checkpoints\V0 --split test --output experiments\phase4\baseline\test_V0.json
+.venv\Scripts\python.exe scripts\run_p4_agent_v2.py --seed 0 --max-rounds 6
+.venv\Scripts\python.exe scripts\run_p4_control_C.py
+
+# Unit tests (tool layer)
+.venv\Scripts\python.exe scripts\test_weight_access.py
+.venv\Scripts\python.exe scripts\test_b2_tools.py
 ```
 
-## Evaluation Design
-
-Three strictly isolated splits (`benchmarks/manifest.json` records provenance
-and per-example checksums):
-
-| Split | Purpose | Visible to agent? |
-|-------|---------|-------------------|
-| optimization | self-analysis & edit hypothesis generation | yes |
-| validation | accept/reject edited checkpoints | scores only |
-| test | final capability reporting | never |
-
-Groups per split: math (GSM8K), instruction (IFEval), logic (local verified
-set), repetition (loop/degeneration probes), general (TruthfulQA MC1).
-
-Decoding: greedy (deterministic) for reproducibility.
-
-## Experiment Phases
-
-- **Phase 0** 鈥?env, model load, param index, baseline eval, V0 checkpoint. *(current)*
-- **Phase 1** 鈥?controlled reversible defect + self-diagnosis/repair, with
-  random-edit and oracle control groups.
-- **Phase 2** 鈥?genuine self-editing on optimization split, accept/reject by
-  validation split.
-- **Phase 3** 鈥?multi-generation recursion V0 鈫?V1 鈫?V2 鈫?..., measuring both
-  C(W_t) (task capability) and M(W_t) (meta-capability).
-
-Control arms (搂4 of the plan): A self-editing, B fixed external editor,
-C random editing, D no-editing (noise floor), E oracle editing (upper bound).
-
-## Progress Log
-
-- 2026-11-04: Project scaffold created; environment audited (RTX 4060 Ti 8GB,
-  32GB RAM); Python 3.12 venv + CUDA PyTorch being provisioned; benchmark
-  builder, evaluator, edit protocol drafted. Model download & baseline eval
-  pending.
+Evaluation splits are strictly isolated (`benchmarks/manifest.json` records
+provenance and per-example checksums): optimization/validation splits are
+agent-visible at different levels; the test split is **never** agent-visible.
+Decoding is greedy (deterministic) for reproducibility.
